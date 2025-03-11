@@ -1,0 +1,12 @@
+[project]
+name = "electrolyte"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "ipykernel>=6.29.5",
+    "numpy>=2.2.3",
+    "pydantic>=2.10.6",
+    "rdkit>=2024.9.5",
+]
