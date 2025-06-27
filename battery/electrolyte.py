@@ -194,7 +194,7 @@ class Electrolyte:
             self.performance["thermal_stability"] = thermal_stability  # ℃
 
     # 5. 获取电解液配方的特征矩阵
-    def get_feature_matrix(self) -> list[float]:
+    def get_feature_matrix(self) -> list[list[float]]:
         """返回每个材料的类型嵌入 + 特定属性 + 指纹 + 占比"""
         raw_features = []
         for i, material in enumerate(self.salts + self.solvents + self.additives):
