@@ -1,4 +1,4 @@
-from battery.models import AnodeModel
+from .models import AnodeModel
 
 
 # 负极类

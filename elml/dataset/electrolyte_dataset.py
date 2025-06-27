@@ -9,9 +9,10 @@ from torch.utils.data import DataLoader, TensorDataset, random_split
 from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score
 import numpy as np
 
-from battery import Electrolyte
-from material import MLibrary, MaterialLibrary
-from ml import BaseModel, ElectrolyteTransformer, ElectrolyteMLP
+from ..battery import Electrolyte
+from ..material import MaterialLibrary
+from .. import MLibrary
+from ..ml import BaseModel, ElectrolyteTransformer, ElectrolyteMLP
 
 
 class ElectrolyteDataset:

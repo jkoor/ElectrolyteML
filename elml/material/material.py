@@ -3,9 +3,9 @@ import json
 from typing import Dict, Optional, Union
 from rdkit.Chem import MACCSkeys, Descriptors, MolFromSmiles, rdMolDescriptors
 
-from config import MLIBRARY_PATH, MLIBRARY_STRICT_MODE
+from ..config import MLIBRARY_STRICT_MODE
 
-from material.models import (
+from .models import (
     MaterialModel,
     SaltModel,
     SolventModel,
@@ -367,6 +367,3 @@ class MaterialLibrary:
         """
         with open(file_path, "w", encoding="utf-8") as f:
             json.dump(self.material_index, f, indent=4)
-
-
-MLibrary = MaterialLibrary(MLIBRARY_PATH)

@@ -1,12 +1,10 @@
 # 基于机器学习的电池电解液性能预测与配方优化系统
 
-
-
-## 项目概述
+## 1. 项目概述
 
 本项目是一个结合材料科学与人工智能技术的研究工具，专注于锂离子电池电解液性能预测与配方优化。该项目利用分子特征提取、材料属性标准化和深度学习模型，基于材料的基础物性，实现电解液性能的精准预测，为电池研发提供高效的计算辅助工具。
 
-## 功能特点
+### 功能特点
 
 - **电解液材料库**
   - 支持锂盐、溶剂、添加剂三大类材料管理
@@ -30,7 +28,7 @@
   - 结构-性能关系可视化
   - 实验数据与预测结果对比
 
-## 技术实现
+### 技术实现
 
 - **材料表示**: 使用MACCS分子指纹和物理化学性质
 - **内存优化**: 采用对象池模式避免重复材料实例
@@ -38,7 +36,7 @@
 - **数据验证**: 使用Pydantic进行严格的数据类型检查
 - **模块解耦**：对电池-电解液-材料三部分进行解耦
 
-## 安装
+## 2. 安装指南
 
 ### 环境要求
 
@@ -49,316 +47,216 @@
 
 ### 安装步骤
 
-```bash
-# 安装依赖
-# 方法 1: 使用 uv 安装 （推荐）
-# uv: https://docs.astral.sh/uv/getting-started/installation/
-uv sync
+**使用 `uv` (推荐):**
 
-# 方法 2: 使用 pip 安装 
+```bash
+# uv 是一个极速的 Python 包安装和解析器
+# https://docs.astral.sh/uv/getting-started/installation/
+uv sync
+```
+
+**使用 `pip`:**
+```bash
 pip install -e .
 ```
 
-## 项目架构
+## 3. 项目结构与模块功能
+
+项目采用模块化设计，各主要文件夹功能如下：
 
 ```
 ElectrolyteML/
-├── battery/                 # 电池相关模块
-│   ├── models.py            # 电池数据模型
-│   ├── anode.py             # 电池正极类
-│   ├── cathode.py           # 电池父极类
-│   └── electrolyte.py       # 电解液类实现
-├── material/                # 材料相关模块
-│   ├── models.py            # 材料数据模型
-│   └── __init__.py          # 材料类实现与库管理
-├── ml/                      # 机器学习模块
-│   ├── models.py            # 神经网络模型定义
-│   └── training.py          # 训练和评估函数
-├── dataset/                 # 数据集管理
-│   └── __init__.py          # 数据集类实现
-├── database/                # 数据文件
-│   ├── materials.json       # 材料库
-│   └── electrolytes.json    # 电解液配方库
-├── config/                  # 项目配置模块
-│   └── __init__.py          # 项目配置文件
-└── README.md                # 项目说明
+├── battery/         # 核心: 定义电池、电解液等数据结构和行为
+├── material/        # 核心: 管理材料库（盐、溶剂、添加剂）
+├── dataset/         # 核心: 负责数据集加载、模型训练和性能预测
+├── ml/              # 核心: 定义机器学习模型（如 Transformer）
+├── data/            # 辅助: 存放原始数据文件（.csv, .json）
+├── config/          # 辅助: 项目配置文件
+├── tools/           # 辅助: 数据处理等工具脚本
+└── utils/           # 辅助: 通用辅助函数
 ```
 
+---
 
+## 4. 核心模块使用说明
 
+以下是各核心模块的详细功能和使用示例。
 
+### `material`: 材料库管理
 
-```mermaid
-    graph TD
-    
-    %% 类关系图
-    subgraph ElectrolyteML
-        Battery["Battery 类"] --> Anode["Anode 类"]
-        Battery --> Cathode["Cathode 类"]
-        Battery --> Electrolyte["Electrolyte 类"]
-        
-        Electrolyte --> Material["Material 类"]
-        Material --> Salt["Salt 类型材料"]
-        Material --> Solvent["Solvent 类型材料"]
-        Material --> Additive["Additive 类型材料"]
-        
-        MaterialLibrary["MaterialLibrary 类"] --> Material
-        
-        ElectrolyteDataset["ElectrolyteDataset 类"] --> Electrolyte
-        ElectrolyteDataset --> MLModels["机器学习模型"]
-        
-        MLModels --> BaseModel["BaseModel"]
-        MLModels --> ElectrolyteTransformer["ElectrolyteTransformer"]
-        MLModels --> ElectrolyteMLP["ElectrolyteMLP"]
-    end
-  
+**功能**:
+此模块负责加载和管理所有化学材料（锂盐、溶剂、添加剂）。它从 `materials.json` 文件中读取材料的基础物理化学性质，并提供一个全局实例 `MLibrary` 方便在项目中随时调用。
 
-```
+**关键组件**:
+- `Material`: 单个材料的基类。
+- `MaterialLibrary`: 材料数据库，负责加载、查询和管理所有材料。
+- `MLibrary`: `MaterialLibrary` 的一个全局单例，预加载了所有材料数据，供项目全局调用。
 
-## 模块说明
+**使用示例**:
 
-### 1. Battery 模块
-
-**功能：**
-- 实现电池组件的数据结构和行为
-- 包含电池整体及其组成部分（正极、负极、电解液）
-- 提供电池性能数据的存取和管理
-
-**主要组件：**
-- Battery 类：电池整体表示，集成了正极、负极和电解液
-- `Anode` 类：负极组件
-- `Cathode` 类：正极组件
-- `BatteryModel`/`AnodeModel`/`CathodeModel` 数据模型：定义数据结构和验证规则
-
-**使用示例：**
 ```python
-from battery import Battery, BatteryModel
+from elml import MLibrary
 
-# 创建电池实例
-battery = Battery(battery_model_data)
+# MLibrary 已自动加载 'data/materials.json' 中的数据
+print(f"材料库加载完成，共 {len(MLibrary)} 种材料。")
 
-# 访问电池组件
-print(f"电池名称: {battery.name}")
-print(f"正极: {battery.cathode}")
-print(f"负极: {battery.anode}")
-print(f"电解液: {battery.electrolyte}")
+# 1. 通过材料缩写 (abbr) 获取材料
+lipf6 = MLibrary.get_material("LiPF6", cas_registry_number="21324-40-3")
+print(f"获取材料: {lipf6.name}, CAS号: {lipf6.cas_registry_number}")
+
+# 2. 通过 CAS 注册号获取材料
+ec = MLibrary.get_material("ec", cas_registry_number="96-49-1")
+print(f"获取材料: {ec.name}, 分子量: {ec.molecular_weight}")
+
+# 3. 查看材料属性
+print(f"EC 的介电常数: {ec.dielectric_constant}")
+print(f"LiPF6 的密度: {lipf6.density} g/cm³")
 ```
 
-### 2. Electrolyte 模块
+### `battery`: 电解液与电池定义
 
-**功能：**
-- 电解液配方的创建和管理
-- 支持锂盐、溶剂和添加剂的组合配比
-- 生成电解液特征向量用于性能预测
-- 序列化和可视化电解液配方
+**功能**:
+此模块用于定义电解液配方和完整的电池结构。`Electrolyte` 类是核心，它使用 `material` 模块中的材料来构建具有特定组分和比例的电解液。
 
-**主要组件：**
-- `Electrolyte` 类：电解液配方的完整表示
-- `ElectrolyteModel` 数据模型：定义电解液数据结构和校验规则
-- `Component` 类：表示电解液中的组分及其配比
+**关键组件**:
+- `Component`: 表示配方中的一个组分（如特定比例的溶剂）。
+- `Electrolyte`: 核心类，由多个 `Component` 组成，代表一个完整的电解液配方。
+- `Battery`: （可扩展）用于集成电解液、正极和负极，以进行更全面的电池性能分析。
 
-**使用示例：**
+**使用示例**:
+
 ```python
-from battery import Electrolyte
-from material import MLibrary
+from elml.battery import Electrolyte
 
-# 创建电解液配方
-electrolyte = Electrolyte.create(
+# 1. 使用 `Electrolyte.create` 方法轻松创建新配方
+#    该方法会自动从 MLibrary 中查找并链接材料
+lp30_recipe = Electrolyte.create(
     name="LP30",
-    id="standard-1",
-    description="标准LiPF6/EC/DMC电解液",
+    id="standard-lp30",
+    description="一个标准的 LiPF6 在 EC/DMC 中的电解液配方",
     salts=[
+        # 对于盐，`overall_fraction` 是其在总溶剂质量中的重量百分比
         {"abbr": "LiPF6", "cas_registry_number": "21324-40-3", "overall_fraction": 10.0}
     ],
     solvents=[
+        # 对于溶剂，`relative_fraction` 是其在所有溶剂中的相对体积或重量比
         {"abbr": "EC", "cas_registry_number": "96-49-1", "relative_fraction": 50.0},
-        {"abbr": "DMC", "cas_registry_number": "616-38-6", "relative_fraction": 50.0}
+        {"abbr": "DMC", "cas_registry_number": "616-38-6", "relative_fraction": 50.0},
     ],
-    additives=[],
-    performance={"ionic_conductivity": 10.5}
+    additives=[],  # 也可以添加添加剂
+    performance={},
 )
 
-# 显示配方详情
-electrolyte.show()
+# 2. 显示配方详情
+lp30_recipe.show()
+
+# 3. 访问配方组分
+print(f"配方 '{lp30_recipe.name}' 的盐: {lp30_recipe.salts[0].name}")
+
 ```
 
-### 3. MaterialLibrary 模块
+### `dataset`: 数据集与模型训练
 
-**功能：**
-- 材料数据库的管理和访问
-- 支持锂盐、溶剂、添加剂三大类材料
-- 材料属性的标准化和验证
-- 材料分子特征的提取
+**功能**:
+这是执行机器学习任务的入口。它负责加载电解液数据集（包含配方和对应的实验性能），处理数据，训练模型，并使用训练好的模型进行性能预测。
 
-**主要组件：**
-- Material 类：材料通用表示
-- `MaterialLibrary` 类：材料库管理
-- `MLibrary` 全局实例：提供统一的材料访问接口
-- 各种材料模型类：`SaltModel`、`SolventModel`、`AdditiveModel` 等
+**关键组件**:
+- `ElectrolyteDataset`: 核心类，封装了数据加载、预处理、模型训练和预测的所有功能。
 
-**使用示例：**
+**使用示例**:
 ```python
-from material import MLibrary
+from elml.dataset import ElectrolyteDataset
+from elml.battery import Electrolyte  # 用于创建待预测的配方
 
-# 获取特定材料
-lipf6 = MLibrary.get_material("LiPF6", "21324-40-3")
-ec = MLibrary.get_material("EC", "96-49-1")
+# 1. 加载一个电解液数据集（例如，包含多个配方及其电导率）
+dataset = ElectrolyteDataset("data/calisol23.json")
+print(f"数据集加载成功，包含 {len(dataset)} 个电解液样本。")
 
-# 查看材料属性
-print(f"LiPF6 密度: {lipf6.density} g/cm³")
-print(f"EC 介电常数: {ec.dielectric_constant}")
+# 2. 训练一个性能预测模型
+#    模型可以是 'transformer' 或 'mlp'
+history = dataset.train_model(
+    model="transformer",
+    model_config={
+        "hidden_dim": 128,
+        "n_layers": 2,
+        "n_heads": 2,
+    },  # Transformer特定参数
+    epochs=50,  # 训练轮次
+    save_path="models/best_conductivity_model.pth",  # 保存最佳模型
+)
+print("模型训练完成！")
 ```
 
-### 4. Dataset 模块
+### `ml`: 机器学习模型定义
 
-**功能：**
-- 电解液数据集的加载和处理
-- 构建特征矩阵和目标值
-- 模型的训练和评估
-- 电解液性能预测
-- 配方优化辅助
+**功能**:
+此模块包含了用于性能预测的神经网络模型的具体实现（基于 PyTorch）。这些模型通常不是直接使用的，而是由 `ElectrolyteDataset` 在 `train_model` 方法内部调用。
 
-**主要组件：**
-- `ElectrolyteDataset` 类：数据集管理和机器学习功能集成
+**关键组件**:
+- `ElectrolyteTransformer`: 基于 Transformer 架构的模型，擅长捕捉序列特征。
+- `ElectrolyteMLP`: 一个标准的多层感知器（MLP）模型。
 
-**使用示例：**
+**使用说明**:
+您可以在调用 `dataset.train_model` 时，通过 `model` 和 `model_config` 参数来选择和配置这些模型。如果您想实现新的模型架构，可以在此文件夹下添加新的模型类。
+
+---
+
+## 5. 端到端工作流示例
+
+这个例子将展示如何从零开始，结合所有模块，完成一个典型的任务：**创建一个新的电解液配方，并使用训练好的模型预测其离子电导率**。
+
 ```python
-from dataset import ElectrolyteDataset
+import torch
+from elml.material import MLibrary
+from elml.battery import Electrolyte
+from elml.dataset import ElectrolyteDataset
 
-# 加载数据集
+# --- 步骤 1: 初始化环境 ---
+# 加载材料库 (由 material 模块自动完成)
+print(f"✅ 1. 材料库已加载，共 {len(MLibrary)} 种材料。")
+
+# --- 步骤 2: 创建一个新的电解液配方 ---
+# 假设我们要设计一个高浓度电解液
+my_new_recipe = Electrolyte.create(
+    name="My-Custom-High-Concentration-Electrolyte",
+    salts=[{"abbr": "LiPF6", "overall_fraction": 15.0}], # 盐浓度提高到 15%
+    solvents=[
+        {"abbr": "EC", "relative_fraction": 40.0},
+        {"abbr": "DMC", "relative_fraction": 60.0}
+    ],
+    additives=[{"abbr": "VC", "overall_fraction": 2.0}] # 添加 2% 的 VC 添加剂
+)
+print(f"✅ 2. 已创建新配方: '{my_new_recipe.name}'")
+my_new_recipe.show()
+
+
+# --- 步骤 3: 加载数据集并训练模型 ---
+# 使用 calisol23 数据集进行训练
 dataset = ElectrolyteDataset("data/calisol23.json")
 
-# 训练模型
-history = dataset.train_model(
-    model="transformer", 
-    model_config={"hidden_dim": 256, "n_layers": 2, "n_heads": 2},
-    epochs=100,
-    save_path="best_model.pth"
-)
-
-# 预测电解液性能
-conductivity = dataset.predict(electrolyte)
-print(f"预测电导率: {conductivity:.4f} mS/cm")
-```
-
-### 5. ML 模块
-
-**功能：**
-- 定义用于电解液性能预测的机器学习模型
-- 提供不同架构的神经网络模型
-- 支持模型参数配置
-
-**主要组件：**
-- `BaseModel`：模型基类
-- `ElectrolyteTransformer`：基于Transformer架构的模型
-- `ElectrolyteMLP`：多层感知器模型
-
-**使用示例：**
-```python
-from ml import ElectrolyteTransformer
-
-# 创建模型（通常通过dataset.train_model间接使用）
-model = ElectrolyteTransformer(
-    input_dim=128,
-    hidden_dim=256,
-    n_layers=2,
-    n_heads=4
-)
-
-# 使用特定模型进行训练
+print("
+✅ 3. 开始训练性能预测模型...")
 dataset.train_model(
-    model=model,
-    epochs=100
+    model="transformer",
+    model_config={"hidden_dim": 256, "n_layers": 2, "n_heads": 4},
+    epochs=100, # 实际应用中可能需要更多轮次
+    learning_rate=0.001,
+    save_path="models/best_model.pth"
 )
+print("模型训练完毕！")
+
+
+# --- 步骤 4: 预测新配方的性能 ---
+# 使用刚刚训练好的模型进行预测
+print(f"
+✅ 4. 预测新配方 '{my_new_recipe.name}' 的性能...")
+predicted_performance = dataset.predict(my_new_recipe)
+
+print("
+" + "="*50)
+print(f"🎉 预测结果 🎉")
+print(f"配方: {my_new_recipe.name}")
+print(f"预测的离子电导率: {predicted_performance:.4f} mS/cm")
+print("="*50)
+
 ```
-
-## 使用指南
-
-### 加载材料库
-
-```python
-from material import MaterialLibrary
-
-# 初始化材料库
-MLibrary = MaterialLibrary("database/materials.json")
-print(f"材料库加载完成，共 {len(MLibrary)} 种材料")
-```
-
-### 创建电解液配方
-
-```python
-from battery import Electrolyte, ElectrolyteModel
-from material import MLibrary
-
-# 获取材料
-lipf6 = MLibrary.get_material("LiPF6", "21324-40-3")
-ec = MLibrary.get_material("EC", "96-49-1")
-dmc = MLibrary.get_material("DMC", "616-38-6")
-
-# 创建配方
-electrolyte = Electrolyte.create(
-    name="LP30",
-    description="标准LiPF6/EC/DMC电解液",
-    salts=[
-        {"material": lipf6, "overall_fraction": 10.0}
-    ],
-    solvents=[
-        {"material": ec, "relative_fraction": 50.0},
-        {"material": dmc, "relative_fraction": 50.0}
-    ]
-)
-
-# 显示配方详情
-electrolyte.show()
-```
-
-### 预测电解液性能
-
-```python
-from dataset import ElectrolyteDataset
-
-# 加载数据集
-dataset = ElectrolyteDataset("database/electrolytes.json")
-
-# 训练模型
-history = dataset.train_model(
-    model="transformer", 
-    model_config={"hidden_dim": 256, "num_heads": 8},
-    epochs=100
-)
-
-# 预测性能
-ionic_conductivity = dataset.predict(electrolyte)
-print(f"预测电导率: {ionic_conductivity:.4f} mS/cm")
-```
-
-## 示例用例
-
-### 批量预测
-
-```python
-# 批量预测多个配方的性能
-results = {}
-for recipe in dataset.get_test_recipes():
-    conductivity = dataset.predict(recipe)
-    results[recipe.name] = conductivity
-    
-# 排序找出最佳配方
-best_recipes = sorted(results.items(), key=lambda x: x[1], reverse=True)
-for name, value in best_recipes[:5]:
-    print(f"{name}: {value:.4f} mS/cm")
-```
-
-### 配方优化
-
-```python
-# 基于已有配方进行微调和优化
-new_recipe = electrolyte.clone()
-new_recipe.adjust_salt_fraction(15.0)  # 增加盐的含量到15%
-new_conductivity = dataset.predict(new_recipe)
-
-print(f"原配方电导率: {dataset.predict(electrolyte):.4f} mS/cm")
-print(f"优化后电导率: {new_conductivity:.4f} mS/cm")
-```
-
-## 
