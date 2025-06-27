@@ -1,1 +1,2 @@
-from .material import Material, MaterialLibrary
+from .material import Material
+from .library import MaterialLibrary

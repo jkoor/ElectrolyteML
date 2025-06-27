@@ -5,8 +5,12 @@ build/
 dist/
 wheels/
 *.egg-info
-tmp.py
+/tmp
+transformer_best.pth
+hello.py
+main.py
 
 # Virtual environments
 .venv
 uv.lock
+main.py
