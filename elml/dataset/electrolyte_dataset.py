@@ -51,8 +51,20 @@ class ElectrolyteDataset:
 
     # ------------------------ 魔术方法 ------------------------ #
     def __len__(self) -> int:
-        """返回配方总数"""
-        return len(self.formulas)
+        """返回数据集的样本总数 (基于特征矩阵)"""
+        if self.features is not None:
+            return len(self.features)
+        return 0
+
+    def __getitem__(self, idx: int) -> Tuple[torch.Tensor, torch.Tensor]:
+        """
+        使数据集支持下标访问。
+        这是 DataLoader 工作所必需的。
+        """
+        if self.features is None or self.targets is None:
+            raise RuntimeError("Dataset features/targets have not been built yet.")
+
+        return self.features[idx], self.targets[idx]
 
     # ------------------------ 实例方法 ------------------------ #
 

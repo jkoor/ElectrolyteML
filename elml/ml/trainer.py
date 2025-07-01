@@ -1,59 +1,52 @@
+# elml/ml/trainer.py
+
 import torch
 import torch.nn as nn
-from torch.utils.data import DataLoader, TensorDataset, random_split
+from torch.utils.data import DataLoader
 from torch.optim.lr_scheduler import ReduceLROnPlateau
-import numpy as np
 from typing import Dict, List, Optional
 
 from .models import BaseModel
-from ..dataset.electrolyte_dataset import ElectrolyteDataset
 
 
 class Trainer:
     """
     模型训练总监。
-    接收一个模型和数据集，负责执行完整的训练和验证流程。
+    接收一个模型和准备好的数据加载器，负责执行完整的训练和验证流程。
     """
 
-    def __init__(
-        self,
-        model: BaseModel,
-        dataset: ElectrolyteDataset,
-        device: Optional[str] = None,
-    ):
+    def __init__(self, model: BaseModel, device: Optional[str] = None):
         self.model = model
-        self.dataset = dataset
         self.device = device or ("cuda" if torch.cuda.is_available() else "cpu")
         self.model.to(self.device)
         print(f"Trainer将在 {self.device} 设备上运行。")
 
     def run(
         self,
-        train_ratio: float = 0.8,
-        batch_size: int = 32,
+        train_loader: DataLoader,
+        val_loader: DataLoader,
         epochs: int = 100,
         lr: float = 0.001,
         patience: int = 10,
         save_path: Optional[str] = "best_model.pth",
+        warmup_epochs: int = 10,  # <-- 新增预热周期参数
     ) -> Dict[str, List[float]]:
-        # 1. 准备数据
-        full_tensor_dataset = TensorDataset(self.dataset.features, self.dataset.targets)
-        train_size = int(train_ratio * len(full_tensor_dataset))
-        val_size = len(full_tensor_dataset) - train_size
-        train_dataset, val_dataset = random_split(
-            full_tensor_dataset, [train_size, val_size]
+        optimizer = torch.optim.AdamW(self.model.parameters(), lr=lr, weight_decay=0.01)
+
+        # 主调度器，在预热结束后生效
+        main_scheduler = ReduceLROnPlateau(optimizer, "min", factor=0.1, patience=5)
+
+        # 预热调度器
+        warmup_scheduler = torch.optim.lr_scheduler.LambdaLR(
+            optimizer,
+            lr_lambda=lambda epoch: (epoch + 1) / warmup_epochs
+            if epoch < warmup_epochs
+            else 1,
         )
 
-        train_loader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True)
-        val_loader = DataLoader(val_dataset, batch_size=batch_size)
-
-        # 2. 定义损失函数和优化器
+        # 定义损失函数
         criterion = nn.MSELoss()
-        optimizer = torch.optim.Adam(self.model.parameters(), lr=lr)
-        # 当 'val_loss' 在 patience=5 个周期内不下降时，学习率乘以 factor=0.1
-        scheduler = ReduceLROnPlateau(optimizer, "min", factor=0.1, patience=5)
 
-        # 3. 训练状态初始化
         history = {"train_loss": [], "val_loss": []}
         best_val_loss = float("inf")
         patience_counter = 0
@@ -64,6 +57,7 @@ class Trainer:
             self.model.train()
             epoch_train_loss = 0.0
             for X_batch, y_batch in train_loader:
+                # ... (内部逻辑不变)
                 X_batch, y_batch = X_batch.to(self.device), y_batch.to(self.device)
                 optimizer.zero_grad()
                 mask = (X_batch.sum(dim=-1) == 0).to(self.device)
@@ -78,6 +72,7 @@ class Trainer:
             epoch_val_loss = 0.0
             with torch.no_grad():
                 for X_batch, y_batch in val_loader:
+                    # ... (内部逻辑不变)
                     X_batch, y_batch = X_batch.to(self.device), y_batch.to(self.device)
                     mask = (X_batch.sum(dim=-1) == 0).to(self.device)
                     y_pred = self.model(X_batch, mask)
@@ -88,15 +83,24 @@ class Trainer:
             avg_val_loss = epoch_val_loss / len(val_loader)
             history["train_loss"].append(avg_train_loss)
             history["val_loss"].append(avg_val_loss)
-            # 更新学习率调度器
-            scheduler.step(avg_val_loss)
-            # 使用 optimizer.param_groups 来获取当前的学习率
+
+            # --- 调度器更新逻辑 ---
+            # 在预热阶段，只调用预热调度器
+            if epoch < warmup_epochs:
+                warmup_scheduler.step()
+            else:
+                # 预热结束后，由主调度器接管
+                main_scheduler.step(avg_val_loss)
+
             current_lr = optimizer.param_groups[0]["lr"]
             print(
-                f"Epoch {epoch + 1}/{epochs} | Train Loss: {avg_train_loss:.4f} | Val Loss: {avg_val_loss:.4f} | LR: {current_lr:.6f}"
+                f"Epoch {epoch + 1}/{epochs} | "
+                f"Train Loss: {avg_train_loss:.4f} | "
+                f"Val Loss: {avg_val_loss:.4f} | "
+                f"LR: {current_lr:.6f}"
             )
 
-            # 4. 早停与模型保存
+            # 早停逻辑
             if avg_val_loss < best_val_loss:
                 best_val_loss = avg_val_loss
                 patience_counter = 0
