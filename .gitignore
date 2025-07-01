@@ -6,11 +6,8 @@ dist/
 wheels/
 *.egg-info
 /tmp
-transformer_best.pth
-hello.py
-main.py
+/runs
 
 # Virtual environments
 .venv
 uv.lock
-main.py
