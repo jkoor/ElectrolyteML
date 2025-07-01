@@ -1,6 +1,7 @@
 import torch
 import torch.nn as nn
 from torch.utils.data import DataLoader, TensorDataset, random_split
+from torch.optim.lr_scheduler import ReduceLROnPlateau
 import numpy as np
 from typing import Dict, List, Optional
 
@@ -49,6 +50,8 @@ class Trainer:
         # 2. 定义损失函数和优化器
         criterion = nn.MSELoss()
         optimizer = torch.optim.Adam(self.model.parameters(), lr=lr)
+        # 当 'val_loss' 在 patience=5 个周期内不下降时，学习率乘以 factor=0.1
+        scheduler = ReduceLROnPlateau(optimizer, "min", factor=0.1, patience=5)
 
         # 3. 训练状态初始化
         history = {"train_loss": [], "val_loss": []}
@@ -85,9 +88,12 @@ class Trainer:
             avg_val_loss = epoch_val_loss / len(val_loader)
             history["train_loss"].append(avg_train_loss)
             history["val_loss"].append(avg_val_loss)
-
+            # 更新学习率调度器
+            scheduler.step(avg_val_loss)
+            # 使用 optimizer.param_groups 来获取当前的学习率
+            current_lr = optimizer.param_groups[0]["lr"]
             print(
-                f"Epoch {epoch + 1}/{epochs} | Train Loss: {avg_train_loss:.4f} | Val Loss: {avg_val_loss:.4f}"
+                f"Epoch {epoch + 1}/{epochs} | Train Loss: {avg_train_loss:.4f} | Val Loss: {avg_val_loss:.4f} | LR: {current_lr:.6f}"
             )
 
             # 4. 早停与模型保存
