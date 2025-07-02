@@ -29,12 +29,16 @@ class Trainer:
         lr: float = 0.001,
         patience: int = 10,
         save_path: Optional[str] = "best_model.pth",
-        warmup_epochs: int = 10,  # <-- 新增预热周期参数
+        warmup_epochs: int = 10,
+        lr_patience: int = 10,  # <-- 新增: LR调度器的耐心
+        lr_factor: float = 0.5,  # <-- 新增: LR降低的因子
     ) -> Dict[str, List[float]]:
         optimizer = torch.optim.AdamW(self.model.parameters(), lr=lr, weight_decay=0.01)
 
-        # 主调度器，在预热结束后生效
-        main_scheduler = ReduceLROnPlateau(optimizer, "min", factor=0.1, patience=5)
+        # 主调度器，使用可配置的参数
+        main_scheduler = ReduceLROnPlateau(
+            optimizer, "min", factor=lr_factor, patience=lr_patience
+        )
 
         # 预热调度器
         warmup_scheduler = torch.optim.lr_scheduler.LambdaLR(
