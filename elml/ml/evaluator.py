@@ -54,17 +54,14 @@ class Evaluator:
         all_targets = []
 
         with torch.no_grad():
-            for X_batch, y_batch in test_loader:
-                X_batch, y_batch = X_batch.to(self.device), y_batch.to(self.device)
-
-                # 创建掩码，与训练和预测时保持一致
-                mask = (X_batch.sum(dim=-1) == 0).to(self.device)
+            for batch in test_loader:
+                batch = batch.to(self.device)
 
                 # 使用模型的 predict 方法进行预测
-                y_pred = self.model.predict(X_batch, mask)
+                y_pred = self.model.predict(batch)
 
                 all_preds.append(y_pred.cpu().numpy())
-                all_targets.append(y_batch.cpu().numpy())
+                all_targets.append(batch.y.cpu().numpy())
 
         # 将列表中的所有批次数据连接成一个大的 numpy 数组
         all_preds = np.concatenate(all_preds).flatten()

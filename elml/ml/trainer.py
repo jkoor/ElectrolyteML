@@ -60,13 +60,13 @@ class Trainer:
             # 训练循环
             self.model.train()
             epoch_train_loss = 0.0
-            for X_batch, y_batch in train_loader:
+            for batch in train_loader:  # GNN Dataloader 返回的是一个 Batch 对象
                 # ... (内部逻辑不变)
-                X_batch, y_batch = X_batch.to(self.device), y_batch.to(self.device)
+                batch = batch.to(self.device)
                 optimizer.zero_grad()
-                mask = (X_batch.sum(dim=-1) == 0).to(self.device)
-                y_pred = self.model(X_batch, mask)
-                loss = criterion(y_pred, y_batch)
+                # 模型现在直接接收 batch 对象
+                y_pred = self.model(batch)
+                loss = criterion(y_pred.squeeze(-1), batch.y)
                 loss.backward()
                 optimizer.step()
                 epoch_train_loss += loss.item()
@@ -75,12 +75,12 @@ class Trainer:
             self.model.eval()
             epoch_val_loss = 0.0
             with torch.no_grad():
-                for X_batch, y_batch in val_loader:
+                for batch in val_loader:
                     # ... (内部逻辑不变)
-                    X_batch, y_batch = X_batch.to(self.device), y_batch.to(self.device)
-                    mask = (X_batch.sum(dim=-1) == 0).to(self.device)
-                    y_pred = self.model(X_batch, mask)
-                    loss = criterion(y_pred, y_batch)
+                    batch = batch.to(self.device)
+                    # 模型现在直接接收 batch 对象
+                    y_pred = self.model(batch)
+                    loss = criterion(y_pred.squeeze(-1), batch.y)
                     epoch_val_loss += loss.item()
 
             avg_train_loss = epoch_train_loss / len(train_loader)

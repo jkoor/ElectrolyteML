@@ -1,12 +1,12 @@
 import itertools
 import json
-from typing import Tuple, Optional, List
+from typing import Optional, List
 import torch
+from torch_geometric.data import Data
 
 from ..battery import Electrolyte
 from ..material import MaterialLibrary
 from .. import MLibrary
-
 
 import warnings
 
@@ -20,8 +20,8 @@ warnings.filterwarnings(
 
 class ElectrolyteDataset:
     """
-    数据集管理器。
-    核心职责：加载、管理电解液配方数据，并将其转换为可供机器学习使用的特征和标签。
+    数据集管理器 (GNN 版本)。
+    核心职责：加载、管理电解液配方数据，并将其转换为可供GNN使用的图数据对象。
     """
 
     def __init__(self, dataset_file: Optional[str] = None, build_features: bool = True):
@@ -30,69 +30,54 @@ class ElectrolyteDataset:
 
         Args:
             dataset_file (str, optional): 配方 JSON 文件路径。
-            build_features (bool): 是否在初始化时立即构建特征矩阵。
+            build_features (bool): 是否在初始化时立即构建图数据。
         """
         self.library: MaterialLibrary = MLibrary
         self.formulas: list[Electrolyte] = []
+        self.feature_dim = 178  # 单个节点（材料）的特征维度
 
-        # 这些参数定义了数据的形状，对于特征工程至关重要
-        self.max_seq_len = 5
-        self.feature_dim = 178
-
-        self.features: Optional[torch.Tensor] = None
-        self.targets: Optional[torch.Tensor] = None
+        # --- GNN改造: 核心存储从Tensor列表变为图Data对象列表 ---
+        self.graph_data: List[Data] = []
+        # ---------------------------------------------------------
 
         self.electrolyte_counter = itertools.count(1)
 
         if dataset_file:
             self.from_json(dataset_file)
         if build_features and self.formulas:
-            self._build_features()
+            self._build_graphs()
 
     # ------------------------ 魔术方法 ------------------------ #
     def __len__(self) -> int:
-        """返回数据集的样本总数 (基于特征矩阵)"""
-        if self.features is not None:
-            return len(self.features)
-        return 0
+        """返回数据集的样本总数 (图的数量)"""
+        return len(self.graph_data)
 
-    def __getitem__(self, idx: int) -> Tuple[torch.Tensor, torch.Tensor]:
+    def __getitem__(self, idx: int) -> Data:
         """
-        使数据集支持下标访问。
-        这是 DataLoader 工作所必需的。
+        使数据集支持下标访问，返回一个图数据对象。
+        这是 PyG DataLoader 工作所必需的。
         """
-        if self.features is None or self.targets is None:
-            raise RuntimeError("Dataset features/targets have not been built yet.")
-
-        return self.features[idx], self.targets[idx]
+        if not self.graph_data:
+            raise RuntimeError("图数据集尚未构建。")
+        return self.graph_data[idx]
 
     # ------------------------ 实例方法 ------------------------ #
 
-    def _build_features(self):
+    def _build_graphs(self):
         """
-        核心方法：从 self.formulas 生成并保存特征矩阵和目标值。
-        此方法保持不变。
+        核心方法：从 self.formulas 生成并保存图数据对象列表。
         """
-        X, y = self.get_training_data()
-        if X:
-            self.features = torch.tensor(X, dtype=torch.float32)
-            self.targets = torch.tensor(y, dtype=torch.float32).unsqueeze(1)
-            # 验证数据
-            if torch.isnan(self.features).any() or torch.isinf(self.features).any():
-                raise ValueError("特征矩阵包含 NaN 或 Inf")
-            if torch.isnan(self.targets).any() or torch.isinf(self.targets).any():
-                raise ValueError("目标值包含 NaN 或 Inf")
-        else:
-            self.features = torch.empty(0, self.max_seq_len, self.feature_dim)
-            self.targets = torch.empty(0, 1)
+        self.graph_data = self.get_training_data()
+        # 可以在此添加对图数据的验证
+        if not self.graph_data:
+            warnings.warn("未生成任何图数据，请检查输入文件和配方。")
 
-    def _update_features(self):
-        """更新特征矩阵（增删配方后）"""
+    def _update_graphs(self):
+        """更新图数据列表（增删配方后）"""
         if self.formulas:
-            self._build_features()
+            self._build_graphs()
         else:
-            self.features = torch.tensor([], dtype=torch.float32)
-            self.targets = torch.tensor([], dtype=torch.float32)
+            self.graph_data = []
 
     def from_json(self, file_path: str):
         """从 JSON 文件加载配方数据"""
@@ -112,66 +97,63 @@ class ElectrolyteDataset:
         electrolyte._data.id = f"E{next(self.electrolyte_counter)}"
         self.formulas.append(electrolyte)
         if refresh:
-            self._update_features()
+            self._update_graphs()
 
     def del_formula(self, id: str, refresh: bool = True):
         """删除指定 ID 的配方"""
         self.formulas = [f for f in self.formulas if f.id != id]
         if refresh:
-            self._update_features()
+            self._update_graphs()
 
     def update_performance(self, formulas: list[Electrolyte], predictions: list[float]):
         """更新配方的性能数据（例如预测结果）"""
         for formula, pred in zip(formulas, predictions):
             formula.performance["conductivity"] = pred
-        self._update_features()
+        self._update_graphs()
 
-    def get_training_data(self) -> Tuple[list[list[list[float]]], list[float]]:
+    def get_training_data(self) -> List[Data]:
         """
-        生成训练数据。
+        生成GNN训练数据。
+        每个配方被转换成一个全连接的图。
         """
-        X: list[list[list[float]]] = []
-        y: list[float] = []
+        graph_list: List[Data] = []
         for formula in self.formulas:
             if (
                 "conductivity" in formula.performance
                 and formula.performance["conductivity"] is not None
             ):
-                formula_features = formula.get_feature_matrix()  #
+                # 1. 节点特征 (Node Features)
+                node_features = formula.get_feature_matrix()
+                if not node_features:
+                    continue  # 跳过没有材料的无效配方
 
-                # 验证每个材料的特征维度是否正确
-                for feature in formula_features:
-                    if len(feature) != self.feature_dim:
-                        raise ValueError(
-                            f"配方 {formula._data.id} 的特征维度错误："
-                            f"预期 {self.feature_dim}，实际为 {len(feature)}"
-                        )
+                x = torch.tensor(node_features, dtype=torch.float32)
+                num_nodes = len(node_features)
 
-                # --- 这是修复问题的关键代码块 ---
-                # 1. 填充（Padding）：如果材料数量少于 max_seq_len，就用 0 向量填充
-                while len(formula_features) < self.max_seq_len:
-                    formula_features.append([0.0] * self.feature_dim)
+                # 2. 边索引 (Edge Index) - 构建全连接图
+                # 对于N个节点，创建所有可能的自环之外的边
+                if num_nodes > 1:
+                    edge_index = torch.tensor(
+                        list(itertools.permutations(range(num_nodes), 2)),
+                        dtype=torch.long,
+                    ).t().contiguous()
+                else:
+                    # 如果只有一个节点，没有边
+                    edge_index = torch.empty((2, 0), dtype=torch.long)
 
-                # 2. 截断（Truncation）：如果材料数量多于 max_seq_len，就截取前面的部分
-                formula_features = formula_features[: self.max_seq_len]
+                # 3. 图标签 (Graph Label)
+                y = torch.tensor(
+                    [formula.performance["conductivity"]], dtype=torch.float32
+                )
 
-                # 3. 最终验证：确保处理后的长度一定是 max_seq_len
-                if len(formula_features) != self.max_seq_len:
-                    # 这个错误理论上不应该发生，除非上面的逻辑有误
-                    raise ValueError(
-                        f"配方 {formula._data.id} 填充后材料数量为 {len(formula_features)}，"
-                        f"预期为 {self.max_seq_len}"
-                    )
-                # --- 关键代码块结束 ---
+                # 4. 创建并存储图数据对象
+                graph_list.append(Data(x=x, edge_index=edge_index, y=y))
 
-                X.append(formula_features)
-                y.append(formula.performance["conductivity"])
+        return graph_list
 
-        return X, y
-
-    def get_candidate_features(self) -> Tuple[List[Electrolyte], torch.Tensor]:
+    def get_candidate_features(self) -> tuple[list[Electrolyte], list[Data]]:
         """
-        获取数据集中所有待预测的候选配方及其特征。
+        获取数据集中所有待预测的候选配方及其图特征。
         此方法专为 Predictor 提供数据。
         """
         candidates = [
@@ -180,17 +162,25 @@ class ElectrolyteDataset:
             if "conductivity" not in f.performance
             or f.performance["conductivity"] is None
         ]
-        X_candidates_list = []
+        
+        graph_candidates: List[Data] = []
         for c in candidates:
-            features = c.get_feature_matrix()  #
-            # ... (填充和维度检查逻辑与 get_training_data 类似)
-            while len(features) < self.max_seq_len:
-                features.append([0.0] * self.feature_dim)
-            features = features[: self.max_seq_len]
-            X_candidates_list.append(features)
+            node_features = c.get_feature_matrix()
+            if not node_features:
+                continue
 
-        if not X_candidates_list:
-            return [], torch.empty(0, self.max_seq_len, self.feature_dim)
+            x = torch.tensor(node_features, dtype=torch.float32)
+            num_nodes = len(node_features)
 
-        X_candidates_tensor = torch.tensor(X_candidates_list, dtype=torch.float32)
-        return candidates, X_candidates_tensor
+            if num_nodes > 1:
+                edge_index = torch.tensor(
+                    list(itertools.permutations(range(num_nodes), 2)),
+                    dtype=torch.long,
+                ).t().contiguous()
+            else:
+                edge_index = torch.empty((2, 0), dtype=torch.long)
+            
+            # 对于待预测的样本，y可以省略或设为-1
+            graph_candidates.append(Data(x=x, edge_index=edge_index))
+
+        return candidates, graph_candidates

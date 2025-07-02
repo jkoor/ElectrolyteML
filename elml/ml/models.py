@@ -1,6 +1,8 @@
 import torch
 import torch.nn as nn
 from typing import Optional
+from torch_geometric.nn import GATv2Conv, global_mean_pool
+from torch_geometric.data import Data, Batch
 
 
 class BaseModel(nn.Module):
@@ -9,44 +11,96 @@ class BaseModel(nn.Module):
     它定义了一个标准的接口，以便与 Trainer 和 Predictor 类兼容。
     """
 
-    def __init__(self, input_dim: int):
+    def __init__(self, input_dim: Optional[int] = None):
         """
         初始化基类。
 
         Args:
-            input_dim (int): 单个输入项（例如一个材料）的特征维度。
+            input_dim (int, optional): 单个输入项（例如一个材料）的特征维度。
+                                       对于GNN，此参数可能不是必需的，因为特征维度在图数据中定义。
         """
         super().__init__()
         self.input_dim = input_dim
 
-    def forward(
-        self, x: torch.Tensor, mask: Optional[torch.Tensor] = None
-    ) -> torch.Tensor:
+    def forward(self, x, **kwargs) -> torch.Tensor:
         """
         定义模型的前向传播逻辑。
-        这是训练的核心，必须由所有子类实现。
-
-        Args:
-            x (torch.Tensor): 输入的特征张量，形状为 [batch_size, seq_len, input_dim]。
-            mask (torch.Tensor, optional): 一个布尔或浮点型的掩码张量，
-                                           用于指示哪些输入是填充项，形状为 [batch_size, seq_len]。
-                                           在Transformer中尤其重要。
-
-        Returns:
-            torch.Tensor: 模型的输出，通常形状为 [batch_size, 1]。
+        这是一个通用签名，以适应不同类型的输入。
         """
         raise NotImplementedError("每个子类都必须实现自己的 forward 方法！")
 
-    def predict(
-        self, x: torch.Tensor, mask: Optional[torch.Tensor] = None
-    ) -> torch.Tensor:
+    def predict(self, x, **kwargs) -> torch.Tensor:
         """
         定义模型的推理（预测）逻辑。
-        这个方法会以无梯度计算的模式调用 forward 方法，以提高效率。
         """
-        self.eval()  # 切换到评估模式 (例如关闭 Dropout)
+        self.eval()  # 切换到评估模式
         with torch.no_grad():
-            return self.forward(x, mask)
+            return self.forward(x, **kwargs)
+
+
+class ElectrolyteGNN(BaseModel):
+    """
+    一个基于图注意力网络 (GATv2) 的模型，用于预测电解液电导率。
+    """
+
+    def __init__(
+        self,
+        input_dim: int = 178,
+        hidden_dim: int = 128,
+        n_heads: int = 4,
+        dropout: float = 0.2,
+    ):
+        """
+        初始化 GNN 模型。
+
+        Args:
+            input_dim (int): 输入节点特征的维度。
+            hidden_dim (int): GNN层和MLP的隐藏维度。
+            n_heads (int): 图注意力机制的头数。
+            dropout (float): Dropout 比率。
+        """
+        super().__init__(input_dim)
+
+        # GNN 卷积层
+        self.conv1 = GATv2Conv(input_dim, hidden_dim, heads=n_heads, dropout=dropout)
+        # 输出维度是 hidden_dim * n_heads，因为多头是拼接的
+        self.conv2 = GATv2Conv(
+            hidden_dim * n_heads, hidden_dim, heads=n_heads, dropout=dropout
+        )
+
+        # 输出的 MLP 网络
+        self.mlp = nn.Sequential(
+            nn.Linear(hidden_dim * n_heads, hidden_dim),
+            nn.ReLU(),
+            nn.Dropout(dropout),
+            nn.Linear(hidden_dim, 1),
+        )
+
+    def forward(self, data: Batch, **kwargs) -> torch.Tensor:
+        """
+        GNN 模型的前向传播。
+
+        Args:
+            data (torch_geometric.data.Batch): PyG DataLoader 提供的批处理图数据。
+
+        Returns:
+            torch.Tensor: 预测的电导率，形状 [batch_size, 1]。
+        """
+        x, edge_index, batch = data.x, data.edge_index, data.batch
+
+        # -> [num_nodes, input_dim]
+        x = self.conv1(x, edge_index)
+        x = x.relu()
+        # -> [num_nodes, hidden_dim * n_heads]
+        x = self.conv2(x, edge_index)
+        # -> [num_nodes, hidden_dim * n_heads]
+
+        # 全局池化，将节点特征聚合成图特征
+        # -> [batch_size, hidden_dim * n_heads]
+        x = global_mean_pool(x, batch)  # `batch` 张量用于区分图
+
+        # 通过最终的 MLP 得到输出
+        return self.mlp(x)
 
 
 class ElectrolyteTransformer(BaseModel):
@@ -74,7 +128,7 @@ class ElectrolyteTransformer(BaseModel):
             dropout (float): Dropout 的比率。
         """
         super().__init__(input_dim)
-        
+
         # --- 关键修改 ---
         # 1. 添加一个嵌入层，将 input_dim 映射到 hidden_dim
         self.embedding = nn.Linear(input_dim, hidden_dim)
@@ -88,8 +142,7 @@ class ElectrolyteTransformer(BaseModel):
             batch_first=True,
         )
         self.transformer_encoder = nn.TransformerEncoder(
-            encoder_layer=encoder_layer,
-            num_layers=n_layers,
+            encoder_layer=encoder_layer, num_layers=n_layers
         )
 
         # 3. 定义最终的线性输出层，输入维度为 hidden_dim
@@ -97,7 +150,7 @@ class ElectrolyteTransformer(BaseModel):
         # --- 修改结束 ---
 
     def forward(
-        self, x: torch.Tensor, mask: Optional[torch.Tensor] = None
+        self, x: torch.Tensor, mask: Optional[torch.Tensor] = None, **kwargs
     ) -> torch.Tensor:
         """
         Transformer 模型的前向传播。
@@ -113,7 +166,7 @@ class ElectrolyteTransformer(BaseModel):
         # --- 关键修改 ---
         # 1. 首先通过嵌入层
         x = self.embedding(x)
-        
+
         # 2. Transformer Encoder 处理
         out = self.transformer_encoder(src=x, src_key_padding_mask=mask)
         # --- 修改结束 ---
@@ -161,15 +214,12 @@ class ElectrolyteMLP(BaseModel):
             nn.Linear(hidden_dim // 2, 1),
         )
 
-    def forward(
-        self, x: torch.Tensor, mask: Optional[torch.Tensor] = None
-    ) -> torch.Tensor:
+    def forward(self, x: torch.Tensor, **kwargs) -> torch.Tensor:
         """
         MLP 模型的前向传播。
 
         Args:
             x (torch.Tensor): 输入张量，形状 [batch_size, seq_len, input_dim]。
-            mask (torch.Tensor, optional): 此模型中未使用掩码，但保留以保证接口统一。
 
         Returns:
             torch.Tensor: 预测的电导率，形状 [batch_size, 1]。
