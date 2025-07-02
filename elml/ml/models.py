@@ -60,7 +60,7 @@ class ElectrolyteTransformer(BaseModel):
         input_dim: int = 178,
         hidden_dim: int = 256,
         n_layers: int = 2,
-        n_heads: int = 2,  # 注意：n_heads 必须能被 input_dim 整除
+        n_heads: int = 2,
         dropout: float = 0.1,
     ):
         """
@@ -68,28 +68,33 @@ class ElectrolyteTransformer(BaseModel):
 
         Args:
             input_dim (int): 输入特征维度。
-            hidden_dim (int): Transformer 前馈网络的隐藏层维度。
+            hidden_dim (int): Transformer 模型的核心维度 (d_model)。
             n_layers (int): Transformer Encoder 的层数。
             n_heads (int): 多头注意力机制中的头数。
             dropout (float): Dropout 的比率。
         """
         super().__init__(input_dim)
+        
+        # --- 关键修改 ---
+        # 1. 添加一个嵌入层，将 input_dim 映射到 hidden_dim
+        self.embedding = nn.Linear(input_dim, hidden_dim)
 
-        # 定义 Transformer Encoder 层
+        # 2. 定义 Transformer Encoder 层，使用 hidden_dim 作为 d_model
         encoder_layer = nn.TransformerEncoderLayer(
-            d_model=input_dim,
+            d_model=hidden_dim,
             nhead=n_heads,
-            dim_feedforward=hidden_dim,
+            dim_feedforward=hidden_dim * 4,  # 通常前馈网络维度是 d_model 的 4 倍
             dropout=dropout,
-            batch_first=True,  # 确保输入形状为 [batch, seq, feature]
+            batch_first=True,
         )
         self.transformer_encoder = nn.TransformerEncoder(
             encoder_layer=encoder_layer,
             num_layers=n_layers,
         )
 
-        # 定义最终的线性输出层
-        self.fc_out = nn.Linear(input_dim, 1)
+        # 3. 定义最终的线性输出层，输入维度为 hidden_dim
+        self.fc_out = nn.Linear(hidden_dim, 1)
+        # --- 修改结束 ---
 
     def forward(
         self, x: torch.Tensor, mask: Optional[torch.Tensor] = None
@@ -105,12 +110,15 @@ class ElectrolyteTransformer(BaseModel):
         Returns:
             torch.Tensor: 预测的电导率，形状 [batch_size, 1]。
         """
-        # Transformer Encoder 需要一个 "key padding mask"
-        # 值为 True 的位置会被注意力机制忽略
+        # --- 关键修改 ---
+        # 1. 首先通过嵌入层
+        x = self.embedding(x)
+        
+        # 2. Transformer Encoder 处理
         out = self.transformer_encoder(src=x, src_key_padding_mask=mask)
+        # --- 修改结束 ---
 
         # 我们使用序列的第一个位置（类似[CLS] token）的输出来代表整个序列的特征
-        # 这是处理序列分类/回归任务的常用方法
         out = out[:, 0, :]
 
         # 通过线性层得到最终输出
