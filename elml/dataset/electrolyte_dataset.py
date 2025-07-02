@@ -34,7 +34,7 @@ class ElectrolyteDataset:
         """
         self.library: MaterialLibrary = MLibrary
         self.formulas: list[Electrolyte] = []
-        self.feature_dim = 178  # 单个节点（材料）的特征维度
+        self.feature_dim = 177  # 单个节点（材料）的特征维度 (减去1，因为比例已成为边特征)
 
         # --- GNN改造: 核心存储从Tensor列表变为图Data对象列表 ---
         self.graph_data: List[Data] = []
@@ -113,8 +113,7 @@ class ElectrolyteDataset:
 
     def get_training_data(self) -> List[Data]:
         """
-        生成GNN训练数据。
-        每个配方被转换成一个全连接的图。
+        生成GNN训练数据，包含节点特征、边索引和边特征。
         """
         graph_list: List[Data] = []
         for formula in self.formulas:
@@ -122,32 +121,49 @@ class ElectrolyteDataset:
                 "conductivity" in formula.performance
                 and formula.performance["conductivity"] is not None
             ):
-                # 1. 节点特征 (Node Features)
-                node_features = formula.get_feature_matrix()
-                if not node_features:
-                    continue  # 跳过没有材料的无效配方
+                # 1. 获取原始特征矩阵，其中包含了比例信息
+                raw_features = formula.get_feature_matrix()
+                if not raw_features:
+                    continue
 
-                x = torch.tensor(node_features, dtype=torch.float32)
+                raw_features_tensor = torch.tensor(raw_features, dtype=torch.float32)
+                
+                # 2. 分离节点特征和比例
+                # 节点特征是除了最后一个元素之外的所有元素
+                node_features = raw_features_tensor[:, :-1]
+                # 节点比例是最后一个元素
+                proportions = raw_features_tensor[:, -1]
                 num_nodes = len(node_features)
 
-                # 2. 边索引 (Edge Index) - 构建全连接图
-                # 对于N个节点，创建所有可能的自环之外的边
+                # 3. 构建边索引和边特征
                 if num_nodes > 1:
-                    edge_index = torch.tensor(
-                        list(itertools.permutations(range(num_nodes), 2)),
-                        dtype=torch.long,
-                    ).t().contiguous()
-                else:
-                    # 如果只有一个节点，没有边
-                    edge_index = torch.empty((2, 0), dtype=torch.long)
+                    # 创建所有可能的边 (i, j) where i != j
+                    senders = torch.arange(num_nodes).repeat_interleave(num_nodes - 1)
+                    receivers = torch.cat([
+                        torch.cat([
+                            torch.arange(i), torch.arange(i + 1, num_nodes)
+                        ]) for i in range(num_nodes)
+                    ])
+                    edge_index = torch.stack([senders, receivers])
 
-                # 3. 图标签 (Graph Label)
+                    # 创建边特征：[prop_i, prop_j]
+                    edge_attr = torch.stack([
+                        proportions[senders],
+                        proportions[receivers],
+                    ], dim=1)
+                else:
+                    edge_index = torch.empty((2, 0), dtype=torch.long)
+                    edge_attr = torch.empty((0, 2), dtype=torch.float32)
+
+                # 4. 图标签
                 y = torch.tensor(
                     [formula.performance["conductivity"]], dtype=torch.float32
                 )
 
-                # 4. 创建并存储图数据对象
-                graph_list.append(Data(x=x, edge_index=edge_index, y=y))
+                # 5. 创建并存储包含边特征的图数据对象
+                graph_list.append(
+                    Data(x=node_features, edge_index=edge_index, edge_attr=edge_attr, y=y)
+                )
 
         return graph_list
 

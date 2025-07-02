@@ -45,7 +45,7 @@ class ElectrolyteGNN(BaseModel):
 
     def __init__(
         self,
-        input_dim: int = 178,
+        input_dim: int = 177,  # 节点特征维度减少了1（比例被移到边上）
         hidden_dim: int = 128,
         n_heads: int = 4,
         dropout: float = 0.2,
@@ -61,11 +61,17 @@ class ElectrolyteGNN(BaseModel):
         """
         super().__init__(input_dim)
 
-        # GNN 卷积层
-        self.conv1 = GATv2Conv(input_dim, hidden_dim, heads=n_heads, dropout=dropout)
-        # 输出维度是 hidden_dim * n_heads，因为多头是拼接的
+        # GNN 卷积层，现在使用边特征
+        edge_feature_dim = 2  # [prop_i, prop_j]
+        self.conv1 = GATv2Conv(
+            input_dim, hidden_dim, heads=n_heads, dropout=dropout, edge_dim=edge_feature_dim
+        )
         self.conv2 = GATv2Conv(
-            hidden_dim * n_heads, hidden_dim, heads=n_heads, dropout=dropout
+            hidden_dim * n_heads,
+            hidden_dim,
+            heads=n_heads,
+            dropout=dropout,
+            edge_dim=edge_feature_dim,
         )
 
         # 输出的 MLP 网络
@@ -86,13 +92,18 @@ class ElectrolyteGNN(BaseModel):
         Returns:
             torch.Tensor: 预测的电导率，形状 [batch_size, 1]。
         """
-        x, edge_index, batch = data.x, data.edge_index, data.batch
+        x, edge_index, edge_attr, batch = (
+            data.x,
+            data.edge_index,
+            data.edge_attr,
+            data.batch,
+        )
 
         # -> [num_nodes, input_dim]
-        x = self.conv1(x, edge_index)
+        x = self.conv1(x, edge_index, edge_attr=edge_attr)
         x = x.relu()
         # -> [num_nodes, hidden_dim * n_heads]
-        x = self.conv2(x, edge_index)
+        x = self.conv2(x, edge_index, edge_attr=edge_attr)
         # -> [num_nodes, hidden_dim * n_heads]
 
         # 全局池化，将节点特征聚合成图特征
