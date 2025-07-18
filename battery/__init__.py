@@ -1,7 +1,7 @@
-from .models import BatteryModel
-from .anode import Anode
-from .cathode import Cathode
-from .electrolyte import Electrolyte
+from battery.models import BatteryModel, AnodeModel, CathodeModel, ElectrolyteModel
+from battery.anode import Anode
+from battery.cathode import Cathode
+from battery.electrolyte import Electrolyte
 
 
 # 电池类

@@ -5,10 +5,8 @@ build/
 dist/
 wheels/
 *.egg-info
-/tmp
-/runs
+tmp.py
 
 # Virtual environments
 .venv
 uv.lock
-test.py

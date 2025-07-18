@@ -1,4 +1,4 @@
-from .models import CathodeModel
+from battery.models import CathodeModel
 
 
 # 正极类

@@ -1,12 +1,12 @@
 from typing import TYPE_CHECKING
 
 if TYPE_CHECKING:  # 只在类型检查时导入，运行时不执行
-    from ..material import (
+    from material import (
         Material,
     )
 
-from .. import MLibrary
-from .models import ElectrolyteModel, Component
+from material import MLibrary
+from battery.models import ElectrolyteModel, Component
 
 
 # 电解液类

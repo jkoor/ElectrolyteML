@@ -1,7 +1,7 @@
 from pydantic import BaseModel, Field, model_validator, ConfigDict
 from typing import Optional
 
-from ..material.models import (
+from material.models import (
     MaterialModel,
 )
 
