@@ -28,7 +28,7 @@ class MaterialLibrary:
         self.file_path = file_path
         self.pool: Dict[str, Material] = {}  # 已创建材料实例的池
         self.material_index: Dict[str, dict] = {}  # 材料数据索引
-        self.abbr_index: Dict[str, str] = {}  # 简称到CAS号的映射
+        self.abbr_to_cas_index: Dict[str, str] = {}  # 简称到CAS号的映射
         # 定义需要标准化属性列表
         self.salt_attrs = {
             "density": [],
@@ -68,7 +68,7 @@ class MaterialLibrary:
         assert self.file_path is not None, "file_path must not be None"
         with open(self.file_path, "r", encoding="utf-8") as f:
             self.material_index = json.load(f)
-            self.abbr_index = {
+            self.abbr_to_cas_index = {
                 data["abbreviation"].lower(): cas_number
                 for cas_number, data in self.material_index.items()
             }
@@ -164,6 +164,33 @@ class MaterialLibrary:
 
         return standardized_values
 
+    def has_material(
+        self, abbr: Union[str, None] = None, cas_registry_number: Union[str, None] = None
+    ) -> bool:
+        """
+        检查材料是否存在于库中。
+        Args:
+            abbr (str): 材料简称。
+            cas_registry_number (str): 材料CAS号。
+            至少提供一个参数。
+        Returns:
+            bool: 如果材料存在，返回 True；否则返回 False。
+        """
+        if not abbr and not cas_registry_number:  # abbr x, cas x
+            raise ValueError("至少提供一个参数: abbr 或 cas_registry_number")
+        elif not cas_registry_number and abbr:  # abbr o, cas x
+            return abbr.lower() in self.abbr_to_cas_index
+        elif not abbr and cas_registry_number:  # abbr x, cas o
+            return cas_registry_number in self.material_index
+        elif abbr and cas_registry_number:  # abbr o, cas o
+            return (
+                self.abbr_to_cas_index[abbr.lower()] == cas_registry_number
+                if abbr.lower() in self.abbr_to_cas_index
+                else False
+            )
+
+        return False
+
     def get_material(
         self,
         abbr: Union[str, None] = None,
@@ -185,11 +212,11 @@ class MaterialLibrary:
         """
 
         # 检查参数，必须至少提供一个参数
-        if not abbr and not cas_registry_number:
+        if not abbr and not cas_registry_number:  # abbr x, cas x
             raise ValueError("至少提供一个参数: abbr 或 cas_registry_number")
         # 如果只提供了简称，则尝试从简称映射获取CAS号
-        if not cas_registry_number and abbr:
-            cas_from_abbr = self.abbr_index.get(abbr.lower())
+        if not cas_registry_number and abbr:  # abbr o, cas x
+            cas_from_abbr = self.abbr_to_cas_index.get(abbr.lower())
             if not cas_from_abbr:
                 raise ValueError(f"Material '{abbr}' not found in library.")
             cas_registry_number = cas_from_abbr

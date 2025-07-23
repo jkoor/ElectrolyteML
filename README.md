@@ -100,15 +100,23 @@ from elml import MLibrary
 # MLibrary 已自动加载 'data/materials.json' 中的数据
 print(f"材料库加载完成，共 {len(MLibrary)} 种材料。")
 
-# 1. 通过材料缩写 (abbr) 获取材料
+# 1. 判断材料是否存在数据库中
+MLibrary.has_material("LiPF6")  # 锂盐LiPF6
+>>> True
+MLibrary.has_material(cas_registry_number="96-49-1")  # 溶剂EC
+>>> True
+MLibrary.has_material(abbr="LiPF6", cas_registry_number="96-49-1")  # 材料缩写与CAS号不匹配
+>>> False
+
+# 2. 通过材料缩写 (abbr) 获取材料
 lipf6 = MLibrary.get_material("LiPF6")
 print(f"获取材料: {lipf6.name}, CAS号: {lipf6.cas_registry_number}")
 
-# 2. 通过 CAS 注册号获取材料
+# 3. 通过 CAS 注册号获取材料
 ec = MLibrary.get_material(cas_registry_number="96-49-1")
 print(f"获取材料: {ec.name}, 分子量: {ec.molecular_weight}")
 
-# 3. 查看材料属性
+# 4. 查看材料属性
 print(f"EC 的介电常数: {ec.dielectric_constant}")
 print(f"LiPF6 的密度: {lipf6.density} g/cm³")
 ```
