@@ -73,17 +73,30 @@ class Electrolyte:
     # ------------------------ 私有方法 ------------------------ #
 
     # ------------------------ 属性方法 ------------------------ #
-    # 1. 获取电解液配方中的锂盐
+    # 1. 从_data 中获取属性
+    @property
+    def name(self) -> str:
+        return self._data.name
+
+    @property
+    def description(self) -> str:
+        return self._data.description
+
+    @property
+    def performance(self) -> dict:
+        return self._data.performance
+
+    # 2. 获取电解液配方中的锂盐
     @property
     def salts(self) -> list["Material"]:
         return self._salts
 
-    # 2. 获取电解液配方中的溶剂
+    # 3. 获取电解液配方中的溶剂
     @property
     def solvents(self) -> list["Material"]:
         return self._solvents
 
-    # 3. 获取电解液配方中的添加剂
+    # 4. 获取电解液配方中的添加剂
     @property
     def additives(self) -> list["Material"]:
         return self._additives

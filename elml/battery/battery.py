@@ -50,6 +50,19 @@ class Battery:
     # ------------------------ 私有方法 ------------------------ #
 
     # ------------------------ 属性方法 ------------------------ #
+    # 1. 从_data 中获取属性
+    @property
+    def name(self) -> str:
+        return self._data.name
+
+    @property
+    def description(self) -> str:
+        return self._data.description
+
+    @property
+    def performance(self) -> dict:
+        return self._data.performance
+
     # 1. 获取电池正极
     @property
     def cathode(self) -> Cathode:

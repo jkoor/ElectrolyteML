@@ -53,8 +53,38 @@ class Material:
     # ------------------------ 私有方法 ------------------------ #
 
     # ------------------------ 属性方法 ------------------------ #
+    # 1. 从 _data 中获取属性
+    @property
+    def name(self) -> str:
+        """返回材料名称"""
+        return self._data.name
 
-    # 1. 计算分子指纹
+    @property
+    def abbreviation(self) -> str:
+        """返回材料缩写"""
+        return self._data.abbreviation
+
+    @property
+    def cas_registry_number(self) -> str:
+        """返回材料的 CAS 注册号"""
+        return self._data.cas_registry_number
+
+    @property
+    def description(self) -> str:
+        """返回材料描述"""
+        return self._data.description
+
+    @property
+    def material_type(self) -> str:
+        """返回材料类型"""
+        return self._data.material_type.value
+
+    @property
+    def molecular_structure(self) -> str:
+        """返回材料的分子结构 (SMILES 格式)"""
+        return self._data.molecular_structure
+
+    # 2. 计算分子指纹
     @cached_property
     def molecular_fingerprint(self) -> list[float]:
         """
@@ -72,7 +102,7 @@ class Material:
         # 将指纹转换为NumPy数组并转换为列表，供机器学习使用
         return list(fingerprint)
 
-    # 2. 计算分子量
+    # 3. 计算分子量
     @cached_property
     def molecular_weight(self):
         """
@@ -81,7 +111,7 @@ class Material:
         # return Descriptors.CalcMolDescriptors(mol).get("MolWt")
         return Descriptors.MolWt(self._mol)  # type: ignore
 
-    # 3. 获取材料分子信息
+    # 4. 获取材料分子信息
     @property
     def molecular_descriptor(self) -> dict:
         """
@@ -90,7 +120,7 @@ class Material:
 
         return Descriptors.CalcMolDescriptors(self._mol)
 
-    # 4. 获取材料分子式
+    # 5. 获取材料分子式
     @property
     def molecular_formula(self) -> str:
         """
