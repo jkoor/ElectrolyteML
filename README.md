@@ -101,11 +101,11 @@ from elml import MLibrary
 print(f"材料库加载完成，共 {len(MLibrary)} 种材料。")
 
 # 1. 通过材料缩写 (abbr) 获取材料
-lipf6 = MLibrary.get_material("LiPF6", cas_registry_number="21324-40-3")
+lipf6 = MLibrary.get_material("LiPF6")
 print(f"获取材料: {lipf6.name}, CAS号: {lipf6.cas_registry_number}")
 
 # 2. 通过 CAS 注册号获取材料
-ec = MLibrary.get_material("ec", cas_registry_number="96-49-1")
+ec = MLibrary.get_material(cas_registry_number="96-49-1")
 print(f"获取材料: {ec.name}, 分子量: {ec.molecular_weight}")
 
 # 3. 查看材料属性
@@ -126,23 +126,23 @@ print(f"LiPF6 的密度: {lipf6.density} g/cm³")
 **使用示例**:
 
 ```python
+from elml import MLibrary
 from elml.battery import Electrolyte
 
-# 1. 使用 `Electrolyte.create` 方法轻松创建新配方
-#    该方法会自动从 MLibrary 中查找并链接材料
+lipf6 = MLibrary.get_material(abbr="LiPF6")
+ec = MLibrary.get_material(abbr="EC")
+dmc = MLibrary.get_material(abbr="DMC")
+
+# 1. 使用 Electrolyte.create() 方法轻松创建新配方
 lp30_recipe = Electrolyte.create(
     name="LP30",
     id="standard-lp30",
     description="一个标准的 LiPF6 在 EC/DMC 中的电解液配方",
-    salts=[
-        # 对于盐，`overall_fraction` 是其在总溶剂质量中的重量百分比
-        {"abbr": "LiPF6", "cas_registry_number": "21324-40-3", "overall_fraction": 10.0}
-    ],
+    salts=[(lipf6, 10.0)],  #  对于盐，overall_fraction 是其在总溶剂质量中的重量百分比
     solvents=[
-        # 对于溶剂，`relative_fraction` 是其在所有溶剂中的相对体积或重量比
-        {"abbr": "EC", "cas_registry_number": "96-49-1", "relative_fraction": 50.0},
-        {"abbr": "DMC", "cas_registry_number": "616-38-6", "relative_fraction": 50.0},
-    ],
+        (ec, 50.0),
+        (dmc, 50.0),
+    ],  # 对于溶剂，relative_fraction 是其在所有溶剂中的相对体积或重量比
     additives=[],  # 也可以添加添加剂
     performance={},
 )
@@ -217,17 +217,31 @@ print(f"✅ 1. 材料库已加载，共 {len(MLibrary)} 种材料。")
 
 # --- 步骤 2: 创建一个新的电解液配方 ---
 # 假设我们要设计一个高浓度电解液
+lipf6 = MLibrary.get_material(abbr="LiPF6")
+ec = MLibrary.get_material(abbr="EC")
+dmc = MLibrary.get_material(abbr="DMC")
+vc = MLibrary.get_material(abbr="VC")
+
 my_new_recipe = Electrolyte.create(
     name="My-Custom-High-Concentration-Electrolyte",
-    salts=[{"abbr": "LiPF6", "overall_fraction": 15.0}], # 盐浓度提高到 15%
+    id="Custom-1",
+    description="A custom electrolyte with high concentration of LiPF6 and specific solvent ratios.",
+    salts=[(lipf6, 15.0)],  # 盐浓度提高到 15%
     solvents=[
-        {"abbr": "EC", "relative_fraction": 40.0},
-        {"abbr": "DMC", "relative_fraction": 60.0}
+        (ec, 40.0),
+        (dmc, 60.0),
     ],
-    additives=[{"abbr": "VC", "overall_fraction": 2.0}] # 添加 2% 的 VC 添加剂
+    additives=[(vc, 2.0)],  # 添加 2% 的 VC 添加剂
+    performance={
+        "ionic_conductivity": 12.0,
+        "viscosity": 5.0,
+        "electrochemical_window": 4.5,
+        "thermal_stability": 80.0,
+    },
 )
 print(f"✅ 2. 已创建新配方: '{my_new_recipe.name}'")
 my_new_recipe.show()
+
 
 
 # --- 步骤 3: 加载数据集并训练模型 ---

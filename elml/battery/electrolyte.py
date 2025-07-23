@@ -118,29 +118,60 @@ class Electrolyte:
         return cls(data)
 
     # 6. 使用数据模型创建电解液实例
+    # 6. 使用数据模型创建电解液实例
     @classmethod
     def create(
         cls,
         name: str,
         id: str,
         description: str,
-        salts: list[dict],
-        solvents: list[dict],
-        additives: list[dict],
+        salts: list[tuple["Material", float]],
+        solvents: list[tuple["Material", float]],
+        additives: list[tuple["Material", float]],
         performance: dict,
     ) -> "Electrolyte":
-        """使用数据模型创建电解液实例"""
+        """
+        使用数据模型创建电解液实例
+        Args:
+            name (str): 电解液名称
+            id (str): 电解液ID
+            description (str): 电解液描述
+            salts (list[tuple[Material, float]]): 锂盐列表，每个元组包含锂盐对象和其占比
+            solvents (list[tuple[Material, float]]): 溶剂列表，每个元组包含溶剂对象和其占比
+            additives (list[tuple[Material, float]]): 添加剂列表，每个元组包含添加剂对象和其占比
+            performance (dict): 性能参数
+        """
 
-        salts_component: list[Component] = [
-            Component.model_validate(salt) for salt in salts
-        ]
-        solvents_component: list[Component] = [
-            (Component.model_validate(solvent)) for solvent in solvents
-        ]
-        additives_component: list[Component] = [
-            (Component.model_validate(additive)) for additive in additives
-        ]
-
+        # 将锂盐材料转换为 Component 模型
+        salts_component: list[Component] = []
+        for salt, ratio in salts:
+            salts_component_dict = {
+                "abbr": salt.abbreviation,
+                "cas_registry_number": salt.cas_registry_number,
+                "overall_fraction": ratio,
+            }
+            salts_component.append(Component.model_validate(salts_component_dict))
+        # 将溶剂材料转换为 Component 模型
+        solvents_component: list[Component] = []
+        for solvent, ratio in solvents:
+            solvents_component_dict = {
+                "abbr": solvent.abbreviation,
+                "cas_registry_number": solvent.cas_registry_number,
+                "relative_fraction": ratio,
+            }
+            solvents_component.append(Component.model_validate(solvents_component_dict))
+        # 将添加剂材料转换为 Component 模型
+        additives_component: list[Component] = []
+        for additive, ratio in additives:
+            additives_component_dict = {
+                "abbr": additive.abbreviation,
+                "cas_registry_number": additive.cas_registry_number,
+                "overall_fraction": ratio,
+            }
+            additives_component.append(
+                Component.model_validate(additives_component_dict)
+            )
+        # 创建 ElectrolyteModel 实例
         data = ElectrolyteModel(
             name=name,
             id=id,
