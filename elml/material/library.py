@@ -1,7 +1,6 @@
 import json
 from typing import Dict, Optional, Union
 
-from ..config import MLIBRARY_STRICT_MODE
 from ..material import Material
 from .models import (
     MaterialModel,
@@ -29,6 +28,7 @@ class MaterialLibrary:
         self.file_path = file_path
         self.pool: Dict[str, Material] = {}  # 已创建材料实例的池
         self.material_index: Dict[str, dict] = {}  # 材料数据索引
+        self.abbr_index: Dict[str, str] = {}  # 简称到CAS号的映射
         # 定义需要标准化属性列表
         self.salt_attrs = {
             "density": [],
@@ -67,7 +67,11 @@ class MaterialLibrary:
         """从 JSON 文件构建材料索引"""
         assert self.file_path is not None, "file_path must not be None"
         with open(self.file_path, "r", encoding="utf-8") as f:
-            self.material_index = json.load(f).get("data", {})
+            self.material_index = json.load(f)
+            self.abbr_index = {
+                data["abbreviation"].lower(): cas_number
+                for cas_number, data in self.material_index.items()
+            }
 
     def _precompute_standardized_values(self):
         """对所有材料属性进行标准化"""
@@ -161,7 +165,9 @@ class MaterialLibrary:
         return standardized_values
 
     def get_material(
-        self, abbr: str, cas_registry_number: str, strict=MLIBRARY_STRICT_MODE
+        self,
+        abbr: Union[str, None] = None,
+        cas_registry_number: Union[str, None] = None,
     ) -> Material:
         """
         按需加载材料。
@@ -169,6 +175,7 @@ class MaterialLibrary:
         Args:
             abbr (str): 材料简称。
             cas_registry_number (str): 材料CAS号。
+            至少提供一个参数。
 
         Returns:
             Union[Salt, Solvent, Additive]: 对应的材料实例。
@@ -177,13 +184,24 @@ class MaterialLibrary:
             ValueError: 如果材料不存在或类型未知。
         """
 
+        # 检查参数，必须至少提供一个参数
+        if not abbr and not cas_registry_number:
+            raise ValueError("至少提供一个参数: abbr 或 cas_registry_number")
+        # 如果只提供了简称，则尝试从简称映射获取CAS号
+        if not cas_registry_number and abbr:
+            cas_from_abbr = self.abbr_index.get(abbr.lower())
+            if not cas_from_abbr:
+                raise ValueError(f"Material '{abbr}' not found in library.")
+            cas_registry_number = cas_from_abbr
+
         if cas_registry_number not in self.material_index:
             raise ValueError(
                 f"Material {abbr}[{cas_registry_number}] not found in library."
             )
 
         material: dict = self.material_index[cas_registry_number]
-        if material["abbreviation"].lower() != abbr.lower() and strict:
+        # 如果提供了简称，检查简称是否匹配
+        if abbr and material["abbreviation"].lower() != abbr.lower():
             raise ValueError(
                 f"Material [{cas_registry_number}] found in library but is named {material['abbr']}."
             )
