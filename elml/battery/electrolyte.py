@@ -118,7 +118,6 @@ class Electrolyte:
         return cls(data)
 
     # 6. 使用数据模型创建电解液实例
-    # 6. 使用数据模型创建电解液实例
     @classmethod
     def create(
         cls,

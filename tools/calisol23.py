@@ -2,17 +2,16 @@ from typing import Optional
 
 import pandas as pd
 
-from source.SALT import LIPF6, LIFSI, LITFSI, LIBF4
-from source.SOLVENT import EC, DMC, DEC, PC, EMC, DME, EA, MA
-from src.models.battery import Electrolyte
-from src.models.materials import Solvent, Salt
-from src.models.base import SolventModel, SaltModel
+from elml import MLibrary
+from elml.battery import Electrolyte
+from elml.material import Material
+from elml.dataset import ElectrolyteDataset
 
 
 def solvent_weight_ratio(
-    solvents: list[tuple[SolventModel, float]],
+    solvents: list[tuple[Material, float]],
     unit_type: str = "w",  # w: weight, v: volume, mol: molar
-) -> list[tuple[SolventModel, float]]:
+) -> list[tuple[Material, float]]:
     """
     将溶剂的体积比转换为质量比
 
@@ -26,24 +25,24 @@ def solvent_weight_ratio(
     # 输入为质量比，总和为 1
     if unit_type == "w":
         total_mass = sum(ratio for solvent, ratio in solvents)
-        components: list[tuple[SolventModel, float]] = [
+        components: list[tuple[Material, float]] = [
             (solvent, round(ratio / total_mass * 100, 2)) for solvent, ratio in solvents
         ]
     # 输入为体积比，总和为 1
     elif unit_type == "v":
         total_mass = sum(ratio * solvent.density for solvent, ratio in solvents)
-        components: list[tuple[SolventModel, float]] = [
+        components: list[tuple[Material, float]] = [
             (solvent, round(ratio * solvent.density / total_mass * 100, 2))
             for solvent, ratio in solvents
         ]
     elif unit_type == "mol":
         total_mass = sum(
-            ratio * Solvent(solvent).molecular_weight for solvent, ratio in solvents
+            ratio * solvent.molecular_weight for solvent, ratio in solvents
         )
-        components: list[tuple[SolventModel, float]] = [
+        components: list[tuple[Material, float]] = [
             (
                 solvent,
-                round(ratio * Solvent(solvent).molecular_weight / total_mass * 100, 2),
+                round(ratio * solvent.molecular_weight / total_mass * 100, 2),
             )
             for solvent, ratio in solvents
         ]
@@ -54,10 +53,10 @@ def solvent_weight_ratio(
 
 
 def salt_weight_ratio(
-    salts: list[tuple[SaltModel, float]],
+    salts: list[tuple[Material, float]],
     unit_type: str = "w",  # w: mol/kg, v: mol/L
-    solvents: Optional[list[tuple[SolventModel, float]]] = None,
-) -> list[tuple[SaltModel, float]]:
+    solvents: Optional[list[tuple[Material, float]]] = None,
+) -> list[tuple[Material, float]]:
     """
     将摩尔占比转换为重量占比
 
@@ -71,10 +70,10 @@ def salt_weight_ratio(
 
     # 输入为摩尔质量比
     if unit_type == "w":
-        components: list[tuple[SaltModel, float]] = [
+        components: list[tuple[Material, float]] = [
             (
                 salt,
-                round((ratio * Salt(salt).molecular_weight / 10), 2),
+                round((ratio * salt.molecular_weight / 10), 2),
             )
             for salt, ratio in salts
         ]
@@ -87,7 +86,7 @@ def salt_weight_ratio(
         components = [
             (
                 salt,
-                round((ratio * Salt(salt).molecular_weight / (total_mass * 10)), 2),
+                round((ratio * salt.molecular_weight / (total_mass * 10)), 2),
             )
             for salt, ratio in salts
         ]
@@ -95,23 +94,8 @@ def salt_weight_ratio(
     return components
 
 
-MaterialMAP = {
-    "LIPF6": LIPF6,
-    "LIFSI": LIFSI,
-    "LITFSI": LITFSI,
-    "LIBF4": LIBF4,
-    "EC": EC,
-    "DMC": DMC,
-    "DEC": DEC,
-    "PC": PC,
-    "EMC": EMC,
-    "DME": DME,
-    "EA": EA,
-    "MA": MA,
-}
-
 # 读取数据
-df = pd.read_csv("database/calisol23_DOI_10.11583DTU.c.6929599.csv")
+df = pd.read_csv("data/calisol23.csv")
 
 # 筛选特定字段值
 filter_salt = ["LIPF6", "LIFSI", "LITFSI", "LIBF4"]
@@ -167,29 +151,41 @@ df.columns = [
     "o_Xylene",
 ]
 
+dataset = ElectrolyteDataset()
+
 # 按行遍历数据
 for row in df.itertuples():
+    # 如果该配方的导电率为0，则跳过该配方
+    if getattr(row, "k") == 0:
+        continue
+
     # 获取锂盐及其比例
-    salt_model: SaltModel = MaterialMAP[str(getattr(row, "salt")).upper()]
+    salt: Material = MLibrary.get_material(abbr=str(getattr(row, "salt")))
 
     # 获取所有非零溶剂及其比例
-    solvents_init: list[tuple[SolventModel, float]] = []
+    has_unknown_solvent = False  # 是否有未知溶剂
+    solvents_init: list[tuple[Material, float]] = []
     solvent_columns = df.columns[8:48]  # 从EC列到o_Xylene列
-    for solvent in solvent_columns:
-        if getattr(row, solvent) != 0 and solvent in MaterialMAP:
-            solvent_model: SolventModel = MaterialMAP[solvent]
-            solvents_init.append((solvent_model, getattr(row, solvent)))
+    for abbr in solvent_columns:
+        # 如果该溶剂的比例不为0，则添加到列表中
+        if getattr(row, abbr) != 0:
+            # 如果数据库中没有该溶剂的简称，则跳过该配方
+            if not MLibrary.has_material(abbr=abbr):
+                has_unknown_solvent = True
+                continue
+            solvent: Material = MLibrary.get_material(abbr=abbr)
+            solvents_init.append((solvent, getattr(row, abbr)))
 
-    if not solvents_init:
+    if has_unknown_solvent or solvents_init == []:
         continue
 
     # 计算溶剂重量比例
-    solvents: list[tuple[SolventModel, float]] = solvent_weight_ratio(
+    solvents: list[tuple[Material, float]] = solvent_weight_ratio(
         solvents_init, getattr(row, "solvent_ratio_type")
     )
 
     # 计算锂盐重量比例
-    salts_init: list[tuple[SaltModel, float]] = [(salt_model, getattr(row, "c"))]
+    salts_init: list[tuple[Material, float]] = [(salt, getattr(row, "c"))]
 
     if salts_init[0][1] <= 0:
         continue
@@ -201,12 +197,12 @@ for row in df.itertuples():
     else:
         raise ValueError(f"unit_type 参数错误: {getattr(row, 'c_unit')}")
 
-    salts: list[tuple[SaltModel, float]] = salt_weight_ratio(
+    salts: list[tuple[Material, float]] = salt_weight_ratio(
         salts_init, salt_unit_type, solvents
     )
 
-    Electrolyte.create(
-        name=f"{salt_model.abbreviation} + {', '.join(solvent.abbreviation for solvent, _ in solvents)}",
+    el: Electrolyte = Electrolyte.create(
+        name=f"{salt.abbreviation} + {', '.join(solvent.abbreviation for solvent, _ in solvents)}",
         id=str(getattr(row, "c")),
         description=getattr(row, "doi"),
         salts=salts,
@@ -218,10 +214,6 @@ for row in df.itertuples():
         },
     )
 
-# Electrolyte.to_jsons("database/electrolyte.json")
+    dataset.add_formula(el, refresh=False)
 
-# ec = (EC, 1)
-# emc = (EMC, 1)
-# result_0 = solvent_weight_ratio([ec, emc], "v")
-# result_1 = salt_weight_ratio([(LIPF6, 1)], "v", result_0)
-pass
+dataset.to_json("data/calisol23.json")

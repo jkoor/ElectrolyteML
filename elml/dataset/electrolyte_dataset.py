@@ -34,7 +34,9 @@ class ElectrolyteDataset:
         """
         self.library: MaterialLibrary = MLibrary
         self.formulas: list[Electrolyte] = []
-        self.feature_dim = 177  # 单个节点（材料）的特征维度 (减去1，因为比例已成为边特征)
+        self.feature_dim = (
+            177  # 单个节点（材料）的特征维度 (减去1，因为比例已成为边特征)
+        )
 
         # --- GNN改造: 核心存储从Tensor列表变为图Data对象列表 ---
         self.graph_data: List[Data] = []
@@ -49,8 +51,8 @@ class ElectrolyteDataset:
 
     # ------------------------ 魔术方法 ------------------------ #
     def __len__(self) -> int:
-        """返回数据集的样本总数 (图的数量)"""
-        return len(self.graph_data)
+        """返回数据集的样本总数"""
+        return len(self.formulas)
 
     def __getitem__(self, idx: int) -> Data:
         """
@@ -127,7 +129,7 @@ class ElectrolyteDataset:
                     continue
 
                 raw_features_tensor = torch.tensor(raw_features, dtype=torch.float32)
-                
+
                 # 2. 分离节点特征和比例
                 # 节点特征是除了最后一个元素之外的所有元素
                 node_features = raw_features_tensor[:, :-1]
@@ -139,18 +141,22 @@ class ElectrolyteDataset:
                 if num_nodes > 1:
                     # 创建所有可能的边 (i, j) where i != j
                     senders = torch.arange(num_nodes).repeat_interleave(num_nodes - 1)
-                    receivers = torch.cat([
-                        torch.cat([
-                            torch.arange(i), torch.arange(i + 1, num_nodes)
-                        ]) for i in range(num_nodes)
-                    ])
+                    receivers = torch.cat(
+                        [
+                            torch.cat([torch.arange(i), torch.arange(i + 1, num_nodes)])
+                            for i in range(num_nodes)
+                        ]
+                    )
                     edge_index = torch.stack([senders, receivers])
 
                     # 创建边特征：[prop_i, prop_j]
-                    edge_attr = torch.stack([
-                        proportions[senders],
-                        proportions[receivers],
-                    ], dim=1)
+                    edge_attr = torch.stack(
+                        [
+                            proportions[senders],
+                            proportions[receivers],
+                        ],
+                        dim=1,
+                    )
                 else:
                     edge_index = torch.empty((2, 0), dtype=torch.long)
                     edge_attr = torch.empty((0, 2), dtype=torch.float32)
@@ -162,7 +168,9 @@ class ElectrolyteDataset:
 
                 # 5. 创建并存储包含边特征的图数据对象
                 graph_list.append(
-                    Data(x=node_features, edge_index=edge_index, edge_attr=edge_attr, y=y)
+                    Data(
+                        x=node_features, edge_index=edge_index, edge_attr=edge_attr, y=y
+                    )
                 )
 
         return graph_list
@@ -178,7 +186,7 @@ class ElectrolyteDataset:
             if "conductivity" not in f.performance
             or f.performance["conductivity"] is None
         ]
-        
+
         graph_candidates: List[Data] = []
         for c in candidates:
             node_features = c.get_feature_matrix()
@@ -189,13 +197,17 @@ class ElectrolyteDataset:
             num_nodes = len(node_features)
 
             if num_nodes > 1:
-                edge_index = torch.tensor(
-                    list(itertools.permutations(range(num_nodes), 2)),
-                    dtype=torch.long,
-                ).t().contiguous()
+                edge_index = (
+                    torch.tensor(
+                        list(itertools.permutations(range(num_nodes), 2)),
+                        dtype=torch.long,
+                    )
+                    .t()
+                    .contiguous()
+                )
             else:
                 edge_index = torch.empty((2, 0), dtype=torch.long)
-            
+
             # 对于待预测的样本，y可以省略或设为-1
             graph_candidates.append(Data(x=x, edge_index=edge_index))
 
