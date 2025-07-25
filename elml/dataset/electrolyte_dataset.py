@@ -45,7 +45,7 @@ class ElectrolyteDataset(Dataset):
         self.MAX_COMPONENTS = max_components
         self.FEATURE_DIM = (
             3 + 166 + 8
-        )  # 材料类型(3), 分子指纹(166), 物化性质(8), 组分占比(1) = 178
+        )  # 材料类型(3), 分子指纹(166), 物化性质(8), 组分占比(1) = 177
 
         if dataset_file:
             self.from_json(dataset_file)
@@ -200,8 +200,8 @@ class ElectrolyteDataset(Dataset):
         """
         为序列模型（如Transformer）生成特征张量。
         输出形状为 (MAX_COMPONENTS, FEATURE_DIM + 1)，+1是为占比信息准备的维度。
-        材料类型(3), 分子指纹(166), 物化性质(8), 组分占比(1) = 178
-        [[材料类型(3), 分子指纹(166), 物化性质(8), 组分占比(1)], ...]
+        分子指纹(166), 材料类型(3), 物化性质(8), 组分占比(1) = 178
+        [[分子指纹(166), 材料类型(3), 物化性质(8), 组分占比(1)], ...]
         """
         # 1. 初始化一个全零的张量用于填充
         # +1 的维度用来存放每个组分的摩尔分数
@@ -221,13 +221,13 @@ class ElectrolyteDataset(Dataset):
 
             standardized_features_tensor = torch.tensor(
                 material.standardized_feature_values, dtype=torch.float32
-            )  # 材料类型(3) + 分子指纹(166) + 物化性质(8)
+            )  # 分子指纹(166) + 材料类型(3) + 物化性质(8)
             fraction_tensor = torch.tensor(
                 [electrolyte.proportions[i] * 0.01], dtype=torch.float32
             )  # 组分占比(1)
 
             # 将材料特征和其占比信息拼接在一起
-            # 材料类型(3), 分子指纹(166), 物化性质(8), 组分占比(1)
+            # 分子指纹(166), 材料类型(3), 物化性质(8), 组分占比(1)
             final_component_vector = torch.cat(
                 [
                     standardized_features_tensor,
@@ -269,9 +269,11 @@ class ElectrolyteDataset(Dataset):
         """
         为单个电解液对象生成目标张量。
         """
-        # log(1+x)变换
-        target_value = torch.log1p(electrolyte.performance.get(self.target_metric, 0.0))
-        return torch.tensor(target_value, dtype=torch.float32)
+        target_value = electrolyte.performance.get(self.target_metric, 0.0)
+        # 对目标值进行 log1p 变换：log(1 + σ)
+        # 这样可以避免电导率为0时的数学错误，同时保持数值稳定性
+        target_value = torch.log1p(torch.tensor(target_value, dtype=torch.float32))
+        return target_value
 
     @staticmethod
     def create_splits(

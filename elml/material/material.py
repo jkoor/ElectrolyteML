@@ -141,17 +141,17 @@ class Material:
             "Solvent": [0, 1, 0],
             "Additive": [0, 0, 1],
         }
+        fingerprint: list[float] = self.molecular_fingerprint  # 分子指纹(166)
         type_list: list[float] = _material_type_vector_map[
             self.material_type
         ]  # 材料类型(3)
-        fingerprint: list[float] = self.molecular_fingerprint  # 分子指纹(166)
         standardized_features: list[float] = list(
             MLibrary.get_standardized_value(self).values()
         )  # 物化性质(8)
 
         # 合并特征
-        # 材料类型(3), 分子指纹(166), 物化性质(8)
-        features: list[float] = type_list + fingerprint + standardized_features
+        # 分子指纹(166), 材料类型(3), 物化性质(8)
+        features: list[float] = fingerprint + type_list + standardized_features
         return features
 
     # ------------------------ 类方法 ------------------------ #

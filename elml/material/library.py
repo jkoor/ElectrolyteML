@@ -33,6 +33,7 @@ class MaterialLibrary:
         self.salt_attrs = {
             "density": [],
             "melting_point": [],
+            "boiling_point": [],
             "solubility": [],
             "anion_size": [],
             "dissociation_constant": [],
@@ -47,13 +48,17 @@ class MaterialLibrary:
             "viscosity": [],
             "dipole_moment": [],
             "electrochemical_window": [],
+            "hydrogen_bonding": [],
         }
         self.additive_attrs = {
             "density": [],
             "melting_point": [],
             "boiling_point": [],
-            "reduction_potential": [],
-            "oxidation_potential": [],
+            "dielectric_constant": [],
+            "viscosity": [],
+            "dipole_moment": [],
+            "electrochemical_window": [],
+            "hydrogen_bonding": [],
         }
         if file_path:
             self._build_index()
