@@ -8,7 +8,7 @@ train_ds, val_ds, test_ds = ElectrolyteDataset.create_splits(
 )
 
 # 2. 初始化模型
-model = ElectrolyteTransformer(input_dim=178, model_dim=256, nhead=8)
+model = ElectrolyteTransformer(input_dim=179, model_dim=256, nhead=8)
 
 # 3. 创建工作流
 workflow = TrainingWorkflow(

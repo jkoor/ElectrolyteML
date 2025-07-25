@@ -95,6 +95,7 @@ class Material:
         # fingerprint = mfpgen.GetFingerprint(mol)
 
         # 使用MACCSkeys指纹生成分子指纹
+        # 分子指纹长度166，为了编程方便（Python索引从0开始），实际上是一个167位的向量
         fingerprint = MACCSkeys._pyGenMACCSKeys(self._mol)
 
         # 将指纹转换为NumPy数组并转换为列表，供机器学习使用
@@ -141,7 +142,7 @@ class Material:
             "Solvent": [0, 1, 0],
             "Additive": [0, 0, 1],
         }
-        fingerprint: list[float] = self.molecular_fingerprint  # 分子指纹(166)
+        fingerprint: list[float] = self.molecular_fingerprint  # 分子指纹(167)
         type_list: list[float] = _material_type_vector_map[
             self.material_type
         ]  # 材料类型(3)
@@ -150,7 +151,7 @@ class Material:
         )  # 物化性质(8)
 
         # 合并特征
-        # 分子指纹(166), 材料类型(3), 物化性质(8)
+        # 分子指纹(167), 材料类型(3), 物化性质(8)
         features: list[float] = fingerprint + type_list + standardized_features
         return features
 

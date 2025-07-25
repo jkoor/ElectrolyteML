@@ -10,13 +10,13 @@ class ElectrolyteMLP(nn.Module):
     输入是一个固定长度的向量，代表整个电解液的平均特性。
     """
 
-    def __init__(self, input_dim: int = 177, output_dim: int = 1):
+    def __init__(self, input_dim: int = 178, output_dim: int = 1):
         """
         初始化MLP模型。
 
         Args:
             input_dim (int): 输入特征的维度。
-                             根据 `ElectrolyteDataset`，该值为 3+166+8 = 177。
+                             根据 `ElectrolyteDataset`，该值为 3+167+8 = 178。
             output_dim (int): 输出的维度，通常为1（预测的目标值）。
         """
         super().__init__()
@@ -91,7 +91,7 @@ class ElectrolyteTransformer(nn.Module):
 
     def __init__(
         self,
-        input_dim: int = 178,
+        input_dim: int = 179,  # 3 (材料类型) + 166 (分子指纹) + 8 (物化性质) + 1 (组分占比)
         model_dim: int = 256,
         nhead: int = 8,
         num_encoder_layers: int = 4,
@@ -104,7 +104,7 @@ class ElectrolyteTransformer(nn.Module):
 
         Args:
             input_dim (int): 输入序列中每个元素的特征维度。
-                             根据 `ElectrolyteDataset`，该值为 177 (特征) + 1 (占比) = 178。
+                             根据 `ElectrolyteDataset`，该值为 178 (特征) + 1 (占比) = 179。
             model_dim (int): Transformer模型内部的特征维度 (d_model)。
             nhead (int): 多头注意力机制中的头数。
             num_encoder_layers (int): Transformer编码器的层数。

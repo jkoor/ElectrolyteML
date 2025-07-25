@@ -43,9 +43,7 @@ class ElectrolyteDataset(Dataset):
         self.feature_mode = feature_mode
         self.target_metric = target_metric
         self.MAX_COMPONENTS = max_components
-        self.FEATURE_DIM = (
-            3 + 166 + 8
-        )  # 材料类型(3), 分子指纹(166), 物化性质(8), 组分占比(1) = 177
+        self.FEATURE_DIM = 3 + 167 + 8  # 材料类型(3), 分子指纹(167), 物化性质(8) = 178
 
         if dataset_file:
             self.from_json(dataset_file)
@@ -199,12 +197,11 @@ class ElectrolyteDataset(Dataset):
     def _generate_sequence_features(self, electrolyte: Electrolyte) -> torch.Tensor:
         """
         为序列模型（如Transformer）生成特征张量。
-        输出形状为 (MAX_COMPONENTS, FEATURE_DIM + 1)，+1是为占比信息准备的维度。
-        分子指纹(166), 材料类型(3), 物化性质(8), 组分占比(1) = 178
-        [[分子指纹(166), 材料类型(3), 物化性质(8), 组分占比(1)], ...]
+        输出形状为 (MAX_COMPONENTS, FEATURE_DIM+1)
+        分子指纹(167), 材料类型(3), 物化性质(8), 组分占比(1) = 179
+        [[分子指纹(167), 材料类型(3), 物化性质(8), 组分占比(1)], ...]
         """
         # 1. 初始化一个全零的张量用于填充
-        # +1 的维度用来存放每个组分的摩尔分数
         sequence_tensor = torch.zeros(
             self.MAX_COMPONENTS, self.FEATURE_DIM + 1, dtype=torch.float32
         )
@@ -221,13 +218,13 @@ class ElectrolyteDataset(Dataset):
 
             standardized_features_tensor = torch.tensor(
                 material.standardized_feature_values, dtype=torch.float32
-            )  # 分子指纹(166) + 材料类型(3) + 物化性质(8)
+            )  # 分子指纹(167) + 材料类型(3) + 物化性质(8)
             fraction_tensor = torch.tensor(
                 [electrolyte.proportions[i] * 0.01], dtype=torch.float32
             )  # 组分占比(1)
 
             # 将材料特征和其占比信息拼接在一起
-            # 分子指纹(166), 材料类型(3), 物化性质(8), 组分占比(1)
+            # 分子指纹(167), 材料类型(3), 物化性质(8), 组分占比(1)
             final_component_vector = torch.cat(
                 [
                     standardized_features_tensor,
