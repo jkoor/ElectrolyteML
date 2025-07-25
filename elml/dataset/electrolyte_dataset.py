@@ -45,6 +45,11 @@ class ElectrolyteDataset(Dataset):
         self.MAX_COMPONENTS = max_components
         self.FEATURE_DIM = 3 + 167 + 8  # 材料类型(3), 分子指纹(167), 物化性质(8) = 178
 
+        # 温度归一化参数 (单位：K)
+        # 针对锂电池电解液的实用温度范围
+        self.TEMP_MIN = 223.15  # -50°C（低温性能测试）
+        self.TEMP_MAX = 373.15  # 100°C（高温性能测试）
+
         if dataset_file:
             self.from_json(dataset_file)
 
@@ -68,10 +73,10 @@ class ElectrolyteDataset(Dataset):
         # 3. 获取目标值（例如电导率），并转换为张量
         target_tensor = self._generate_target_tensor(electrolyte)
 
-        # 获取温度信息
-        temperature = torch.tensor(
-            [electrolyte.performance["temperature"]], dtype=torch.float32
-        )
+        # 获取温度信息并标准化
+        raw_temperature = electrolyte.performance["temperature"]  # 假设单位为K
+        normalized_temp = self._normalize_temperature(raw_temperature)
+        temperature = torch.tensor([normalized_temp], dtype=torch.float32)
 
         return feature_tensor, temperature, target_tensor
 
@@ -181,6 +186,76 @@ class ElectrolyteDataset(Dataset):
         new_dataset = ElectrolyteDataset()
         new_dataset.formulas = [f for f in self.formulas]  # 浅拷贝配方列表
         return new_dataset
+
+    # ------------------------ 温度处理方法 ------------------------ #
+    def _normalize_temperature(self, temperature_k: float) -> float:
+        """
+        将温度标准化到 [0, 1] 范围
+
+        Args:
+            temperature_k (float): 温度值，单位为开尔文(K)
+
+        Returns:
+            float: 标准化后的温度值 [0, 1]
+        """
+        # 限制温度在合理范围内
+        temp_clamped = max(self.TEMP_MIN, min(self.TEMP_MAX, temperature_k))
+
+        # 标准化到 [0, 1]
+        normalized = (temp_clamped - self.TEMP_MIN) / (self.TEMP_MAX - self.TEMP_MIN)
+
+        return normalized
+
+    def get_temperature_statistics(self) -> dict:
+        """
+        获取数据集中温度的统计信息
+        """
+        temperatures = []
+        for formula in self.formulas:
+            if (
+                "temperature" in formula.performance
+                and formula.performance["temperature"] is not None
+            ):
+                temperatures.append(formula.performance["temperature"])
+
+        if not temperatures:
+            return {"count": 0}
+
+        return {
+            "count": len(temperatures),
+            "min_k": min(temperatures),
+            "max_k": max(temperatures),
+            "mean_k": sum(temperatures) / len(temperatures),
+            "min_c": min(temperatures) - 273.15,
+            "max_c": max(temperatures) - 273.15,
+            "mean_c": (sum(temperatures) / len(temperatures)) - 273.15,
+            "normalization_range": f"{self.TEMP_MIN}K - {self.TEMP_MAX}K",
+            "out_of_range_count": sum(
+                1 for t in temperatures if t < self.TEMP_MIN or t > self.TEMP_MAX
+            ),
+        }
+
+    def validate_temperature_range(self):
+        """
+        验证数据集中的温度是否在归一化范围内
+        """
+        stats = self.get_temperature_statistics()
+
+        if stats["count"] == 0:
+            print("警告：数据集中没有温度数据")
+            return
+
+        print("温度统计信息：")
+        print(f"  样本数量: {stats['count']}")
+        print(
+            f"  温度范围: {stats['min_k']:.2f}K - {stats['max_k']:.2f}K ({stats['min_c']:.2f}°C - {stats['max_c']:.2f}°C)"
+        )
+        print(f"  归一化范围: {self.TEMP_MIN}K - {self.TEMP_MAX}K")
+
+        if stats["out_of_range_count"] > 0:
+            print(f"  警告：{stats['out_of_range_count']} 个样本的温度超出归一化范围")
+        else:
+            print("  ✓ 所有温度样本都在归一化范围内")
 
     # ------------------------ 特征提取方法 ------------------------ #
     def _generate_feature_tensor(self, electrolyte: Electrolyte) -> torch.Tensor:
