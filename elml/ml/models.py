@@ -1,240 +1,175 @@
+import math
 import torch
 import torch.nn as nn
-from typing import Optional
-from torch_geometric.nn import GATv2Conv, global_mean_pool
-from torch_geometric.data import Data, Batch
 
 
-class BaseModel(nn.Module):
+class ElectrolyteMLP(nn.Module):
     """
-    所有机器学习模型的基类。
-    它定义了一个标准的接口，以便与 Trainer 和 Predictor 类兼容。
+    一个简单的多层感知机（MLP），用于处理加权平均后的电解液特征。
+
+    输入是一个固定长度的向量，代表整个电解液的平均特性。
     """
 
-    def __init__(self, input_dim: Optional[int] = None):
+    def __init__(self, input_dim: int = 177, output_dim: int = 1):
         """
-        初始化基类。
+        初始化MLP模型。
 
         Args:
-            input_dim (int, optional): 单个输入项（例如一个材料）的特征维度。
-                                       对于GNN，此参数可能不是必需的，因为特征维度在图数据中定义。
+            input_dim (int): 输入特征的维度。
+                             根据 `ElectrolyteDataset`，该值为 3+166+8 = 177。
+            output_dim (int): 输出的维度，通常为1（预测的目标值）。
         """
         super().__init__()
-        self.input_dim = input_dim
-
-    def forward(self, x, **kwargs) -> torch.Tensor:
-        """
-        定义模型的前向传播逻辑。
-        这是一个通用签名，以适应不同类型的输入。
-        """
-        raise NotImplementedError("每个子类都必须实现自己的 forward 方法！")
-
-    def predict(self, x, **kwargs) -> torch.Tensor:
-        """
-        定义模型的推理（预测）逻辑。
-        """
-        self.eval()  # 切换到评估模式
-        with torch.no_grad():
-            return self.forward(x, **kwargs)
-
-
-class ElectrolyteGNN(BaseModel):
-    """
-    一个基于图注意力网络 (GATv2) 的模型，用于预测电解液电导率。
-    """
-
-    def __init__(
-        self,
-        input_dim: int = 177,  # 节点特征维度减少了1（比例被移到边上）
-        hidden_dim: int = 128,
-        n_heads: int = 4,
-        dropout: float = 0.2,
-    ):
-        """
-        初始化 GNN 模型。
-
-        Args:
-            input_dim (int): 输入节点特征的维度。
-            hidden_dim (int): GNN层和MLP的隐藏维度。
-            n_heads (int): 图注意力机制的头数。
-            dropout (float): Dropout 比率。
-        """
-        super().__init__(input_dim)
-
-        # GNN 卷积层，现在使用边特征
-        edge_feature_dim = 2  # [prop_i, prop_j]
-        self.conv1 = GATv2Conv(
-            input_dim, hidden_dim, heads=n_heads, dropout=dropout, edge_dim=edge_feature_dim
-        )
-        self.conv2 = GATv2Conv(
-            hidden_dim * n_heads,
-            hidden_dim,
-            heads=n_heads,
-            dropout=dropout,
-            edge_dim=edge_feature_dim,
-        )
-
-        # 输出的 MLP 网络
-        self.mlp = nn.Sequential(
-            nn.Linear(hidden_dim * n_heads, hidden_dim),
+        self.model = nn.Sequential(
+            nn.Linear(input_dim, 256),
             nn.ReLU(),
-            nn.Dropout(dropout),
-            nn.Linear(hidden_dim, 1),
+            nn.Dropout(0.2),
+            nn.Linear(256, 128),
+            nn.ReLU(),
+            nn.Dropout(0.2),
+            nn.Linear(128, 64),
+            nn.ReLU(),
+            nn.Linear(64, output_dim),
         )
 
-    def forward(self, data: Batch, **kwargs) -> torch.Tensor:
+    def forward(self, x: torch.Tensor) -> torch.Tensor:
         """
-        GNN 模型的前向传播。
+        MLP的前向传播。
 
         Args:
-            data (torch_geometric.data.Batch): PyG DataLoader 提供的批处理图数据。
+            x (torch.Tensor): 输入张量，形状为 (batch_size, input_dim)。
 
         Returns:
-            torch.Tensor: 预测的电导率，形状 [batch_size, 1]。
+            torch.Tensor: 模型的输出，形状为 (batch_size, output_dim)。
         """
-        x, edge_index, edge_attr, batch = (
-            data.x,
-            data.edge_index,
-            data.edge_attr,
-            data.batch,
+        return self.model(x)
+
+
+class PositionalEncoding(nn.Module):
+    """
+    为Transformer模型注入位置信息。
+    """
+
+    def __init__(self, d_model: int, dropout: float = 0.1, max_len: int = 20):
+        super().__init__()
+        self.dropout = nn.Dropout(p=dropout)
+
+        # 修复：创建适合batch_first=True的位置编码
+        pe = torch.zeros(max_len, d_model)  # [max_len, d_model]
+        position = torch.arange(0, max_len, dtype=torch.float).unsqueeze(1)
+
+        div_term = torch.exp(
+            torch.arange(0, d_model, 2).float() * (-math.log(10000.0) / d_model)
         )
 
-        # -> [num_nodes, input_dim]
-        x = self.conv1(x, edge_index, edge_attr=edge_attr)
-        x = x.relu()
-        # -> [num_nodes, hidden_dim * n_heads]
-        x = self.conv2(x, edge_index, edge_attr=edge_attr)
-        # -> [num_nodes, hidden_dim * n_heads]
+        pe[:, 0::2] = torch.sin(position * div_term)
+        pe[:, 1::2] = torch.cos(position * div_term)
 
-        # 全局池化，将节点特征聚合成图特征
-        # -> [batch_size, hidden_dim * n_heads]
-        x = global_mean_pool(x, batch)  # `batch` 张量用于区分图
+        # 注册为buffer，形状为 [max_len, d_model]
+        self.register_buffer("pe", pe)
 
-        # 通过最终的 MLP 得到输出
-        return self.mlp(x)
+    def forward(self, x: torch.Tensor) -> torch.Tensor:
+        """
+        Args:
+            x: [batch_size, seq_len, d_model]
+        Returns:
+            x: [batch_size, seq_len, d_model]
+        """
+        seq_len = x.size(1)
+        # pe[:seq_len] 形状为 [seq_len, d_model]
+        # 广播到 [batch_size, seq_len, d_model]
+        x = x + self.pe[:seq_len].unsqueeze(0)
+        return self.dropout(x)
 
 
-class ElectrolyteTransformer(BaseModel):
+class ElectrolyteTransformer(nn.Module):
     """
-    一个基于 Transformer Encoder 的模型，用于预测电解液电导率。
-    它能有效捕捉配方中不同材料之间的相互作用。
+    一个基于Transformer的序列模型，用于处理电解液的组分序列特征。
+
+    输入是一个变长的序列，每个元素代表一种材料及其占比。
     """
 
     def __init__(
         self,
         input_dim: int = 178,
-        hidden_dim: int = 256,
-        n_layers: int = 2,
-        n_heads: int = 2,
-        dropout: float = 0.1,
+        model_dim: int = 256,
+        nhead: int = 8,
+        num_encoder_layers: int = 4,
+        dim_feedforward: int = 512,
+        dropout: float = 0.2,
+        output_dim: int = 1,
     ):
         """
-        初始化 Transformer 模型。
+        初始化Transformer模型。
 
         Args:
-            input_dim (int): 输入特征维度。
-            hidden_dim (int): Transformer 模型的核心维度 (d_model)。
-            n_layers (int): Transformer Encoder 的层数。
-            n_heads (int): 多头注意力机制中的头数。
-            dropout (float): Dropout 的比率。
+            input_dim (int): 输入序列中每个元素的特征维度。
+                             根据 `ElectrolyteDataset`，该值为 177 (特征) + 1 (占比) = 178。
+            model_dim (int): Transformer模型内部的特征维度 (d_model)。
+            nhead (int): 多头注意力机制中的头数。
+            num_encoder_layers (int): Transformer编码器的层数。
+            dim_feedforward (int): 前馈网络（FFN）的维度。
+            dropout (float): Dropout的比率。
+            output_dim (int): 输出的维度，通常为1。
         """
-        super().__init__(input_dim)
+        super().__init__()
+        self.model_dim = model_dim
 
-        # --- 关键修改 ---
-        # 1. 添加一个嵌入层，将 input_dim 映射到 hidden_dim
-        self.embedding = nn.Linear(input_dim, hidden_dim)
+        # 1. 输入层：将输入特征维度映射到模型内部维度
+        self.input_embedding = nn.Linear(input_dim, model_dim)
 
-        # 2. 定义 Transformer Encoder 层，使用 hidden_dim 作为 d_model
+        # 2. 位置编码
+        self.pos_encoder = PositionalEncoding(model_dim, dropout)
+
+        # 3. Transformer编码器
         encoder_layer = nn.TransformerEncoderLayer(
-            d_model=hidden_dim,
-            nhead=n_heads,
-            dim_feedforward=hidden_dim * 4,  # 通常前馈网络维度是 d_model 的 4 倍
+            d_model=model_dim,
+            nhead=nhead,
+            dim_feedforward=dim_feedforward,
             dropout=dropout,
-            batch_first=True,
+            batch_first=True,  # 使用 batch_first=True
         )
         self.transformer_encoder = nn.TransformerEncoder(
-            encoder_layer=encoder_layer, num_layers=n_layers
+            encoder_layer, num_layers=num_encoder_layers
         )
 
-        # 3. 定义最终的线性输出层，输入维度为 hidden_dim
-        self.fc_out = nn.Linear(hidden_dim, 1)
-        # --- 修改结束 ---
+        # 4. 输出层：将Transformer的输出映射到最终预测值
+        self.output_layer = nn.Linear(model_dim, output_dim)
 
     def forward(
-        self, x: torch.Tensor, mask: Optional[torch.Tensor] = None, **kwargs
+        self, src: torch.Tensor, src_padding_mask: torch.Tensor = None
     ) -> torch.Tensor:
         """
-        Transformer 模型的前向传播。
+        Transformer的前向传播。
 
         Args:
-            x (torch.Tensor): 输入张量，形状 [batch_size, seq_len, input_dim]。
-            mask (torch.Tensor): 填充掩码，形状 [batch_size, seq_len]。
-                                 值为 True 的位置代表是填充项，需要被忽略。
+            src (torch.Tensor): 输入序列张量，形状为 (batch_size, seq_len, input_dim)。
+            src_padding_mask (torch.Tensor, optional): 用于屏蔽填充部分的掩码。
+                                                       形状为 (batch_size, seq_len)。
 
         Returns:
-            torch.Tensor: 预测的电导率，形状 [batch_size, 1]。
+            torch.Tensor: 模型的输出，形状为 (batch_size, output_dim)。
         """
-        # --- 关键修改 ---
-        # 1. 首先通过嵌入层
-        x = self.embedding(x)
+        # 1. 输入嵌入
+        embedded = self.input_embedding(src) * math.sqrt(self.model_dim)
 
-        # 2. Transformer Encoder 处理
-        out = self.transformer_encoder(src=x, src_key_padding_mask=mask)
-        # --- 修改结束 ---
+        # 2. 添加位置编码 - 修复后可以正常使用
+        embedded = self.pos_encoder(embedded)
 
-        # 我们使用序列的第一个位置（类似[CLS] token）的输出来代表整个序列的特征
-        out = out[:, 0, :]
-
-        # 通过线性层得到最终输出
-        return self.fc_out(out)
-
-
-class ElectrolyteMLP(BaseModel):
-    """
-    一个基于多层感知机 (MLP) 的模型。
-    它将所有材料的特征展平后，通过全连接网络进行预测。
-    """
-
-    def __init__(
-        self,
-        input_dim: int = 178,
-        seq_len: int = 5,
-        hidden_dim: int = 512,
-        dropout: float = 0.3,
-    ):
-        """
-        初始化 MLP 模型。
-
-        Args:
-            input_dim (int): 单个材料的特征维度。
-            seq_len (int): 序列长度（即配方中材料的最大数量）。
-            hidden_dim (int): 隐藏层的维度。
-            dropout (float): Dropout 的比率。
-        """
-        super().__init__(input_dim)
-        self.flatten_dim = input_dim * seq_len
-
-        # 定义一个序列化的全连接网络
-        self.net = nn.Sequential(
-            nn.Linear(self.flatten_dim, hidden_dim),
-            nn.ReLU(),
-            nn.Dropout(dropout),
-            nn.Linear(hidden_dim, hidden_dim // 2),
-            nn.ReLU(),
-            nn.Dropout(dropout),
-            nn.Linear(hidden_dim // 2, 1),
+        # 3. Transformer编码器
+        transformer_output = self.transformer_encoder(
+            embedded, src_key_padding_mask=src_padding_mask
         )
 
-    def forward(self, x: torch.Tensor, **kwargs) -> torch.Tensor:
-        """
-        MLP 模型的前向传播。
+        # 4. 序列聚合 (现有逻辑很好)
+        if src_padding_mask is not None:
+            mask = ~src_padding_mask.unsqueeze(-1).bool()
+            masked_output = transformer_output * mask
+            valid_lengths = mask.sum(dim=1)
+            aggregated_output = masked_output.sum(dim=1) / valid_lengths
+        else:
+            aggregated_output = transformer_output.mean(dim=1)
 
-        Args:
-            x (torch.Tensor): 输入张量，形状 [batch_size, seq_len, input_dim]。
-
-        Returns:
-            torch.Tensor: 预测的电导率，形状 [batch_size, 1]。
-        """
-        # 将 [batch_size, seq_len, input_dim] 展平为 [batch_size, seq_len * input_dim]
-        x = x.view(x.size(0), -1)
-        return self.net(x)
+        # 5. 输出预测
+        output = self.output_layer(aggregated_output)
+        return output
