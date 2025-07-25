@@ -106,19 +106,25 @@ class TrainingWorkflow:
         start_time = time.time()
 
         for batch_data in loader:
-            if len(batch_data) == 3:  # Transformer with mask
-                features, targets, padding_mask = batch_data
+            # 现在数据集返回 (features, temperature, targets)
+            if len(batch_data) == 3:
+                features, temperature, targets = batch_data
                 features = features.to(self.device)
-                targets = targets.to(self.device) 
-                padding_mask = padding_mask.to(self.device)
-                
-                outputs = self.model(features, src_padding_mask=padding_mask)
-            else:  # MLP without mask
-                features, targets = batch_data
-                features = features.to(self.device)
+                temperature = temperature.to(self.device)
                 targets = targets.to(self.device)
                 
-                outputs = self.model(features)
+                # 判断模型类型并调用相应的forward方法
+                if isinstance(self.model, ElectrolyteTransformer):
+                    # 为Transformer模型创建padding mask
+                    # 检查features中全零的行，这些是填充的位置
+                    padding_mask = (features.sum(dim=-1) == 0)  # [batch_size, seq_len]
+                    outputs = self.model(features, temperature, src_padding_mask=padding_mask)
+                else:
+                    # 对于MLP模型，temperature需要与features拼接
+                    # 注意：这里假设MLP模型也需要温度信息，可能需要修改MLP模型
+                    outputs = self.model(features)
+            else:
+                raise ValueError(f"Expected 3 elements in batch_data, got {len(batch_data)}")
 
             with torch.set_grad_enabled(is_train):
                 loss = self.criterion(outputs.squeeze(), targets)
@@ -191,14 +197,26 @@ class TrainingWorkflow:
         print(f"Evaluation Loss: {loss:.4f}")
         return loss
 
-    def predict(self, features: torch.Tensor) -> torch.Tensor:
+    def predict(self, features: torch.Tensor, temperature: torch.Tensor) -> torch.Tensor:
         """
         使用模型进行预测。
+        
+        Args:
+            features: 特征张量
+            temperature: 温度张量
         """
         self.model.eval()
         with torch.no_grad():
             features = features.to(self.device)
-            outputs = self.model(features)
+            temperature = temperature.to(self.device)
+            
+            if isinstance(self.model, ElectrolyteTransformer):
+                # 为Transformer模型创建padding mask
+                padding_mask = (features.sum(dim=-1) == 0)
+                outputs = self.model(features, temperature, src_padding_mask=padding_mask)
+            else:
+                # MLP模型暂时只用features（可能需要后续修改）
+                outputs = self.model(features)
         return outputs
 
     def predict_dataset(self, dataset: Dataset, return_targets: bool = False):
@@ -211,15 +229,18 @@ class TrainingWorkflow:
         self.model.eval()
         with torch.no_grad():
             for batch_data in loader:
-                if len(batch_data) == 3:  # With mask
-                    features, targets, mask = batch_data
+                if len(batch_data) == 3:
+                    features, temperature, targets = batch_data
                     features = features.to(self.device)
-                    mask = mask.to(self.device)
-                    outputs = self.model(features, src_padding_mask=mask)
+                    temperature = temperature.to(self.device)
+                    
+                    if isinstance(self.model, ElectrolyteTransformer):
+                        padding_mask = (features.sum(dim=-1) == 0)
+                        outputs = self.model(features, temperature, src_padding_mask=padding_mask)
+                    else:
+                        outputs = self.model(features)
                 else:
-                    features, targets = batch_data
-                    features = features.to(self.device)
-                    outputs = self.model(features)
+                    raise ValueError(f"Expected 3 elements in batch_data, got {len(batch_data)}")
                 
                 all_predictions.append(outputs.cpu())
                 if return_targets:
