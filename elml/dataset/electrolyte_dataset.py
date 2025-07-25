@@ -54,7 +54,7 @@ class ElectrolyteDataset(Dataset):
         return len(self.formulas)
 
     # 在 ElectrolyteDataset 类内部
-    def __getitem__(self, idx: int) -> tuple[torch.Tensor, torch.Tensor]:
+    def __getitem__(self, idx: int) -> tuple[torch.Tensor, torch.Tensor, torch.Tensor]:
         """
         使数据集支持下标访问。
         为模型训练提供一个样本，包括特征和目标。
@@ -68,7 +68,12 @@ class ElectrolyteDataset(Dataset):
         # 3. 获取目标值（例如电导率），并转换为张量
         target_tensor = self._generate_target_tensor(electrolyte)
 
-        return feature_tensor, target_tensor
+        # 获取温度信息
+        temperature = torch.tensor(
+            [electrolyte.performance["temperature"]], dtype=torch.float32
+        )
+
+        return feature_tensor, temperature, target_tensor
 
     def __iter__(self):
         """支持迭代访问"""

@@ -136,14 +136,29 @@ class ElectrolyteTransformer(nn.Module):
         # 4. 输出层：将Transformer的输出映射到最终预测值
         self.output_layer = nn.Linear(model_dim, output_dim)
 
+        # 温度编码器
+        self.temperature_encoder = nn.Sequential(
+            nn.Linear(1, model_dim // 4),
+            nn.ReLU(),
+            nn.Linear(model_dim // 4, model_dim),
+        )
+
+        # 融合层
+        self.fusion_layer = nn.Sequential(
+            nn.Linear(model_dim * 2, model_dim),
+            nn.ReLU(),
+            nn.Dropout(dropout),
+        )
+
     def forward(
-        self, src: torch.Tensor, src_padding_mask: torch.Tensor = None
+        self, src: torch.Tensor, temperature: torch.Tensor, src_padding_mask: torch.Tensor = None
     ) -> torch.Tensor:
         """
         Transformer的前向传播。
 
         Args:
             src (torch.Tensor): 输入序列张量，形状为 (batch_size, seq_len, input_dim)。
+            temperature: [batch_size, 1] 温度值
             src_padding_mask (torch.Tensor, optional): 用于屏蔽填充部分的掩码。
                                                        形状为 (batch_size, seq_len)。
 
@@ -170,6 +185,15 @@ class ElectrolyteTransformer(nn.Module):
         else:
             aggregated_output = transformer_output.mean(dim=1)
 
-        # 5. 输出预测
-        output = self.output_layer(aggregated_output)
+        # 5. 温度编码
+        temperature_encoded = self.temperature_encoder(temperature)  # [batch_size, model_dim]
+
+        # 6. 融合配方特征和温度特征
+        fused_features = torch.cat(
+            [aggregated_output, temperature_encoded], dim=-1
+        )  # [batch_size, model_dim*2]
+        fused_output = self.fusion_layer(fused_features)  # [batch_size, model_dim]
+
+        # 7. 输出预测
+        output = self.output_layer(fused_output)
         return output
