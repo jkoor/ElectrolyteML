@@ -1,6 +1,5 @@
 from functools import cached_property
-from rdkit.Chem import MACCSkeys, Descriptors, MolFromSmiles, rdMolDescriptors
-
+from rdkit.Chem import MACCSkeys, Descriptors, MolFromSmiles, rdMolDescriptors  # type: ignore
 from .models import MaterialModel
 
 
@@ -11,7 +10,6 @@ class Material:
         "_mol",
         "_fingerprint",
         "_molecular_weight",
-        "ml_features",
     )
 
     def __init__(self, data: MaterialModel):
@@ -128,6 +126,33 @@ class Material:
         """
         mol = MolFromSmiles(self.molecular_structure)
         return rdMolDescriptors.CalcMolFormula(mol)
+
+    # 6. 获取材料标准化的特征张量
+    @cached_property
+    def standardized_feature_values(self) -> list[float]:
+        """
+        返回材料的标准化特征张量。
+        """
+        from .. import MLibrary
+
+        # 类型映射字典
+        _material_type_vector_map: dict[str, list[float]] = {
+            "Salt": [1, 0, 0],
+            "Solvent": [0, 1, 0],
+            "Additive": [0, 0, 1],
+        }
+        type_list: list[float] = _material_type_vector_map[
+            self.material_type
+        ]  # 材料类型(3)
+        fingerprint: list[float] = self.molecular_fingerprint  # 分子指纹(166)
+        standardized_features: list[float] = list(
+            MLibrary.get_standardized_value(self).values()
+        )  # 物化性质(8)
+
+        # 合并特征
+        # 材料类型(3), 分子指纹(166), 物化性质(8)
+        features: list[float] = type_list + fingerprint + standardized_features
+        return features
 
     # ------------------------ 类方法 ------------------------ #
 

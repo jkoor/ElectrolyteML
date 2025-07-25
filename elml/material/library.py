@@ -131,7 +131,7 @@ class MaterialLibrary:
                             value if value is not None else 0,
                         )
 
-    def get_standardized_value(self, material: Material) -> dict:
+    def get_standardized_value(self, material: Material) -> dict[str, float]:
         """
         获取标准化值。
         """
@@ -165,7 +165,9 @@ class MaterialLibrary:
         return standardized_values
 
     def has_material(
-        self, abbr: Union[str, None] = None, cas_registry_number: Union[str, None] = None
+        self,
+        abbr: Union[str, None] = None,
+        cas_registry_number: Union[str, None] = None,
     ) -> bool:
         """
         检查材料是否存在于库中。

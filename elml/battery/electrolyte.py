@@ -235,27 +235,3 @@ class Electrolyte:
             self.performance["electrochemical_window"] = electrochemical_window  # V
         if thermal_stability is not None:
             self.performance["thermal_stability"] = thermal_stability  # ℃
-
-    # 5. 获取电解液配方的特征矩阵
-    def get_feature_matrix(self) -> list[list[float]]:
-        """返回每个材料的类型嵌入 + 特定属性 + 指纹 + 占比"""
-        raw_features = []
-        for i, material in enumerate(self.salts + self.solvents + self.additives):
-            # 类型映射字典
-            _material_type_vector_map: dict[str, list] = {
-                "Salt": [1, 0, 0],
-                "Solvent": [0, 1, 0],
-                "Additive": [0, 0, 1],
-            }
-            type_embedding: list[float] = _material_type_vector_map[
-                material.material_type
-            ]
-            attrs_dict: dict[str, float] = MLibrary.get_standardized_value(material)
-            attrs_list: list[float] = list(attrs_dict.values())
-            prop = self.proportions[i] * 0.01  # 占比转换为小数
-            # 合并特征
-            features: list[float] = (
-                type_embedding + attrs_list + material.molecular_fingerprint + [prop]
-            )
-            raw_features.append(features)
-        return raw_features

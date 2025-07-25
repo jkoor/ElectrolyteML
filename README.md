@@ -180,7 +180,16 @@ from elml.battery import Electrolyte  # 用于创建待预测的配方
 dataset = ElectrolyteDataset("data/calisol23.json")
 print(f"数据集加载成功，包含 {len(dataset)} 个电解液样本。")
 
-# 2. 训练一个性能预测模型
+# 2. 按要求划分训练集，验证集，测试集
+train_dataset, val_dataset, test_dataset = ElectrolyteDataset.create_splits(
+    dataset_file="data/calisol23/calisol23.json",
+    target_metric="conductivity",
+    train_frac=0.7,
+    val_frac=0.2,
+    random_seed=42,
+)
+
+# 3. 训练一个性能预测模型
 #    模型可以是 'transformer' 或 'mlp'
 history = dataset.train_model(
     model="transformer",
