@@ -10,13 +10,13 @@ class ElectrolyteMLP(nn.Module):
     输入是一个固定长度的向量，代表整个电解液的平均特性。
     """
 
-    def __init__(self, input_dim: int = 178, output_dim: int = 1):
+    def __init__(self, input_dim: int = 179, output_dim: int = 1):
         """
         初始化MLP模型。
 
         Args:
             input_dim (int): 输入特征的维度。
-                             根据 `ElectrolyteDataset`，该值为 3+167+8 = 178。
+                             根据 `ElectrolyteDataset`，该值为 3+167+8+1 = 179。
             output_dim (int): 输出的维度，通常为1（预测的目标值）。
         """
         super().__init__()

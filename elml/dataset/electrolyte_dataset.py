@@ -43,7 +43,9 @@ class ElectrolyteDataset(Dataset):
         self.feature_mode = feature_mode
         self.target_metric = target_metric
         self.MAX_COMPONENTS = max_components
-        self.FEATURE_DIM = 3 + 167 + 8  # 材料类型(3), 分子指纹(167), 物化性质(8) = 178
+        self.FEATURE_DIM = (
+            3 + 167 + 8 + 1
+        )  # 材料类型(3), 分子指纹(167), 物化性质(8), 占比-Transformer序列模型/温度-简单模型(1) = 179
 
         # 温度归一化参数 (单位：K)
         # 针对锂电池电解液的实用温度范围
@@ -283,7 +285,7 @@ class ElectrolyteDataset(Dataset):
         """
         # 1. 初始化一个全零的张量用于填充
         sequence_tensor = torch.zeros(
-            self.MAX_COMPONENTS, self.FEATURE_DIM + 1, dtype=torch.float32
+            self.MAX_COMPONENTS, self.FEATURE_DIM, dtype=torch.float32
         )
 
         # 添加锂盐
@@ -325,7 +327,12 @@ class ElectrolyteDataset(Dataset):
         # 初始化加权平均特征向量
         weighted_features = torch.zeros(self.FEATURE_DIM, dtype=torch.float32)
 
-        # 获取所有组分和对应的摩尔分数
+        # 获取温度信息并标准化
+        raw_temperature = electrolyte.performance["temperature"]  # 假设单位为K
+        normalized_temp = self._normalize_temperature(raw_temperature)
+        temperature = torch.tensor([normalized_temp], dtype=torch.float32)
+
+        # 获取所有组分和对应的质量占比
         all_materials = electrolyte.salts + electrolyte.solvents + electrolyte.additives
 
         for i, material in enumerate(all_materials):
@@ -334,11 +341,11 @@ class ElectrolyteDataset(Dataset):
                 material.standardized_feature_values, dtype=torch.float32
             )
 
-            # 获取组分的摩尔分数（转换为小数）
+            # 获取组分的质量占比（转换为小数）
             weight = electrolyte.proportions[i] * 0.01
 
             # 加权累加到总特征向量
-            weighted_features += material_features * weight
+            weighted_features += torch.cat([material_features * weight, temperature])
 
         return weighted_features
 
