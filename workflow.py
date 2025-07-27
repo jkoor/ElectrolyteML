@@ -1,15 +1,22 @@
 from elml.dataset import ElectrolyteDataset
-from elml.ml.models import ElectrolyteTransformer
+from elml.ml.models import ElectrolyteTransformer, ElectrolyteMLP
 from elml.ml.workflow import TrainingWorkflow
 from analysis_prediction import analyze_predictions
 
+USE_MODEL = "mlp"
+
+feature_mode = "sequence" if USE_MODEL == "transformer" else "weighted_average"
+
 # 1. 准备数据
 train_ds, val_ds, test_ds = ElectrolyteDataset.create_splits(
-    "data/calisol23/calisol23.json", feature_mode="sequence"
+    "data/calisol23/calisol23.json", feature_mode=feature_mode
 )
 
 # 2. 初始化模型
-model = ElectrolyteTransformer(input_dim=179, model_dim=256, nhead=8)
+transformer_model = ElectrolyteTransformer(input_dim=179, model_dim=256, nhead=8)
+mlp_model = ElectrolyteMLP(input_dim=179, output_dim=1)
+model = transformer_model if USE_MODEL == "transformer" else mlp_model
+log_dir = "runs/transformer" if USE_MODEL == "transformer" else "runs/mlp"
 
 # 3. 创建工作流
 workflow = TrainingWorkflow(
@@ -19,6 +26,7 @@ workflow = TrainingWorkflow(
     test_dataset=test_ds,
     batch_size=32,
     lr=1e-4,
+    log_dir=log_dir,
 )
 
 # 4. 训练模型

@@ -1,16 +1,20 @@
+import os
+import time
 import torch
 import torch.nn as nn
 from torch.utils.data import DataLoader, Dataset
 from torch.optim import AdamW, Adam, SGD
 from torch.optim.lr_scheduler import ReduceLROnPlateau
-import time
-import os
-from typing import Optional, Union
 import torch.nn.functional as F
+from typing import Optional, Union
+import warnings
+
 from sklearn.metrics import r2_score, mean_absolute_error
 
-# 假设模型定义在 .models 中
 from .models import ElectrolyteMLP, ElectrolyteTransformer
+
+# 过滤PyTorch嵌套张量的警告
+warnings.filterwarnings("ignore", message=".*nested tensors is in prototype stage.*")
 
 
 class TrainingWorkflow:
@@ -76,9 +80,13 @@ class TrainingWorkflow:
                 self.model.parameters(), lr=lr, weight_decay=weight_decay
             )
         elif optimizer_name == "adam":
-            self.optimizer = Adam(self.model.parameters(), lr=lr, weight_decay=weight_decay)
+            self.optimizer = Adam(
+                self.model.parameters(), lr=lr, weight_decay=weight_decay
+            )
         elif optimizer_name == "sgd":
-            self.optimizer = SGD(self.model.parameters(), lr=lr, weight_decay=weight_decay)
+            self.optimizer = SGD(
+                self.model.parameters(), lr=lr, weight_decay=weight_decay
+            )
         else:
             raise ValueError(f"Unsupported optimizer: {optimizer_name}")
 
@@ -92,10 +100,10 @@ class TrainingWorkflow:
 
         # 初始化历史记录
         self.history = {
-            'train_loss': [],
-            'val_loss': [],
-            'train_metrics': [],
-            'val_metrics': []
+            "train_loss": [],
+            "val_loss": [],
+            "train_metrics": [],
+            "val_metrics": [],
         }
 
     def _run_epoch(self, loader: DataLoader, is_train: bool = True):
@@ -112,19 +120,23 @@ class TrainingWorkflow:
                 features = features.to(self.device)
                 temperature = temperature.to(self.device)
                 targets = targets.to(self.device)
-                
+
                 # 判断模型类型并调用相应的forward方法
                 if isinstance(self.model, ElectrolyteTransformer):
                     # 为Transformer模型创建padding mask
                     # 检查features中全零的行，这些是填充的位置
-                    padding_mask = (features.sum(dim=-1) == 0)  # [batch_size, seq_len]
-                    outputs = self.model(features, temperature, src_padding_mask=padding_mask)
+                    padding_mask = features.sum(dim=-1) == 0  # [batch_size, seq_len]
+                    outputs = self.model(
+                        features, temperature, src_padding_mask=padding_mask
+                    )
                 else:
                     # 对于MLP模型，temperature需要与features拼接
                     # 注意：这里假设MLP模型也需要温度信息，可能需要修改MLP模型
                     outputs = self.model(features)
             else:
-                raise ValueError(f"Expected 3 elements in batch_data, got {len(batch_data)}")
+                raise ValueError(
+                    f"Expected 3 elements in batch_data, got {len(batch_data)}"
+                )
 
             with torch.set_grad_enabled(is_train):
                 loss = self.criterion(outputs.squeeze(), targets)
@@ -183,8 +195,8 @@ class TrainingWorkflow:
                 break
 
             # 记录历史
-            self.history['train_loss'].append(train_loss)
-            self.history['val_loss'].append(val_loss)
+            self.history["train_loss"].append(train_loss)
+            self.history["val_loss"].append(val_loss)
 
         print("Training finished.")
         print(f"Best validation loss: {best_val_loss:.4f}")
@@ -197,10 +209,12 @@ class TrainingWorkflow:
         print(f"Evaluation Loss: {loss:.4f}")
         return loss
 
-    def predict(self, features: torch.Tensor, temperature: torch.Tensor) -> torch.Tensor:
+    def predict(
+        self, features: torch.Tensor, temperature: torch.Tensor
+    ) -> torch.Tensor:
         """
         使用模型进行预测。
-        
+
         Args:
             features: 特征张量
             temperature: 温度张量
@@ -209,11 +223,13 @@ class TrainingWorkflow:
         with torch.no_grad():
             features = features.to(self.device)
             temperature = temperature.to(self.device)
-            
+
             if isinstance(self.model, ElectrolyteTransformer):
                 # 为Transformer模型创建padding mask
-                padding_mask = (features.sum(dim=-1) == 0)
-                outputs = self.model(features, temperature, src_padding_mask=padding_mask)
+                padding_mask = features.sum(dim=-1) == 0
+                outputs = self.model(
+                    features, temperature, src_padding_mask=padding_mask
+                )
             else:
                 # MLP模型暂时只用features（可能需要后续修改）
                 outputs = self.model(features)
@@ -222,10 +238,10 @@ class TrainingWorkflow:
     def predict_dataset(self, dataset: Dataset, return_targets: bool = False):
         """对整个数据集进行预测"""
         loader = DataLoader(dataset, batch_size=self.batch_size, shuffle=False)
-        
+
         all_predictions = []
         all_targets = []
-        
+
         self.model.eval()
         with torch.no_grad():
             for batch_data in loader:
@@ -233,21 +249,25 @@ class TrainingWorkflow:
                     features, temperature, targets = batch_data
                     features = features.to(self.device)
                     temperature = temperature.to(self.device)
-                    
+
                     if isinstance(self.model, ElectrolyteTransformer):
-                        padding_mask = (features.sum(dim=-1) == 0)
-                        outputs = self.model(features, temperature, src_padding_mask=padding_mask)
+                        padding_mask = features.sum(dim=-1) == 0
+                        outputs = self.model(
+                            features, temperature, src_padding_mask=padding_mask
+                        )
                     else:
                         outputs = self.model(features)
                 else:
-                    raise ValueError(f"Expected 3 elements in batch_data, got {len(batch_data)}")
-                
+                    raise ValueError(
+                        f"Expected 3 elements in batch_data, got {len(batch_data)}"
+                    )
+
                 all_predictions.append(outputs.cpu())
                 if return_targets:
                     all_targets.append(targets)
-        
+
         predictions = torch.cat(all_predictions, dim=0)
-        
+
         if return_targets:
             targets = torch.cat(all_targets, dim=0)
             return predictions, targets
@@ -281,25 +301,20 @@ class TrainingWorkflow:
         mae = mean_absolute_error(targets_np, outputs_np)
         r2 = r2_score(targets_np, outputs_np)
 
-        return {
-            'mse': mse,
-            'mae': mae,
-            'r2': r2,
-            'rmse': mse ** 0.5
-        }
+        return {"mse": mse, "mae": mae, "r2": r2, "rmse": mse**0.5}
 
     def plot_training_history(self):
         """绘制训练曲线"""
         import matplotlib.pyplot as plt
-        
+
         plt.figure(figsize=(12, 4))
-        
+
         plt.subplot(1, 2, 1)
-        plt.plot(self.history['train_loss'], label='Train Loss')
-        plt.plot(self.history['val_loss'], label='Val Loss')
+        plt.plot(self.history["train_loss"], label="Train Loss")
+        plt.plot(self.history["val_loss"], label="Val Loss")
         plt.legend()
-        plt.title('Training Loss')
-        
+        plt.title("Training Loss")
+
         plt.subplot(1, 2, 2)
         # 添加其他指标的绘制
         plt.show()
