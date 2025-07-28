@@ -322,7 +322,7 @@ class ElectrolyteDataset(Dataset):
         weighted_features = torch.zeros(self.FEATURE_DIM, dtype=torch.float32)
 
         # 获取温度信息并标准化
-        raw_temperature = electrolyte.performance["temperature"]  # 假设单位为K
+        raw_temperature = electrolyte.condition["temperature"]  # 假设单位为K
         normalized_temp = self._normalize_temperature(raw_temperature)
         temperature = torch.tensor([normalized_temp], dtype=torch.float32)
 
@@ -366,7 +366,7 @@ class ElectrolyteDataset(Dataset):
         target_tensor = self._generate_target_tensor(electrolyte)
 
         # 获取温度信息并标准化
-        raw_temperature = electrolyte.performance["temperature"]  # 假设单位为K
+        raw_temperature = electrolyte.condition["temperature"]  # 假设单位为K
         normalized_temp = self._normalize_temperature(raw_temperature)
         temperature = torch.tensor([normalized_temp], dtype=torch.float32)
 
@@ -399,7 +399,11 @@ class ElectrolyteDataset(Dataset):
         """
 
         # 1. 创建一个临时数据集实例以加载和筛选数据
-        temp_dataset = ElectrolyteDataset(dataset_file=dataset_file)
+        temp_dataset = ElectrolyteDataset(
+            dataset_file=dataset_file,
+            feature_mode=feature_mode,
+            target_metric=target_metric,
+        )
 
         # 2. 筛选出所有包含有效性能标签的样本，这是我们划分的基础
         labeled_formulas = temp_dataset.get_formulas_with_performance(

@@ -30,7 +30,10 @@ class ElectrolyteModel(BaseModel):
     model_config = ConfigDict(
         use_enum_values=True,  # 使用枚举值而不是名称
     )
-    performance: dict = Field(..., description="电解液性能参数，如电导率、离子传输数等")
+    condition: dict[str, float] = Field(..., description="电解液配方条件")
+    performance: dict[str, float] = Field(
+        ..., description="电解液性能参数，如电导率、离子传输数等"
+    )
 
     @model_validator(mode="after")
     def compute_fraction(self):
@@ -84,6 +87,13 @@ class ElectrolyteModel(BaseModel):
             else:
                 raise ValueError("必须提供溶剂的相对占比")
 
+        return self
+
+    # 验证condition是否包含温度
+    @model_validator(mode="after")
+    def validate_condition(self):
+        if "temperature" not in self.condition:
+            self.condition["temperature"] = 298.15
         return self
 
 

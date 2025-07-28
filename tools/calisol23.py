@@ -218,11 +218,11 @@ for idx, row in df.iterrows():
         additives=[],
         performance={
             "conductivity": row["k"],
-            "temperature": row["T"],
         },
+        condition={"temperature": row["T"]},
     )
 
-    dataset.add_formula(el, refresh=False)
+    dataset.add_formula(el)
 
 
 json_filepath = filepath.replace(".csv", ".json")

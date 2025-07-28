@@ -83,6 +83,10 @@ class Electrolyte:
         return self._data.description
 
     @property
+    def condition(self) -> dict:
+        return self._data.condition
+
+    @property
     def performance(self) -> dict:
         return self._data.performance
 
@@ -127,7 +131,8 @@ class Electrolyte:
         salts: list[tuple["Material", float]],
         solvents: list[tuple["Material", float]],
         additives: list[tuple["Material", float]],
-        performance: dict,
+        performance: dict[str, float],
+        condition: dict[str, float] = {"temperature": 298.15},
     ) -> "Electrolyte":
         """
         使用数据模型创建电解液实例
@@ -138,6 +143,7 @@ class Electrolyte:
             salts (list[tuple[Material, float]]): 锂盐列表，每个元组包含锂盐对象和其占比
             solvents (list[tuple[Material, float]]): 溶剂列表，每个元组包含溶剂对象和其占比
             additives (list[tuple[Material, float]]): 添加剂列表，每个元组包含添加剂对象和其占比
+            condition (dict): 测试条件 默认值为 {"temperature": 298.15}
             performance (dict): 性能参数
         """
 
@@ -179,6 +185,7 @@ class Electrolyte:
             solvents=solvents_component,
             additives=additives_component,
             performance=performance,
+            condition=condition,
         )
 
         return cls(data)
@@ -218,20 +225,3 @@ class Electrolyte:
     def to_dict(self) -> dict:
         """序列化为 dict"""
         return self._data.model_dump(mode="json")
-
-    # 4. 添加性能参数
-    def set_performance(
-        self,
-        ionic_conductivity=None,
-        viscosity=None,
-        electrochemical_window=None,
-        thermal_stability=None,
-    ):
-        if ionic_conductivity is not None:
-            self.performance["ionic_conductivity"] = ionic_conductivity  # mS/cm
-        if viscosity is not None:
-            self.performance["viscosity"] = viscosity  # cP
-        if electrochemical_window is not None:
-            self.performance["electrochemical_window"] = electrochemical_window  # V
-        if thermal_stability is not None:
-            self.performance["thermal_stability"] = thermal_stability  # ℃

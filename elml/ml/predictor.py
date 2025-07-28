@@ -68,53 +68,9 @@ class ElectrolytePredictor:
         except Exception as e:
             raise RuntimeError(f"Failed to load model from {checkpoint_path}: {e}")
 
-    def print_prediction_result(self, electrolyte, predicted_conductivity):
-        """打印预测结果的格式化输出"""
-
-        print("=== 电解液预测结果 ===")
-        print(f"配方ID: {electrolyte.id}")
-        print(
-            f"配方名称: {electrolyte.name if hasattr(electrolyte, 'name') else '未命名'}"
-        )
-
-        print("\n组成:")
-        # 显示组分信息
-        total_idx = 0
-
-        if electrolyte.salts:
-            print("  锂盐:")
-            for i, salt in enumerate(electrolyte.salts):
-                proportion = electrolyte.proportions[total_idx + i]
-                print(f"    {salt.name}: {proportion:.1f}%")
-            total_idx += len(electrolyte.salts)
-
-        if electrolyte.solvents:
-            print("  溶剂:")
-            for i, solvent in enumerate(electrolyte.solvents):
-                proportion = electrolyte.proportions[total_idx + i]
-                print(f"    {solvent.name}: {proportion:.1f}%")
-            total_idx += len(electrolyte.solvents)
-
-        if electrolyte.additives:
-            print("  添加剂:")
-            for i, additive in enumerate(electrolyte.additives):
-                proportion = electrolyte.proportions[total_idx + i]
-                print(f"    {additive.name}: {proportion:.1f}%")
-
-        # 显示条件
-        temperature_k = electrolyte.performance.get("temperature", 298.15)
-        print("\n测试条件:")
-        print(f"  温度: {temperature_k}K ({temperature_k - 273.15:.1f}°C)")
-
-        # 显示预测结果
-        print("\n预测结果:")
-        print(f"  电导率: {predicted_conductivity:.6f} S/cm")
-        print(f"  电导率: {predicted_conductivity * 1000:.3f} mS/cm")
-
     def predict_single_formula(
         self,
         electrolyte: Electrolyte,
-        temperature: float = None,
         return_original_scale: bool = True,
     ) -> float:
         """
@@ -122,16 +78,11 @@ class ElectrolytePredictor:
 
         Args:
             electrolyte: 电解液配方对象
-            temperature: 测试温度 (K)，默认25°C
             return_original_scale: 是否返回原始尺度的结果
 
         Returns:
             预测的性能值
         """
-
-        # 检查温度参数
-        if temperature is not None:
-            electrolyte.performance["temperature"] = temperature
 
         features, temperature_tensor, _ = self.dataset._generate_all_tensor(electrolyte)
 
@@ -155,7 +106,9 @@ class ElectrolytePredictor:
             prediction = outputs
 
         # 返回原始电导率值
-        return torch.expm1(prediction).item()
+        if return_original_scale:
+            return torch.expm1(prediction).item()
+        return prediction.item()
 
     def predict_dataset(
         self,
@@ -232,7 +185,9 @@ class ElectrolytePredictor:
 
         predictions = []
         for temp in temperatures:
-            pred = self.predict_single_formula(electrolyte, temp, return_original_scale)
+            # 设置电解液的测试条件
+            electrolyte.condition["temperature"] = temp
+            pred = self.predict_single_formula(electrolyte, return_original_scale)
             predictions.append(pred)
 
         return temperatures, np.array(predictions)
@@ -250,35 +205,3 @@ class ElectrolytePredictor:
 
         print(f"Predictions saved to {output_file}")
 
-
-def create_predictor_from_workflow(
-    workflow: ElectrolyteTrainer, checkpoint_name: str = "best_model.pth"
-) -> ElectrolytePredictor:
-    """
-    从训练工作流创建预测器的便捷函数
-
-    Args:
-        workflow: 训练好的工作流实例
-        checkpoint_name: 检查点文件名
-
-    Returns:
-        预测器实例
-    """
-    # 确定特征模式
-    if isinstance(workflow.model, ElectrolyteTransformer):
-        feature_mode = "sequence"
-    else:
-        feature_mode = "weighted_average"
-
-    # 构建检查点路径
-    checkpoint_path = f"{workflow.log_dir}/{checkpoint_name}"
-
-    # 创建预测器
-    predictor = ElectrolytePredictor(
-        model=workflow.model,
-        model_checkpoint_path=checkpoint_path,
-        device=str(workflow.device),
-        feature_mode=feature_mode,
-    )
-
-    return predictor
