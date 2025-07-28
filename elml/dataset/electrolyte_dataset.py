@@ -1,7 +1,7 @@
 import itertools
 import json
 import random
-from typing import Optional
+from typing import Optional, Literal
 
 import torch
 from torch.utils.data import Dataset
@@ -9,6 +9,9 @@ from torch.utils.data import Dataset
 from ..battery import Electrolyte
 from ..material import MaterialLibrary
 from .. import MLibrary
+
+
+FeatureMode = Literal["sequence", "weighted_average"]
 
 
 class ElectrolyteDataset(Dataset):
@@ -21,7 +24,7 @@ class ElectrolyteDataset(Dataset):
     def __init__(
         self,
         dataset_file: Optional[str] = None,
-        feature_mode: str = "sequence",
+        feature_mode: FeatureMode = "sequence",
         max_components: int = 10,
         target_metric: str = "conductivity",
     ):
@@ -30,8 +33,9 @@ class ElectrolyteDataset(Dataset):
 
         Args:
             dataset_file (str, optional): 配方 JSON 文件路径。
-            feature_mode (str): 特征向量计算方式，默认为 "sequence"。
+            feature_mode (FeatureMode): 特征模式，默认为 "sequence"。
             max_components (int): 数据集中可能出现的最大组分数量，默认为 10。
+            target_metric (str): 目标性能指标，默认为 "conductivity"。
         """
 
         # PyTorch Dataset 的构造函数调用
@@ -40,8 +44,8 @@ class ElectrolyteDataset(Dataset):
         self.library: MaterialLibrary = MLibrary
         self.formulas: list[Electrolyte] = []
         self.electrolyte_counter = itertools.count(1)
-        self.feature_mode = feature_mode
         self.target_metric = target_metric
+        self.feature_mode = feature_mode
         self.MAX_COMPONENTS = max_components
         self.FEATURE_DIM = (
             3 + 167 + 8 + 1
@@ -68,19 +72,7 @@ class ElectrolyteDataset(Dataset):
         """
         # 1. 根据索引获取原始的电解液配方对象
         electrolyte: Electrolyte = self.formulas[idx]
-
-        # 2. 调用内部方法，动态生成该配方的特征张量
-        feature_tensor = self._generate_feature_tensor(electrolyte)
-
-        # 3. 获取目标值（例如电导率），并转换为张量
-        target_tensor = self._generate_target_tensor(electrolyte)
-
-        # 获取温度信息并标准化
-        raw_temperature = electrolyte.performance["temperature"]  # 假设单位为K
-        normalized_temp = self._normalize_temperature(raw_temperature)
-        temperature = torch.tensor([normalized_temp], dtype=torch.float32)
-
-        return feature_tensor, temperature, target_tensor
+        return self._generate_all_tensor(electrolyte)
 
     def __iter__(self):
         """支持迭代访问"""
@@ -260,21 +252,23 @@ class ElectrolyteDataset(Dataset):
             print("  ✓ 所有温度样本都在归一化范围内")
 
     # ------------------------ 特征提取方法 ------------------------ #
-    def _generate_feature_tensor(self, electrolyte: Electrolyte) -> torch.Tensor:
+    def _generate_feature_tensor(
+        self, electrolyte: Electrolyte, feature_mode: FeatureMode = "sequence"
+    ) -> torch.Tensor:
         """
         根据设定的模式，为单个电解液对象生成特征张量。
         这是所有特征工程逻辑的集合点。
         """
-        if self.feature_mode == "sequence":
+        if feature_mode == "sequence":
             # 调用为Transformer等序列模型设计的特征生成函数
             return self._generate_sequence_features(electrolyte)
 
-        elif self.feature_mode == "weighted_average":
+        elif feature_mode == "weighted_average":
             # 调用为MLP, XGBoost等模型设计的特征生成函数
             return self._generate_average_features(electrolyte)
 
         else:
-            raise ValueError(f"未知的特征模式: {self.feature_mode}")
+            raise ValueError(f"未知的特征模式: {feature_mode}")
 
     def _generate_sequence_features(self, electrolyte: Electrolyte) -> torch.Tensor:
         """
@@ -359,10 +353,29 @@ class ElectrolyteDataset(Dataset):
         target_value = torch.log1p(torch.tensor(target_value, dtype=torch.float32))
         return target_value
 
+    def _generate_all_tensor(
+        self, electrolyte: Electrolyte
+    ) -> tuple[torch.Tensor, torch.Tensor, torch.Tensor]:
+        """
+        为单个电解液对象生成特征、温度和目标张量。
+        """
+        # 2. 调用内部方法，动态生成该配方的特征张量
+        feature_tensor = self._generate_feature_tensor(electrolyte)
+
+        # 3. 获取目标值（例如电导率），并转换为张量
+        target_tensor = self._generate_target_tensor(electrolyte)
+
+        # 获取温度信息并标准化
+        raw_temperature = electrolyte.performance["temperature"]  # 假设单位为K
+        normalized_temp = self._normalize_temperature(raw_temperature)
+        temperature = torch.tensor([normalized_temp], dtype=torch.float32)
+
+        return feature_tensor, temperature, target_tensor
+
     @staticmethod
     def create_splits(
         dataset_file: str,
-        feature_mode: str = "sequence",
+        feature_mode: FeatureMode = "sequence",
         target_metric: str = "conductivity",
         train_frac: float = 0.8,
         val_frac: float = 0.1,
@@ -413,15 +426,9 @@ class ElectrolyteDataset(Dataset):
         test_formulas = labeled_formulas[n_train + n_val :]
 
         # 6. 创建三个新的、配置正确的数据集实例
-        train_dataset = ElectrolyteDataset(
-            feature_mode=feature_mode, target_metric=target_metric
-        )
-        val_dataset = ElectrolyteDataset(
-            feature_mode=feature_mode, target_metric=target_metric
-        )
-        test_dataset = ElectrolyteDataset(
-            feature_mode=feature_mode, target_metric=target_metric
-        )
+        train_dataset = ElectrolyteDataset(target_metric=target_metric)
+        val_dataset = ElectrolyteDataset(target_metric=target_metric)
+        test_dataset = ElectrolyteDataset(target_metric=target_metric)
 
         # 7. 将切分好的配方列表分别赋给新的实例
         train_dataset.formulas = train_formulas

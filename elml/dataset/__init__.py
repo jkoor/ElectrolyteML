@@ -1,1 +1,1 @@
-from .electrolyte_dataset import ElectrolyteDataset
+from .electrolyte_dataset import ElectrolyteDataset, FeatureMode
