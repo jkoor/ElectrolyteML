@@ -8,18 +8,23 @@ import numpy as np
 from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
 from elml.dataset import ElectrolyteDataset
 from elml.ml.models import ElectrolyteTransformer
-from elml.ml.workflow import TrainingWorkflow
+from elml.ml.predictor import ElectrolytePredictor
 
 
 def analyze_predictions(
-    workflow, test_dataset, save_plots=True, plot_filename="prediction_analysis.png"
+    predictor: ElectrolytePredictor,
+    test_dataset: ElectrolyteDataset,
+    show_plots=False,
+    save_plots=True,
+    plot_filename="prediction_analysis.png",
 ):
     """
     分析预测结果的函数
 
     Args:
-        workflow: 训练好的工作流实例
+        trainer: 训练好的工作流实例
         test_dataset: 测试数据集
+        show_plots: 是否显示图表
         save_plots: 是否保存图表
         plot_filename: 图表保存文件名
     """
@@ -27,33 +32,29 @@ def analyze_predictions(
     print("=== 开始预测结果分析 ===")
 
     # 进行预测并获取实际值
-    predictions, actual_values = workflow.predict_dataset(
-        test_dataset, return_targets=True
+    predictions, actual_values = predictor.predict_dataset(
+        test_dataset, return_original_scale=True
     )
 
     # 转换为numpy数组
-    pred_np = predictions.detach().numpy().flatten()
-    actual_np = actual_values.detach().numpy().flatten()
-
-    # 由于数据可能做了log1p变换，需要还原到原始尺度
-    pred_original = np.expm1(pred_np)  # 反log1p变换
-    actual_original = np.expm1(actual_np)
+    pred_np = predictions
+    actual_np = actual_values
 
     # 基本统计信息
-    print(f"测试样本数量: {len(pred_original)}")
-    print(f"预测值范围: {pred_original.min():.4f} - {pred_original.max():.4f}")
-    print(f"实际值范围: {actual_original.min():.4f} - {actual_original.max():.4f}")
-    print(f"预测值均值: {pred_original.mean():.4f}")
-    print(f"实际值均值: {actual_original.mean():.4f}")
+    print(f"测试样本数量: {len(pred_np)}")
+    print(f"预测值范围: {pred_np.min():.4f} - {pred_np.max():.4f}")
+    print(f"实际值范围: {actual_np.min():.4f} - {actual_np.max():.4f}")
+    print(f"预测值均值: {pred_np.mean():.4f}")
+    print(f"实际值均值: {actual_np.mean():.4f}")
 
     # 计算评估指标
-    mae = mean_absolute_error(actual_original, pred_original)
-    mse = mean_squared_error(actual_original, pred_original)
+    mae = mean_absolute_error(actual_np, pred_np)
+    mse = mean_squared_error(actual_np, pred_np)
     rmse = np.sqrt(mse)
-    r2 = r2_score(actual_original, pred_original)
+    r2 = r2_score(actual_np, pred_np)
 
     # 计算平均绝对百分比误差(MAPE)
-    mape = np.mean(np.abs((actual_original - pred_original) / actual_original)) * 100
+    mape = np.mean(np.abs((actual_np - pred_np) / actual_np)) * 100
 
     print("\n评估指标:")
     print(f"平均绝对误差 (MAE): {mae:.4f}")
@@ -63,18 +64,18 @@ def analyze_predictions(
 
     # 创建可视化图表
     create_analysis_plots(
-        actual_original, pred_original, r2, mae, mape, save_plots, plot_filename
+        actual_np, pred_np, r2, mae, mape, show_plots, save_plots, plot_filename
     )
 
     # 详细样本分析
-    detailed_sample_analysis(actual_original, pred_original)
+    detailed_sample_analysis(actual_np, pred_np)
 
     # 误差分析
-    error_analysis(actual_original, pred_original)
+    error_analysis(actual_np, pred_np)
 
     return {
-        "predictions": pred_original,
-        "actual": actual_original,
+        "predictions": pred_np,
+        "actual": actual_np,
         "mae": mae,
         "rmse": rmse,
         "r2": r2,
@@ -82,7 +83,9 @@ def analyze_predictions(
     }
 
 
-def create_analysis_plots(actual, predicted, r2, mae, mape, save_plots, filename):
+def create_analysis_plots(
+    actual, predicted, r2, mae, mape, show_plots, save_plots, filename
+):
     """创建分析图表"""
 
     plt.figure(figsize=(15, 10))
@@ -175,7 +178,8 @@ def create_analysis_plots(actual, predicted, r2, mae, mape, save_plots, filename
         plt.savefig(filename, dpi=300, bbox_inches="tight")
         print(f"\n图表已保存为: {filename}")
 
-    plt.show()
+    if show_plots:
+        plt.show()
 
 
 def detailed_sample_analysis(actual, predicted, n_samples=10):
@@ -258,27 +262,15 @@ if __name__ == "__main__":
     model = ElectrolyteTransformer(input_dim=179, model_dim=256, nhead=8)
 
     # 创建工作流
-    workflow = TrainingWorkflow(
+    predictor = ElectrolytePredictor(
         model=model,
-        train_dataset=train_ds,
-        val_dataset=val_ds,
-        test_dataset=test_ds,
-        batch_size=32,
-        lr=1e-4,
+        model_checkpoint_path="runs/transformer/best_model.pth",
+        feature_mode="sequence",
     )
-
-    # 加载预训练模型
-    try:
-        workflow.load_checkpoint("best_model.pth")
-        print("成功加载预训练模型")
-    except Exception as e:
-        print(f"加载模型失败: {e}")
-        print("请先训练模型或检查模型文件路径")
-        exit(1)
 
     # 执行分析
     results = analyze_predictions(
-        workflow,
+        predictor,
         test_ds,
         save_plots=True,
         plot_filename="detailed_prediction_analysis.png",

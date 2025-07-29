@@ -2,7 +2,7 @@ import json
 import torch
 import numpy as np
 from typing import Union, List, Dict, Optional, Tuple
-from torch.utils.data import DataLoader
+from torch.utils.data import DataLoader, Dataset
 import warnings
 
 from .train import ElectrolyteTrainer
@@ -134,26 +134,20 @@ class ElectrolytePredictor:
 
         with torch.no_grad():
             for batch_data in dataloader:
-                features, temperature, targets = batch_data
-                features = features.to(self.device)
-                temperature = temperature.to(self.device)
-
-                # 模型预测
-                if isinstance(self.model, ElectrolyteTransformer):
-                    padding_mask = features.sum(dim=-1) == 0
-                    outputs = self.model(
-                        features, temperature, src_padding_mask=padding_mask
-                    )
+                if len(batch_data) == 3:  # With mask
+                    features, temperature, targets = batch_data
+                    features = features.to(self.device)
+                    temperature = temperature.to(self.device)
+                    outputs = self.model(features, temperature)
                 else:
+                    features, targets = batch_data
+                    features = features.to(self.device)
                     outputs = self.model(features)
 
-                all_predictions.append(outputs.cpu().numpy())
-                all_targets.append(targets.cpu().numpy())
-
-        # 合并结果
-        predictions = np.concatenate(all_predictions, axis=0).flatten()
-        targets = np.concatenate(all_targets, axis=0).flatten()
-
+                all_predictions.append(outputs.cpu())
+                all_targets.append(targets)
+        predictions = torch.cat(all_predictions, dim=0).detach().numpy().flatten()
+        targets = torch.cat(all_targets, dim=0).detach().numpy().flatten()
         # 如果需要，转换回原始尺度
         if return_original_scale:
             predictions = np.expm1(predictions)
@@ -204,4 +198,3 @@ class ElectrolytePredictor:
             json.dump(predictions_data, f, ensure_ascii=False, indent=2)
 
         print(f"Predictions saved to {output_file}")
-
