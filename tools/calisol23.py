@@ -160,8 +160,7 @@ valid_df = df.iloc[0:0].copy()  # 保留列结构但不包含数据行
 
 # 按行遍历数据
 for idx, row in df.iterrows():
-    # 如果该配方的导电率为0，则跳过该配方
-    if row["k"] == 0:
+    if pd.isna(row["k"]) or row["k"] <= 0:
         continue
 
     # 获取锂盐及其比例
