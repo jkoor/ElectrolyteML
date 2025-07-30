@@ -105,7 +105,7 @@ class ElectrolyteTrainer:
         else:
             raise ValueError(f"Unsupported optimizer: {optimizer_name}")
 
-        self.criterion = nn.MSELoss()
+        self.criterion = nn.HuberLoss()
         self.scheduler = ReduceLROnPlateau(
             self.optimizer, "min", factor=0.5, patience=10
         )
