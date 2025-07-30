@@ -21,7 +21,7 @@ warnings.filterwarnings("ignore", category=UserWarning, module="matplotlib")
 class ElectrolyteAnalyzer:
     """
     电解液预测结果分析器
-    
+
     提供全面的预测结果分析功能：
     - 评估指标计算 (MAE, RMSE, R², MAPE)
     - 可视化图表生成
@@ -52,27 +52,27 @@ class ElectrolyteAnalyzer:
         self.save_dir = save_dir
         self.figure_size = figure_size
         self.dpi = dpi
-        
+
         # 配置字体
         self._configure_font(font_config)
-        
+
         # 存储分析结果
         self.results = {}
         self.predictions = None
         self.actual_values = None
-        
+
         print("ElectrolyteAnalyzer initialized")
         print(f"Save directory: {self.save_dir}")
 
     def _configure_font(self, font_config: Optional[Dict[str, Any]] = None):
         """配置matplotlib字体"""
         default_config = {
-            "font.sans-serif": ["SimHei", "Arial", "DejaVu Sans"],
+            "font.sans-serif": ["Noto Sans CJK SC", "SimHei", "Arial", "DejaVu Sans"],
             "axes.unicode_minus": False,
             "mathtext.fontset": "stix",
-            "mathtext.default": "regular"
+            "mathtext.default": "regular",
         }
-        
+
         config = font_config or default_config
         for key, value in config.items():
             plt.rcParams[key] = value
@@ -139,15 +139,23 @@ class ElectrolyteAnalyzer:
         print(f"预测值均值: {pred_np.mean():.4f}")
         print(f"实际值均值: {actual_np.mean():.4f}")
 
-        self.results.update({
-            "sample_count": len(pred_np),
-            "pred_range": {"min": float(pred_np.min()), "max": float(pred_np.max())},
-            "actual_range": {"min": float(actual_np.min()), "max": float(actual_np.max())},
-            "pred_mean": float(pred_np.mean()),
-            "actual_mean": float(actual_np.mean()),
-            "pred_std": float(pred_np.std()),
-            "actual_std": float(actual_np.std()),
-        })
+        self.results.update(
+            {
+                "sample_count": len(pred_np),
+                "pred_range": {
+                    "min": float(pred_np.min()),
+                    "max": float(pred_np.max()),
+                },
+                "actual_range": {
+                    "min": float(actual_np.min()),
+                    "max": float(actual_np.max()),
+                },
+                "pred_mean": float(pred_np.mean()),
+                "actual_mean": float(actual_np.mean()),
+                "pred_std": float(pred_np.std()),
+                "actual_std": float(actual_np.std()),
+            }
+        )
 
     def _calculate_metrics(self):
         """计算评估指标"""
@@ -164,10 +172,17 @@ class ElectrolyteAnalyzer:
         # 避免除零错误
         non_zero_mask = actual_np != 0
         if non_zero_mask.any():
-            mape = np.mean(np.abs((actual_np[non_zero_mask] - pred_np[non_zero_mask]) 
-                                / actual_np[non_zero_mask])) * 100
+            mape = (
+                np.mean(
+                    np.abs(
+                        (actual_np[non_zero_mask] - pred_np[non_zero_mask])
+                        / actual_np[non_zero_mask]
+                    )
+                )
+                * 100
+            )
         else:
-            mape = float('inf')
+            mape = float("inf")
 
         print("\n评估指标:")
         print(f"平均绝对误差 (MAE): {mae:.4f}")
@@ -175,22 +190,19 @@ class ElectrolyteAnalyzer:
         print(f"决定系数 (R²): {r2:.4f}")
         print(f"平均绝对百分比误差 (MAPE): {mape:.2f}%")
 
-        self.results.update({
-            "predictions": pred_np.tolist(),
-            "actual": actual_np.tolist(),
-            "mae": float(mae),
-            "mse": float(mse),
-            "rmse": float(rmse),
-            "r2": float(r2),
-            "mape": float(mape),
-        })
+        self.results.update(
+            {
+                "predictions": pred_np.tolist(),
+                "actual": actual_np.tolist(),
+                "mae": float(mae),
+                "mse": float(mse),
+                "rmse": float(rmse),
+                "r2": float(r2),
+                "mape": float(mape),
+            }
+        )
 
-    def _create_analysis_plots(
-        self, 
-        show_plots: bool, 
-        save_plots: bool, 
-        filename: str
-    ):
+    def _create_analysis_plots(self, show_plots: bool, save_plots: bool, filename: str):
         """创建分析图表"""
         actual = self.actual_values
         predicted = self.predictions
@@ -206,7 +218,11 @@ class ElectrolyteAnalyzer:
         min_val = min(actual.min(), predicted.min())
         max_val = max(actual.max(), predicted.max())
         plt.plot(
-            [min_val, max_val], [min_val, max_val], "r--", lw=2, label="Perfect prediction"
+            [min_val, max_val],
+            [min_val, max_val],
+            "r--",
+            lw=2,
+            label="Perfect prediction",
         )
         plt.xlabel("实际值")
         plt.ylabel("预测值")
@@ -218,7 +234,11 @@ class ElectrolyteAnalyzer:
         z = np.polyfit(actual, predicted, 1)
         p = np.poly1d(z)
         plt.plot(
-            actual, p(actual), "g--", alpha=0.8, label=f"拟合线 (y={z[0]:.3f}x+{z[1]:.3f})"
+            actual,
+            p(actual),
+            "g--",
+            alpha=0.8,
+            label=f"拟合线 (y={z[0]:.3f}x+{z[1]:.3f})",
         )
         plt.legend()
 
@@ -252,7 +272,9 @@ class ElectrolyteAnalyzer:
         plt.subplot(2, 3, 5)
         n_show = min(50, len(predicted))
         x_range = range(n_show)
-        plt.plot(x_range, actual[:n_show], "o-", label="实际值", markersize=4, color="blue")
+        plt.plot(
+            x_range, actual[:n_show], "o-", label="实际值", markersize=4, color="blue"
+        )
         plt.plot(
             x_range, predicted[:n_show], "s-", label="预测值", markersize=4, color="red"
         )
@@ -277,6 +299,7 @@ class ElectrolyteAnalyzer:
 
         if save_plots:
             import os
+
             os.makedirs(os.path.dirname(filename), exist_ok=True)
             plt.savefig(filename, dpi=self.dpi, bbox_inches="tight")
             print(f"\n图表已保存为: {filename}")
@@ -299,16 +322,20 @@ class ElectrolyteAnalyzer:
         for i in range(min(n_samples, len(predicted))):
             error = predicted[i] - actual[i]
             abs_error = abs(error)
-            rel_error = (abs_error / actual[i]) * 100 if actual[i] != 0 else float("inf")
-            
-            sample_details.append({
-                "index": int(i),
-                "actual": float(actual[i]),
-                "predicted": float(predicted[i]),
-                "absolute_error": float(abs_error),
-                "relative_error": float(rel_error)
-            })
-            
+            rel_error = (
+                (abs_error / actual[i]) * 100 if actual[i] != 0 else float("inf")
+            )
+
+            sample_details.append(
+                {
+                    "index": int(i),
+                    "actual": float(actual[i]),
+                    "predicted": float(predicted[i]),
+                    "absolute_error": float(abs_error),
+                    "relative_error": float(rel_error),
+                }
+            )
+
             print(
                 f"{i}\t{actual[i]:.6f}\t{predicted[i]:.6f}\t{abs_error:.6f}\t{rel_error:.2f}"
             )
@@ -349,14 +376,14 @@ class ElectrolyteAnalyzer:
                 "index": int(best_idx),
                 "actual": float(actual[best_idx]),
                 "predicted": float(predicted[best_idx]),
-                "absolute_error": float(abs_errors[best_idx])
+                "absolute_error": float(abs_errors[best_idx]),
             },
             "worst_prediction": {
                 "index": int(worst_idx),
                 "actual": float(actual[worst_idx]),
                 "predicted": float(predicted[worst_idx]),
-                "absolute_error": float(abs_errors[worst_idx])
-            }
+                "absolute_error": float(abs_errors[worst_idx]),
+            },
         }
 
         print("\n误差统计:")
@@ -385,7 +412,7 @@ class ElectrolyteAnalyzer:
                     "index": int(idx),
                     "actual": float(actual[idx]),
                     "predicted": float(predicted[idx]),
-                    "absolute_error": float(abs_errors[idx])
+                    "absolute_error": float(abs_errors[idx]),
                 }
                 high_error_samples.append(sample_info)
                 print(
@@ -399,52 +426,61 @@ class ElectrolyteAnalyzer:
     def _statistical_tests(self):
         """统计检验"""
         residuals = self.predictions - self.actual_values
-        
+
         # Shapiro-Wilk正态性检验
         try:
             shapiro_stat, shapiro_p = stats.shapiro(residuals)
         except Exception:
             shapiro_stat, shapiro_p = None, None
-        
+
         # Kolmogorov-Smirnov正态性检验
         try:
-            ks_stat, ks_p = stats.kstest(residuals, 'norm')
+            ks_stat, ks_p = stats.kstest(residuals, "norm")
         except Exception:
             ks_stat, ks_p = None, None
-        
+
         # Durbin-Watson自相关检验（如果适用）
         try:
             from statsmodels.stats.diagnostic import durbin_watson
+
             dw_stat = durbin_watson(residuals)
         except Exception:
             dw_stat = None
-        
+
         statistical_tests = {
             "shapiro_wilk": {
                 "statistic": float(shapiro_stat) if shapiro_stat is not None else None,
                 "p_value": float(shapiro_p) if shapiro_p is not None else None,
-                "is_normal": bool(shapiro_p > 0.05) if shapiro_p is not None else None
+                "is_normal": bool(shapiro_p > 0.05) if shapiro_p is not None else None,
             },
             "kolmogorov_smirnov": {
                 "statistic": float(ks_stat) if ks_stat is not None else None,
                 "p_value": float(ks_p) if ks_p is not None else None,
-                "is_normal": bool(ks_p > 0.05) if ks_p is not None else None
+                "is_normal": bool(ks_p > 0.05) if ks_p is not None else None,
             },
             "durbin_watson": {
                 "statistic": float(dw_stat) if dw_stat is not None else None,
-                "autocorrelation": "positive" if dw_stat and dw_stat < 1.5 else 
-                                  "negative" if dw_stat and dw_stat > 2.5 else 
-                                  "none" if dw_stat else None
-            }
+                "autocorrelation": "positive"
+                if dw_stat and dw_stat < 1.5
+                else "negative"
+                if dw_stat and dw_stat > 2.5
+                else "none"
+                if dw_stat
+                else None,
+            },
         }
-        
+
         self.results["statistical_tests"] = statistical_tests
-        
+
         print("\n=== 统计检验 ===")
         if shapiro_p is not None:
-            print(f"Shapiro-Wilk正态性检验: p = {shapiro_p:.4f} ({'正态' if shapiro_p > 0.05 else '非正态'})")
+            print(
+                f"Shapiro-Wilk正态性检验: p = {shapiro_p:.4f} ({'正态' if shapiro_p > 0.05 else '非正态'})"
+            )
         if ks_p is not None:
-            print(f"Kolmogorov-Smirnov检验: p = {ks_p:.4f} ({'正态' if ks_p > 0.05 else '非正态'})")
+            print(
+                f"Kolmogorov-Smirnov检验: p = {ks_p:.4f} ({'正态' if ks_p > 0.05 else '非正态'})"
+            )
         if dw_stat is not None:
             print(f"Durbin-Watson自相关检验: {dw_stat:.4f}")
 
@@ -452,25 +488,27 @@ class ElectrolyteAnalyzer:
         self,
         other_analyzer: "ElectrolyteAnalyzer",
         dataset: ElectrolyteDataset,
-        model_names: Tuple[str, str] = ("Model 1", "Model 2")
+        model_names: Tuple[str, str] = ("Model 1", "Model 2"),
     ) -> Dict[str, Any]:
         """
         比较两个模型的性能
-        
+
         Args:
             other_analyzer: 另一个分析器实例
             dataset: 测试数据集
             model_names: 模型名称元组
-            
+
         Returns:
             模型比较结果
         """
         # 分析当前模型
         results1 = self.analyze_dataset(dataset, show_plots=False, save_plots=False)
-        
+
         # 分析另一个模型
-        results2 = other_analyzer.analyze_dataset(dataset, show_plots=False, save_plots=False)
-        
+        results2 = other_analyzer.analyze_dataset(
+            dataset, show_plots=False, save_plots=False
+        )
+
         # 比较指标
         comparison = {
             "model_names": model_names,
@@ -478,64 +516,82 @@ class ElectrolyteAnalyzer:
                 "mae": {
                     model_names[0]: results1["mae"],
                     model_names[1]: results2["mae"],
-                    "improvement": ((results2["mae"] - results1["mae"]) / results2["mae"]) * 100
+                    "improvement": (
+                        (results2["mae"] - results1["mae"]) / results2["mae"]
+                    )
+                    * 100,
                 },
                 "rmse": {
                     model_names[0]: results1["rmse"],
                     model_names[1]: results2["rmse"],
-                    "improvement": ((results2["rmse"] - results1["rmse"]) / results2["rmse"]) * 100
+                    "improvement": (
+                        (results2["rmse"] - results1["rmse"]) / results2["rmse"]
+                    )
+                    * 100,
                 },
                 "r2": {
                     model_names[0]: results1["r2"],
                     model_names[1]: results2["r2"],
-                    "improvement": ((results1["r2"] - results2["r2"]) / abs(results2["r2"])) * 100
+                    "improvement": (
+                        (results1["r2"] - results2["r2"]) / abs(results2["r2"])
+                    )
+                    * 100,
                 },
                 "mape": {
                     model_names[0]: results1["mape"],
                     model_names[1]: results2["mape"],
-                    "improvement": ((results2["mape"] - results1["mape"]) / results2["mape"]) * 100
-                }
-            }
+                    "improvement": (
+                        (results2["mape"] - results1["mape"]) / results2["mape"]
+                    )
+                    * 100,
+                },
+            },
         }
-        
+
         print("\n=== 模型比较结果 ===")
         for metric, values in comparison["metrics_comparison"].items():
             print(f"{metric.upper()}:")
             print(f"  {model_names[0]}: {values[model_names[0]]:.4f}")
             print(f"  {model_names[1]}: {values[model_names[1]]:.4f}")
             print(f"  改进: {values['improvement']:+.2f}%")
-        
+
         return comparison
 
     def save_results(self, filename: str):
         """保存分析结果到JSON文件"""
         import json
         import os
-        
+
         os.makedirs(os.path.dirname(filename), exist_ok=True)
-        with open(filename, 'w', encoding='utf-8') as f:
+        with open(filename, "w", encoding="utf-8") as f:
             json.dump(self.results, f, indent=2, ensure_ascii=False)
-        
+
         print(f"分析结果已保存到: {filename}")
 
     def get_summary(self) -> Dict[str, Any]:
         """获取分析结果摘要"""
         if not self.results:
-            return {"error": "No analysis results available. Run analyze_dataset first."}
-        
+            return {
+                "error": "No analysis results available. Run analyze_dataset first."
+            }
+
         return {
             "sample_count": self.results.get("sample_count"),
             "metrics": {
                 "mae": self.results.get("mae"),
                 "rmse": self.results.get("rmse"),
                 "r2": self.results.get("r2"),
-                "mape": self.results.get("mape")
+                "mape": self.results.get("mape"),
             },
             "error_analysis": {
-                "best_error": self.results.get("error_analysis", {}).get("best_prediction", {}).get("absolute_error"),
-                "worst_error": self.results.get("error_analysis", {}).get("worst_prediction", {}).get("absolute_error"),
-                "error_std": self.results.get("error_analysis", {}).get("error_std")
-            }
+                "best_error": self.results.get("error_analysis", {})
+                .get("best_prediction", {})
+                .get("absolute_error"),
+                "worst_error": self.results.get("error_analysis", {})
+                .get("worst_prediction", {})
+                .get("absolute_error"),
+                "error_std": self.results.get("error_analysis", {}).get("error_std"),
+            },
         }
 
 
@@ -565,5 +621,5 @@ def analyze_predictions(
         test_dataset,
         show_plots=show_plots,
         save_plots=save_plots,
-        plot_filename=plot_filename
+        plot_filename=plot_filename,
     )
