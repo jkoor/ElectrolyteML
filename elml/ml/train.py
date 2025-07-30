@@ -203,6 +203,12 @@ class ElectrolyteTrainer:
 
         print("Training finished.")
         print(f"Best validation loss: {best_val_loss:.4f}")
+        return {
+            "best_val_loss": best_val_loss,
+            "history": self.history,
+            "total_epochs": epoch + 1,
+            "model_checkpoint_path": self.model_checkpoint_path,
+        }
 
     def evaluate(self, loader: DataLoader):
         """
@@ -212,19 +218,19 @@ class ElectrolyteTrainer:
         print(f"Evaluation Loss: {loss:.4f}")
         return loss
 
-    def save_checkpoint(self, filename: str):
+    def save_checkpoint(self, filepath: str):
         """
         保存模型检查点。
         """
-        path = os.path.join(self.log_dir, filename)
+        path = filepath
         print(f"Saving checkpoint to {path}")
         torch.save(self.model.state_dict(), path)
 
-    def load_checkpoint(self, filename: str):
+    def load_checkpoint(self, filepath: str):
         """
         加载模型检查点。
         """
-        path = os.path.join(self.log_dir, filename)
+        path = filepath
         if not os.path.exists(path):
             print(f"Checkpoint file not found: {path}")
             return

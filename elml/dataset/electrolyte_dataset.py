@@ -45,7 +45,7 @@ class ElectrolyteDataset(Dataset):
         self.formulas: list[Electrolyte] = []
         self.electrolyte_counter = itertools.count(1)
         self.target_metric = target_metric
-        self.feature_mode = feature_mode
+        self.feature_mode: FeatureMode = feature_mode
         self.MAX_COMPONENTS = max_components
         self.FEATURE_DIM = (
             3 + 167 + 8 + 1
@@ -360,7 +360,9 @@ class ElectrolyteDataset(Dataset):
         为单个电解液对象生成特征、温度和目标张量。
         """
         # 2. 调用内部方法，动态生成该配方的特征张量
-        feature_tensor = self._generate_feature_tensor(electrolyte)
+        feature_tensor = self._generate_feature_tensor(
+            electrolyte, feature_mode=self.feature_mode
+        )
 
         # 3. 获取目标值（例如电导率），并转换为张量
         target_tensor = self._generate_target_tensor(electrolyte)
@@ -430,9 +432,12 @@ class ElectrolyteDataset(Dataset):
         test_formulas = labeled_formulas[n_train + n_val :]
 
         # 6. 创建三个新的、配置正确的数据集实例
-        train_dataset = ElectrolyteDataset(target_metric=target_metric)
-        val_dataset = ElectrolyteDataset(target_metric=target_metric)
-        test_dataset = ElectrolyteDataset(target_metric=target_metric)
+        train_dataset = ElectrolyteDataset(target_metric=target_metric, 
+                                           feature_mode=feature_mode)
+        val_dataset = ElectrolyteDataset(target_metric=target_metric, 
+                                         feature_mode=feature_mode)
+        test_dataset = ElectrolyteDataset(target_metric=target_metric, 
+                                          feature_mode=feature_mode)
 
         # 7. 将切分好的配方列表分别赋给新的实例
         train_dataset.formulas = train_formulas

@@ -134,18 +134,34 @@ class ElectrolytePredictor:
 
         with torch.no_grad():
             for batch_data in dataloader:
-                if len(batch_data) == 3:  # With mask
+                if len(batch_data) == 3:
                     features, temperature, targets = batch_data
                     features = features.to(self.device)
                     temperature = temperature.to(self.device)
-                    outputs = self.model(features, temperature)
+                    targets = targets.to(self.device)
+
+                    # 判断模型类型并调用相应的forward方法
+                    if isinstance(self.model, ElectrolyteTransformer):
+                        # 为Transformer模型创建padding mask
+                        # 检查features中全零的行，这些是填充的位置
+                        padding_mask = (
+                            features.sum(dim=-1) == 0
+                        )  # [batch_size, seq_len]
+                        outputs = self.model(
+                            features, temperature, src_padding_mask=padding_mask
+                        )
+                    else:
+                        # 对于MLP模型，temperature需要与features拼接
+                        # 注意：这里假设MLP模型也需要温度信息，可能需要修改MLP模型
+                        outputs = self.model(features)
                 else:
-                    features, targets = batch_data
-                    features = features.to(self.device)
-                    outputs = self.model(features)
+                    raise ValueError(
+                        f"Expected 3 elements in batch_data, got {len(batch_data)}"
+                    )
 
                 all_predictions.append(outputs.cpu())
-                all_targets.append(targets)
+                all_targets.append(targets.cpu())
+
         predictions = torch.cat(all_predictions, dim=0).detach().numpy().flatten()
         targets = torch.cat(all_targets, dim=0).detach().numpy().flatten()
         # 如果需要，转换回原始尺度
