@@ -31,6 +31,7 @@ class ElectrolytePredictor:
         model: Union[ElectrolyteMLP, ElectrolyteTransformer],
         model_checkpoint_path: str,
         device: Optional[str] = None,
+        num_workers: int = 0,
         feature_mode: "FeatureMode" = "weighted_average",
     ):
         """
@@ -40,9 +41,11 @@ class ElectrolytePredictor:
             model: 训练好的模型实例
             model_checkpoint_path: 模型检查点文件路径
             device: 计算设备 ('cuda', 'cpu')
+            num_workers: DataLoader的工作线程数
             feature_mode: 特征模式 ('sequence' 用于transformer, 'weighted_average' 用于mlp)
         """
         self.device = device or ("cuda" if torch.cuda.is_available() else "cpu")
+        self.num_workers = num_workers
         self.model = model.to(self.device)
         self.feature_mode = feature_mode
 
@@ -127,7 +130,7 @@ class ElectrolytePredictor:
         Returns:
             (预测值数组, 实际值数组)
         """
-        dataloader = DataLoader(dataset, batch_size=batch_size, shuffle=False)
+        dataloader = DataLoader(dataset, batch_size=batch_size, shuffle=False, num_workers=self.num_workers)
 
         all_predictions = []
         all_targets = []

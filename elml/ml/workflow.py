@@ -62,6 +62,7 @@ class WorkflowConfig:
 
     # 设备配置
     device: Optional[str] = None
+    num_workers: int = 0
 
     def __post_init__(self):
         if self.hidden_dims is None:
@@ -235,6 +236,7 @@ class ElectrolyteWorkflow:
             lr=self.config.lr,
             weight_decay=self.config.weight_decay,
             device=str(self.device),
+            num_workers=self.config.num_workers,
             log_dir=str(self.log_dir),
             model_checkpoint_path=str(self.log_dir / "best_model.pth"),
             optimizer_name=self.config.optimizer_name,
@@ -315,6 +317,7 @@ class ElectrolyteWorkflow:
             model=self.model,
             model_checkpoint_path=model_path,
             device=str(self.device),
+            num_workers=self.config.num_workers,
             feature_mode=feature_mode,
         )
 

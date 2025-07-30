@@ -5,17 +5,15 @@
 
 import matplotlib.pyplot as plt
 import numpy as np
-from typing import Optional, Dict, Any, Tuple, Union
+from typing import Optional, Dict, Any, Tuple
 from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
 from scipy import stats
-import warnings
 
-from ..dataset import ElectrolyteDataset, FeatureMode
-from .models import ElectrolyteMLP, ElectrolyteTransformer
+from ..dataset import ElectrolyteDataset
 from .predictor import ElectrolytePredictor
 
-# 过滤matplotlib的警告
-warnings.filterwarnings("ignore", category=UserWarning, module="matplotlib")
+
+plt.rcParams["font.sans-serif"] = ["Noto Sans CJK SC", "SimHei", "Arial", "DejaVu Sans"]
 
 
 class ElectrolyteAnalyzer:
@@ -133,6 +131,9 @@ class ElectrolyteAnalyzer:
         pred_np = self.predictions
         actual_np = self.actual_values
 
+        if pred_np is None or actual_np is None:
+            raise ValueError("Predictions or actual values are not available.")
+
         print(f"测试样本数量: {len(pred_np)}")
         print(f"预测值范围: {pred_np.min():.4f} - {pred_np.max():.4f}")
         print(f"实际值范围: {actual_np.min():.4f} - {actual_np.max():.4f}")
@@ -161,6 +162,9 @@ class ElectrolyteAnalyzer:
         """计算评估指标"""
         pred_np = self.predictions
         actual_np = self.actual_values
+
+        if pred_np is None or actual_np is None:
+            raise ValueError("Predictions or actual values are not available.")
 
         # 计算评估指标
         mae = mean_absolute_error(actual_np, pred_np)
@@ -206,6 +210,12 @@ class ElectrolyteAnalyzer:
         """创建分析图表"""
         actual = self.actual_values
         predicted = self.predictions
+
+        if actual is None or predicted is None:
+            raise ValueError(
+                "Predictions or actual values are not available for plotting."
+            )
+
         r2 = self.results["r2"]
         mae = self.results["mae"]
         mape = self.results["mape"]
@@ -314,6 +324,11 @@ class ElectrolyteAnalyzer:
         actual = self.actual_values
         predicted = self.predictions
 
+        if actual is None or predicted is None:
+            raise ValueError(
+                "Predictions or actual values are not available for detailed analysis."
+            )
+
         print(f"\n前{n_samples}个样本详细对比:")
         print("索引\t实际值\t\t预测值\t\t绝对误差\t相对误差(%)")
         print("-" * 70)
@@ -344,6 +359,12 @@ class ElectrolyteAnalyzer:
 
     def _error_analysis(self):
         """误差分析"""
+
+        if self.predictions is None or self.actual_values is None:
+            raise ValueError(
+                "Predictions or actual values are not available for error analysis."
+            )
+
         actual = self.actual_values
         predicted = self.predictions
         residuals = predicted - actual
@@ -425,6 +446,12 @@ class ElectrolyteAnalyzer:
 
     def _statistical_tests(self):
         """统计检验"""
+
+        if self.predictions is None or self.actual_values is None:
+            raise ValueError(
+                "Predictions or actual values are not available for statistical tests."
+            )
+
         residuals = self.predictions - self.actual_values
 
         # Shapiro-Wilk正态性检验

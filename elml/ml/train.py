@@ -32,6 +32,7 @@ class ElectrolyteTrainer:
         lr: float = 1e-4,
         weight_decay: float = 1e-5,
         device: Optional[str] = None,
+        num_workers: int = 0,
         log_dir: str = "runs",
         model_checkpoint_path: str = "best_model.pth",
         optimizer_name: str = "adamw",
@@ -48,6 +49,7 @@ class ElectrolyteTrainer:
             lr (float): 学习率。
             weight_decay (float): 权重衰减 (L2正则化)。
             device (str, optional): 指定设备 ('cuda', 'cpu')。如果为None，则自动检测。
+            num_workers (int): DataLoader的工作线程数。
             log_dir (str): 保存日志和模型检查点的目录。
             model_checkpoint_path (str, optional): 预训练模型检查点路径。
             optimizer_name (str): 优化器名称 ("adamw", "adam" 或 "sgd")。
@@ -57,6 +59,7 @@ class ElectrolyteTrainer:
         self.val_dataset = val_dataset
         self.test_dataset = test_dataset
         self.batch_size = batch_size
+        self.num_workers = num_workers
         self.log_dir = log_dir
         self.model_checkpoint_path = model_checkpoint_path
 
@@ -71,11 +74,20 @@ class ElectrolyteTrainer:
 
         # 初始化DataLoader
         self.train_loader = DataLoader(
-            self.train_dataset, batch_size=self.batch_size, shuffle=True
+            self.train_dataset,
+            batch_size=self.batch_size,
+            shuffle=True,
+            num_workers=self.num_workers,
         )
-        self.val_loader = DataLoader(self.val_dataset, batch_size=self.batch_size)
+        self.val_loader = DataLoader(
+            self.val_dataset, batch_size=self.batch_size, num_workers=self.num_workers
+        )
         if self.test_dataset:
-            self.test_loader = DataLoader(self.test_dataset, batch_size=self.batch_size)
+            self.test_loader = DataLoader(
+                self.test_dataset,
+                batch_size=self.batch_size,
+                num_workers=self.num_workers,
+            )
 
         # 初始化优化器、损失函数和学习率调度器
         if optimizer_name == "adamw":
