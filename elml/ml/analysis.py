@@ -234,9 +234,9 @@ class ElectrolyteAnalyzer:
             lw=2,
             label="Perfect prediction",
         )
-        plt.xlabel("实际值")
-        plt.ylabel("预测值")
-        plt.title(f"预测值 vs 实际值\n$R^2$ = {r2:.4f}")
+        plt.xlabel("Actual Value")
+        plt.ylabel("Predicted Value")
+        plt.title(f"Predicted vs Actual Value\n$R^2$ = {r2:.4f}")
         plt.legend()
         plt.grid(True, alpha=0.3)
 
@@ -248,7 +248,7 @@ class ElectrolyteAnalyzer:
             p(actual),
             "g--",
             alpha=0.8,
-            label=f"拟合线 (y={z[0]:.3f}x+{z[1]:.3f})",
+            label=f"Fit Line (y={z[0]:.3f}x+{z[1]:.3f})",
         )
         plt.legend()
 
@@ -257,25 +257,25 @@ class ElectrolyteAnalyzer:
         residuals = predicted - actual
         plt.scatter(actual, residuals, alpha=0.6, s=30, color="orange")
         plt.axhline(y=0, color="r", linestyle="--")
-        plt.xlabel("实际值")
-        plt.ylabel("残差 (预测值 - 实际值)")
-        plt.title("残差分布图")
+        plt.xlabel("Actual Value")
+        plt.ylabel("Residuals (Predicted - Actual)")
+        plt.title("Residuals Distribution Plot")
         plt.grid(True, alpha=0.3)
 
         # 子图3: 误差分布直方图
         plt.subplot(2, 3, 3)
         plt.hist(residuals, bins=30, alpha=0.7, edgecolor="black", color="green")
-        plt.axvline(x=0, color="r", linestyle="--", label="零误差线")
-        plt.xlabel("残差")
-        plt.ylabel("频次")
-        plt.title(f"残差分布直方图\nMAE = {mae:.4f}")
+        plt.axvline(x=0, color="r", linestyle="--", label="Zero Error Line")
+        plt.xlabel("Residuals")
+        plt.ylabel("Frequency")
+        plt.title(f"Residuals Histogram\nMAE = {mae:.4f}")
         plt.legend()
         plt.grid(True, alpha=0.3)
 
         # 子图4: Q-Q图检验残差正态性
         plt.subplot(2, 3, 4)
         stats.probplot(residuals, dist="norm", plot=plt)
-        plt.title("残差Q-Q图\n(检验正态性)")
+        plt.title("Residuals Q-Q Plot\n(Normality Test)")
         plt.grid(True, alpha=0.3)
 
         # 子图5: 预测值与实际值的时间序列对比（前50个样本）
@@ -283,14 +283,14 @@ class ElectrolyteAnalyzer:
         n_show = min(50, len(predicted))
         x_range = range(n_show)
         plt.plot(
-            x_range, actual[:n_show], "o-", label="实际值", markersize=4, color="blue"
+            x_range, actual[:n_show], "o-", label="Actual Value", markersize=4, color="blue"
         )
         plt.plot(
-            x_range, predicted[:n_show], "s-", label="预测值", markersize=4, color="red"
+            x_range, predicted[:n_show], "s-", label="Predicted Value", markersize=4, color="red"
         )
-        plt.xlabel("样本索引")
-        plt.ylabel("值")
-        plt.title(f"前{n_show}个样本对比")
+        plt.xlabel("Sample Index")
+        plt.ylabel("Value")
+        plt.title(f"First {n_show} Samples Comparison")
         plt.legend()
         plt.grid(True, alpha=0.3)
 
@@ -300,9 +300,9 @@ class ElectrolyteAnalyzer:
         sorted_errors = np.sort(abs_errors)
         y = np.arange(1, len(sorted_errors) + 1) / len(sorted_errors)
         plt.plot(sorted_errors, y, "b-", linewidth=2)
-        plt.xlabel("绝对误差")
-        plt.ylabel("累积概率")
-        plt.title(f"绝对误差累积分布\nMAPE = {mape:.2f}%")
+        plt.xlabel("Absolute Error")
+        plt.ylabel("Cumulative Probability")
+        plt.title(f"Absolute Error CDF\nMAPE = {mape:.2f}%")
         plt.grid(True, alpha=0.3)
 
         plt.tight_layout()
