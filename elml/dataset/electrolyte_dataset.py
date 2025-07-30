@@ -319,7 +319,7 @@ class ElectrolyteDataset(Dataset):
         输出形状为 (FEATURE_DIM,)
         """
         # 初始化加权平均特征向量
-        weighted_features = torch.zeros(self.FEATURE_DIM, dtype=torch.float32)
+        weighted_features = torch.zeros(self.FEATURE_DIM - 1, dtype=torch.float32)
 
         # 获取温度信息并标准化
         raw_temperature = electrolyte.condition["temperature"]  # 假设单位为K
@@ -338,10 +338,14 @@ class ElectrolyteDataset(Dataset):
             # 获取组分的质量占比（转换为小数）
             weight = electrolyte.proportions[i] * 0.01
 
-            # 加权累加到总特征向量
-            weighted_features += torch.cat([material_features * weight, temperature])
+            # 加权累加到总特征向量，并在最后一位补0
+            padded_features = torch.cat([material_features * weight])
+            weighted_features += padded_features
 
-        return weighted_features
+        # 最后将温度信息添加到特征向量中
+        weighted_features_with_tempture = torch.cat([weighted_features, temperature])
+
+        return weighted_features_with_tempture
 
     def _generate_target_tensor(self, electrolyte: Electrolyte) -> torch.Tensor:
         """

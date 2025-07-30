@@ -4,33 +4,11 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 
 
-def modify_feature_matrix(feature_matrix: list[list[float]]) -> list[float]:
-    # 原始矩阵：[类型嵌入（3） + 特定属性（8） + MACCS指纹（166） + 占比（1）]
-    # 修改后的矩阵：溶剂特定属性（8） + 锂盐占比（1）
-    salt = 0
-    solvent_matrix: list[float] = [0, 0, 0, 0, 0, 0, 0]
-    for row in feature_matrix:
-        if row[0:3] == [1, 0, 0]:  # 锂盐
-            salt += row[-1]
-        elif row[0:3] == [0, 1, 0]:  # 溶剂
-            for i in range(7):
-                solvent_matrix[i] += row[3 + i] * row[-1]
-    updated_feature_matrix = solvent_matrix + [salt]
-    return updated_feature_matrix
+dataset = ElectrolyteDataset(
+    dataset_file="data/calisol23/calisol23.json", feature_mode="weighted_average"
+)
 
-
-dataset = ElectrolyteDataset(dataset_file="data/calisol23.json")
-
-features = []
-for formula in dataset.formulas:
-    features.append(
-        [formula.performance["conductivity"]]
-        + modify_feature_matrix(formula.get_feature_matrix())
-    )
-
-features_df = pd.DataFrame(features)
-# 设置列名
-features_df.columns = [
+columns = [
     "电导率",
     "密度",
     "熔点",
@@ -39,8 +17,24 @@ features_df.columns = [
     "粘度",
     "偶极化率",
     "电化学窗口",
+    "氢键能",
+    "温度",
     "锂盐占比",
 ]
+features_df = pd.DataFrame(columns=columns)
+# 设置列名
+
+for i in range(len(dataset)):
+    features_tensor, temperature_tensor, target_tensor = dataset[i]
+    features = features_tensor.numpy().tolist()
+    temperature = temperature_tensor.numpy().tolist()
+    target = target_tensor.numpy().tolist()
+
+    # 获取锂盐浓度
+    salt_concentration = dataset.formulas[i].proportions[0] ** 0.01
+
+    features_df.loc[i] = [target] + features[-9:] + [salt_concentration]
+
 # 计算皮尔逊相关性矩阵
 correlation_matrix = features_df.corr(method="pearson")
 
