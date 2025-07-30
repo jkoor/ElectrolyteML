@@ -81,8 +81,11 @@ class MaterialLibrary:
     def _precompute_standardized_values(self):
         """对所有材料属性进行标准化"""
 
-        # 收集所有材料的属性值
+        # 收集所有材料的属性值的最小值和最大值
         for cas_number, data in self.material_index.items():
+            if not data["use_as_standard_data"]:
+                continue
+
             material_type = data["material_type"]
             if material_type == "Salt":
                 for attr in self.salt_attrs:

@@ -101,6 +101,7 @@ df = pd.read_csv(filepath)
 
 # 筛选特定字段值
 filter_salt = ["LIPF6", "LIFSI", "LITFSI", "LIBF4"]
+# filter_salt = ["LIBOB"]
 df = df[df["salt"].str.upper().isin(filter_salt)]
 
 # 重命名列名
