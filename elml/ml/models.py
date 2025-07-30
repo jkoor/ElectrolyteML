@@ -78,7 +78,7 @@ class PositionalEncoding(nn.Module):
         seq_len = x.size(1)
         # pe[:seq_len] 形状为 [seq_len, d_model]
         # 广播到 [batch_size, seq_len, d_model]
-        x = x + self.pe[:seq_len].unsqueeze(0)
+        x = x + self.pe[:seq_len].unsqueeze(0)  # type: ignore
         return self.dropout(x)
 
 
@@ -151,7 +151,10 @@ class ElectrolyteTransformer(nn.Module):
         )
 
     def forward(
-        self, src: torch.Tensor, temperature: torch.Tensor, src_padding_mask: torch.Tensor = None
+        self,
+        src: torch.Tensor,
+        temperature: torch.Tensor,
+        src_padding_mask: torch.Tensor = None,
     ) -> torch.Tensor:
         """
         Transformer的前向传播。
@@ -186,7 +189,9 @@ class ElectrolyteTransformer(nn.Module):
             aggregated_output = transformer_output.mean(dim=1)
 
         # 5. 温度编码
-        temperature_encoded = self.temperature_encoder(temperature)  # [batch_size, model_dim]
+        temperature_encoded = self.temperature_encoder(
+            temperature
+        )  # [batch_size, model_dim]
 
         # 6. 融合配方特征和温度特征
         fused_features = torch.cat(

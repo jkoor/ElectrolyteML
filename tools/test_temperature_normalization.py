@@ -15,10 +15,10 @@ def test_temperature_normalization():
     """测试温度归一化功能"""
 
     print("=== 温度归一化测试 ===")
-    
+
     # 1. 测试基本归一化功能
     dataset = ElectrolyteDataset()
-    
+
     print(f"设定的温度归一化范围: {dataset.TEMP_MIN}K - {dataset.TEMP_MAX}K")
     print(
         f"对应摄氏度范围: {dataset.TEMP_MIN - 273.15:.1f}°C - {dataset.TEMP_MAX - 273.15:.1f}°C"
@@ -31,34 +31,44 @@ def test_temperature_normalization():
         if os.path.exists(data_file):
             print(f"=== 分析实际数据集: {data_file} ===")
             dataset_with_data = ElectrolyteDataset(dataset_file=data_file)
-            
+
             # 获取温度统计信息
             temp_stats = dataset_with_data.get_temperature_statistics()
-            
+
             if temp_stats["count"] > 0:
                 print("数据集中的温度统计:")
                 print(f"  样本数量: {temp_stats['count']}")
-                print(f"  温度范围: {temp_stats['min_k']:.2f}K - {temp_stats['max_k']:.2f}K")
-                print(f"  摄氏度范围: {temp_stats['min_c']:.2f}°C - {temp_stats['max_c']:.2f}°C")
-                print(f"  平均温度: {temp_stats['mean_k']:.2f}K ({temp_stats['mean_c']:.2f}°C)")
+                print(
+                    f"  温度范围: {temp_stats['min_k']:.2f}K - {temp_stats['max_k']:.2f}K"
+                )
+                print(
+                    f"  摄氏度范围: {temp_stats['min_c']:.2f}°C - {temp_stats['max_c']:.2f}°C"
+                )
+                print(
+                    f"  平均温度: {temp_stats['mean_k']:.2f}K ({temp_stats['mean_c']:.2f}°C)"
+                )
                 print(f"  超出归一化范围的样本: {temp_stats['out_of_range_count']}")
-                
+
                 # 验证温度范围
                 print("\n验证温度范围:")
                 dataset_with_data.validate_temperature_range()
-                
+
                 # 测试几个实际温度值的归一化
                 print("\n实际温度值归一化示例:")
-                sample_temps = [temp_stats['min_k'], temp_stats['mean_k'], temp_stats['max_k']]
+                sample_temps = [
+                    temp_stats["min_k"],
+                    temp_stats["mean_k"],
+                    temp_stats["max_k"],
+                ]
                 for temp in sample_temps:
                     normalized = dataset_with_data._normalize_temperature(temp)
-                    print(f"  {temp:.2f}K ({temp-273.15:.2f}°C) -> {normalized:.3f}")
+                    print(f"  {temp:.2f}K ({temp - 273.15:.2f}°C) -> {normalized:.3f}")
             else:
                 print("数据集中没有找到温度信息")
-                
+
         else:
             print(f"数据文件 {data_file} 不存在，跳过实际数据分析")
-            
+
     except Exception as e:
         print(f"加载数据集时出错: {e}")
         print("继续进行基本功能测试...")
@@ -111,38 +121,44 @@ def suggest_temperature_range():
         if os.path.exists(data_file):
             dataset = ElectrolyteDataset(dataset_file=data_file)
             temp_stats = dataset.get_temperature_statistics()
-            
+
             if temp_stats["count"] > 0:
                 print("\n=== 温度范围建议 ===")
                 print("基于实际数据的温度范围建议:")
-                
+
                 # 计算建议的范围（在实际范围基础上适当扩展）
-                data_min = temp_stats['min_k']
-                data_max = temp_stats['max_k']
+                data_min = temp_stats["min_k"]
+                data_max = temp_stats["max_k"]
                 data_range = data_max - data_min
-                
+
                 # 扩展20%的范围作为缓冲
                 buffer = data_range * 0.2
                 suggested_min = data_min - buffer
                 suggested_max = data_max + buffer
-                
+
                 # 确保在合理的物理范围内
                 suggested_min = max(223.15, suggested_min)  # 不低于-50°C
                 suggested_max = min(373.15, suggested_max)  # 不高于100°C
-                
-                print(f"  数据实际范围: {data_min:.2f}K - {data_max:.2f}K ({data_min-273.15:.1f}°C - {data_max-273.15:.1f}°C)")
-                print(f"  建议归一化范围: {suggested_min:.2f}K - {suggested_max:.2f}K ({suggested_min-273.15:.1f}°C - {suggested_max-273.15:.1f}°C)")
-                print(f"  当前设定范围: {dataset.TEMP_MIN:.2f}K - {dataset.TEMP_MAX:.2f}K ({dataset.TEMP_MIN-273.15:.1f}°C - {dataset.TEMP_MAX-273.15:.1f}°C)")
-                
-                if (dataset.TEMP_MIN <= data_min and dataset.TEMP_MAX >= data_max):
+
+                print(
+                    f"  数据实际范围: {data_min:.2f}K - {data_max:.2f}K ({data_min - 273.15:.1f}°C - {data_max - 273.15:.1f}°C)"
+                )
+                print(
+                    f"  建议归一化范围: {suggested_min:.2f}K - {suggested_max:.2f}K ({suggested_min - 273.15:.1f}°C - {suggested_max - 273.15:.1f}°C)"
+                )
+                print(
+                    f"  当前设定范围: {dataset.TEMP_MIN:.2f}K - {dataset.TEMP_MAX:.2f}K ({dataset.TEMP_MIN - 273.15:.1f}°C - {dataset.TEMP_MAX - 273.15:.1f}°C)"
+                )
+
+                if dataset.TEMP_MIN <= data_min and dataset.TEMP_MAX >= data_max:
                     print("  ✓ 当前设定范围已经覆盖了所有数据")
                 else:
                     print("  ⚠ 建议调整温度归一化范围以更好地适应数据分布")
-                    
+
                 return suggested_min, suggested_max
     except Exception as e:
         print(f"分析数据时出错: {e}")
-    
+
     return None, None
 
 

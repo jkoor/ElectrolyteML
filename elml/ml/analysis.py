@@ -467,10 +467,10 @@ class ElectrolyteAnalyzer:
             ks_stat, ks_p = None, None
 
         # Durbin-Watson自相关检验（如果适用）
+        # Durbin-Watson自相关检验（检测残差的序列相关性）
         try:
-            from statsmodels.stats.diagnostic import durbin_watson
-
-            dw_stat = durbin_watson(residuals)
+            diff = np.diff(residuals)
+            dw_stat = np.sum(diff**2) / np.sum(residuals**2)
         except Exception:
             dw_stat = None
 

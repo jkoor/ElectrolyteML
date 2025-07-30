@@ -432,12 +432,15 @@ class ElectrolyteDataset(Dataset):
         test_formulas = labeled_formulas[n_train + n_val :]
 
         # 6. 创建三个新的、配置正确的数据集实例
-        train_dataset = ElectrolyteDataset(target_metric=target_metric, 
-                                           feature_mode=feature_mode)
-        val_dataset = ElectrolyteDataset(target_metric=target_metric, 
-                                         feature_mode=feature_mode)
-        test_dataset = ElectrolyteDataset(target_metric=target_metric, 
-                                          feature_mode=feature_mode)
+        train_dataset = ElectrolyteDataset(
+            target_metric=target_metric, feature_mode=feature_mode
+        )
+        val_dataset = ElectrolyteDataset(
+            target_metric=target_metric, feature_mode=feature_mode
+        )
+        test_dataset = ElectrolyteDataset(
+            target_metric=target_metric, feature_mode=feature_mode
+        )
 
         # 7. 将切分好的配方列表分别赋给新的实例
         train_dataset.formulas = train_formulas

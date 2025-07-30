@@ -2,10 +2,9 @@ import json
 import torch
 import numpy as np
 from typing import Union, List, Dict, Optional, Tuple
-from torch.utils.data import DataLoader, Dataset
+from torch.utils.data import DataLoader
 import warnings
 
-from .train import ElectrolyteTrainer
 from .models import ElectrolyteMLP, ElectrolyteTransformer
 from ..battery import Electrolyte
 from ..dataset import ElectrolyteDataset, FeatureMode
@@ -130,7 +129,9 @@ class ElectrolytePredictor:
         Returns:
             (预测值数组, 实际值数组)
         """
-        dataloader = DataLoader(dataset, batch_size=batch_size, shuffle=False, num_workers=self.num_workers)
+        dataloader = DataLoader(
+            dataset, batch_size=batch_size, shuffle=False, num_workers=self.num_workers
+        )
 
         all_predictions = []
         all_targets = []

@@ -13,7 +13,6 @@ dependencies = [
     "scikit-learn>=1.6.1",
     "seaborn>=0.13.2",
     "torch>=2.6.0",
-    "torch-geometric>=2.6.1",
 ]
 
 [dependency-groups]
