@@ -17,13 +17,14 @@ def example_transformer_workflow():
         nhead=8,
         num_encoder_layers=4,
         feature_mode="sequence",  # transformer使用序列特征
-        batch_size=32,
+        batch_size=256,
+        num_workers=16,
         lr=1e-4,
         num_epochs=500,
-        early_stopping_patience=20,
+        early_stopping_patience=40,
         data_path="data/calisol23/calisol23.json",
         log_dir="runs",
-        model_name="transformer_model",
+        model_name="transformer_model_4",
     )
 
     # 创建工作流
@@ -47,14 +48,15 @@ def example_mlp_workflow():
         "input_dim": 179,
         "dropout_rate": 0.3,
         "feature_mode": "weighted_average",  # mlp使用加权平均特征
-        "batch_size": 64,
+        "batch_size": 256,
+        "num_workers": 16,
         "lr": 1e-4,
         "optimizer_name": "adam",
         "num_epochs": 500,
-        "early_stopping_patience": 20,
+        "early_stopping_patience": 40,
         "data_path": "data/calisol23/calisol23.json",
         "log_dir": "runs",
-        "model_name": "mlp_model",
+        "model_name": "mlp_model_4",
     }
 
     # 创建工作流
@@ -171,9 +173,9 @@ def example_custom_analysis():
     """自定义分析的示例"""
 
     config = WorkflowConfig(
-        model_type="transformer",
+        model_type="mlp",
         data_path="data/calisol23/calisol23.json",
-        model_name="custom_analysis_model",
+        model_name="mlp_model_4",
     )
 
     workflow = ElectrolyteWorkflow(config)
@@ -183,7 +185,7 @@ def example_custom_analysis():
         # 仅执行预测和分析部分
         workflow.setup_data()
         workflow.setup_model()
-        workflow.setup_predictor("runs/transformer_model/best_model.pth")
+        workflow.setup_predictor(str(workflow.log_dir / "best_model.pth"))
 
         # 使用不同的数据集进行分析
         # 这里可以传入自定义的数据集
@@ -207,10 +209,10 @@ if __name__ == "__main__":
 
     # 选择要运行的示例
     print("1. Transformer模型完整工作流")
-    example_transformer_workflow()
+    # example_transformer_workflow()
 
     print("\n2. MLP模型完整工作流")
-    example_mlp_workflow()
+    # example_mlp_workflow()
 
     print("\n3. 分步骤执行工作流")
     # example_step_by_step_workflow()
@@ -222,4 +224,4 @@ if __name__ == "__main__":
     # example_config_from_file()
 
     print("\n6. 自定义分析")
-    # example_custom_analysis()
+    example_custom_analysis()
