@@ -94,11 +94,14 @@ def salt_weight_ratio(
     return components
 
 
+filepath = "data/calisol23/calisol23.csv"
+
 # 读取数据
-df = pd.read_csv("data/calisol23.csv")
+df = pd.read_csv(filepath)
 
 # 筛选特定字段值
 filter_salt = ["LIPF6", "LIFSI", "LITFSI", "LIBF4"]
+# filter_salt = ["LIBOB"]
 df = df[df["salt"].str.upper().isin(filter_salt)]
 
 # 重命名列名
@@ -153,14 +156,16 @@ df.columns = [
 
 dataset = ElectrolyteDataset()
 
+# 创建与df完全相同的空表
+valid_df = df.iloc[0:0].copy()  # 保留列结构但不包含数据行
+
 # 按行遍历数据
-for row in df.itertuples():
-    # 如果该配方的导电率为0，则跳过该配方
-    if getattr(row, "k") == 0:
+for idx, row in df.iterrows():
+    if pd.isna(row["k"]) or row["k"] <= 0:
         continue
 
     # 获取锂盐及其比例
-    salt: Material = MLibrary.get_material(abbr=str(getattr(row, "salt")))
+    salt: Material = MLibrary.get_material(abbr=str(row["salt"]))
 
     # 获取所有非零溶剂及其比例
     has_unknown_solvent = False  # 是否有未知溶剂
@@ -168,34 +173,37 @@ for row in df.itertuples():
     solvent_columns = df.columns[8:48]  # 从EC列到o_Xylene列
     for abbr in solvent_columns:
         # 如果该溶剂的比例不为0，则添加到列表中
-        if getattr(row, abbr) != 0:
+        if row[abbr] != 0:
             # 如果数据库中没有该溶剂的简称，则跳过该配方
             if not MLibrary.has_material(abbr=abbr):
                 has_unknown_solvent = True
                 continue
             solvent: Material = MLibrary.get_material(abbr=abbr)
-            solvents_init.append((solvent, getattr(row, abbr)))
+            solvents_init.append((solvent, row[abbr]))
 
     if has_unknown_solvent or solvents_init == []:
         continue
 
+    # 将符合条件的数据行添加到空表中
+    valid_df = pd.concat([valid_df, pd.DataFrame([row])], ignore_index=True)
+
     # 计算溶剂重量比例
     solvents: list[tuple[Material, float]] = solvent_weight_ratio(
-        solvents_init, getattr(row, "solvent_ratio_type")
+        solvents_init, row["solvent_ratio_type"]
     )
 
     # 计算锂盐重量比例
-    salts_init: list[tuple[Material, float]] = [(salt, getattr(row, "c"))]
+    salts_init: list[tuple[Material, float]] = [(salt, row["c"])]
 
     if salts_init[0][1] <= 0:
         continue
 
-    if getattr(row, "c_unit") == "mol/kg":
+    if row["c_unit"] == "mol/kg":
         salt_unit_type = "w"
-    elif getattr(row, "c_unit") == "mol/l":
+    elif row["c_unit"] == "mol/l":
         salt_unit_type = "v"
     else:
-        raise ValueError(f"unit_type 参数错误: {getattr(row, 'c_unit')}")
+        raise ValueError(f"unit_type 参数错误: {row['c_unit']}")
 
     salts: list[tuple[Material, float]] = salt_weight_ratio(
         salts_init, salt_unit_type, solvents
@@ -203,17 +211,26 @@ for row in df.itertuples():
 
     el: Electrolyte = Electrolyte.create(
         name=f"{salt.abbreviation} + {', '.join(solvent.abbreviation for solvent, _ in solvents)}",
-        id=str(getattr(row, "c")),
-        description=getattr(row, "doi"),
+        id=str(row["c"]),
+        description=row["doi"],
         salts=salts,
         solvents=solvents,
         additives=[],
         performance={
-            "conductivity": getattr(row, "k"),
-            "temperature": getattr(row, "T"),
+            "conductivity": row["k"],
         },
+        condition={"temperature": row["T"]},
     )
 
-    dataset.add_formula(el, refresh=False)
+    dataset.add_formula(el)
 
-dataset.to_json("data/calisol23.json")
+
+json_filepath = filepath.replace(".csv", ".json")
+dataset.to_json(json_filepath)
+
+# 保存包含有效电解质配方的DataFrame
+valid_filepath = filepath.replace(".csv", "_valid.csv")
+valid_df.to_csv(valid_filepath, index=False)
+print(f"原始数据行数: {len(df)}")
+print(f"有效配方行数: {len(valid_df)}")
+print(f"有效配方保存至: {valid_filepath}")

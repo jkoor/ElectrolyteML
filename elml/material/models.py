@@ -34,6 +34,9 @@ class MaterialModel(BaseModel):
         ..., pattern=r"^\d{2,7}-\d{2}-\d$", description="CAS注册号，格式如 123-45-6"
     )
     description: str = Field(..., min_length=1, description="材料描述")
+    use_as_standard_data: bool = Field(
+        default=False, description="是否作为标准化计算数据"
+    )
     molecular_structure: str = Field(
         ..., min_length=1, description="分子结构 (SMILES格式)"
     )

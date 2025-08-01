@@ -1,1 +1,3 @@
-from .electrolyte_dataset import ElectrolyteDataset
+from .electrolyte_dataset import ElectrolyteDataset, FeatureMode
+
+__all__ = ["ElectrolyteDataset", "FeatureMode"]

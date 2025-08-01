@@ -1,6 +1,5 @@
 from functools import cached_property
-from rdkit.Chem import MACCSkeys, Descriptors, MolFromSmiles, rdMolDescriptors
-
+from rdkit.Chem import MACCSkeys, Descriptors, MolFromSmiles, rdMolDescriptors  # type: ignore
 from .models import MaterialModel
 
 
@@ -11,7 +10,6 @@ class Material:
         "_mol",
         "_fingerprint",
         "_molecular_weight",
-        "ml_features",
     )
 
     def __init__(self, data: MaterialModel):
@@ -97,6 +95,7 @@ class Material:
         # fingerprint = mfpgen.GetFingerprint(mol)
 
         # 使用MACCSkeys指纹生成分子指纹
+        # 分子指纹长度166，为了编程方便（Python索引从0开始），实际上是一个167位的向量
         fingerprint = MACCSkeys._pyGenMACCSKeys(self._mol)
 
         # 将指纹转换为NumPy数组并转换为列表，供机器学习使用
@@ -128,6 +127,33 @@ class Material:
         """
         mol = MolFromSmiles(self.molecular_structure)
         return rdMolDescriptors.CalcMolFormula(mol)
+
+    # 6. 获取材料标准化的特征张量
+    @cached_property
+    def standardized_feature_values(self) -> list[float]:
+        """
+        返回材料的标准化特征张量。
+        """
+        from .. import MLibrary
+
+        # 类型映射字典
+        _material_type_vector_map: dict[str, list[float]] = {
+            "Salt": [1, 0, 0],
+            "Solvent": [0, 1, 0],
+            "Additive": [0, 0, 1],
+        }
+        fingerprint: list[float] = self.molecular_fingerprint  # 分子指纹(167)
+        type_list: list[float] = _material_type_vector_map[
+            self.material_type
+        ]  # 材料类型(3)
+        standardized_features: list[float] = list(
+            MLibrary.get_standardized_value(self).values()
+        )  # 物化性质(8)
+
+        # 合并特征
+        # 分子指纹(167), 材料类型(3), 物化性质(8)
+        features: list[float] = fingerprint + type_list + standardized_features
+        return features
 
     # ------------------------ 类方法 ------------------------ #
 

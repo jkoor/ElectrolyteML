@@ -33,6 +33,7 @@ class MaterialLibrary:
         self.salt_attrs = {
             "density": [],
             "melting_point": [],
+            "boiling_point": [],
             "solubility": [],
             "anion_size": [],
             "dissociation_constant": [],
@@ -47,13 +48,17 @@ class MaterialLibrary:
             "viscosity": [],
             "dipole_moment": [],
             "electrochemical_window": [],
+            "hydrogen_bonding": [],
         }
         self.additive_attrs = {
             "density": [],
             "melting_point": [],
             "boiling_point": [],
-            "reduction_potential": [],
-            "oxidation_potential": [],
+            "dielectric_constant": [],
+            "viscosity": [],
+            "dipole_moment": [],
+            "electrochemical_window": [],
+            "hydrogen_bonding": [],
         }
         if file_path:
             self._build_index()
@@ -76,8 +81,11 @@ class MaterialLibrary:
     def _precompute_standardized_values(self):
         """对所有材料属性进行标准化"""
 
-        # 收集所有材料的属性值
+        # 收集所有材料的属性值的最小值和最大值
         for cas_number, data in self.material_index.items():
+            if not data["use_as_standard_data"]:
+                continue
+
             material_type = data["material_type"]
             if material_type == "Salt":
                 for attr in self.salt_attrs:
@@ -131,7 +139,7 @@ class MaterialLibrary:
                             value if value is not None else 0,
                         )
 
-    def get_standardized_value(self, material: Material) -> dict:
+    def get_standardized_value(self, material: Material) -> dict[str, float]:
         """
         获取标准化值。
         """
@@ -165,7 +173,9 @@ class MaterialLibrary:
         return standardized_values
 
     def has_material(
-        self, abbr: Union[str, None] = None, cas_registry_number: Union[str, None] = None
+        self,
+        abbr: Union[str, None] = None,
+        cas_registry_number: Union[str, None] = None,
     ) -> bool:
         """
         检查材料是否存在于库中。
