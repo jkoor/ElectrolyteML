@@ -91,6 +91,9 @@ def salt_weight_ratio(
             for salt, ratio in salts
         ]
 
+    else:
+        raise ValueError(f"unit_type 参数错误: {unit_type}")
+
     return components
 
 
