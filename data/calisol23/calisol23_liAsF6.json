@@ -1,0 +1,6676 @@
+[
+    {
+        "name": "liasf6 + pc, dme",
+        "id": "E1",
+        "description": "10.1016/S0378-7753(01)00697-8",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 3.95,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 30.74,
+                "relative_fraction": 32.0
+            },
+            {
+                "abbr": "dme",
+                "cas_registry_number": "110-71-4",
+                "overall_fraction": 65.31,
+                "relative_fraction": 68.0
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 248.15
+        },
+        "performance": {
+            "conductivity": 0.346900385
+        }
+    },
+    {
+        "name": "liasf6 + pc, dme",
+        "id": "E2",
+        "description": "10.1016/S0378-7753(01)00697-8",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 3.89,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 30.76,
+                "relative_fraction": 32.0
+            },
+            {
+                "abbr": "dme",
+                "cas_registry_number": "110-71-4",
+                "overall_fraction": 65.35,
+                "relative_fraction": 68.0
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 258.15
+        },
+        "performance": {
+            "conductivity": 0.428241617
+        }
+    },
+    {
+        "name": "liasf6 + pc, dme",
+        "id": "E3",
+        "description": "10.1016/S0378-7753(01)00697-8",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 3.89,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 30.76,
+                "relative_fraction": 32.0
+            },
+            {
+                "abbr": "dme",
+                "cas_registry_number": "110-71-4",
+                "overall_fraction": 65.35,
+                "relative_fraction": 68.0
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 268.15
+        },
+        "performance": {
+            "conductivity": 0.505075429
+        }
+    },
+    {
+        "name": "liasf6 + pc, dme",
+        "id": "E4",
+        "description": "10.1016/S0378-7753(01)00697-8",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 3.92,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 30.75,
+                "relative_fraction": 32.0
+            },
+            {
+                "abbr": "dme",
+                "cas_registry_number": "110-71-4",
+                "overall_fraction": 65.33,
+                "relative_fraction": 68.0
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 278.15
+        },
+        "performance": {
+            "conductivity": 0.586441092
+        }
+    },
+    {
+        "name": "liasf6 + pc, dme",
+        "id": "E5",
+        "description": "10.1016/S0378-7753(01)00697-8",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 3.91,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 30.75,
+                "relative_fraction": 32.0
+            },
+            {
+                "abbr": "dme",
+                "cas_registry_number": "110-71-4",
+                "overall_fraction": 65.34,
+                "relative_fraction": 68.0
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 288.15
+        },
+        "performance": {
+            "conductivity": 0.658755268
+        }
+    },
+    {
+        "name": "liasf6 + pc, dme",
+        "id": "E6",
+        "description": "10.1016/S0378-7753(01)00697-8",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 3.86,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 30.76,
+                "relative_fraction": 32.0
+            },
+            {
+                "abbr": "dme",
+                "cas_registry_number": "110-71-4",
+                "overall_fraction": 65.38,
+                "relative_fraction": 68.0
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 298.15
+        },
+        "performance": {
+            "conductivity": 0.735576864
+        }
+    },
+    {
+        "name": "liasf6 + pc, dme",
+        "id": "E7",
+        "description": "10.1016/S0378-7753(01)00697-8",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 6.64,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 29.88,
+                "relative_fraction": 32.0
+            },
+            {
+                "abbr": "dme",
+                "cas_registry_number": "110-71-4",
+                "overall_fraction": 63.48,
+                "relative_fraction": 68.0
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 248.15
+        },
+        "performance": {
+            "conductivity": 0.481011421
+        }
+    },
+    {
+        "name": "liasf6 + pc, dme",
+        "id": "E8",
+        "description": "10.1016/S0378-7753(01)00697-8",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 6.63,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 29.88,
+                "relative_fraction": 32.0
+            },
+            {
+                "abbr": "dme",
+                "cas_registry_number": "110-71-4",
+                "overall_fraction": 63.49,
+                "relative_fraction": 68.0
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 258.15
+        },
+        "performance": {
+            "conductivity": 0.582703231
+        }
+    },
+    {
+        "name": "liasf6 + pc, dme",
+        "id": "E9",
+        "description": "10.1016/S0378-7753(01)00697-8",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 6.66,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 29.87,
+                "relative_fraction": 32.0
+            },
+            {
+                "abbr": "dme",
+                "cas_registry_number": "110-71-4",
+                "overall_fraction": 63.47,
+                "relative_fraction": 68.0
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 268.15
+        },
+        "performance": {
+            "conductivity": 0.704745618
+        }
+    },
+    {
+        "name": "liasf6 + pc, dme",
+        "id": "E10",
+        "description": "10.1016/S0378-7753(01)00697-8",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 6.69,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 29.86,
+                "relative_fraction": 32.0
+            },
+            {
+                "abbr": "dme",
+                "cas_registry_number": "110-71-4",
+                "overall_fraction": 63.45,
+                "relative_fraction": 68.0
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 278.15
+        },
+        "performance": {
+            "conductivity": 0.822268369
+        }
+    },
+    {
+        "name": "liasf6 + pc, dme",
+        "id": "E11",
+        "description": "10.1016/S0378-7753(01)00697-8",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 6.59,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 29.89,
+                "relative_fraction": 32.0
+            },
+            {
+                "abbr": "dme",
+                "cas_registry_number": "110-71-4",
+                "overall_fraction": 63.52,
+                "relative_fraction": 68.0
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 288.15
+        },
+        "performance": {
+            "conductivity": 0.94427411
+        }
+    },
+    {
+        "name": "liasf6 + pc, dme",
+        "id": "E12",
+        "description": "10.1016/S0378-7753(01)00697-8",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 6.54,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 29.91,
+                "relative_fraction": 32.0
+            },
+            {
+                "abbr": "dme",
+                "cas_registry_number": "110-71-4",
+                "overall_fraction": 63.55,
+                "relative_fraction": 68.0
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 298.15
+        },
+        "performance": {
+            "conductivity": 1.064032248
+        }
+    },
+    {
+        "name": "liasf6 + pc, dme",
+        "id": "E13",
+        "description": "10.1016/S0378-7753(01)00697-8",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 8.62,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 29.24,
+                "relative_fraction": 32.0
+            },
+            {
+                "abbr": "dme",
+                "cas_registry_number": "110-71-4",
+                "overall_fraction": 62.14,
+                "relative_fraction": 68.0
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 248.15
+        },
+        "performance": {
+            "conductivity": 0.542600623
+        }
+    },
+    {
+        "name": "liasf6 + pc, dme",
+        "id": "E14",
+        "description": "10.1016/S0378-7753(01)00697-8",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 8.61,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 29.24,
+                "relative_fraction": 32.0
+            },
+            {
+                "abbr": "dme",
+                "cas_registry_number": "110-71-4",
+                "overall_fraction": 62.15,
+                "relative_fraction": 68.0
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 258.15
+        },
+        "performance": {
+            "conductivity": 0.666890613
+        }
+    },
+    {
+        "name": "liasf6 + pc, dme",
+        "id": "E15",
+        "description": "10.1016/S0378-7753(01)00697-8",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 8.55,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 29.26,
+                "relative_fraction": 32.0
+            },
+            {
+                "abbr": "dme",
+                "cas_registry_number": "110-71-4",
+                "overall_fraction": 62.19,
+                "relative_fraction": 68.0
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 268.15
+        },
+        "performance": {
+            "conductivity": 0.818286203
+        }
+    },
+    {
+        "name": "liasf6 + pc, dme",
+        "id": "E16",
+        "description": "10.1016/S0378-7753(01)00697-8",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 8.58,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 29.25,
+                "relative_fraction": 32.0
+            },
+            {
+                "abbr": "dme",
+                "cas_registry_number": "110-71-4",
+                "overall_fraction": 62.17,
+                "relative_fraction": 68.0
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 278.15
+        },
+        "performance": {
+            "conductivity": 0.965186588
+        }
+    },
+    {
+        "name": "liasf6 + pc, dme",
+        "id": "E17",
+        "description": "10.1016/S0378-7753(01)00697-8",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 8.57,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 29.26,
+                "relative_fraction": 32.0
+            },
+            {
+                "abbr": "dme",
+                "cas_registry_number": "110-71-4",
+                "overall_fraction": 62.17,
+                "relative_fraction": 68.0
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 288.15
+        },
+        "performance": {
+            "conductivity": 1.100775667
+        }
+    },
+    {
+        "name": "liasf6 + pc, dme",
+        "id": "E18",
+        "description": "10.1016/S0378-7753(01)00697-8",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 8.47,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 29.29,
+                "relative_fraction": 32.0
+            },
+            {
+                "abbr": "dme",
+                "cas_registry_number": "110-71-4",
+                "overall_fraction": 62.24,
+                "relative_fraction": 68.0
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 298.15
+        },
+        "performance": {
+            "conductivity": 1.247639406
+        }
+    },
+    {
+        "name": "liasf6 + pc, dme",
+        "id": "E19",
+        "description": "10.1016/S0378-7753(01)00697-8",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 9.77,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 28.87,
+                "relative_fraction": 32.0
+            },
+            {
+                "abbr": "dme",
+                "cas_registry_number": "110-71-4",
+                "overall_fraction": 61.36,
+                "relative_fraction": 68.0
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 248.15
+        },
+        "performance": {
+            "conductivity": 0.565528614
+        }
+    },
+    {
+        "name": "liasf6 + pc, dme",
+        "id": "E20",
+        "description": "10.1016/S0378-7753(01)00697-8",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 9.79,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 28.87,
+                "relative_fraction": 32.0
+            },
+            {
+                "abbr": "dme",
+                "cas_registry_number": "110-71-4",
+                "overall_fraction": 61.34,
+                "relative_fraction": 68.0
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 258.15
+        },
+        "performance": {
+            "conductivity": 0.712428999
+        }
+    },
+    {
+        "name": "liasf6 + pc, dme",
+        "id": "E21",
+        "description": "10.1016/S0378-7753(01)00697-8",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 9.73,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 28.89,
+                "relative_fraction": 32.0
+            },
+            {
+                "abbr": "dme",
+                "cas_registry_number": "110-71-4",
+                "overall_fraction": 61.38,
+                "relative_fraction": 68.0
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 268.15
+        },
+        "performance": {
+            "conductivity": 0.868344225
+        }
+    },
+    {
+        "name": "liasf6 + pc, dme",
+        "id": "E22",
+        "description": "10.1016/S0378-7753(01)00697-8",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 9.76,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 28.88,
+                "relative_fraction": 32.0
+            },
+            {
+                "abbr": "dme",
+                "cas_registry_number": "110-71-4",
+                "overall_fraction": 61.36,
+                "relative_fraction": 68.0
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 278.15
+        },
+        "performance": {
+            "conductivity": 1.024283882
+        }
+    },
+    {
+        "name": "liasf6 + pc, dme",
+        "id": "E23",
+        "description": "10.1016/S0378-7753(01)00697-8",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 9.74,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 28.88,
+                "relative_fraction": 32.0
+            },
+            {
+                "abbr": "dme",
+                "cas_registry_number": "110-71-4",
+                "overall_fraction": 61.38,
+                "relative_fraction": 68.0
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 288.15
+        },
+        "performance": {
+            "conductivity": 1.182471142
+        }
+    },
+    {
+        "name": "liasf6 + pc, dme",
+        "id": "E24",
+        "description": "10.1016/S0378-7753(01)00697-8",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 9.68,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 28.9,
+                "relative_fraction": 32.0
+            },
+            {
+                "abbr": "dme",
+                "cas_registry_number": "110-71-4",
+                "overall_fraction": 61.42,
+                "relative_fraction": 68.0
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 298.15
+        },
+        "performance": {
+            "conductivity": 1.342906004
+        }
+    },
+    {
+        "name": "liasf6 + pc, dme",
+        "id": "E25",
+        "description": "10.1016/S0378-7753(01)00697-8",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 15.98,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 26.89,
+                "relative_fraction": 32.0
+            },
+            {
+                "abbr": "dme",
+                "cas_registry_number": "110-71-4",
+                "overall_fraction": 57.13,
+                "relative_fraction": 68.0
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 248.15
+        },
+        "performance": {
+            "conductivity": 0.623819703
+        }
+    },
+    {
+        "name": "liasf6 + pc, dme",
+        "id": "E26",
+        "description": "10.1016/S0378-7753(01)00697-8",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 16.05,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 26.86,
+                "relative_fraction": 32.0
+            },
+            {
+                "abbr": "dme",
+                "cas_registry_number": "110-71-4",
+                "overall_fraction": 57.09,
+                "relative_fraction": 68.0
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 258.15
+        },
+        "performance": {
+            "conductivity": 0.811409027
+        }
+    },
+    {
+        "name": "liasf6 + pc, dme",
+        "id": "E27",
+        "description": "10.1016/S0378-7753(01)00697-8",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 15.94,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 26.9,
+                "relative_fraction": 32.0
+            },
+            {
+                "abbr": "dme",
+                "cas_registry_number": "110-71-4",
+                "overall_fraction": 57.16,
+                "relative_fraction": 68.0
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 268.15
+        },
+        "performance": {
+            "conductivity": 0.99894949
+        }
+    },
+    {
+        "name": "liasf6 + pc, dme",
+        "id": "E28",
+        "description": "10.1016/S0378-7753(01)00697-8",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 15.96,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 26.89,
+                "relative_fraction": 32.0
+            },
+            {
+                "abbr": "dme",
+                "cas_registry_number": "110-71-4",
+                "overall_fraction": 57.15,
+                "relative_fraction": 68.0
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 278.15
+        },
+        "performance": {
+            "conductivity": 1.227203323
+        }
+    },
+    {
+        "name": "liasf6 + pc, dme",
+        "id": "E29",
+        "description": "10.1016/S0378-7753(01)00697-8",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 15.94,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 26.9,
+                "relative_fraction": 32.0
+            },
+            {
+                "abbr": "dme",
+                "cas_registry_number": "110-71-4",
+                "overall_fraction": 57.16,
+                "relative_fraction": 68.0
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 288.15
+        },
+        "performance": {
+            "conductivity": 1.441886032
+        }
+    },
+    {
+        "name": "liasf6 + pc, dme",
+        "id": "E30",
+        "description": "10.1016/S0378-7753(01)00697-8",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 15.87,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 26.92,
+                "relative_fraction": 32.0
+            },
+            {
+                "abbr": "dme",
+                "cas_registry_number": "110-71-4",
+                "overall_fraction": 57.21,
+                "relative_fraction": 68.0
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 298.15
+        },
+        "performance": {
+            "conductivity": 1.66333598
+        }
+    },
+    {
+        "name": "liasf6 + pc, dme",
+        "id": "E31",
+        "description": "10.1016/S0378-7753(01)00697-8",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 20.26,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 25.52,
+                "relative_fraction": 32.0
+            },
+            {
+                "abbr": "dme",
+                "cas_registry_number": "110-71-4",
+                "overall_fraction": 54.22,
+                "relative_fraction": 68.0
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 248.15
+        },
+        "performance": {
+            "conductivity": 0.59341599
+        }
+    },
+    {
+        "name": "liasf6 + pc, dme",
+        "id": "E32",
+        "description": "10.1016/S0378-7753(01)00697-8",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 20.29,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 25.51,
+                "relative_fraction": 32.0
+            },
+            {
+                "abbr": "dme",
+                "cas_registry_number": "110-71-4",
+                "overall_fraction": 54.2,
+                "relative_fraction": 68.0
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 258.15
+        },
+        "performance": {
+            "conductivity": 0.77873328
+        }
+    },
+    {
+        "name": "liasf6 + pc, dme",
+        "id": "E33",
+        "description": "10.1016/S0378-7753(01)00697-8",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 20.27,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 25.51,
+                "relative_fraction": 32.0
+            },
+            {
+                "abbr": "dme",
+                "cas_registry_number": "110-71-4",
+                "overall_fraction": 54.22,
+                "relative_fraction": 68.0
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 268.15
+        },
+        "performance": {
+            "conductivity": 0.988896354
+        }
+    },
+    {
+        "name": "liasf6 + pc, dme",
+        "id": "E34",
+        "description": "10.1016/S0378-7753(01)00697-8",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 20.24,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 25.52,
+                "relative_fraction": 32.0
+            },
+            {
+                "abbr": "dme",
+                "cas_registry_number": "110-71-4",
+                "overall_fraction": 54.24,
+                "relative_fraction": 68.0
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 278.15
+        },
+        "performance": {
+            "conductivity": 1.230696879
+        }
+    },
+    {
+        "name": "liasf6 + pc, dme",
+        "id": "E35",
+        "description": "10.1016/S0378-7753(01)00697-8",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 20.17,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 25.55,
+                "relative_fraction": 32.0
+            },
+            {
+                "abbr": "dme",
+                "cas_registry_number": "110-71-4",
+                "overall_fraction": 54.28,
+                "relative_fraction": 68.0
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 288.15
+        },
+        "performance": {
+            "conductivity": 1.472485189
+        }
+    },
+    {
+        "name": "liasf6 + pc, dme",
+        "id": "E36",
+        "description": "10.1016/S0378-7753(01)00697-8",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 20.23,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 25.53,
+                "relative_fraction": 32.0
+            },
+            {
+                "abbr": "dme",
+                "cas_registry_number": "110-71-4",
+                "overall_fraction": 54.24,
+                "relative_fraction": 68.0
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 298.15
+        },
+        "performance": {
+            "conductivity": 1.739168143
+        }
+    },
+    {
+        "name": "liasf6 + pc, dme",
+        "id": "E37",
+        "description": "10.1016/S0378-7753(01)00697-8",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 31.19,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 22.02,
+                "relative_fraction": 32.0
+            },
+            {
+                "abbr": "dme",
+                "cas_registry_number": "110-71-4",
+                "overall_fraction": 46.79,
+                "relative_fraction": 68.0
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 278.15
+        },
+        "performance": {
+            "conductivity": 1.010126428
+        }
+    },
+    {
+        "name": "liasf6 + pc, dme",
+        "id": "E38",
+        "description": "10.1016/S0378-7753(01)00697-8",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 31.24,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 22.0,
+                "relative_fraction": 32.0
+            },
+            {
+                "abbr": "dme",
+                "cas_registry_number": "110-71-4",
+                "overall_fraction": 46.76,
+                "relative_fraction": 68.0
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 288.15
+        },
+        "performance": {
+            "conductivity": 1.276809381
+        }
+    },
+    {
+        "name": "liasf6 + pc, dme",
+        "id": "E39",
+        "description": "10.1016/S0378-7753(01)00697-8",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 31.17,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 22.03,
+                "relative_fraction": 32.0
+            },
+            {
+                "abbr": "dme",
+                "cas_registry_number": "110-71-4",
+                "overall_fraction": 46.8,
+                "relative_fraction": 68.0
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 298.15
+        },
+        "performance": {
+            "conductivity": 1.606730593
+        }
+    },
+    {
+        "name": "liasf6 + pc, dme",
+        "id": "E40",
+        "description": "10.1016/S0378-7753(01)00697-8",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 2.01,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 31.36,
+                "relative_fraction": 32.0
+            },
+            {
+                "abbr": "dme",
+                "cas_registry_number": "110-71-4",
+                "overall_fraction": 66.63,
+                "relative_fraction": 68.0
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 248.15
+        },
+        "performance": {
+            "conductivity": 0.208489587
+        }
+    },
+    {
+        "name": "liasf6 + pc, dme",
+        "id": "E41",
+        "description": "10.1016/S0378-7753(01)00697-8",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 2.01,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 31.36,
+                "relative_fraction": 32.0
+            },
+            {
+                "abbr": "dme",
+                "cas_registry_number": "110-71-4",
+                "overall_fraction": 66.63,
+                "relative_fraction": 68.0
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 258.15
+        },
+        "performance": {
+            "conductivity": 0.244646674
+        }
+    },
+    {
+        "name": "liasf6 + pc, dme",
+        "id": "E42",
+        "description": "10.1016/S0378-7753(01)00697-8",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 2.05,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 31.34,
+                "relative_fraction": 32.0
+            },
+            {
+                "abbr": "dme",
+                "cas_registry_number": "110-71-4",
+                "overall_fraction": 66.61,
+                "relative_fraction": 68.0
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 268.15
+        },
+        "performance": {
+            "conductivity": 0.292115067
+        }
+    },
+    {
+        "name": "liasf6 + pc, dme",
+        "id": "E43",
+        "description": "10.1016/S0378-7753(01)00697-8",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 1.96,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 31.37,
+                "relative_fraction": 32.0
+            },
+            {
+                "abbr": "dme",
+                "cas_registry_number": "110-71-4",
+                "overall_fraction": 66.67,
+                "relative_fraction": 68.0
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 278.15
+        },
+        "performance": {
+            "conductivity": 0.335027179
+        }
+    },
+    {
+        "name": "liasf6 + pc, dme",
+        "id": "E44",
+        "description": "10.1016/S0378-7753(01)00697-8",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 1.95,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 31.38,
+                "relative_fraction": 32.0
+            },
+            {
+                "abbr": "dme",
+                "cas_registry_number": "110-71-4",
+                "overall_fraction": 66.67,
+                "relative_fraction": 68.0
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 288.15
+        },
+        "performance": {
+            "conductivity": 0.375703903
+        }
+    },
+    {
+        "name": "liasf6 + pc, dme",
+        "id": "E45",
+        "description": "10.1016/S0378-7753(01)00697-8",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 1.99,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 31.36,
+                "relative_fraction": 32.0
+            },
+            {
+                "abbr": "dme",
+                "cas_registry_number": "110-71-4",
+                "overall_fraction": 66.65,
+                "relative_fraction": 68.0
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 298.15
+        },
+        "performance": {
+            "conductivity": 0.411873206
+        }
+    },
+    {
+        "name": "liasf6 + ec, pc, dme",
+        "id": "E46",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 17.74,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 25.49,
+                "relative_fraction": 30.99
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 23.25,
+                "relative_fraction": 28.26
+            },
+            {
+                "abbr": "dme",
+                "cas_registry_number": "110-71-4",
+                "overall_fraction": 33.53,
+                "relative_fraction": 40.76
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 213.15
+        },
+        "performance": {
+            "conductivity": 0.28
+        }
+    },
+    {
+        "name": "liasf6 + ec, pc, dme",
+        "id": "E47",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 17.74,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 25.49,
+                "relative_fraction": 30.99
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 23.25,
+                "relative_fraction": 28.26
+            },
+            {
+                "abbr": "dme",
+                "cas_registry_number": "110-71-4",
+                "overall_fraction": 33.53,
+                "relative_fraction": 40.76
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 223.15
+        },
+        "performance": {
+            "conductivity": 0.57
+        }
+    },
+    {
+        "name": "liasf6 + ec, pc, dme",
+        "id": "E48",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 17.74,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 25.49,
+                "relative_fraction": 30.99
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 23.25,
+                "relative_fraction": 28.26
+            },
+            {
+                "abbr": "dme",
+                "cas_registry_number": "110-71-4",
+                "overall_fraction": 33.53,
+                "relative_fraction": 40.76
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 233.15
+        },
+        "performance": {
+            "conductivity": 1.07
+        }
+    },
+    {
+        "name": "liasf6 + ec, pc, dme",
+        "id": "E49",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 17.74,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 25.49,
+                "relative_fraction": 30.99
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 23.25,
+                "relative_fraction": 28.26
+            },
+            {
+                "abbr": "dme",
+                "cas_registry_number": "110-71-4",
+                "overall_fraction": 33.53,
+                "relative_fraction": 40.76
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 243.15
+        },
+        "performance": {
+            "conductivity": 3.35
+        }
+    },
+    {
+        "name": "liasf6 + ec, pc, dme",
+        "id": "E50",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 70.95,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 9.0,
+                "relative_fraction": 30.99
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 8.21,
+                "relative_fraction": 28.26
+            },
+            {
+                "abbr": "dme",
+                "cas_registry_number": "110-71-4",
+                "overall_fraction": 11.84,
+                "relative_fraction": 40.76
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 243.15
+        },
+        "performance": {
+            "conductivity": 0.01
+        }
+    },
+    {
+        "name": "liasf6 + pc, dme",
+        "id": "E51",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 18.4,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 47.41,
+                "relative_fraction": 58.1
+            },
+            {
+                "abbr": "dme",
+                "cas_registry_number": "110-71-4",
+                "overall_fraction": 34.19,
+                "relative_fraction": 41.9
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 243.15
+        },
+        "performance": {
+            "conductivity": 3.28
+        }
+    },
+    {
+        "name": "liasf6 + pc, dme",
+        "id": "E52",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 73.61,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 15.33,
+                "relative_fraction": 58.1
+            },
+            {
+                "abbr": "dme",
+                "cas_registry_number": "110-71-4",
+                "overall_fraction": 11.06,
+                "relative_fraction": 41.9
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 243.15
+        },
+        "performance": {
+            "conductivity": 0.01
+        }
+    },
+    {
+        "name": "liasf6 + ec, dme",
+        "id": "E53",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 17.15,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 49.98,
+                "relative_fraction": 60.33
+            },
+            {
+                "abbr": "dme",
+                "cas_registry_number": "110-71-4",
+                "overall_fraction": 32.87,
+                "relative_fraction": 39.67
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 253.15
+        },
+        "performance": {
+            "conductivity": 5.27
+        }
+    },
+    {
+        "name": "liasf6 + ec, pc, dme",
+        "id": "E54",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 17.74,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 25.49,
+                "relative_fraction": 30.99
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 23.25,
+                "relative_fraction": 28.26
+            },
+            {
+                "abbr": "dme",
+                "cas_registry_number": "110-71-4",
+                "overall_fraction": 33.53,
+                "relative_fraction": 40.76
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 253.15
+        },
+        "performance": {
+            "conductivity": 5.02
+        }
+    },
+    {
+        "name": "liasf6 + ec, pc, dme",
+        "id": "E55",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 70.95,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 9.0,
+                "relative_fraction": 30.99
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 8.21,
+                "relative_fraction": 28.26
+            },
+            {
+                "abbr": "dme",
+                "cas_registry_number": "110-71-4",
+                "overall_fraction": 11.84,
+                "relative_fraction": 40.76
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 253.15
+        },
+        "performance": {
+            "conductivity": 0.01
+        }
+    },
+    {
+        "name": "liasf6 + pc, dme",
+        "id": "E56",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 18.4,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 47.41,
+                "relative_fraction": 58.1
+            },
+            {
+                "abbr": "dme",
+                "cas_registry_number": "110-71-4",
+                "overall_fraction": 34.19,
+                "relative_fraction": 41.9
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 253.15
+        },
+        "performance": {
+            "conductivity": 4.43
+        }
+    },
+    {
+        "name": "liasf6 + pc, dme",
+        "id": "E57",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 73.61,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 15.33,
+                "relative_fraction": 58.1
+            },
+            {
+                "abbr": "dme",
+                "cas_registry_number": "110-71-4",
+                "overall_fraction": 11.06,
+                "relative_fraction": 41.9
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 253.15
+        },
+        "performance": {
+            "conductivity": 0.08
+        }
+    },
+    {
+        "name": "liasf6 + ec, dme",
+        "id": "E58",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 17.15,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 49.98,
+                "relative_fraction": 60.33
+            },
+            {
+                "abbr": "dme",
+                "cas_registry_number": "110-71-4",
+                "overall_fraction": 32.87,
+                "relative_fraction": 39.67
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 263.15
+        },
+        "performance": {
+            "conductivity": 7.23
+        }
+    },
+    {
+        "name": "liasf6 + ec, pc, dme",
+        "id": "E59",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 17.74,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 25.49,
+                "relative_fraction": 30.99
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 23.25,
+                "relative_fraction": 28.26
+            },
+            {
+                "abbr": "dme",
+                "cas_registry_number": "110-71-4",
+                "overall_fraction": 33.53,
+                "relative_fraction": 40.76
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 263.15
+        },
+        "performance": {
+            "conductivity": 7.02
+        }
+    },
+    {
+        "name": "liasf6 + ec, pc, dme",
+        "id": "E60",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 70.95,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 9.0,
+                "relative_fraction": 30.99
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 8.21,
+                "relative_fraction": 28.26
+            },
+            {
+                "abbr": "dme",
+                "cas_registry_number": "110-71-4",
+                "overall_fraction": 11.84,
+                "relative_fraction": 40.76
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 263.15
+        },
+        "performance": {
+            "conductivity": 0.22
+        }
+    },
+    {
+        "name": "liasf6 + pc, dme",
+        "id": "E61",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 18.4,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 47.41,
+                "relative_fraction": 58.1
+            },
+            {
+                "abbr": "dme",
+                "cas_registry_number": "110-71-4",
+                "overall_fraction": 34.19,
+                "relative_fraction": 41.9
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 263.15
+        },
+        "performance": {
+            "conductivity": 6.24
+        }
+    },
+    {
+        "name": "liasf6 + pc, dme",
+        "id": "E62",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 73.61,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 15.33,
+                "relative_fraction": 58.1
+            },
+            {
+                "abbr": "dme",
+                "cas_registry_number": "110-71-4",
+                "overall_fraction": 11.06,
+                "relative_fraction": 41.9
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 263.15
+        },
+        "performance": {
+            "conductivity": 0.27
+        }
+    },
+    {
+        "name": "liasf6 + ec, dme",
+        "id": "E63",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 17.15,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 49.98,
+                "relative_fraction": 60.33
+            },
+            {
+                "abbr": "dme",
+                "cas_registry_number": "110-71-4",
+                "overall_fraction": 32.87,
+                "relative_fraction": 39.67
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 273.15
+        },
+        "performance": {
+            "conductivity": 9.5
+        }
+    },
+    {
+        "name": "liasf6 + ec, pc, dme",
+        "id": "E64",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 17.74,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 25.49,
+                "relative_fraction": 30.99
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 23.25,
+                "relative_fraction": 28.26
+            },
+            {
+                "abbr": "dme",
+                "cas_registry_number": "110-71-4",
+                "overall_fraction": 33.53,
+                "relative_fraction": 40.76
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 273.15
+        },
+        "performance": {
+            "conductivity": 9.23
+        }
+    },
+    {
+        "name": "liasf6 + ec, pc, dme",
+        "id": "E65",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 70.95,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 9.0,
+                "relative_fraction": 30.99
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 8.21,
+                "relative_fraction": 28.26
+            },
+            {
+                "abbr": "dme",
+                "cas_registry_number": "110-71-4",
+                "overall_fraction": 11.84,
+                "relative_fraction": 40.76
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 273.15
+        },
+        "performance": {
+            "conductivity": 0.63
+        }
+    },
+    {
+        "name": "liasf6 + pc, dme",
+        "id": "E66",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 18.4,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 47.41,
+                "relative_fraction": 58.1
+            },
+            {
+                "abbr": "dme",
+                "cas_registry_number": "110-71-4",
+                "overall_fraction": 34.19,
+                "relative_fraction": 41.9
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 273.15
+        },
+        "performance": {
+            "conductivity": 8.37
+        }
+    },
+    {
+        "name": "liasf6 + pc, dme",
+        "id": "E67",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 73.61,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 15.33,
+                "relative_fraction": 58.1
+            },
+            {
+                "abbr": "dme",
+                "cas_registry_number": "110-71-4",
+                "overall_fraction": 11.06,
+                "relative_fraction": 41.9
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 273.15
+        },
+        "performance": {
+            "conductivity": 0.7
+        }
+    },
+    {
+        "name": "liasf6 + ec, dme",
+        "id": "E68",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 17.15,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 49.98,
+                "relative_fraction": 60.33
+            },
+            {
+                "abbr": "dme",
+                "cas_registry_number": "110-71-4",
+                "overall_fraction": 32.87,
+                "relative_fraction": 39.67
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 293.15
+        },
+        "performance": {
+            "conductivity": 14.52
+        }
+    },
+    {
+        "name": "liasf6 + ec, pc, dme",
+        "id": "E69",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 17.74,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 25.49,
+                "relative_fraction": 30.99
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 23.25,
+                "relative_fraction": 28.26
+            },
+            {
+                "abbr": "dme",
+                "cas_registry_number": "110-71-4",
+                "overall_fraction": 33.53,
+                "relative_fraction": 40.76
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 293.15
+        },
+        "performance": {
+            "conductivity": 14.4
+        }
+    },
+    {
+        "name": "liasf6 + ec, pc, dme",
+        "id": "E70",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 70.95,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 9.0,
+                "relative_fraction": 30.99
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 8.21,
+                "relative_fraction": 28.26
+            },
+            {
+                "abbr": "dme",
+                "cas_registry_number": "110-71-4",
+                "overall_fraction": 11.84,
+                "relative_fraction": 40.76
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 293.15
+        },
+        "performance": {
+            "conductivity": 2.76
+        }
+    },
+    {
+        "name": "liasf6 + pc, dme",
+        "id": "E71",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 18.4,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 47.41,
+                "relative_fraction": 58.1
+            },
+            {
+                "abbr": "dme",
+                "cas_registry_number": "110-71-4",
+                "overall_fraction": 34.19,
+                "relative_fraction": 41.9
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 293.15
+        },
+        "performance": {
+            "conductivity": 13.15
+        }
+    },
+    {
+        "name": "liasf6 + pc, dme",
+        "id": "E72",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 73.61,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 15.33,
+                "relative_fraction": 58.1
+            },
+            {
+                "abbr": "dme",
+                "cas_registry_number": "110-71-4",
+                "overall_fraction": 11.06,
+                "relative_fraction": 41.9
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 293.15
+        },
+        "performance": {
+            "conductivity": 2.74
+        }
+    },
+    {
+        "name": "liasf6 + ec, dme",
+        "id": "E73",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 17.15,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 49.98,
+                "relative_fraction": 60.33
+            },
+            {
+                "abbr": "dme",
+                "cas_registry_number": "110-71-4",
+                "overall_fraction": 32.87,
+                "relative_fraction": 39.67
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 313.15
+        },
+        "performance": {
+            "conductivity": 20.64
+        }
+    },
+    {
+        "name": "liasf6 + ec, pc, dme",
+        "id": "E74",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 17.74,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 25.49,
+                "relative_fraction": 30.99
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 23.25,
+                "relative_fraction": 28.26
+            },
+            {
+                "abbr": "dme",
+                "cas_registry_number": "110-71-4",
+                "overall_fraction": 33.53,
+                "relative_fraction": 40.76
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 313.15
+        },
+        "performance": {
+            "conductivity": 19.87
+        }
+    },
+    {
+        "name": "liasf6 + ec, pc, dme",
+        "id": "E75",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 70.95,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 9.0,
+                "relative_fraction": 30.99
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 8.21,
+                "relative_fraction": 28.26
+            },
+            {
+                "abbr": "dme",
+                "cas_registry_number": "110-71-4",
+                "overall_fraction": 11.84,
+                "relative_fraction": 40.76
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 313.15
+        },
+        "performance": {
+            "conductivity": 6.95
+        }
+    },
+    {
+        "name": "liasf6 + pc, dme",
+        "id": "E76",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 18.4,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 47.41,
+                "relative_fraction": 58.1
+            },
+            {
+                "abbr": "dme",
+                "cas_registry_number": "110-71-4",
+                "overall_fraction": 34.19,
+                "relative_fraction": 41.9
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 313.15
+        },
+        "performance": {
+            "conductivity": 18.46
+        }
+    },
+    {
+        "name": "liasf6 + pc, dme",
+        "id": "E77",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 73.61,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 15.33,
+                "relative_fraction": 58.1
+            },
+            {
+                "abbr": "dme",
+                "cas_registry_number": "110-71-4",
+                "overall_fraction": 11.06,
+                "relative_fraction": 41.9
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 313.15
+        },
+        "performance": {
+            "conductivity": 6.65
+        }
+    },
+    {
+        "name": "liasf6 + ec, dme",
+        "id": "E78",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 17.15,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 49.98,
+                "relative_fraction": 60.33
+            },
+            {
+                "abbr": "dme",
+                "cas_registry_number": "110-71-4",
+                "overall_fraction": 32.87,
+                "relative_fraction": 39.67
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 333.15
+        },
+        "performance": {
+            "conductivity": 26.65
+        }
+    },
+    {
+        "name": "liasf6 + ec, pc, dme",
+        "id": "E79",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 17.74,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 25.49,
+                "relative_fraction": 30.99
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 23.25,
+                "relative_fraction": 28.26
+            },
+            {
+                "abbr": "dme",
+                "cas_registry_number": "110-71-4",
+                "overall_fraction": 33.53,
+                "relative_fraction": 40.76
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 333.15
+        },
+        "performance": {
+            "conductivity": 25.75
+        }
+    },
+    {
+        "name": "liasf6 + ec, pc, dme",
+        "id": "E80",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 70.95,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 9.0,
+                "relative_fraction": 30.99
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 8.21,
+                "relative_fraction": 28.26
+            },
+            {
+                "abbr": "dme",
+                "cas_registry_number": "110-71-4",
+                "overall_fraction": 11.84,
+                "relative_fraction": 40.76
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 333.15
+        },
+        "performance": {
+            "conductivity": 13.13
+        }
+    },
+    {
+        "name": "liasf6 + pc, dme",
+        "id": "E81",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 18.4,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 47.41,
+                "relative_fraction": 58.1
+            },
+            {
+                "abbr": "dme",
+                "cas_registry_number": "110-71-4",
+                "overall_fraction": 34.19,
+                "relative_fraction": 41.9
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 333.15
+        },
+        "performance": {
+            "conductivity": 23.92
+        }
+    },
+    {
+        "name": "liasf6 + pc, dme",
+        "id": "E82",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 73.61,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 15.33,
+                "relative_fraction": 58.1
+            },
+            {
+                "abbr": "dme",
+                "cas_registry_number": "110-71-4",
+                "overall_fraction": 11.06,
+                "relative_fraction": 41.9
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 333.15
+        },
+        "performance": {
+            "conductivity": 12.37
+        }
+    },
+    {
+        "name": "liasf6 + ec, dme",
+        "id": "E83",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 17.15,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 49.98,
+                "relative_fraction": 60.33
+            },
+            {
+                "abbr": "dme",
+                "cas_registry_number": "110-71-4",
+                "overall_fraction": 32.87,
+                "relative_fraction": 39.67
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 353.15
+        },
+        "performance": {
+            "conductivity": 32.57
+        }
+    },
+    {
+        "name": "liasf6 + ec, pc, dme",
+        "id": "E84",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 17.74,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 25.49,
+                "relative_fraction": 30.99
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 23.25,
+                "relative_fraction": 28.26
+            },
+            {
+                "abbr": "dme",
+                "cas_registry_number": "110-71-4",
+                "overall_fraction": 33.53,
+                "relative_fraction": 40.76
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 353.15
+        },
+        "performance": {
+            "conductivity": 31.44
+        }
+    },
+    {
+        "name": "liasf6 + ec, pc, dme",
+        "id": "E85",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 70.95,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 9.0,
+                "relative_fraction": 30.99
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 8.21,
+                "relative_fraction": 28.26
+            },
+            {
+                "abbr": "dme",
+                "cas_registry_number": "110-71-4",
+                "overall_fraction": 11.84,
+                "relative_fraction": 40.76
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 353.15
+        },
+        "performance": {
+            "conductivity": 20.84
+        }
+    },
+    {
+        "name": "liasf6 + pc, dme",
+        "id": "E86",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 18.4,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 47.41,
+                "relative_fraction": 58.1
+            },
+            {
+                "abbr": "dme",
+                "cas_registry_number": "110-71-4",
+                "overall_fraction": 34.19,
+                "relative_fraction": 41.9
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 353.15
+        },
+        "performance": {
+            "conductivity": 28.18
+        }
+    },
+    {
+        "name": "liasf6 + pc, dme",
+        "id": "E87",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 73.61,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 15.33,
+                "relative_fraction": 58.1
+            },
+            {
+                "abbr": "dme",
+                "cas_registry_number": "110-71-4",
+                "overall_fraction": 11.06,
+                "relative_fraction": 41.9
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 353.15
+        },
+        "performance": {
+            "conductivity": 19.49
+        }
+    },
+    {
+        "name": "liasf6 + ec, pc",
+        "id": "E88",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 8.0,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 14.91,
+                "relative_fraction": 16.21
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 77.09,
+                "relative_fraction": 83.79
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 213.15
+        },
+        "performance": {
+            "conductivity": 0.04
+        }
+    },
+    {
+        "name": "liasf6 + ec, pc",
+        "id": "E89",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 16.0,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 13.62,
+                "relative_fraction": 16.21
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 70.38,
+                "relative_fraction": 83.79
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 213.15
+        },
+        "performance": {
+            "conductivity": 0.01
+        }
+    },
+    {
+        "name": "liasf6 + ec, pc",
+        "id": "E90",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 8.0,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 14.91,
+                "relative_fraction": 16.21
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 77.09,
+                "relative_fraction": 83.79
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 223.15
+        },
+        "performance": {
+            "conductivity": 0.14
+        }
+    },
+    {
+        "name": "liasf6 + ec, pc",
+        "id": "E91",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 16.0,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 13.62,
+                "relative_fraction": 16.21
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 70.38,
+                "relative_fraction": 83.79
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 223.15
+        },
+        "performance": {
+            "conductivity": 0.05
+        }
+    },
+    {
+        "name": "liasf6 + ec, pc",
+        "id": "E92",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 24.0,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 12.32,
+                "relative_fraction": 16.21
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 63.68,
+                "relative_fraction": 83.79
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 223.15
+        },
+        "performance": {
+            "conductivity": 0.01
+        }
+    },
+    {
+        "name": "liasf6 + ec, pc",
+        "id": "E93",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 8.0,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 14.91,
+                "relative_fraction": 16.21
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 77.09,
+                "relative_fraction": 83.79
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 233.15
+        },
+        "performance": {
+            "conductivity": 0.39
+        }
+    },
+    {
+        "name": "liasf6 + ec, pc",
+        "id": "E94",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 16.0,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 13.62,
+                "relative_fraction": 16.21
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 70.38,
+                "relative_fraction": 83.79
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 233.15
+        },
+        "performance": {
+            "conductivity": 0.18
+        }
+    },
+    {
+        "name": "liasf6 + ec, pc",
+        "id": "E95",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 24.0,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 12.32,
+                "relative_fraction": 16.21
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 63.68,
+                "relative_fraction": 83.79
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 233.15
+        },
+        "performance": {
+            "conductivity": 0.03
+        }
+    },
+    {
+        "name": "liasf6 + ec, pc",
+        "id": "E96",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 23.21,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 40.16,
+                "relative_fraction": 52.3
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 36.63,
+                "relative_fraction": 47.7
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 233.15
+        },
+        "performance": {
+            "conductivity": 0.03
+        }
+    },
+    {
+        "name": "liasf6 + ec, pc",
+        "id": "E97",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 8.0,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 14.91,
+                "relative_fraction": 16.21
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 77.09,
+                "relative_fraction": 83.79
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 243.15
+        },
+        "performance": {
+            "conductivity": 0.81
+        }
+    },
+    {
+        "name": "liasf6 + ec, pc",
+        "id": "E98",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 7.74,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 48.25,
+                "relative_fraction": 52.3
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 44.01,
+                "relative_fraction": 47.7
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 243.15
+        },
+        "performance": {
+            "conductivity": 0.86
+        }
+    },
+    {
+        "name": "liasf6 + ec, pc",
+        "id": "E99",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 16.0,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 13.62,
+                "relative_fraction": 16.21
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 70.38,
+                "relative_fraction": 83.79
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 243.15
+        },
+        "performance": {
+            "conductivity": 0.55
+        }
+    },
+    {
+        "name": "liasf6 + ec, pc",
+        "id": "E100",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 15.47,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 44.21,
+                "relative_fraction": 52.3
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 40.32,
+                "relative_fraction": 47.7
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 243.15
+        },
+        "performance": {
+            "conductivity": 0.64
+        }
+    },
+    {
+        "name": "liasf6 + ec, pc",
+        "id": "E101",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 24.0,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 12.32,
+                "relative_fraction": 16.21
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 63.68,
+                "relative_fraction": 83.79
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 243.15
+        },
+        "performance": {
+            "conductivity": 0.14
+        }
+    },
+    {
+        "name": "liasf6 + ec, pc",
+        "id": "E102",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 23.21,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 40.16,
+                "relative_fraction": 52.3
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 36.63,
+                "relative_fraction": 47.7
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 243.15
+        },
+        "performance": {
+            "conductivity": 0.16
+        }
+    },
+    {
+        "name": "liasf6 + ec, pc",
+        "id": "E103",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 32.01,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 11.02,
+                "relative_fraction": 16.21
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 56.97,
+                "relative_fraction": 83.79
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 243.15
+        },
+        "performance": {
+            "conductivity": 0.01
+        }
+    },
+    {
+        "name": "liasf6 + ec, pc",
+        "id": "E104",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 30.94,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 36.12,
+                "relative_fraction": 52.3
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 32.94,
+                "relative_fraction": 47.7
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 243.15
+        },
+        "performance": {
+            "conductivity": 0.02
+        }
+    },
+    {
+        "name": "liasf6 + ec, pc",
+        "id": "E105",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 8.0,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 14.91,
+                "relative_fraction": 16.21
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 77.09,
+                "relative_fraction": 83.79
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 253.15
+        },
+        "performance": {
+            "conductivity": 1.37
+        }
+    },
+    {
+        "name": "liasf6 + ec, pc",
+        "id": "E106",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 7.74,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 48.25,
+                "relative_fraction": 52.3
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 44.01,
+                "relative_fraction": 47.7
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 253.15
+        },
+        "performance": {
+            "conductivity": 1.46
+        }
+    },
+    {
+        "name": "liasf6 + ec, pc",
+        "id": "E107",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 16.0,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 13.62,
+                "relative_fraction": 16.21
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 70.38,
+                "relative_fraction": 83.79
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 253.15
+        },
+        "performance": {
+            "conductivity": 1.07
+        }
+    },
+    {
+        "name": "liasf6 + ec, pc",
+        "id": "E108",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 15.47,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 44.21,
+                "relative_fraction": 52.3
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 40.32,
+                "relative_fraction": 47.7
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 253.15
+        },
+        "performance": {
+            "conductivity": 1.15
+        }
+    },
+    {
+        "name": "liasf6 + ec, pc",
+        "id": "E109",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 15.2,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 60.97,
+                "relative_fraction": 71.9
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 23.83,
+                "relative_fraction": 28.1
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 253.15
+        },
+        "performance": {
+            "conductivity": 1.38
+        }
+    },
+    {
+        "name": "liasf6 + ec, pc",
+        "id": "E110",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 24.0,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 12.32,
+                "relative_fraction": 16.21
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 63.68,
+                "relative_fraction": 83.79
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 253.15
+        },
+        "performance": {
+            "conductivity": 0.41
+        }
+    },
+    {
+        "name": "liasf6 + ec, pc",
+        "id": "E111",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 23.21,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 40.16,
+                "relative_fraction": 52.3
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 36.63,
+                "relative_fraction": 47.7
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 253.15
+        },
+        "performance": {
+            "conductivity": 0.42
+        }
+    },
+    {
+        "name": "liasf6 + ec, pc",
+        "id": "E112",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 32.01,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 11.02,
+                "relative_fraction": 16.21
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 56.97,
+                "relative_fraction": 83.79
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 253.15
+        },
+        "performance": {
+            "conductivity": 0.06
+        }
+    },
+    {
+        "name": "liasf6 + ec, pc",
+        "id": "E113",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 30.94,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 36.12,
+                "relative_fraction": 52.3
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 32.94,
+                "relative_fraction": 47.7
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 253.15
+        },
+        "performance": {
+            "conductivity": 0.07
+        }
+    },
+    {
+        "name": "liasf6 + ec, pc",
+        "id": "E114",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 46.41,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 28.03,
+                "relative_fraction": 52.3
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 25.56,
+                "relative_fraction": 47.7
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 253.15
+        },
+        "performance": {
+            "conductivity": 0.01
+        }
+    },
+    {
+        "name": "liasf6 + ec, pc",
+        "id": "E115",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 8.0,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 14.91,
+                "relative_fraction": 16.21
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 77.09,
+                "relative_fraction": 83.79
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 263.15
+        },
+        "performance": {
+            "conductivity": 2.08
+        }
+    },
+    {
+        "name": "liasf6 + ec, pc",
+        "id": "E116",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 7.74,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 48.25,
+                "relative_fraction": 52.3
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 44.01,
+                "relative_fraction": 47.7
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 263.15
+        },
+        "performance": {
+            "conductivity": 2.25
+        }
+    },
+    {
+        "name": "liasf6 + ec, pc",
+        "id": "E117",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 16.0,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 13.62,
+                "relative_fraction": 16.21
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 70.38,
+                "relative_fraction": 83.79
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 263.15
+        },
+        "performance": {
+            "conductivity": 1.83
+        }
+    },
+    {
+        "name": "liasf6 + ec, pc",
+        "id": "E118",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 15.47,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 44.21,
+                "relative_fraction": 52.3
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 40.32,
+                "relative_fraction": 47.7
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 263.15
+        },
+        "performance": {
+            "conductivity": 1.96
+        }
+    },
+    {
+        "name": "liasf6 + ec, pc",
+        "id": "E119",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 15.2,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 60.97,
+                "relative_fraction": 71.9
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 23.83,
+                "relative_fraction": 28.1
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 263.15
+        },
+        "performance": {
+            "conductivity": 2.29
+        }
+    },
+    {
+        "name": "liasf6 + ec, pc",
+        "id": "E120",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 24.0,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 12.32,
+                "relative_fraction": 16.21
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 63.68,
+                "relative_fraction": 83.79
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 263.15
+        },
+        "performance": {
+            "conductivity": 0.83
+        }
+    },
+    {
+        "name": "liasf6 + ec, pc",
+        "id": "E121",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 23.21,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 40.16,
+                "relative_fraction": 52.3
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 36.63,
+                "relative_fraction": 47.7
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 263.15
+        },
+        "performance": {
+            "conductivity": 0.92
+        }
+    },
+    {
+        "name": "liasf6 + ec, pc",
+        "id": "E122",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 32.01,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 11.02,
+                "relative_fraction": 16.21
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 56.97,
+                "relative_fraction": 83.79
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 263.15
+        },
+        "performance": {
+            "conductivity": 0.2
+        }
+    },
+    {
+        "name": "liasf6 + ec, pc",
+        "id": "E123",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 30.94,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 36.12,
+                "relative_fraction": 52.3
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 32.94,
+                "relative_fraction": 47.7
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 263.15
+        },
+        "performance": {
+            "conductivity": 0.23
+        }
+    },
+    {
+        "name": "liasf6 + ec, pc",
+        "id": "E124",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 46.41,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 28.03,
+                "relative_fraction": 52.3
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 25.56,
+                "relative_fraction": 47.7
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 263.15
+        },
+        "performance": {
+            "conductivity": 0.04
+        }
+    },
+    {
+        "name": "liasf6 + ec, pc",
+        "id": "E125",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 8.0,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 14.91,
+                "relative_fraction": 16.21
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 77.09,
+                "relative_fraction": 83.79
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 273.15
+        },
+        "performance": {
+            "conductivity": 2.92
+        }
+    },
+    {
+        "name": "liasf6 + ec, pc",
+        "id": "E126",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 7.74,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 48.25,
+                "relative_fraction": 52.3
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 44.01,
+                "relative_fraction": 47.7
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 273.15
+        },
+        "performance": {
+            "conductivity": 3.17
+        }
+    },
+    {
+        "name": "liasf6 + ec, pc",
+        "id": "E127",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 16.0,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 13.62,
+                "relative_fraction": 16.21
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 70.38,
+                "relative_fraction": 83.79
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 273.15
+        },
+        "performance": {
+            "conductivity": 2.78
+        }
+    },
+    {
+        "name": "liasf6 + ec, pc",
+        "id": "E128",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 15.47,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 44.21,
+                "relative_fraction": 52.3
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 40.32,
+                "relative_fraction": 47.7
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 273.15
+        },
+        "performance": {
+            "conductivity": 3.04
+        }
+    },
+    {
+        "name": "liasf6 + ec, pc",
+        "id": "E129",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 15.2,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 60.97,
+                "relative_fraction": 71.9
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 23.83,
+                "relative_fraction": 28.1
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 273.15
+        },
+        "performance": {
+            "conductivity": 3.45
+        }
+    },
+    {
+        "name": "liasf6 + ec, pc",
+        "id": "E130",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 24.0,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 12.32,
+                "relative_fraction": 16.21
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 63.68,
+                "relative_fraction": 83.79
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 273.15
+        },
+        "performance": {
+            "conductivity": 1.5
+        }
+    },
+    {
+        "name": "liasf6 + ec, pc",
+        "id": "E131",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 23.21,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 40.16,
+                "relative_fraction": 52.3
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 36.63,
+                "relative_fraction": 47.7
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 273.15
+        },
+        "performance": {
+            "conductivity": 1.65
+        }
+    },
+    {
+        "name": "liasf6 + ec, pc",
+        "id": "E132",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 32.01,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 11.02,
+                "relative_fraction": 16.21
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 56.97,
+                "relative_fraction": 83.79
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 273.15
+        },
+        "performance": {
+            "conductivity": 0.51
+        }
+    },
+    {
+        "name": "liasf6 + ec, pc",
+        "id": "E133",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 30.94,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 36.12,
+                "relative_fraction": 52.3
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 32.94,
+                "relative_fraction": 47.7
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 273.15
+        },
+        "performance": {
+            "conductivity": 0.58
+        }
+    },
+    {
+        "name": "liasf6 + ec, pc",
+        "id": "E134",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 46.41,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 28.03,
+                "relative_fraction": 52.3
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 25.56,
+                "relative_fraction": 47.7
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 273.15
+        },
+        "performance": {
+            "conductivity": 0.15
+        }
+    },
+    {
+        "name": "liasf6 + ec",
+        "id": "E135",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 14.82,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 85.18,
+                "relative_fraction": 100.0
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 293.15
+        },
+        "performance": {
+            "conductivity": 6.97
+        }
+    },
+    {
+        "name": "liasf6 + ec, pc",
+        "id": "E136",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 8.0,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 14.91,
+                "relative_fraction": 16.21
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 77.09,
+                "relative_fraction": 83.79
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 293.15
+        },
+        "performance": {
+            "conductivity": 5.0
+        }
+    },
+    {
+        "name": "liasf6 + ec, pc",
+        "id": "E137",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 7.74,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 48.25,
+                "relative_fraction": 52.3
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 44.01,
+                "relative_fraction": 47.7
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 293.15
+        },
+        "performance": {
+            "conductivity": 5.53
+        }
+    },
+    {
+        "name": "liasf6 + ec, pc",
+        "id": "E138",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 16.0,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 13.62,
+                "relative_fraction": 16.21
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 70.38,
+                "relative_fraction": 83.79
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 293.15
+        },
+        "performance": {
+            "conductivity": 5.47
+        }
+    },
+    {
+        "name": "liasf6 + ec, pc",
+        "id": "E139",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 15.47,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 44.21,
+                "relative_fraction": 52.3
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 40.32,
+                "relative_fraction": 47.7
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 293.15
+        },
+        "performance": {
+            "conductivity": 5.94
+        }
+    },
+    {
+        "name": "liasf6 + ec, pc",
+        "id": "E140",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 15.2,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 60.97,
+                "relative_fraction": 71.9
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 23.83,
+                "relative_fraction": 28.1
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 293.15
+        },
+        "performance": {
+            "conductivity": 6.49
+        }
+    },
+    {
+        "name": "liasf6 + ec, pc",
+        "id": "E141",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 24.0,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 12.32,
+                "relative_fraction": 16.21
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 63.68,
+                "relative_fraction": 83.79
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 293.15
+        },
+        "performance": {
+            "conductivity": 3.73
+        }
+    },
+    {
+        "name": "liasf6 + ec, pc",
+        "id": "E142",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 23.21,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 40.16,
+                "relative_fraction": 52.3
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 36.63,
+                "relative_fraction": 47.7
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 293.15
+        },
+        "performance": {
+            "conductivity": 4.12
+        }
+    },
+    {
+        "name": "liasf6 + ec, pc",
+        "id": "E143",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 32.01,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 11.02,
+                "relative_fraction": 16.21
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 56.97,
+                "relative_fraction": 83.79
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 293.15
+        },
+        "performance": {
+            "conductivity": 1.8
+        }
+    },
+    {
+        "name": "liasf6 + ec, pc",
+        "id": "E144",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 30.94,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 36.12,
+                "relative_fraction": 52.3
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 32.94,
+                "relative_fraction": 47.7
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 293.15
+        },
+        "performance": {
+            "conductivity": 1.97
+        }
+    },
+    {
+        "name": "liasf6 + ec, pc",
+        "id": "E145",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 46.41,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 28.03,
+                "relative_fraction": 52.3
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 25.56,
+                "relative_fraction": 47.7
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 293.15
+        },
+        "performance": {
+            "conductivity": 0.96
+        }
+    },
+    {
+        "name": "liasf6 + ec",
+        "id": "E146",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 14.82,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 85.18,
+                "relative_fraction": 100.0
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 313.15
+        },
+        "performance": {
+            "conductivity": 11.0
+        }
+    },
+    {
+        "name": "liasf6 + ec, pc",
+        "id": "E147",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 8.0,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 14.91,
+                "relative_fraction": 16.21
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 77.09,
+                "relative_fraction": 83.79
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 313.15
+        },
+        "performance": {
+            "conductivity": 7.5
+        }
+    },
+    {
+        "name": "liasf6 + ec, pc",
+        "id": "E148",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 7.74,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 48.25,
+                "relative_fraction": 52.3
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 44.01,
+                "relative_fraction": 47.7
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 313.15
+        },
+        "performance": {
+            "conductivity": 8.24
+        }
+    },
+    {
+        "name": "liasf6 + ec, pc",
+        "id": "E149",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 16.0,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 13.62,
+                "relative_fraction": 16.21
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 70.38,
+                "relative_fraction": 83.79
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 313.15
+        },
+        "performance": {
+            "conductivity": 8.82
+        }
+    },
+    {
+        "name": "liasf6 + ec, pc",
+        "id": "E150",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 15.47,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 44.21,
+                "relative_fraction": 52.3
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 40.32,
+                "relative_fraction": 47.7
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 313.15
+        },
+        "performance": {
+            "conductivity": 9.55
+        }
+    },
+    {
+        "name": "liasf6 + ec, pc",
+        "id": "E151",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 15.2,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 60.97,
+                "relative_fraction": 71.9
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 23.83,
+                "relative_fraction": 28.1
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 313.15
+        },
+        "performance": {
+            "conductivity": 10.23
+        }
+    },
+    {
+        "name": "liasf6 + ec, pc",
+        "id": "E152",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 24.0,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 12.32,
+                "relative_fraction": 16.21
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 63.68,
+                "relative_fraction": 83.79
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 313.15
+        },
+        "performance": {
+            "conductivity": 6.95
+        }
+    },
+    {
+        "name": "liasf6 + ec, pc",
+        "id": "E153",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 23.21,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 40.16,
+                "relative_fraction": 52.3
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 36.63,
+                "relative_fraction": 47.7
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 313.15
+        },
+        "performance": {
+            "conductivity": 7.64
+        }
+    },
+    {
+        "name": "liasf6 + ec, pc",
+        "id": "E154",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 32.01,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 11.02,
+                "relative_fraction": 16.21
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 56.97,
+                "relative_fraction": 83.79
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 313.15
+        },
+        "performance": {
+            "conductivity": 4.22
+        }
+    },
+    {
+        "name": "liasf6 + ec, pc",
+        "id": "E155",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 30.94,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 36.12,
+                "relative_fraction": 52.3
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 32.94,
+                "relative_fraction": 47.7
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 313.15
+        },
+        "performance": {
+            "conductivity": 4.93
+        }
+    },
+    {
+        "name": "liasf6 + ec, pc",
+        "id": "E156",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 46.41,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 28.03,
+                "relative_fraction": 52.3
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 25.56,
+                "relative_fraction": 47.7
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 313.15
+        },
+        "performance": {
+            "conductivity": 2.99
+        }
+    },
+    {
+        "name": "liasf6 + ec",
+        "id": "E157",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 14.82,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 85.18,
+                "relative_fraction": 100.0
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 333.15
+        },
+        "performance": {
+            "conductivity": 15.72
+        }
+    },
+    {
+        "name": "liasf6 + ec, pc",
+        "id": "E158",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 8.0,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 14.91,
+                "relative_fraction": 16.21
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 77.09,
+                "relative_fraction": 83.79
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 333.15
+        },
+        "performance": {
+            "conductivity": 10.38
+        }
+    },
+    {
+        "name": "liasf6 + ec, pc",
+        "id": "E159",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 7.74,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 48.25,
+                "relative_fraction": 52.3
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 44.01,
+                "relative_fraction": 47.7
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 333.15
+        },
+        "performance": {
+            "conductivity": 11.28
+        }
+    },
+    {
+        "name": "liasf6 + ec, pc",
+        "id": "E160",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 16.0,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 13.62,
+                "relative_fraction": 16.21
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 70.38,
+                "relative_fraction": 83.79
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 333.15
+        },
+        "performance": {
+            "conductivity": 12.73
+        }
+    },
+    {
+        "name": "liasf6 + ec, pc",
+        "id": "E161",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 15.47,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 44.21,
+                "relative_fraction": 52.3
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 40.32,
+                "relative_fraction": 47.7
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 333.15
+        },
+        "performance": {
+            "conductivity": 13.86
+        }
+    },
+    {
+        "name": "liasf6 + ec, pc",
+        "id": "E162",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 15.2,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 60.97,
+                "relative_fraction": 71.9
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 23.83,
+                "relative_fraction": 28.1
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 333.15
+        },
+        "performance": {
+            "conductivity": 14.43
+        }
+    },
+    {
+        "name": "liasf6 + ec, pc",
+        "id": "E163",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 24.0,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 12.32,
+                "relative_fraction": 16.21
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 63.68,
+                "relative_fraction": 83.79
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 333.15
+        },
+        "performance": {
+            "conductivity": 11.05
+        }
+    },
+    {
+        "name": "liasf6 + ec, pc",
+        "id": "E164",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 23.21,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 40.16,
+                "relative_fraction": 52.3
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 36.63,
+                "relative_fraction": 47.7
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 333.15
+        },
+        "performance": {
+            "conductivity": 12.2
+        }
+    },
+    {
+        "name": "liasf6 + ec, pc",
+        "id": "E165",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 32.01,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 11.02,
+                "relative_fraction": 16.21
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 56.97,
+                "relative_fraction": 83.79
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 333.15
+        },
+        "performance": {
+            "conductivity": 7.78
+        }
+    },
+    {
+        "name": "liasf6 + ec, pc",
+        "id": "E166",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 30.94,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 36.12,
+                "relative_fraction": 52.3
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 32.94,
+                "relative_fraction": 47.7
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 333.15
+        },
+        "performance": {
+            "conductivity": 8.91
+        }
+    },
+    {
+        "name": "liasf6 + ec, pc",
+        "id": "E167",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 46.41,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 28.03,
+                "relative_fraction": 52.3
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 25.56,
+                "relative_fraction": 47.7
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 333.15
+        },
+        "performance": {
+            "conductivity": 6.5
+        }
+    },
+    {
+        "name": "liasf6 + ec",
+        "id": "E168",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 14.82,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 85.18,
+                "relative_fraction": 100.0
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 353.15
+        },
+        "performance": {
+            "conductivity": 20.07
+        }
+    },
+    {
+        "name": "liasf6 + ec, pc",
+        "id": "E169",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 8.0,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 14.91,
+                "relative_fraction": 16.21
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 77.09,
+                "relative_fraction": 83.79
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 353.15
+        },
+        "performance": {
+            "conductivity": 13.38
+        }
+    },
+    {
+        "name": "liasf6 + ec, pc",
+        "id": "E170",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 7.74,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 48.25,
+                "relative_fraction": 52.3
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 44.01,
+                "relative_fraction": 47.7
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 353.15
+        },
+        "performance": {
+            "conductivity": 14.52
+        }
+    },
+    {
+        "name": "liasf6 + ec, pc",
+        "id": "E171",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 16.0,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 13.62,
+                "relative_fraction": 16.21
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 70.38,
+                "relative_fraction": 83.79
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 353.15
+        },
+        "performance": {
+            "conductivity": 16.97
+        }
+    },
+    {
+        "name": "liasf6 + ec, pc",
+        "id": "E172",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 15.47,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 44.21,
+                "relative_fraction": 52.3
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 40.32,
+                "relative_fraction": 47.7
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 353.15
+        },
+        "performance": {
+            "conductivity": 18.49
+        }
+    },
+    {
+        "name": "liasf6 + ec, pc",
+        "id": "E173",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 15.2,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 60.97,
+                "relative_fraction": 71.9
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 23.83,
+                "relative_fraction": 28.1
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 353.15
+        },
+        "performance": {
+            "conductivity": 18.94
+        }
+    },
+    {
+        "name": "liasf6 + ec, pc",
+        "id": "E174",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 24.0,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 12.32,
+                "relative_fraction": 16.21
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 63.68,
+                "relative_fraction": 83.79
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 353.15
+        },
+        "performance": {
+            "conductivity": 15.82
+        }
+    },
+    {
+        "name": "liasf6 + ec, pc",
+        "id": "E175",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 23.21,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 40.16,
+                "relative_fraction": 52.3
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 36.63,
+                "relative_fraction": 47.7
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 353.15
+        },
+        "performance": {
+            "conductivity": 17.34
+        }
+    },
+    {
+        "name": "liasf6 + ec, pc",
+        "id": "E176",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 32.01,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 11.02,
+                "relative_fraction": 16.21
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 56.97,
+                "relative_fraction": 83.79
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 353.15
+        },
+        "performance": {
+            "conductivity": 12.23
+        }
+    },
+    {
+        "name": "liasf6 + ec, pc",
+        "id": "E177",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 30.94,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 36.12,
+                "relative_fraction": 52.3
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 32.94,
+                "relative_fraction": 47.7
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 353.15
+        },
+        "performance": {
+            "conductivity": 13.9
+        }
+    },
+    {
+        "name": "liasf6 + ec, pc",
+        "id": "E178",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 46.41,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 28.03,
+                "relative_fraction": 52.3
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 25.56,
+                "relative_fraction": 47.7
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 353.15
+        },
+        "performance": {
+            "conductivity": 11.23
+        }
+    },
+    {
+        "name": "liasf6 + pc",
+        "id": "E179",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 16.25,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 83.75,
+                "relative_fraction": 100.0
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 213.15
+        },
+        "performance": {
+            "conductivity": 0.01
+        }
+    },
+    {
+        "name": "liasf6 + pc",
+        "id": "E180",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 16.25,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 83.75,
+                "relative_fraction": 100.0
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 223.15
+        },
+        "performance": {
+            "conductivity": 0.06
+        }
+    },
+    {
+        "name": "liasf6 + pc",
+        "id": "E181",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 16.25,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 83.75,
+                "relative_fraction": 100.0
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 233.15
+        },
+        "performance": {
+            "conductivity": 0.22
+        }
+    },
+    {
+        "name": "liasf6 + pc",
+        "id": "E182",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 3.25,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 96.75,
+                "relative_fraction": 100.0
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 243.15
+        },
+        "performance": {
+            "conductivity": 0.65
+        }
+    },
+    {
+        "name": "liasf6 + pc",
+        "id": "E183",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 16.25,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 83.75,
+                "relative_fraction": 100.0
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 243.15
+        },
+        "performance": {
+            "conductivity": 0.51
+        }
+    },
+    {
+        "name": "liasf6 + pc",
+        "id": "E184",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 3.25,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 96.75,
+                "relative_fraction": 100.0
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 253.15
+        },
+        "performance": {
+            "conductivity": 0.93
+        }
+    },
+    {
+        "name": "liasf6 + pc",
+        "id": "E185",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 16.25,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 83.75,
+                "relative_fraction": 100.0
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 253.15
+        },
+        "performance": {
+            "conductivity": 1.02
+        }
+    },
+    {
+        "name": "liasf6 + pc",
+        "id": "E186",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 3.25,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 96.75,
+                "relative_fraction": 100.0
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 263.15
+        },
+        "performance": {
+            "conductivity": 1.33
+        }
+    },
+    {
+        "name": "liasf6 + pc",
+        "id": "E187",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 16.25,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 83.75,
+                "relative_fraction": 100.0
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 263.15
+        },
+        "performance": {
+            "conductivity": 1.74
+        }
+    },
+    {
+        "name": "liasf6 + pc",
+        "id": "E188",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 3.25,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 96.75,
+                "relative_fraction": 100.0
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 273.15
+        },
+        "performance": {
+            "conductivity": 1.8
+        }
+    },
+    {
+        "name": "liasf6 + pc",
+        "id": "E189",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 16.25,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 83.75,
+                "relative_fraction": 100.0
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 273.15
+        },
+        "performance": {
+            "conductivity": 2.68
+        }
+    },
+    {
+        "name": "liasf6 + pc",
+        "id": "E190",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 3.25,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 96.75,
+                "relative_fraction": 100.0
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 293.15
+        },
+        "performance": {
+            "conductivity": 2.93
+        }
+    },
+    {
+        "name": "liasf6 + pc",
+        "id": "E191",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 16.25,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 83.75,
+                "relative_fraction": 100.0
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 293.15
+        },
+        "performance": {
+            "conductivity": 5.28
+        }
+    },
+    {
+        "name": "liasf6 + pc",
+        "id": "E192",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 3.25,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 96.75,
+                "relative_fraction": 100.0
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 313.15
+        },
+        "performance": {
+            "conductivity": 4.26
+        }
+    },
+    {
+        "name": "liasf6 + pc",
+        "id": "E193",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 16.25,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 83.75,
+                "relative_fraction": 100.0
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 313.15
+        },
+        "performance": {
+            "conductivity": 8.47
+        }
+    },
+    {
+        "name": "liasf6 + pc",
+        "id": "E194",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 3.25,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 96.75,
+                "relative_fraction": 100.0
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 333.15
+        },
+        "performance": {
+            "conductivity": 5.69
+        }
+    },
+    {
+        "name": "liasf6 + pc",
+        "id": "E195",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 16.25,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 83.75,
+                "relative_fraction": 100.0
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 333.15
+        },
+        "performance": {
+            "conductivity": 12.3
+        }
+    },
+    {
+        "name": "liasf6 + pc",
+        "id": "E196",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 3.25,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 96.75,
+                "relative_fraction": 100.0
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 353.15
+        },
+        "performance": {
+            "conductivity": 7.21
+        }
+    },
+    {
+        "name": "liasf6 + pc",
+        "id": "E197",
+        "description": "10.1016/0378-7753(91)80004-H",
+        "salts": [
+            {
+                "abbr": "liasf6",
+                "cas_registry_number": "29935-35-1",
+                "overall_fraction": 16.25,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 83.75,
+                "relative_fraction": 100.0
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 353.15
+        },
+        "performance": {
+            "conductivity": 16.56
+        }
+    }
+]

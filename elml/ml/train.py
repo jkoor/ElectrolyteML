@@ -108,7 +108,7 @@ class ElectrolyteTrainer:
         self.criterion = nn.HuberLoss()
         self.scheduler = ReduceLROnPlateau(
             self.optimizer,
-            mode='min',
+            mode="min",
             factor=0.5,
             patience=15,
             min_lr=1e-6,
