@@ -283,10 +283,20 @@ class ElectrolyteAnalyzer:
         n_show = min(50, len(predicted))
         x_range = range(n_show)
         plt.plot(
-            x_range, actual[:n_show], "o-", label="Actual Value", markersize=4, color="blue"
+            x_range,
+            actual[:n_show],
+            "o-",
+            label="Actual Value",
+            markersize=4,
+            color="blue",
         )
         plt.plot(
-            x_range, predicted[:n_show], "s-", label="Predicted Value", markersize=4, color="red"
+            x_range,
+            predicted[:n_show],
+            "s-",
+            label="Predicted Value",
+            markersize=4,
+            color="red",
         )
         plt.xlabel("Sample Index")
         plt.ylabel("Value")
