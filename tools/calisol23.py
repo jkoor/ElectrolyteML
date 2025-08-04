@@ -1,5 +1,5 @@
 from typing import Optional
-
+import numpy as np
 import pandas as pd
 
 from elml import MLibrary
@@ -97,14 +97,103 @@ def salt_weight_ratio(
     return components
 
 
-filepath = "data/calisol23/calisol23.csv"
+def process_calisol23():
+    """
+    处理 Calisol23 数据集
+    """
+    # 设置数据文件路径
+    filepath = "data/calisol23/calisol23.csv"
+
+    # 读取数据
+    df = pd.read_csv(filepath)
+
+    # 重命名列名
+    df.columns = [
+        "i",
+        "doi",
+        "k",
+        "T",
+        "c",
+        "salt",
+        "c_unit",
+        "solvent_ratio_type",
+        "EC",
+        "PC",
+        "DMC",
+        "EMC",
+        "DEC",
+        "DME",
+        "DMSO",
+        "AN",
+        "MOEMC",
+        "TFP",
+        "EA",
+        "MA",
+        "FEC",
+        "DOL",
+        "MeTHF_2",
+        "DMM",
+        "Freon_11",
+        "Methylene_chloride",
+        "THF",
+        "Toluene",
+        "Sulfolane",
+        "Glyme_2",
+        "Glyme_3",
+        "Glyme_4",
+        "Me_3_Oxazolidinone_2",
+        "MeSulfolane_3",
+        "Ethyldiglyme",
+        "DMF",
+        "Ethylbenzene",
+        "Ethylmonoglyme",
+        "Benzene",
+        "g_Butyrolactone",
+        "Cumene",
+        "Propylsulfone",
+        "Pseudocumeme",
+        "TEOS",
+        "m_Xylene",
+        "o_Xylene",
+    ]
+
+    # 对"k"列值小于1的行随机剔除3/4
+    # 首先找出k < 1的行
+    low_k_rows = df[df["k"] < 1]
+    # 找出k >= 1的行
+    high_k_rows = df[df["k"] >= 1]
+
+    # 如果有k < 1的行，随机保留1/4
+    if len(low_k_rows) > 0:
+        # 设置随机种子以保证结果可重现
+        np.random.seed(42)
+        # 计算要保留的行数（1/4）
+        keep_count = int(len(low_k_rows) * 0.1)
+        # 随机选择要保留的行
+        kept_low_k_rows = low_k_rows.sample(n=keep_count, random_state=42)
+        # 合并保留的低k值行和所有高k值行
+        df = pd.concat([high_k_rows, kept_low_k_rows], ignore_index=True)
+        print(f"原始k<1的行数: {len(low_k_rows)}")
+        print(f"保留k<1的行数: {len(kept_low_k_rows)}")
+        print(
+            f"剔除了 {len(low_k_rows) - len(kept_low_k_rows)} 行 ({((len(low_k_rows) - len(kept_low_k_rows)) / len(low_k_rows) * 100):.1f}%)"
+        )
+    else:
+        print("没有发现k<1的行")
+
+    # 保存处理后的数据
+    output_filepath = "data/calisol23/calisol23_processed.csv"
+    df.to_csv(output_filepath, index=False)
+    print(f"处理后的数据已保存到: {output_filepath}")
+
+
+filepath = "data/calisol23/calisol23_processed.csv"
 
 # 读取数据
 df = pd.read_csv(filepath)
 
 # 筛选特定字段值
-filter_salt = ["LIPF6", "LIFSI", "LITFSI", "LIBF4"]
-# filter_salt = ["LIBOB"]
+filter_salt = ["LIPF6", "LIFSI", "LIBF4", "LIBOB"]
 df = df[df["salt"].str.upper().isin(filter_salt)]
 
 # 重命名列名
