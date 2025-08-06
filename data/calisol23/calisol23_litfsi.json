@@ -1,7 +1,7 @@
 [
     {
         "name": "litfsi + ec, dmc",
-        "id": "E1",
+        "id": "litfsi_2624-dmc_6638-ec_738",
         "description": "10.1016/j.jpowsour.2011.07.071",
         "salts": [
             {
@@ -13,16 +13,16 @@
         ],
         "solvents": [
             {
-                "abbr": "ec",
-                "cas_registry_number": "96-49-1",
-                "overall_fraction": 7.38,
-                "relative_fraction": 10.0
-            },
-            {
                 "abbr": "dmc",
                 "cas_registry_number": "616-38-6",
                 "overall_fraction": 66.38,
                 "relative_fraction": 90.0
+            },
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 7.38,
+                "relative_fraction": 10.0
             }
         ],
         "additives": [],
@@ -35,7 +35,7 @@
     },
     {
         "name": "litfsi + ec, dmc",
-        "id": "E2",
+        "id": "litfsi_2564-dmc_5949-ec_1487",
         "description": "10.1016/j.jpowsour.2011.07.071",
         "salts": [
             {
@@ -47,16 +47,16 @@
         ],
         "solvents": [
             {
-                "abbr": "ec",
-                "cas_registry_number": "96-49-1",
-                "overall_fraction": 14.87,
-                "relative_fraction": 20.0
-            },
-            {
                 "abbr": "dmc",
                 "cas_registry_number": "616-38-6",
                 "overall_fraction": 59.49,
                 "relative_fraction": 80.0
+            },
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 14.87,
+                "relative_fraction": 20.0
             }
         ],
         "additives": [],
@@ -69,7 +69,7 @@
     },
     {
         "name": "litfsi + ec, dmc",
-        "id": "E3",
+        "id": "litfsi_2536-dmc_5598-ec_1866",
         "description": "10.1016/j.jpowsour.2011.07.071",
         "salts": [
             {
@@ -81,16 +81,16 @@
         ],
         "solvents": [
             {
-                "abbr": "ec",
-                "cas_registry_number": "96-49-1",
-                "overall_fraction": 18.66,
-                "relative_fraction": 25.0
-            },
-            {
                 "abbr": "dmc",
                 "cas_registry_number": "616-38-6",
                 "overall_fraction": 55.98,
                 "relative_fraction": 75.0
+            },
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 18.66,
+                "relative_fraction": 25.0
             }
         ],
         "additives": [],
@@ -103,7 +103,7 @@
     },
     {
         "name": "litfsi + ec, dmc",
-        "id": "E4",
+        "id": "litfsi_2508-dmc_5244-ec_2248",
         "description": "10.1016/j.jpowsour.2011.07.071",
         "salts": [
             {
@@ -115,16 +115,16 @@
         ],
         "solvents": [
             {
-                "abbr": "ec",
-                "cas_registry_number": "96-49-1",
-                "overall_fraction": 22.48,
-                "relative_fraction": 30.0
-            },
-            {
                 "abbr": "dmc",
                 "cas_registry_number": "616-38-6",
                 "overall_fraction": 52.44,
                 "relative_fraction": 70.0
+            },
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 22.48,
+                "relative_fraction": 30.0
             }
         ],
         "additives": [],
@@ -137,7 +137,7 @@
     },
     {
         "name": "litfsi + ec, dmc",
-        "id": "E5",
+        "id": "litfsi_2454-dmc_4528-ec_3018",
         "description": "10.1016/j.jpowsour.2011.07.071",
         "salts": [
             {
@@ -149,16 +149,16 @@
         ],
         "solvents": [
             {
-                "abbr": "ec",
-                "cas_registry_number": "96-49-1",
-                "overall_fraction": 30.18,
-                "relative_fraction": 40.0
-            },
-            {
                 "abbr": "dmc",
                 "cas_registry_number": "616-38-6",
                 "overall_fraction": 45.28,
                 "relative_fraction": 60.0
+            },
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 30.18,
+                "relative_fraction": 40.0
             }
         ],
         "additives": [],
@@ -171,7 +171,7 @@
     },
     {
         "name": "litfsi + ec, dmc",
-        "id": "E6",
+        "id": "litfsi_2402-dmc_3799-ec_3799",
         "description": "10.1016/j.jpowsour.2011.07.071",
         "salts": [
             {
@@ -183,14 +183,14 @@
         ],
         "solvents": [
             {
-                "abbr": "ec",
-                "cas_registry_number": "96-49-1",
+                "abbr": "dmc",
+                "cas_registry_number": "616-38-6",
                 "overall_fraction": 37.99,
                 "relative_fraction": 50.0
             },
             {
-                "abbr": "dmc",
-                "cas_registry_number": "616-38-6",
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
                 "overall_fraction": 37.99,
                 "relative_fraction": 50.0
             }
@@ -205,7 +205,7 @@
     },
     {
         "name": "litfsi + ec, dmc",
-        "id": "E7",
+        "id": "litfsi_2352-dmc_3059-ec_4589",
         "description": "10.1016/j.jpowsour.2011.07.071",
         "salts": [
             {
@@ -217,16 +217,16 @@
         ],
         "solvents": [
             {
-                "abbr": "ec",
-                "cas_registry_number": "96-49-1",
-                "overall_fraction": 45.89,
-                "relative_fraction": 60.0
-            },
-            {
                 "abbr": "dmc",
                 "cas_registry_number": "616-38-6",
                 "overall_fraction": 30.59,
                 "relative_fraction": 40.0
+            },
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 45.89,
+                "relative_fraction": 60.0
             }
         ],
         "additives": [],
@@ -239,7 +239,7 @@
     },
     {
         "name": "litfsi + ec, dmc",
-        "id": "E8",
+        "id": "litfsi_2305-dmc_2309-ec_5387",
         "description": "10.1016/j.jpowsour.2011.07.071",
         "salts": [
             {
@@ -251,16 +251,16 @@
         ],
         "solvents": [
             {
-                "abbr": "ec",
-                "cas_registry_number": "96-49-1",
-                "overall_fraction": 53.87,
-                "relative_fraction": 70.0
-            },
-            {
                 "abbr": "dmc",
                 "cas_registry_number": "616-38-6",
                 "overall_fraction": 23.09,
                 "relative_fraction": 30.0
+            },
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 53.87,
+                "relative_fraction": 70.0
             }
         ],
         "additives": [],
@@ -273,7 +273,7 @@
     },
     {
         "name": "litfsi + ec, dmc",
-        "id": "E9",
+        "id": "litfsi_2259-dmc_1548-ec_6193",
         "description": "10.1016/j.jpowsour.2011.07.071",
         "salts": [
             {
@@ -285,16 +285,16 @@
         ],
         "solvents": [
             {
-                "abbr": "ec",
-                "cas_registry_number": "96-49-1",
-                "overall_fraction": 61.93,
-                "relative_fraction": 80.0
-            },
-            {
                 "abbr": "dmc",
                 "cas_registry_number": "616-38-6",
                 "overall_fraction": 15.48,
                 "relative_fraction": 20.0
+            },
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 61.93,
+                "relative_fraction": 80.0
             }
         ],
         "additives": [],
@@ -307,7 +307,7 @@
     },
     {
         "name": "litfsi + ec",
-        "id": "E10",
+        "id": "litfsi_2173-ec_7827",
         "description": "10.1016/j.jpowsour.2011.07.071",
         "salts": [
             {
@@ -335,7 +335,7 @@
     },
     {
         "name": "litfsi + dmc",
-        "id": "E11",
+        "id": "litfsi_2686-dmc_7314",
         "description": "10.1016/j.jpowsour.2011.07.071",
         "salts": [
             {
@@ -363,7 +363,7 @@
     },
     {
         "name": "litfsi + ec, dmc",
-        "id": "E12",
+        "id": "litfsi_2405-dmc_3840-ec_3754",
         "description": "10.1016/j.jpowsour.2011.07.071",
         "salts": [
             {
@@ -375,16 +375,16 @@
         ],
         "solvents": [
             {
-                "abbr": "ec",
-                "cas_registry_number": "96-49-1",
-                "overall_fraction": 37.54,
-                "relative_fraction": 49.43
-            },
-            {
                 "abbr": "dmc",
                 "cas_registry_number": "616-38-6",
                 "overall_fraction": 38.41,
                 "relative_fraction": 50.57
+            },
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 37.54,
+                "relative_fraction": 49.43
             }
         ],
         "additives": [],
@@ -397,7 +397,7 @@
     },
     {
         "name": "litfsi + ec, dmc",
-        "id": "E13",
+        "id": "litfsi_2405-dmc_3840-ec_3754",
         "description": "10.1016/j.jpowsour.2011.07.071",
         "salts": [
             {
@@ -409,16 +409,16 @@
         ],
         "solvents": [
             {
-                "abbr": "ec",
-                "cas_registry_number": "96-49-1",
-                "overall_fraction": 37.54,
-                "relative_fraction": 49.43
-            },
-            {
                 "abbr": "dmc",
                 "cas_registry_number": "616-38-6",
                 "overall_fraction": 38.41,
                 "relative_fraction": 50.57
+            },
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 37.54,
+                "relative_fraction": 49.43
             }
         ],
         "additives": [],
@@ -431,7 +431,7 @@
     },
     {
         "name": "litfsi + ec, dmc",
-        "id": "E14",
+        "id": "litfsi_2405-dmc_3840-ec_3754",
         "description": "10.1016/j.jpowsour.2011.07.071",
         "salts": [
             {
@@ -443,16 +443,16 @@
         ],
         "solvents": [
             {
-                "abbr": "ec",
-                "cas_registry_number": "96-49-1",
-                "overall_fraction": 37.54,
-                "relative_fraction": 49.43
-            },
-            {
                 "abbr": "dmc",
                 "cas_registry_number": "616-38-6",
                 "overall_fraction": 38.41,
                 "relative_fraction": 50.57
+            },
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 37.54,
+                "relative_fraction": 49.43
             }
         ],
         "additives": [],
@@ -465,7 +465,7 @@
     },
     {
         "name": "litfsi + ec, dmc",
-        "id": "E15",
+        "id": "litfsi_2405-dmc_3840-ec_3754",
         "description": "10.1016/j.jpowsour.2011.07.071",
         "salts": [
             {
@@ -477,16 +477,16 @@
         ],
         "solvents": [
             {
-                "abbr": "ec",
-                "cas_registry_number": "96-49-1",
-                "overall_fraction": 37.54,
-                "relative_fraction": 49.43
-            },
-            {
                 "abbr": "dmc",
                 "cas_registry_number": "616-38-6",
                 "overall_fraction": 38.41,
                 "relative_fraction": 50.57
+            },
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 37.54,
+                "relative_fraction": 49.43
             }
         ],
         "additives": [],
@@ -499,7 +499,7 @@
     },
     {
         "name": "litfsi + ec, dmc",
-        "id": "E16",
+        "id": "litfsi_2405-dmc_3840-ec_3754",
         "description": "10.1016/j.jpowsour.2011.07.071",
         "salts": [
             {
@@ -511,16 +511,16 @@
         ],
         "solvents": [
             {
-                "abbr": "ec",
-                "cas_registry_number": "96-49-1",
-                "overall_fraction": 37.54,
-                "relative_fraction": 49.43
-            },
-            {
                 "abbr": "dmc",
                 "cas_registry_number": "616-38-6",
                 "overall_fraction": 38.41,
                 "relative_fraction": 50.57
+            },
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 37.54,
+                "relative_fraction": 49.43
             }
         ],
         "additives": [],
@@ -533,7 +533,7 @@
     },
     {
         "name": "litfsi + ec, dmc",
-        "id": "E17",
+        "id": "litfsi_2405-dmc_3840-ec_3754",
         "description": "10.1016/j.jpowsour.2011.07.071",
         "salts": [
             {
@@ -545,16 +545,16 @@
         ],
         "solvents": [
             {
-                "abbr": "ec",
-                "cas_registry_number": "96-49-1",
-                "overall_fraction": 37.54,
-                "relative_fraction": 49.43
-            },
-            {
                 "abbr": "dmc",
                 "cas_registry_number": "616-38-6",
                 "overall_fraction": 38.41,
                 "relative_fraction": 50.57
+            },
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 37.54,
+                "relative_fraction": 49.43
             }
         ],
         "additives": [],
@@ -567,7 +567,7 @@
     },
     {
         "name": "litfsi + ec, dmc",
-        "id": "E18",
+        "id": "litfsi_2405-dmc_3840-ec_3754",
         "description": "10.1016/j.jpowsour.2011.07.071",
         "salts": [
             {
@@ -579,16 +579,16 @@
         ],
         "solvents": [
             {
-                "abbr": "ec",
-                "cas_registry_number": "96-49-1",
-                "overall_fraction": 37.54,
-                "relative_fraction": 49.43
-            },
-            {
                 "abbr": "dmc",
                 "cas_registry_number": "616-38-6",
                 "overall_fraction": 38.41,
                 "relative_fraction": 50.57
+            },
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 37.54,
+                "relative_fraction": 49.43
             }
         ],
         "additives": [],
@@ -601,7 +601,7 @@
     },
     {
         "name": "litfsi + ec, dmc",
-        "id": "E19",
+        "id": "litfsi_2405-dmc_3840-ec_3754",
         "description": "10.1016/j.jpowsour.2011.07.071",
         "salts": [
             {
@@ -613,16 +613,16 @@
         ],
         "solvents": [
             {
-                "abbr": "ec",
-                "cas_registry_number": "96-49-1",
-                "overall_fraction": 37.54,
-                "relative_fraction": 49.43
-            },
-            {
                 "abbr": "dmc",
                 "cas_registry_number": "616-38-6",
                 "overall_fraction": 38.41,
                 "relative_fraction": 50.57
+            },
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 37.54,
+                "relative_fraction": 49.43
             }
         ],
         "additives": [],
@@ -635,7 +635,7 @@
     },
     {
         "name": "litfsi + ec, dmc",
-        "id": "E20",
+        "id": "litfsi_2405-dmc_3840-ec_3754",
         "description": "10.1016/j.jpowsour.2011.07.071",
         "salts": [
             {
@@ -647,16 +647,16 @@
         ],
         "solvents": [
             {
-                "abbr": "ec",
-                "cas_registry_number": "96-49-1",
-                "overall_fraction": 37.54,
-                "relative_fraction": 49.43
-            },
-            {
                 "abbr": "dmc",
                 "cas_registry_number": "616-38-6",
                 "overall_fraction": 38.41,
                 "relative_fraction": 50.57
+            },
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 37.54,
+                "relative_fraction": 49.43
             }
         ],
         "additives": [],
@@ -669,7 +669,7 @@
     },
     {
         "name": "litfsi + ec, dmc",
-        "id": "E21",
+        "id": "litfsi_2405-dmc_3840-ec_3754",
         "description": "10.1016/j.jpowsour.2011.07.071",
         "salts": [
             {
@@ -681,16 +681,16 @@
         ],
         "solvents": [
             {
-                "abbr": "ec",
-                "cas_registry_number": "96-49-1",
-                "overall_fraction": 37.54,
-                "relative_fraction": 49.43
-            },
-            {
                 "abbr": "dmc",
                 "cas_registry_number": "616-38-6",
                 "overall_fraction": 38.41,
                 "relative_fraction": 50.57
+            },
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 37.54,
+                "relative_fraction": 49.43
             }
         ],
         "additives": [],
@@ -703,7 +703,7 @@
     },
     {
         "name": "litfsi + ec, dmc",
-        "id": "E22",
+        "id": "litfsi_2405-dmc_3840-ec_3754",
         "description": "10.1016/j.jpowsour.2011.07.071",
         "salts": [
             {
@@ -715,16 +715,16 @@
         ],
         "solvents": [
             {
-                "abbr": "ec",
-                "cas_registry_number": "96-49-1",
-                "overall_fraction": 37.54,
-                "relative_fraction": 49.43
-            },
-            {
                 "abbr": "dmc",
                 "cas_registry_number": "616-38-6",
                 "overall_fraction": 38.41,
                 "relative_fraction": 50.57
+            },
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 37.54,
+                "relative_fraction": 49.43
             }
         ],
         "additives": [],
@@ -737,7 +737,7 @@
     },
     {
         "name": "litfsi + ec, dmc",
-        "id": "E23",
+        "id": "litfsi_2405-dmc_3840-ec_3754",
         "description": "10.1016/j.jpowsour.2011.07.071",
         "salts": [
             {
@@ -749,16 +749,16 @@
         ],
         "solvents": [
             {
-                "abbr": "ec",
-                "cas_registry_number": "96-49-1",
-                "overall_fraction": 37.54,
-                "relative_fraction": 49.43
-            },
-            {
                 "abbr": "dmc",
                 "cas_registry_number": "616-38-6",
                 "overall_fraction": 38.41,
                 "relative_fraction": 50.57
+            },
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 37.54,
+                "relative_fraction": 49.43
             }
         ],
         "additives": [],
@@ -771,7 +771,7 @@
     },
     {
         "name": "litfsi + ec, dmc",
-        "id": "E24",
+        "id": "litfsi_2405-dmc_3840-ec_3754",
         "description": "10.1016/j.jpowsour.2011.07.071",
         "salts": [
             {
@@ -783,16 +783,16 @@
         ],
         "solvents": [
             {
-                "abbr": "ec",
-                "cas_registry_number": "96-49-1",
-                "overall_fraction": 37.54,
-                "relative_fraction": 49.43
-            },
-            {
                 "abbr": "dmc",
                 "cas_registry_number": "616-38-6",
                 "overall_fraction": 38.41,
                 "relative_fraction": 50.57
+            },
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 37.54,
+                "relative_fraction": 49.43
             }
         ],
         "additives": [],
@@ -805,7 +805,7 @@
     },
     {
         "name": "litfsi + ec, dmc",
-        "id": "E25",
+        "id": "litfsi_2405-dmc_3840-ec_3754",
         "description": "10.1016/j.jpowsour.2011.07.071",
         "salts": [
             {
@@ -817,16 +817,16 @@
         ],
         "solvents": [
             {
-                "abbr": "ec",
-                "cas_registry_number": "96-49-1",
-                "overall_fraction": 37.54,
-                "relative_fraction": 49.43
-            },
-            {
                 "abbr": "dmc",
                 "cas_registry_number": "616-38-6",
                 "overall_fraction": 38.41,
                 "relative_fraction": 50.57
+            },
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 37.54,
+                "relative_fraction": 49.43
             }
         ],
         "additives": [],
@@ -839,7 +839,7 @@
     },
     {
         "name": "litfsi + ec, dmc",
-        "id": "E26",
+        "id": "litfsi_2405-dmc_3840-ec_3754",
         "description": "10.1016/j.jpowsour.2011.07.071",
         "salts": [
             {
@@ -851,16 +851,16 @@
         ],
         "solvents": [
             {
-                "abbr": "ec",
-                "cas_registry_number": "96-49-1",
-                "overall_fraction": 37.54,
-                "relative_fraction": 49.43
-            },
-            {
                 "abbr": "dmc",
                 "cas_registry_number": "616-38-6",
                 "overall_fraction": 38.41,
                 "relative_fraction": 50.57
+            },
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 37.54,
+                "relative_fraction": 49.43
             }
         ],
         "additives": [],
@@ -873,7 +873,7 @@
     },
     {
         "name": "litfsi + ec, dmc",
-        "id": "E27",
+        "id": "litfsi_2405-dmc_3840-ec_3754",
         "description": "10.1016/j.jpowsour.2011.07.071",
         "salts": [
             {
@@ -885,16 +885,16 @@
         ],
         "solvents": [
             {
-                "abbr": "ec",
-                "cas_registry_number": "96-49-1",
-                "overall_fraction": 37.54,
-                "relative_fraction": 49.43
-            },
-            {
                 "abbr": "dmc",
                 "cas_registry_number": "616-38-6",
                 "overall_fraction": 38.41,
                 "relative_fraction": 50.57
+            },
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 37.54,
+                "relative_fraction": 49.43
             }
         ],
         "additives": [],
@@ -907,7 +907,7 @@
     },
     {
         "name": "litfsi + ec, dmc",
-        "id": "E28",
+        "id": "litfsi_2405-dmc_3840-ec_3754",
         "description": "10.1016/j.jpowsour.2011.07.071",
         "salts": [
             {
@@ -919,16 +919,16 @@
         ],
         "solvents": [
             {
-                "abbr": "ec",
-                "cas_registry_number": "96-49-1",
-                "overall_fraction": 37.54,
-                "relative_fraction": 49.43
-            },
-            {
                 "abbr": "dmc",
                 "cas_registry_number": "616-38-6",
                 "overall_fraction": 38.41,
                 "relative_fraction": 50.57
+            },
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 37.54,
+                "relative_fraction": 49.43
             }
         ],
         "additives": [],
@@ -941,7 +941,7 @@
     },
     {
         "name": "litfsi + ec, dmc",
-        "id": "E29",
+        "id": "litfsi_2405-dmc_3840-ec_3754",
         "description": "10.1016/j.jpowsour.2011.07.071",
         "salts": [
             {
@@ -953,16 +953,16 @@
         ],
         "solvents": [
             {
-                "abbr": "ec",
-                "cas_registry_number": "96-49-1",
-                "overall_fraction": 37.54,
-                "relative_fraction": 49.43
-            },
-            {
                 "abbr": "dmc",
                 "cas_registry_number": "616-38-6",
                 "overall_fraction": 38.41,
                 "relative_fraction": 50.57
+            },
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 37.54,
+                "relative_fraction": 49.43
             }
         ],
         "additives": [],
@@ -975,7 +975,7 @@
     },
     {
         "name": "litfsi + ec, dmc",
-        "id": "E30",
+        "id": "litfsi_2405-dmc_3840-ec_3754",
         "description": "10.1016/j.jpowsour.2011.07.071",
         "salts": [
             {
@@ -987,16 +987,16 @@
         ],
         "solvents": [
             {
-                "abbr": "ec",
-                "cas_registry_number": "96-49-1",
-                "overall_fraction": 37.54,
-                "relative_fraction": 49.43
-            },
-            {
                 "abbr": "dmc",
                 "cas_registry_number": "616-38-6",
                 "overall_fraction": 38.41,
                 "relative_fraction": 50.57
+            },
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 37.54,
+                "relative_fraction": 49.43
             }
         ],
         "additives": [],
@@ -1009,7 +1009,7 @@
     },
     {
         "name": "litfsi + ec, dmc",
-        "id": "E31",
+        "id": "litfsi_2405-dmc_3840-ec_3754",
         "description": "10.1016/j.jpowsour.2011.07.071",
         "salts": [
             {
@@ -1021,16 +1021,16 @@
         ],
         "solvents": [
             {
-                "abbr": "ec",
-                "cas_registry_number": "96-49-1",
-                "overall_fraction": 37.54,
-                "relative_fraction": 49.43
-            },
-            {
                 "abbr": "dmc",
                 "cas_registry_number": "616-38-6",
                 "overall_fraction": 38.41,
                 "relative_fraction": 50.57
+            },
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 37.54,
+                "relative_fraction": 49.43
             }
         ],
         "additives": [],
@@ -1043,7 +1043,7 @@
     },
     {
         "name": "litfsi + ec, dmc",
-        "id": "E32",
+        "id": "litfsi_2405-dmc_3840-ec_3754",
         "description": "10.1016/j.jpowsour.2011.07.071",
         "salts": [
             {
@@ -1055,16 +1055,16 @@
         ],
         "solvents": [
             {
-                "abbr": "ec",
-                "cas_registry_number": "96-49-1",
-                "overall_fraction": 37.54,
-                "relative_fraction": 49.43
-            },
-            {
                 "abbr": "dmc",
                 "cas_registry_number": "616-38-6",
                 "overall_fraction": 38.41,
                 "relative_fraction": 50.57
+            },
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 37.54,
+                "relative_fraction": 49.43
             }
         ],
         "additives": [],
@@ -1077,7 +1077,7 @@
     },
     {
         "name": "litfsi + ec, dmc",
-        "id": "E33",
+        "id": "litfsi_2405-dmc_3840-ec_3754",
         "description": "10.1016/j.jpowsour.2011.07.071",
         "salts": [
             {
@@ -1089,16 +1089,16 @@
         ],
         "solvents": [
             {
-                "abbr": "ec",
-                "cas_registry_number": "96-49-1",
-                "overall_fraction": 37.54,
-                "relative_fraction": 49.43
-            },
-            {
                 "abbr": "dmc",
                 "cas_registry_number": "616-38-6",
                 "overall_fraction": 38.41,
                 "relative_fraction": 50.57
+            },
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 37.54,
+                "relative_fraction": 49.43
             }
         ],
         "additives": [],
@@ -1111,7 +1111,7 @@
     },
     {
         "name": "litfsi + ec, dmc",
-        "id": "E34",
+        "id": "litfsi_2405-dmc_3840-ec_3754",
         "description": "10.1016/j.jpowsour.2011.07.071",
         "salts": [
             {
@@ -1123,16 +1123,16 @@
         ],
         "solvents": [
             {
-                "abbr": "ec",
-                "cas_registry_number": "96-49-1",
-                "overall_fraction": 37.54,
-                "relative_fraction": 49.43
-            },
-            {
                 "abbr": "dmc",
                 "cas_registry_number": "616-38-6",
                 "overall_fraction": 38.41,
                 "relative_fraction": 50.57
+            },
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 37.54,
+                "relative_fraction": 49.43
             }
         ],
         "additives": [],
@@ -1145,7 +1145,7 @@
     },
     {
         "name": "litfsi + ec, dmc",
-        "id": "E35",
+        "id": "litfsi_2405-dmc_3840-ec_3754",
         "description": "10.1016/j.jpowsour.2011.07.071",
         "salts": [
             {
@@ -1157,16 +1157,16 @@
         ],
         "solvents": [
             {
-                "abbr": "ec",
-                "cas_registry_number": "96-49-1",
-                "overall_fraction": 37.54,
-                "relative_fraction": 49.43
-            },
-            {
                 "abbr": "dmc",
                 "cas_registry_number": "616-38-6",
                 "overall_fraction": 38.41,
                 "relative_fraction": 50.57
+            },
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 37.54,
+                "relative_fraction": 49.43
             }
         ],
         "additives": [],
@@ -1179,7 +1179,7 @@
     },
     {
         "name": "litfsi + ec, dmc",
-        "id": "E36",
+        "id": "litfsi_2405-dmc_3840-ec_3754",
         "description": "10.1016/j.jpowsour.2011.07.071",
         "salts": [
             {
@@ -1191,16 +1191,16 @@
         ],
         "solvents": [
             {
-                "abbr": "ec",
-                "cas_registry_number": "96-49-1",
-                "overall_fraction": 37.54,
-                "relative_fraction": 49.43
-            },
-            {
                 "abbr": "dmc",
                 "cas_registry_number": "616-38-6",
                 "overall_fraction": 38.41,
                 "relative_fraction": 50.57
+            },
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 37.54,
+                "relative_fraction": 49.43
             }
         ],
         "additives": [],
@@ -1213,7 +1213,7 @@
     },
     {
         "name": "litfsi + ec, dmc",
-        "id": "E37",
+        "id": "litfsi_2405-dmc_3840-ec_3754",
         "description": "10.1016/j.jpowsour.2011.07.071",
         "salts": [
             {
@@ -1225,16 +1225,16 @@
         ],
         "solvents": [
             {
-                "abbr": "ec",
-                "cas_registry_number": "96-49-1",
-                "overall_fraction": 37.54,
-                "relative_fraction": 49.43
-            },
-            {
                 "abbr": "dmc",
                 "cas_registry_number": "616-38-6",
                 "overall_fraction": 38.41,
                 "relative_fraction": 50.57
+            },
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 37.54,
+                "relative_fraction": 49.43
             }
         ],
         "additives": [],
@@ -1247,7 +1247,7 @@
     },
     {
         "name": "litfsi + ec, dmc",
-        "id": "E38",
+        "id": "litfsi_2405-dmc_3840-ec_3754",
         "description": "10.1016/j.jpowsour.2011.07.071",
         "salts": [
             {
@@ -1259,16 +1259,16 @@
         ],
         "solvents": [
             {
-                "abbr": "ec",
-                "cas_registry_number": "96-49-1",
-                "overall_fraction": 37.54,
-                "relative_fraction": 49.43
-            },
-            {
                 "abbr": "dmc",
                 "cas_registry_number": "616-38-6",
                 "overall_fraction": 38.41,
                 "relative_fraction": 50.57
+            },
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 37.54,
+                "relative_fraction": 49.43
             }
         ],
         "additives": [],
@@ -1281,7 +1281,7 @@
     },
     {
         "name": "litfsi + ec, dmc",
-        "id": "E39",
+        "id": "litfsi_2405-dmc_3840-ec_3754",
         "description": "10.1016/j.jpowsour.2011.07.071",
         "salts": [
             {
@@ -1293,16 +1293,16 @@
         ],
         "solvents": [
             {
-                "abbr": "ec",
-                "cas_registry_number": "96-49-1",
-                "overall_fraction": 37.54,
-                "relative_fraction": 49.43
-            },
-            {
                 "abbr": "dmc",
                 "cas_registry_number": "616-38-6",
                 "overall_fraction": 38.41,
                 "relative_fraction": 50.57
+            },
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 37.54,
+                "relative_fraction": 49.43
             }
         ],
         "additives": [],
@@ -1315,7 +1315,7 @@
     },
     {
         "name": "litfsi + ec, dmc",
-        "id": "E40",
+        "id": "litfsi_2405-dmc_3840-ec_3754",
         "description": "10.1016/j.jpowsour.2011.07.071",
         "salts": [
             {
@@ -1327,16 +1327,16 @@
         ],
         "solvents": [
             {
-                "abbr": "ec",
-                "cas_registry_number": "96-49-1",
-                "overall_fraction": 37.54,
-                "relative_fraction": 49.43
-            },
-            {
                 "abbr": "dmc",
                 "cas_registry_number": "616-38-6",
                 "overall_fraction": 38.41,
                 "relative_fraction": 50.57
+            },
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 37.54,
+                "relative_fraction": 49.43
             }
         ],
         "additives": [],
@@ -1349,7 +1349,7 @@
     },
     {
         "name": "litfsi + ec, dmc",
-        "id": "E41",
+        "id": "litfsi_2405-dmc_3840-ec_3754",
         "description": "10.1016/j.jpowsour.2011.07.071",
         "salts": [
             {
@@ -1361,16 +1361,16 @@
         ],
         "solvents": [
             {
-                "abbr": "ec",
-                "cas_registry_number": "96-49-1",
-                "overall_fraction": 37.54,
-                "relative_fraction": 49.43
-            },
-            {
                 "abbr": "dmc",
                 "cas_registry_number": "616-38-6",
                 "overall_fraction": 38.41,
                 "relative_fraction": 50.57
+            },
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 37.54,
+                "relative_fraction": 49.43
             }
         ],
         "additives": [],
@@ -1383,7 +1383,7 @@
     },
     {
         "name": "litfsi + ec, dmc",
-        "id": "E42",
+        "id": "litfsi_2405-dmc_3840-ec_3754",
         "description": "10.1016/j.jpowsour.2011.07.071",
         "salts": [
             {
@@ -1395,16 +1395,16 @@
         ],
         "solvents": [
             {
-                "abbr": "ec",
-                "cas_registry_number": "96-49-1",
-                "overall_fraction": 37.54,
-                "relative_fraction": 49.43
-            },
-            {
                 "abbr": "dmc",
                 "cas_registry_number": "616-38-6",
                 "overall_fraction": 38.41,
                 "relative_fraction": 50.57
+            },
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 37.54,
+                "relative_fraction": 49.43
             }
         ],
         "additives": [],
@@ -1417,7 +1417,7 @@
     },
     {
         "name": "litfsi + ec, dmc",
-        "id": "E43",
+        "id": "litfsi_2405-dmc_3840-ec_3754",
         "description": "10.1016/j.jpowsour.2011.07.071",
         "salts": [
             {
@@ -1429,16 +1429,16 @@
         ],
         "solvents": [
             {
-                "abbr": "ec",
-                "cas_registry_number": "96-49-1",
-                "overall_fraction": 37.54,
-                "relative_fraction": 49.43
-            },
-            {
                 "abbr": "dmc",
                 "cas_registry_number": "616-38-6",
                 "overall_fraction": 38.41,
                 "relative_fraction": 50.57
+            },
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 37.54,
+                "relative_fraction": 49.43
             }
         ],
         "additives": [],
@@ -1451,7 +1451,7 @@
     },
     {
         "name": "litfsi + ec, dmc",
-        "id": "E44",
+        "id": "litfsi_2405-dmc_3840-ec_3754",
         "description": "10.1016/j.jpowsour.2011.07.071",
         "salts": [
             {
@@ -1463,16 +1463,16 @@
         ],
         "solvents": [
             {
-                "abbr": "ec",
-                "cas_registry_number": "96-49-1",
-                "overall_fraction": 37.54,
-                "relative_fraction": 49.43
-            },
-            {
                 "abbr": "dmc",
                 "cas_registry_number": "616-38-6",
                 "overall_fraction": 38.41,
                 "relative_fraction": 50.57
+            },
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 37.54,
+                "relative_fraction": 49.43
             }
         ],
         "additives": [],
@@ -1485,7 +1485,7 @@
     },
     {
         "name": "litfsi + ec, dmc",
-        "id": "E45",
+        "id": "litfsi_2405-dmc_3840-ec_3754",
         "description": "10.1016/j.jpowsour.2011.07.071",
         "salts": [
             {
@@ -1497,16 +1497,16 @@
         ],
         "solvents": [
             {
-                "abbr": "ec",
-                "cas_registry_number": "96-49-1",
-                "overall_fraction": 37.54,
-                "relative_fraction": 49.43
-            },
-            {
                 "abbr": "dmc",
                 "cas_registry_number": "616-38-6",
                 "overall_fraction": 38.41,
                 "relative_fraction": 50.57
+            },
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 37.54,
+                "relative_fraction": 49.43
             }
         ],
         "additives": [],
@@ -1519,7 +1519,7 @@
     },
     {
         "name": "litfsi + ec, dmc",
-        "id": "E46",
+        "id": "litfsi_2405-dmc_3840-ec_3754",
         "description": "10.1016/j.jpowsour.2011.07.071",
         "salts": [
             {
@@ -1531,16 +1531,16 @@
         ],
         "solvents": [
             {
-                "abbr": "ec",
-                "cas_registry_number": "96-49-1",
-                "overall_fraction": 37.54,
-                "relative_fraction": 49.43
-            },
-            {
                 "abbr": "dmc",
                 "cas_registry_number": "616-38-6",
                 "overall_fraction": 38.41,
                 "relative_fraction": 50.57
+            },
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 37.54,
+                "relative_fraction": 49.43
             }
         ],
         "additives": [],
@@ -1553,7 +1553,7 @@
     },
     {
         "name": "litfsi + ec, dmc",
-        "id": "E47",
+        "id": "litfsi_2405-dmc_3840-ec_3754",
         "description": "10.1016/j.jpowsour.2011.07.071",
         "salts": [
             {
@@ -1565,16 +1565,16 @@
         ],
         "solvents": [
             {
-                "abbr": "ec",
-                "cas_registry_number": "96-49-1",
-                "overall_fraction": 37.54,
-                "relative_fraction": 49.43
-            },
-            {
                 "abbr": "dmc",
                 "cas_registry_number": "616-38-6",
                 "overall_fraction": 38.41,
                 "relative_fraction": 50.57
+            },
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 37.54,
+                "relative_fraction": 49.43
             }
         ],
         "additives": [],
@@ -1587,7 +1587,7 @@
     },
     {
         "name": "litfsi + ec, dmc",
-        "id": "E48",
+        "id": "litfsi_2405-dmc_3840-ec_3754",
         "description": "10.1016/j.jpowsour.2011.07.071",
         "salts": [
             {
@@ -1599,16 +1599,16 @@
         ],
         "solvents": [
             {
-                "abbr": "ec",
-                "cas_registry_number": "96-49-1",
-                "overall_fraction": 37.54,
-                "relative_fraction": 49.43
-            },
-            {
                 "abbr": "dmc",
                 "cas_registry_number": "616-38-6",
                 "overall_fraction": 38.41,
                 "relative_fraction": 50.57
+            },
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 37.54,
+                "relative_fraction": 49.43
             }
         ],
         "additives": [],
@@ -1621,7 +1621,7 @@
     },
     {
         "name": "litfsi + ec, dmc",
-        "id": "E49",
+        "id": "litfsi_2405-dmc_3840-ec_3754",
         "description": "10.1016/j.jpowsour.2011.07.071",
         "salts": [
             {
@@ -1633,16 +1633,16 @@
         ],
         "solvents": [
             {
-                "abbr": "ec",
-                "cas_registry_number": "96-49-1",
-                "overall_fraction": 37.54,
-                "relative_fraction": 49.43
-            },
-            {
                 "abbr": "dmc",
                 "cas_registry_number": "616-38-6",
                 "overall_fraction": 38.41,
                 "relative_fraction": 50.57
+            },
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 37.54,
+                "relative_fraction": 49.43
             }
         ],
         "additives": [],
@@ -1655,7 +1655,7 @@
     },
     {
         "name": "litfsi + ec, dmc",
-        "id": "E50",
+        "id": "litfsi_2405-dmc_3840-ec_3754",
         "description": "10.1016/j.jpowsour.2011.07.071",
         "salts": [
             {
@@ -1667,16 +1667,16 @@
         ],
         "solvents": [
             {
-                "abbr": "ec",
-                "cas_registry_number": "96-49-1",
-                "overall_fraction": 37.54,
-                "relative_fraction": 49.43
-            },
-            {
                 "abbr": "dmc",
                 "cas_registry_number": "616-38-6",
                 "overall_fraction": 38.41,
                 "relative_fraction": 50.57
+            },
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 37.54,
+                "relative_fraction": 49.43
             }
         ],
         "additives": [],
@@ -1689,7 +1689,7 @@
     },
     {
         "name": "litfsi + ec, dmc",
-        "id": "E51",
+        "id": "litfsi_2405-dmc_3840-ec_3754",
         "description": "10.1016/j.jpowsour.2011.07.071",
         "salts": [
             {
@@ -1701,16 +1701,16 @@
         ],
         "solvents": [
             {
-                "abbr": "ec",
-                "cas_registry_number": "96-49-1",
-                "overall_fraction": 37.54,
-                "relative_fraction": 49.43
-            },
-            {
                 "abbr": "dmc",
                 "cas_registry_number": "616-38-6",
                 "overall_fraction": 38.41,
                 "relative_fraction": 50.57
+            },
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 37.54,
+                "relative_fraction": 49.43
             }
         ],
         "additives": [],
@@ -1723,7 +1723,7 @@
     },
     {
         "name": "litfsi + ec, dmc",
-        "id": "E52",
+        "id": "litfsi_2405-dmc_3840-ec_3754",
         "description": "10.1016/j.jpowsour.2011.07.071",
         "salts": [
             {
@@ -1735,16 +1735,16 @@
         ],
         "solvents": [
             {
-                "abbr": "ec",
-                "cas_registry_number": "96-49-1",
-                "overall_fraction": 37.54,
-                "relative_fraction": 49.43
-            },
-            {
                 "abbr": "dmc",
                 "cas_registry_number": "616-38-6",
                 "overall_fraction": 38.41,
                 "relative_fraction": 50.57
+            },
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 37.54,
+                "relative_fraction": 49.43
             }
         ],
         "additives": [],
@@ -1757,7 +1757,7 @@
     },
     {
         "name": "litfsi + ec, dmc",
-        "id": "E53",
+        "id": "litfsi_2405-dmc_3840-ec_3754",
         "description": "10.1016/j.jpowsour.2011.07.071",
         "salts": [
             {
@@ -1769,16 +1769,16 @@
         ],
         "solvents": [
             {
-                "abbr": "ec",
-                "cas_registry_number": "96-49-1",
-                "overall_fraction": 37.54,
-                "relative_fraction": 49.43
-            },
-            {
                 "abbr": "dmc",
                 "cas_registry_number": "616-38-6",
                 "overall_fraction": 38.41,
                 "relative_fraction": 50.57
+            },
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 37.54,
+                "relative_fraction": 49.43
             }
         ],
         "additives": [],
@@ -1791,7 +1791,7 @@
     },
     {
         "name": "litfsi + ec, dmc",
-        "id": "E54",
+        "id": "litfsi_2405-dmc_3840-ec_3754",
         "description": "10.1016/j.jpowsour.2011.07.071",
         "salts": [
             {
@@ -1803,16 +1803,16 @@
         ],
         "solvents": [
             {
-                "abbr": "ec",
-                "cas_registry_number": "96-49-1",
-                "overall_fraction": 37.54,
-                "relative_fraction": 49.43
-            },
-            {
                 "abbr": "dmc",
                 "cas_registry_number": "616-38-6",
                 "overall_fraction": 38.41,
                 "relative_fraction": 50.57
+            },
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 37.54,
+                "relative_fraction": 49.43
             }
         ],
         "additives": [],
@@ -1825,7 +1825,7 @@
     },
     {
         "name": "litfsi + ec, dmc",
-        "id": "E55",
+        "id": "litfsi_2405-dmc_3840-ec_3754",
         "description": "10.1016/j.jpowsour.2011.07.071",
         "salts": [
             {
@@ -1837,16 +1837,16 @@
         ],
         "solvents": [
             {
-                "abbr": "ec",
-                "cas_registry_number": "96-49-1",
-                "overall_fraction": 37.54,
-                "relative_fraction": 49.43
-            },
-            {
                 "abbr": "dmc",
                 "cas_registry_number": "616-38-6",
                 "overall_fraction": 38.41,
                 "relative_fraction": 50.57
+            },
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 37.54,
+                "relative_fraction": 49.43
             }
         ],
         "additives": [],
@@ -1859,7 +1859,7 @@
     },
     {
         "name": "litfsi + ec, dmc",
-        "id": "E56",
+        "id": "litfsi_2405-dmc_3840-ec_3754",
         "description": "10.1016/j.jpowsour.2011.07.071",
         "salts": [
             {
@@ -1871,16 +1871,16 @@
         ],
         "solvents": [
             {
-                "abbr": "ec",
-                "cas_registry_number": "96-49-1",
-                "overall_fraction": 37.54,
-                "relative_fraction": 49.43
-            },
-            {
                 "abbr": "dmc",
                 "cas_registry_number": "616-38-6",
                 "overall_fraction": 38.41,
                 "relative_fraction": 50.57
+            },
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 37.54,
+                "relative_fraction": 49.43
             }
         ],
         "additives": [],
@@ -1893,7 +1893,7 @@
     },
     {
         "name": "litfsi + ec, dmc",
-        "id": "E57",
+        "id": "litfsi_2405-dmc_3840-ec_3754",
         "description": "10.1016/j.jpowsour.2011.07.071",
         "salts": [
             {
@@ -1905,16 +1905,16 @@
         ],
         "solvents": [
             {
-                "abbr": "ec",
-                "cas_registry_number": "96-49-1",
-                "overall_fraction": 37.54,
-                "relative_fraction": 49.43
-            },
-            {
                 "abbr": "dmc",
                 "cas_registry_number": "616-38-6",
                 "overall_fraction": 38.41,
                 "relative_fraction": 50.57
+            },
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 37.54,
+                "relative_fraction": 49.43
             }
         ],
         "additives": [],
@@ -1927,7 +1927,7 @@
     },
     {
         "name": "litfsi + ec, dmc",
-        "id": "E58",
+        "id": "litfsi_2405-dmc_3840-ec_3754",
         "description": "10.1016/j.jpowsour.2011.07.071",
         "salts": [
             {
@@ -1939,16 +1939,16 @@
         ],
         "solvents": [
             {
-                "abbr": "ec",
-                "cas_registry_number": "96-49-1",
-                "overall_fraction": 37.54,
-                "relative_fraction": 49.43
-            },
-            {
                 "abbr": "dmc",
                 "cas_registry_number": "616-38-6",
                 "overall_fraction": 38.41,
                 "relative_fraction": 50.57
+            },
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 37.54,
+                "relative_fraction": 49.43
             }
         ],
         "additives": [],
@@ -1961,7 +1961,7 @@
     },
     {
         "name": "litfsi + ec, dmc",
-        "id": "E59",
+        "id": "litfsi_2405-dmc_3840-ec_3754",
         "description": "10.1016/j.jpowsour.2011.07.071",
         "salts": [
             {
@@ -1973,16 +1973,16 @@
         ],
         "solvents": [
             {
-                "abbr": "ec",
-                "cas_registry_number": "96-49-1",
-                "overall_fraction": 37.54,
-                "relative_fraction": 49.43
-            },
-            {
                 "abbr": "dmc",
                 "cas_registry_number": "616-38-6",
                 "overall_fraction": 38.41,
                 "relative_fraction": 50.57
+            },
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 37.54,
+                "relative_fraction": 49.43
             }
         ],
         "additives": [],
@@ -1995,7 +1995,7 @@
     },
     {
         "name": "litfsi + ec, dmc",
-        "id": "E60",
+        "id": "litfsi_2405-dmc_3840-ec_3754",
         "description": "10.1016/j.jpowsour.2011.07.071",
         "salts": [
             {
@@ -2007,16 +2007,16 @@
         ],
         "solvents": [
             {
-                "abbr": "ec",
-                "cas_registry_number": "96-49-1",
-                "overall_fraction": 37.54,
-                "relative_fraction": 49.43
-            },
-            {
                 "abbr": "dmc",
                 "cas_registry_number": "616-38-6",
                 "overall_fraction": 38.41,
                 "relative_fraction": 50.57
+            },
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 37.54,
+                "relative_fraction": 49.43
             }
         ],
         "additives": [],
@@ -2029,7 +2029,7 @@
     },
     {
         "name": "litfsi + ec, dmc",
-        "id": "E61",
+        "id": "litfsi_2405-dmc_3840-ec_3754",
         "description": "10.1016/j.jpowsour.2011.07.071",
         "salts": [
             {
@@ -2041,16 +2041,16 @@
         ],
         "solvents": [
             {
-                "abbr": "ec",
-                "cas_registry_number": "96-49-1",
-                "overall_fraction": 37.54,
-                "relative_fraction": 49.43
-            },
-            {
                 "abbr": "dmc",
                 "cas_registry_number": "616-38-6",
                 "overall_fraction": 38.41,
                 "relative_fraction": 50.57
+            },
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 37.54,
+                "relative_fraction": 49.43
             }
         ],
         "additives": [],
@@ -2063,7 +2063,7 @@
     },
     {
         "name": "litfsi + ec, dmc",
-        "id": "E62",
+        "id": "litfsi_2405-dmc_3840-ec_3754",
         "description": "10.1016/j.jpowsour.2011.07.071",
         "salts": [
             {
@@ -2075,16 +2075,16 @@
         ],
         "solvents": [
             {
-                "abbr": "ec",
-                "cas_registry_number": "96-49-1",
-                "overall_fraction": 37.54,
-                "relative_fraction": 49.43
-            },
-            {
                 "abbr": "dmc",
                 "cas_registry_number": "616-38-6",
                 "overall_fraction": 38.41,
                 "relative_fraction": 50.57
+            },
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 37.54,
+                "relative_fraction": 49.43
             }
         ],
         "additives": [],
@@ -2097,7 +2097,7 @@
     },
     {
         "name": "litfsi + ec, dmc",
-        "id": "E63",
+        "id": "litfsi_2405-dmc_3840-ec_3754",
         "description": "10.1016/j.jpowsour.2011.07.071",
         "salts": [
             {
@@ -2109,16 +2109,16 @@
         ],
         "solvents": [
             {
-                "abbr": "ec",
-                "cas_registry_number": "96-49-1",
-                "overall_fraction": 37.54,
-                "relative_fraction": 49.43
-            },
-            {
                 "abbr": "dmc",
                 "cas_registry_number": "616-38-6",
                 "overall_fraction": 38.41,
                 "relative_fraction": 50.57
+            },
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 37.54,
+                "relative_fraction": 49.43
             }
         ],
         "additives": [],
@@ -2131,7 +2131,7 @@
     },
     {
         "name": "litfsi + ec, dmc",
-        "id": "E64",
+        "id": "litfsi_2405-dmc_3840-ec_3754",
         "description": "10.1016/j.jpowsour.2011.07.071",
         "salts": [
             {
@@ -2143,16 +2143,16 @@
         ],
         "solvents": [
             {
-                "abbr": "ec",
-                "cas_registry_number": "96-49-1",
-                "overall_fraction": 37.54,
-                "relative_fraction": 49.43
-            },
-            {
                 "abbr": "dmc",
                 "cas_registry_number": "616-38-6",
                 "overall_fraction": 38.41,
                 "relative_fraction": 50.57
+            },
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 37.54,
+                "relative_fraction": 49.43
             }
         ],
         "additives": [],
@@ -2165,7 +2165,7 @@
     },
     {
         "name": "litfsi + ec, dmc",
-        "id": "E65",
+        "id": "litfsi_2405-dmc_3840-ec_3754",
         "description": "10.1016/j.jpowsour.2011.07.071",
         "salts": [
             {
@@ -2177,16 +2177,16 @@
         ],
         "solvents": [
             {
-                "abbr": "ec",
-                "cas_registry_number": "96-49-1",
-                "overall_fraction": 37.54,
-                "relative_fraction": 49.43
-            },
-            {
                 "abbr": "dmc",
                 "cas_registry_number": "616-38-6",
                 "overall_fraction": 38.41,
                 "relative_fraction": 50.57
+            },
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 37.54,
+                "relative_fraction": 49.43
             }
         ],
         "additives": [],
@@ -2199,7 +2199,7 @@
     },
     {
         "name": "litfsi + ec, dmc",
-        "id": "E66",
+        "id": "litfsi_2405-dmc_3840-ec_3754",
         "description": "10.1016/j.jpowsour.2011.07.071",
         "salts": [
             {
@@ -2211,16 +2211,16 @@
         ],
         "solvents": [
             {
-                "abbr": "ec",
-                "cas_registry_number": "96-49-1",
-                "overall_fraction": 37.54,
-                "relative_fraction": 49.43
-            },
-            {
                 "abbr": "dmc",
                 "cas_registry_number": "616-38-6",
                 "overall_fraction": 38.41,
                 "relative_fraction": 50.57
+            },
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 37.54,
+                "relative_fraction": 49.43
             }
         ],
         "additives": [],
@@ -2233,7 +2233,7 @@
     },
     {
         "name": "litfsi + ec, dmc",
-        "id": "E67",
+        "id": "litfsi_2405-dmc_3840-ec_3754",
         "description": "10.1016/j.jpowsour.2011.07.071",
         "salts": [
             {
@@ -2245,16 +2245,16 @@
         ],
         "solvents": [
             {
-                "abbr": "ec",
-                "cas_registry_number": "96-49-1",
-                "overall_fraction": 37.54,
-                "relative_fraction": 49.43
-            },
-            {
                 "abbr": "dmc",
                 "cas_registry_number": "616-38-6",
                 "overall_fraction": 38.41,
                 "relative_fraction": 50.57
+            },
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 37.54,
+                "relative_fraction": 49.43
             }
         ],
         "additives": [],
@@ -2267,7 +2267,7 @@
     },
     {
         "name": "litfsi + ec, dmc",
-        "id": "E68",
+        "id": "litfsi_2405-dmc_3840-ec_3754",
         "description": "10.1016/j.jpowsour.2011.07.071",
         "salts": [
             {
@@ -2279,16 +2279,16 @@
         ],
         "solvents": [
             {
-                "abbr": "ec",
-                "cas_registry_number": "96-49-1",
-                "overall_fraction": 37.54,
-                "relative_fraction": 49.43
-            },
-            {
                 "abbr": "dmc",
                 "cas_registry_number": "616-38-6",
                 "overall_fraction": 38.41,
                 "relative_fraction": 50.57
+            },
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 37.54,
+                "relative_fraction": 49.43
             }
         ],
         "additives": [],
@@ -2301,7 +2301,7 @@
     },
     {
         "name": "litfsi + pc",
-        "id": "E69",
+        "id": "litfsi_2382-pc_7618",
         "description": "10.1149/1.1344281",
         "salts": [
             {
@@ -2329,7 +2329,7 @@
     },
     {
         "name": "litfsi + pc",
-        "id": "E70",
+        "id": "litfsi_2382-pc_7618",
         "description": "10.1149/1.1344281",
         "salts": [
             {
@@ -2357,7 +2357,7 @@
     },
     {
         "name": "litfsi + pc",
-        "id": "E71",
+        "id": "litfsi_2382-pc_7618",
         "description": "10.1149/1.1344281",
         "salts": [
             {
@@ -2385,7 +2385,7 @@
     },
     {
         "name": "litfsi + pc",
-        "id": "E72",
+        "id": "litfsi_2382-pc_7618",
         "description": "10.1149/1.1344281",
         "salts": [
             {
@@ -2413,7 +2413,7 @@
     },
     {
         "name": "litfsi + pc",
-        "id": "E73",
+        "id": "litfsi_2382-pc_7618",
         "description": "10.1149/1.1344281",
         "salts": [
             {
@@ -2441,7 +2441,7 @@
     },
     {
         "name": "litfsi + pc",
-        "id": "E74",
+        "id": "litfsi_2382-pc_7618",
         "description": "10.1149/1.1344281",
         "salts": [
             {
@@ -2469,7 +2469,7 @@
     },
     {
         "name": "litfsi + pc",
-        "id": "E75",
+        "id": "litfsi_2382-pc_7618",
         "description": "10.1149/1.1344281",
         "salts": [
             {
@@ -2497,7 +2497,7 @@
     },
     {
         "name": "litfsi + pc",
-        "id": "E76",
+        "id": "litfsi_2382-pc_7618",
         "description": "10.1149/1.1344281",
         "salts": [
             {
@@ -2525,7 +2525,7 @@
     },
     {
         "name": "litfsi + pc",
-        "id": "E77",
+        "id": "litfsi_2382-pc_7618",
         "description": "10.1149/1.1344281",
         "salts": [
             {
@@ -2553,7 +2553,7 @@
     },
     {
         "name": "litfsi + pc",
-        "id": "E78",
+        "id": "litfsi_2382-pc_7618",
         "description": "10.1149/1.1344281",
         "salts": [
             {
@@ -2581,7 +2581,7 @@
     },
     {
         "name": "litfsi + pc",
-        "id": "E79",
+        "id": "litfsi_2382-pc_7618",
         "description": "10.1149/1.1344281",
         "salts": [
             {
@@ -2609,7 +2609,7 @@
     },
     {
         "name": "litfsi + pc",
-        "id": "E80",
+        "id": "litfsi_2382-pc_7618",
         "description": "10.1149/1.1344281",
         "salts": [
             {
@@ -2637,7 +2637,7 @@
     },
     {
         "name": "litfsi + pc",
-        "id": "E81",
+        "id": "litfsi_2382-pc_7618",
         "description": "10.1149/1.1344281",
         "salts": [
             {
@@ -2665,7 +2665,7 @@
     },
     {
         "name": "litfsi + pc",
-        "id": "E82",
+        "id": "litfsi_2382-pc_7618",
         "description": "10.1149/1.1344281",
         "salts": [
             {
@@ -2693,7 +2693,7 @@
     },
     {
         "name": "litfsi + pc",
-        "id": "E83",
+        "id": "litfsi_2382-pc_7618",
         "description": "10.1149/1.1344281",
         "salts": [
             {
@@ -2721,7 +2721,7 @@
     },
     {
         "name": "litfsi + pc",
-        "id": "E84",
+        "id": "litfsi_2382-pc_7618",
         "description": "10.1149/1.1344281",
         "salts": [
             {
@@ -2749,7 +2749,7 @@
     },
     {
         "name": "litfsi + pc",
-        "id": "E85",
+        "id": "litfsi_2382-pc_7618",
         "description": "10.1149/1.1344281",
         "salts": [
             {
@@ -2777,7 +2777,7 @@
     },
     {
         "name": "litfsi + pc",
-        "id": "E86",
+        "id": "litfsi_2382-pc_7618",
         "description": "10.1149/1.1344281",
         "salts": [
             {
@@ -2805,7 +2805,7 @@
     },
     {
         "name": "litfsi + pc",
-        "id": "E87",
+        "id": "litfsi_2382-pc_7618",
         "description": "10.1149/1.1344281",
         "salts": [
             {
@@ -2833,7 +2833,7 @@
     },
     {
         "name": "litfsi + pc",
-        "id": "E88",
+        "id": "litfsi_2382-pc_7618",
         "description": "10.1149/1.1344281",
         "salts": [
             {
@@ -2861,7 +2861,7 @@
     },
     {
         "name": "litfsi + pc",
-        "id": "E89",
+        "id": "litfsi_2382-pc_7618",
         "description": "10.1149/1.1344281",
         "salts": [
             {
@@ -2889,7 +2889,7 @@
     },
     {
         "name": "litfsi + pc",
-        "id": "E90",
+        "id": "litfsi_2382-pc_7618",
         "description": "10.1149/1.1344281",
         "salts": [
             {
@@ -2917,7 +2917,7 @@
     },
     {
         "name": "litfsi + pc",
-        "id": "E91",
+        "id": "litfsi_2382-pc_7618",
         "description": "10.1149/1.1344281",
         "salts": [
             {
@@ -2945,7 +2945,7 @@
     },
     {
         "name": "litfsi + pc",
-        "id": "E92",
+        "id": "litfsi_2382-pc_7618",
         "description": "10.1149/1.1344281",
         "salts": [
             {
@@ -2973,7 +2973,7 @@
     },
     {
         "name": "litfsi + pc",
-        "id": "E93",
+        "id": "litfsi_2382-pc_7618",
         "description": "10.1149/1.1344281",
         "salts": [
             {
@@ -3001,7 +3001,7 @@
     },
     {
         "name": "litfsi + pc",
-        "id": "E94",
+        "id": "litfsi_2382-pc_7618",
         "description": "10.1149/1.1344281",
         "salts": [
             {
@@ -3029,7 +3029,7 @@
     },
     {
         "name": "litfsi + pc",
-        "id": "E95",
+        "id": "litfsi_2382-pc_7618",
         "description": "10.1149/1.1344281",
         "salts": [
             {
@@ -3057,7 +3057,7 @@
     },
     {
         "name": "litfsi + pc",
-        "id": "E96",
+        "id": "litfsi_2382-pc_7618",
         "description": "10.1149/1.1344281",
         "salts": [
             {
@@ -3085,7 +3085,7 @@
     },
     {
         "name": "litfsi + pc",
-        "id": "E97",
+        "id": "litfsi_2382-pc_7618",
         "description": "10.1149/1.1344281",
         "salts": [
             {
@@ -3113,7 +3113,7 @@
     },
     {
         "name": "litfsi + pc",
-        "id": "E98",
+        "id": "litfsi_2382-pc_7618",
         "description": "10.1149/1.1344281",
         "salts": [
             {
@@ -3141,7 +3141,7 @@
     },
     {
         "name": "litfsi + pc",
-        "id": "E99",
+        "id": "litfsi_2382-pc_7618",
         "description": "10.1149/1.1344281",
         "salts": [
             {
@@ -3169,7 +3169,7 @@
     },
     {
         "name": "litfsi + pc",
-        "id": "E100",
+        "id": "litfsi_2382-pc_7618",
         "description": "10.1149/1.1344281",
         "salts": [
             {
@@ -3197,7 +3197,7 @@
     },
     {
         "name": "litfsi + pc",
-        "id": "E101",
+        "id": "litfsi_2382-pc_7618",
         "description": "10.1149/1.1344281",
         "salts": [
             {
@@ -3225,7 +3225,7 @@
     },
     {
         "name": "litfsi + dme",
-        "id": "E102",
+        "id": "litfsi_1652-dme_8348",
         "description": "10.1149/1.1344281",
         "salts": [
             {
@@ -3253,7 +3253,7 @@
     },
     {
         "name": "litfsi + dme",
-        "id": "E103",
+        "id": "litfsi_1652-dme_8348",
         "description": "10.1149/1.1344281",
         "salts": [
             {
@@ -3281,7 +3281,7 @@
     },
     {
         "name": "litfsi + dme",
-        "id": "E104",
+        "id": "litfsi_1652-dme_8348",
         "description": "10.1149/1.1344281",
         "salts": [
             {
@@ -3309,7 +3309,7 @@
     },
     {
         "name": "litfsi + dme",
-        "id": "E105",
+        "id": "litfsi_1652-dme_8348",
         "description": "10.1149/1.1344281",
         "salts": [
             {
@@ -3337,7 +3337,7 @@
     },
     {
         "name": "litfsi + dme",
-        "id": "E106",
+        "id": "litfsi_1652-dme_8348",
         "description": "10.1149/1.1344281",
         "salts": [
             {
@@ -3365,7 +3365,7 @@
     },
     {
         "name": "litfsi + dme",
-        "id": "E107",
+        "id": "litfsi_1652-dme_8348",
         "description": "10.1149/1.1344281",
         "salts": [
             {
@@ -3393,7 +3393,7 @@
     },
     {
         "name": "litfsi + dme",
-        "id": "E108",
+        "id": "litfsi_1652-dme_8348",
         "description": "10.1149/1.1344281",
         "salts": [
             {
@@ -3421,7 +3421,7 @@
     },
     {
         "name": "litfsi + dme",
-        "id": "E109",
+        "id": "litfsi_1652-dme_8348",
         "description": "10.1149/1.1344281",
         "salts": [
             {
@@ -3449,7 +3449,7 @@
     },
     {
         "name": "litfsi + dme",
-        "id": "E110",
+        "id": "litfsi_1652-dme_8348",
         "description": "10.1149/1.1344281",
         "salts": [
             {
@@ -3477,7 +3477,7 @@
     },
     {
         "name": "litfsi + dme",
-        "id": "E111",
+        "id": "litfsi_1652-dme_8348",
         "description": "10.1149/1.1344281",
         "salts": [
             {
@@ -3505,7 +3505,7 @@
     },
     {
         "name": "litfsi + dme",
-        "id": "E112",
+        "id": "litfsi_1652-dme_8348",
         "description": "10.1149/1.1344281",
         "salts": [
             {
@@ -3533,7 +3533,7 @@
     },
     {
         "name": "litfsi + dme",
-        "id": "E113",
+        "id": "litfsi_1652-dme_8348",
         "description": "10.1149/1.1344281",
         "salts": [
             {
@@ -3561,7 +3561,7 @@
     },
     {
         "name": "litfsi + dme",
-        "id": "E114",
+        "id": "litfsi_1652-dme_8348",
         "description": "10.1149/1.1344281",
         "salts": [
             {
@@ -3589,7 +3589,7 @@
     },
     {
         "name": "litfsi + dme",
-        "id": "E115",
+        "id": "litfsi_1652-dme_8348",
         "description": "10.1149/1.1344281",
         "salts": [
             {
@@ -3617,7 +3617,7 @@
     },
     {
         "name": "litfsi + dme",
-        "id": "E116",
+        "id": "litfsi_1652-dme_8348",
         "description": "10.1149/1.1344281",
         "salts": [
             {
@@ -3645,7 +3645,7 @@
     },
     {
         "name": "litfsi + dme",
-        "id": "E117",
+        "id": "litfsi_1652-dme_8348",
         "description": "10.1149/1.1344281",
         "salts": [
             {
@@ -3673,7 +3673,7 @@
     },
     {
         "name": "litfsi + dme",
-        "id": "E118",
+        "id": "litfsi_1652-dme_8348",
         "description": "10.1149/1.1344281",
         "salts": [
             {
@@ -3701,7 +3701,7 @@
     },
     {
         "name": "litfsi + dme",
-        "id": "E119",
+        "id": "litfsi_1652-dme_8348",
         "description": "10.1149/1.1344281",
         "salts": [
             {
@@ -3729,7 +3729,7 @@
     },
     {
         "name": "litfsi + dme",
-        "id": "E120",
+        "id": "litfsi_1652-dme_8348",
         "description": "10.1149/1.1344281",
         "salts": [
             {
@@ -3757,7 +3757,7 @@
     },
     {
         "name": "litfsi + dme",
-        "id": "E121",
+        "id": "litfsi_1652-dme_8348",
         "description": "10.1149/1.1344281",
         "salts": [
             {
@@ -3785,7 +3785,7 @@
     },
     {
         "name": "litfsi + dme",
-        "id": "E122",
+        "id": "litfsi_1652-dme_8348",
         "description": "10.1149/1.1344281",
         "salts": [
             {
@@ -3813,7 +3813,7 @@
     },
     {
         "name": "litfsi + dme",
-        "id": "E123",
+        "id": "litfsi_1652-dme_8348",
         "description": "10.1149/1.1344281",
         "salts": [
             {
@@ -3841,7 +3841,7 @@
     },
     {
         "name": "litfsi + dme",
-        "id": "E124",
+        "id": "litfsi_1652-dme_8348",
         "description": "10.1149/1.1344281",
         "salts": [
             {
@@ -3869,7 +3869,7 @@
     },
     {
         "name": "litfsi + dme",
-        "id": "E125",
+        "id": "litfsi_1652-dme_8348",
         "description": "10.1149/1.1344281",
         "salts": [
             {
@@ -3897,7 +3897,7 @@
     },
     {
         "name": "litfsi + dme",
-        "id": "E126",
+        "id": "litfsi_1652-dme_8348",
         "description": "10.1149/1.1344281",
         "salts": [
             {
@@ -3925,7 +3925,7 @@
     },
     {
         "name": "litfsi + dme",
-        "id": "E127",
+        "id": "litfsi_1652-dme_8348",
         "description": "10.1149/1.1344281",
         "salts": [
             {

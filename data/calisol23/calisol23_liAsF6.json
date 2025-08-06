@@ -1,7 +1,7 @@
 [
     {
         "name": "liasf6 + pc, dme",
-        "id": "E1",
+        "id": "liasf6_395-dme_6531-pc_3074",
         "description": "10.1016/S0378-7753(01)00697-8",
         "salts": [
             {
@@ -13,16 +13,16 @@
         ],
         "solvents": [
             {
-                "abbr": "pc",
-                "cas_registry_number": "108-32-7",
-                "overall_fraction": 30.74,
-                "relative_fraction": 32.0
-            },
-            {
                 "abbr": "dme",
                 "cas_registry_number": "110-71-4",
                 "overall_fraction": 65.31,
                 "relative_fraction": 68.0
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 30.74,
+                "relative_fraction": 32.0
             }
         ],
         "additives": [],
@@ -35,7 +35,7 @@
     },
     {
         "name": "liasf6 + pc, dme",
-        "id": "E2",
+        "id": "liasf6_389-dme_6534-pc_3076",
         "description": "10.1016/S0378-7753(01)00697-8",
         "salts": [
             {
@@ -47,16 +47,16 @@
         ],
         "solvents": [
             {
-                "abbr": "pc",
-                "cas_registry_number": "108-32-7",
-                "overall_fraction": 30.76,
-                "relative_fraction": 32.0
-            },
-            {
                 "abbr": "dme",
                 "cas_registry_number": "110-71-4",
                 "overall_fraction": 65.35,
                 "relative_fraction": 68.0
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 30.76,
+                "relative_fraction": 32.0
             }
         ],
         "additives": [],
@@ -69,7 +69,7 @@
     },
     {
         "name": "liasf6 + pc, dme",
-        "id": "E3",
+        "id": "liasf6_389-dme_6534-pc_3076",
         "description": "10.1016/S0378-7753(01)00697-8",
         "salts": [
             {
@@ -81,16 +81,16 @@
         ],
         "solvents": [
             {
-                "abbr": "pc",
-                "cas_registry_number": "108-32-7",
-                "overall_fraction": 30.76,
-                "relative_fraction": 32.0
-            },
-            {
                 "abbr": "dme",
                 "cas_registry_number": "110-71-4",
                 "overall_fraction": 65.35,
                 "relative_fraction": 68.0
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 30.76,
+                "relative_fraction": 32.0
             }
         ],
         "additives": [],
@@ -103,7 +103,7 @@
     },
     {
         "name": "liasf6 + pc, dme",
-        "id": "E4",
+        "id": "liasf6_392-dme_6533-pc_3075",
         "description": "10.1016/S0378-7753(01)00697-8",
         "salts": [
             {
@@ -115,16 +115,16 @@
         ],
         "solvents": [
             {
-                "abbr": "pc",
-                "cas_registry_number": "108-32-7",
-                "overall_fraction": 30.75,
-                "relative_fraction": 32.0
-            },
-            {
                 "abbr": "dme",
                 "cas_registry_number": "110-71-4",
                 "overall_fraction": 65.33,
                 "relative_fraction": 68.0
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 30.75,
+                "relative_fraction": 32.0
             }
         ],
         "additives": [],
@@ -137,7 +137,7 @@
     },
     {
         "name": "liasf6 + pc, dme",
-        "id": "E5",
+        "id": "liasf6_391-dme_6534-pc_3075",
         "description": "10.1016/S0378-7753(01)00697-8",
         "salts": [
             {
@@ -149,16 +149,16 @@
         ],
         "solvents": [
             {
-                "abbr": "pc",
-                "cas_registry_number": "108-32-7",
-                "overall_fraction": 30.75,
-                "relative_fraction": 32.0
-            },
-            {
                 "abbr": "dme",
                 "cas_registry_number": "110-71-4",
                 "overall_fraction": 65.34,
                 "relative_fraction": 68.0
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 30.75,
+                "relative_fraction": 32.0
             }
         ],
         "additives": [],
@@ -171,7 +171,7 @@
     },
     {
         "name": "liasf6 + pc, dme",
-        "id": "E6",
+        "id": "liasf6_386-dme_6538-pc_3076",
         "description": "10.1016/S0378-7753(01)00697-8",
         "salts": [
             {
@@ -183,16 +183,16 @@
         ],
         "solvents": [
             {
-                "abbr": "pc",
-                "cas_registry_number": "108-32-7",
-                "overall_fraction": 30.76,
-                "relative_fraction": 32.0
-            },
-            {
                 "abbr": "dme",
                 "cas_registry_number": "110-71-4",
                 "overall_fraction": 65.38,
                 "relative_fraction": 68.0
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 30.76,
+                "relative_fraction": 32.0
             }
         ],
         "additives": [],
@@ -205,7 +205,7 @@
     },
     {
         "name": "liasf6 + pc, dme",
-        "id": "E7",
+        "id": "liasf6_664-dme_6348-pc_2988",
         "description": "10.1016/S0378-7753(01)00697-8",
         "salts": [
             {
@@ -217,16 +217,16 @@
         ],
         "solvents": [
             {
-                "abbr": "pc",
-                "cas_registry_number": "108-32-7",
-                "overall_fraction": 29.88,
-                "relative_fraction": 32.0
-            },
-            {
                 "abbr": "dme",
                 "cas_registry_number": "110-71-4",
                 "overall_fraction": 63.48,
                 "relative_fraction": 68.0
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 29.88,
+                "relative_fraction": 32.0
             }
         ],
         "additives": [],
@@ -239,7 +239,7 @@
     },
     {
         "name": "liasf6 + pc, dme",
-        "id": "E8",
+        "id": "liasf6_663-dme_6349-pc_2988",
         "description": "10.1016/S0378-7753(01)00697-8",
         "salts": [
             {
@@ -251,16 +251,16 @@
         ],
         "solvents": [
             {
-                "abbr": "pc",
-                "cas_registry_number": "108-32-7",
-                "overall_fraction": 29.88,
-                "relative_fraction": 32.0
-            },
-            {
                 "abbr": "dme",
                 "cas_registry_number": "110-71-4",
                 "overall_fraction": 63.49,
                 "relative_fraction": 68.0
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 29.88,
+                "relative_fraction": 32.0
             }
         ],
         "additives": [],
@@ -273,7 +273,7 @@
     },
     {
         "name": "liasf6 + pc, dme",
-        "id": "E9",
+        "id": "liasf6_666-dme_6347-pc_2987",
         "description": "10.1016/S0378-7753(01)00697-8",
         "salts": [
             {
@@ -285,16 +285,16 @@
         ],
         "solvents": [
             {
-                "abbr": "pc",
-                "cas_registry_number": "108-32-7",
-                "overall_fraction": 29.87,
-                "relative_fraction": 32.0
-            },
-            {
                 "abbr": "dme",
                 "cas_registry_number": "110-71-4",
                 "overall_fraction": 63.47,
                 "relative_fraction": 68.0
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 29.87,
+                "relative_fraction": 32.0
             }
         ],
         "additives": [],
@@ -307,7 +307,7 @@
     },
     {
         "name": "liasf6 + pc, dme",
-        "id": "E10",
+        "id": "liasf6_669-dme_6345-pc_2986",
         "description": "10.1016/S0378-7753(01)00697-8",
         "salts": [
             {
@@ -319,16 +319,16 @@
         ],
         "solvents": [
             {
-                "abbr": "pc",
-                "cas_registry_number": "108-32-7",
-                "overall_fraction": 29.86,
-                "relative_fraction": 32.0
-            },
-            {
                 "abbr": "dme",
                 "cas_registry_number": "110-71-4",
                 "overall_fraction": 63.45,
                 "relative_fraction": 68.0
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 29.86,
+                "relative_fraction": 32.0
             }
         ],
         "additives": [],
@@ -341,7 +341,7 @@
     },
     {
         "name": "liasf6 + pc, dme",
-        "id": "E11",
+        "id": "liasf6_659-dme_6352-pc_2989",
         "description": "10.1016/S0378-7753(01)00697-8",
         "salts": [
             {
@@ -353,16 +353,16 @@
         ],
         "solvents": [
             {
-                "abbr": "pc",
-                "cas_registry_number": "108-32-7",
-                "overall_fraction": 29.89,
-                "relative_fraction": 32.0
-            },
-            {
                 "abbr": "dme",
                 "cas_registry_number": "110-71-4",
                 "overall_fraction": 63.52,
                 "relative_fraction": 68.0
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 29.89,
+                "relative_fraction": 32.0
             }
         ],
         "additives": [],
@@ -375,7 +375,7 @@
     },
     {
         "name": "liasf6 + pc, dme",
-        "id": "E12",
+        "id": "liasf6_654-dme_6355-pc_2991",
         "description": "10.1016/S0378-7753(01)00697-8",
         "salts": [
             {
@@ -387,16 +387,16 @@
         ],
         "solvents": [
             {
-                "abbr": "pc",
-                "cas_registry_number": "108-32-7",
-                "overall_fraction": 29.91,
-                "relative_fraction": 32.0
-            },
-            {
                 "abbr": "dme",
                 "cas_registry_number": "110-71-4",
                 "overall_fraction": 63.55,
                 "relative_fraction": 68.0
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 29.91,
+                "relative_fraction": 32.0
             }
         ],
         "additives": [],
@@ -409,7 +409,7 @@
     },
     {
         "name": "liasf6 + pc, dme",
-        "id": "E13",
+        "id": "liasf6_861-dme_6214-pc_2924",
         "description": "10.1016/S0378-7753(01)00697-8",
         "salts": [
             {
@@ -421,16 +421,16 @@
         ],
         "solvents": [
             {
-                "abbr": "pc",
-                "cas_registry_number": "108-32-7",
-                "overall_fraction": 29.24,
-                "relative_fraction": 32.0
-            },
-            {
                 "abbr": "dme",
                 "cas_registry_number": "110-71-4",
                 "overall_fraction": 62.14,
                 "relative_fraction": 68.0
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 29.24,
+                "relative_fraction": 32.0
             }
         ],
         "additives": [],
@@ -443,7 +443,7 @@
     },
     {
         "name": "liasf6 + pc, dme",
-        "id": "E14",
+        "id": "liasf6_861-dme_6215-pc_2924",
         "description": "10.1016/S0378-7753(01)00697-8",
         "salts": [
             {
@@ -455,16 +455,16 @@
         ],
         "solvents": [
             {
-                "abbr": "pc",
-                "cas_registry_number": "108-32-7",
-                "overall_fraction": 29.24,
-                "relative_fraction": 32.0
-            },
-            {
                 "abbr": "dme",
                 "cas_registry_number": "110-71-4",
                 "overall_fraction": 62.15,
                 "relative_fraction": 68.0
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 29.24,
+                "relative_fraction": 32.0
             }
         ],
         "additives": [],
@@ -477,7 +477,7 @@
     },
     {
         "name": "liasf6 + pc, dme",
-        "id": "E15",
+        "id": "liasf6_855-dme_6219-pc_2926",
         "description": "10.1016/S0378-7753(01)00697-8",
         "salts": [
             {
@@ -489,16 +489,16 @@
         ],
         "solvents": [
             {
-                "abbr": "pc",
-                "cas_registry_number": "108-32-7",
-                "overall_fraction": 29.26,
-                "relative_fraction": 32.0
-            },
-            {
                 "abbr": "dme",
                 "cas_registry_number": "110-71-4",
                 "overall_fraction": 62.19,
                 "relative_fraction": 68.0
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 29.26,
+                "relative_fraction": 32.0
             }
         ],
         "additives": [],
@@ -511,7 +511,7 @@
     },
     {
         "name": "liasf6 + pc, dme",
-        "id": "E16",
+        "id": "liasf6_858-dme_6217-pc_2925",
         "description": "10.1016/S0378-7753(01)00697-8",
         "salts": [
             {
@@ -523,16 +523,16 @@
         ],
         "solvents": [
             {
-                "abbr": "pc",
-                "cas_registry_number": "108-32-7",
-                "overall_fraction": 29.25,
-                "relative_fraction": 32.0
-            },
-            {
                 "abbr": "dme",
                 "cas_registry_number": "110-71-4",
                 "overall_fraction": 62.17,
                 "relative_fraction": 68.0
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 29.25,
+                "relative_fraction": 32.0
             }
         ],
         "additives": [],
@@ -545,7 +545,7 @@
     },
     {
         "name": "liasf6 + pc, dme",
-        "id": "E17",
+        "id": "liasf6_857-dme_6217-pc_2926",
         "description": "10.1016/S0378-7753(01)00697-8",
         "salts": [
             {
@@ -557,16 +557,16 @@
         ],
         "solvents": [
             {
-                "abbr": "pc",
-                "cas_registry_number": "108-32-7",
-                "overall_fraction": 29.26,
-                "relative_fraction": 32.0
-            },
-            {
                 "abbr": "dme",
                 "cas_registry_number": "110-71-4",
                 "overall_fraction": 62.17,
                 "relative_fraction": 68.0
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 29.26,
+                "relative_fraction": 32.0
             }
         ],
         "additives": [],
@@ -579,7 +579,7 @@
     },
     {
         "name": "liasf6 + pc, dme",
-        "id": "E18",
+        "id": "liasf6_847-dme_6224-pc_2929",
         "description": "10.1016/S0378-7753(01)00697-8",
         "salts": [
             {
@@ -591,16 +591,16 @@
         ],
         "solvents": [
             {
-                "abbr": "pc",
-                "cas_registry_number": "108-32-7",
-                "overall_fraction": 29.29,
-                "relative_fraction": 32.0
-            },
-            {
                 "abbr": "dme",
                 "cas_registry_number": "110-71-4",
                 "overall_fraction": 62.24,
                 "relative_fraction": 68.0
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 29.29,
+                "relative_fraction": 32.0
             }
         ],
         "additives": [],
@@ -613,7 +613,7 @@
     },
     {
         "name": "liasf6 + pc, dme",
-        "id": "E19",
+        "id": "liasf6_977-dme_6136-pc_2887",
         "description": "10.1016/S0378-7753(01)00697-8",
         "salts": [
             {
@@ -625,16 +625,16 @@
         ],
         "solvents": [
             {
-                "abbr": "pc",
-                "cas_registry_number": "108-32-7",
-                "overall_fraction": 28.87,
-                "relative_fraction": 32.0
-            },
-            {
                 "abbr": "dme",
                 "cas_registry_number": "110-71-4",
                 "overall_fraction": 61.36,
                 "relative_fraction": 68.0
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 28.87,
+                "relative_fraction": 32.0
             }
         ],
         "additives": [],
@@ -647,7 +647,7 @@
     },
     {
         "name": "liasf6 + pc, dme",
-        "id": "E20",
+        "id": "liasf6_978-dme_6134-pc_2887",
         "description": "10.1016/S0378-7753(01)00697-8",
         "salts": [
             {
@@ -659,16 +659,16 @@
         ],
         "solvents": [
             {
-                "abbr": "pc",
-                "cas_registry_number": "108-32-7",
-                "overall_fraction": 28.87,
-                "relative_fraction": 32.0
-            },
-            {
                 "abbr": "dme",
                 "cas_registry_number": "110-71-4",
                 "overall_fraction": 61.34,
                 "relative_fraction": 68.0
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 28.87,
+                "relative_fraction": 32.0
             }
         ],
         "additives": [],
@@ -681,7 +681,7 @@
     },
     {
         "name": "liasf6 + pc, dme",
-        "id": "E21",
+        "id": "liasf6_973-dme_6138-pc_2889",
         "description": "10.1016/S0378-7753(01)00697-8",
         "salts": [
             {
@@ -693,16 +693,16 @@
         ],
         "solvents": [
             {
-                "abbr": "pc",
-                "cas_registry_number": "108-32-7",
-                "overall_fraction": 28.89,
-                "relative_fraction": 32.0
-            },
-            {
                 "abbr": "dme",
                 "cas_registry_number": "110-71-4",
                 "overall_fraction": 61.38,
                 "relative_fraction": 68.0
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 28.89,
+                "relative_fraction": 32.0
             }
         ],
         "additives": [],
@@ -715,7 +715,7 @@
     },
     {
         "name": "liasf6 + pc, dme",
-        "id": "E22",
+        "id": "liasf6_976-dme_6136-pc_2888",
         "description": "10.1016/S0378-7753(01)00697-8",
         "salts": [
             {
@@ -727,16 +727,16 @@
         ],
         "solvents": [
             {
-                "abbr": "pc",
-                "cas_registry_number": "108-32-7",
-                "overall_fraction": 28.88,
-                "relative_fraction": 32.0
-            },
-            {
                 "abbr": "dme",
                 "cas_registry_number": "110-71-4",
                 "overall_fraction": 61.36,
                 "relative_fraction": 68.0
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 28.88,
+                "relative_fraction": 32.0
             }
         ],
         "additives": [],
@@ -749,7 +749,7 @@
     },
     {
         "name": "liasf6 + pc, dme",
-        "id": "E23",
+        "id": "liasf6_974-dme_6138-pc_2888",
         "description": "10.1016/S0378-7753(01)00697-8",
         "salts": [
             {
@@ -761,16 +761,16 @@
         ],
         "solvents": [
             {
-                "abbr": "pc",
-                "cas_registry_number": "108-32-7",
-                "overall_fraction": 28.88,
-                "relative_fraction": 32.0
-            },
-            {
                 "abbr": "dme",
                 "cas_registry_number": "110-71-4",
                 "overall_fraction": 61.38,
                 "relative_fraction": 68.0
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 28.88,
+                "relative_fraction": 32.0
             }
         ],
         "additives": [],
@@ -783,7 +783,7 @@
     },
     {
         "name": "liasf6 + pc, dme",
-        "id": "E24",
+        "id": "liasf6_968-dme_6142-pc_2890",
         "description": "10.1016/S0378-7753(01)00697-8",
         "salts": [
             {
@@ -795,16 +795,16 @@
         ],
         "solvents": [
             {
-                "abbr": "pc",
-                "cas_registry_number": "108-32-7",
-                "overall_fraction": 28.9,
-                "relative_fraction": 32.0
-            },
-            {
                 "abbr": "dme",
                 "cas_registry_number": "110-71-4",
                 "overall_fraction": 61.42,
                 "relative_fraction": 68.0
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 28.9,
+                "relative_fraction": 32.0
             }
         ],
         "additives": [],
@@ -817,7 +817,7 @@
     },
     {
         "name": "liasf6 + pc, dme",
-        "id": "E25",
+        "id": "liasf6_1598-dme_5713-pc_2689",
         "description": "10.1016/S0378-7753(01)00697-8",
         "salts": [
             {
@@ -829,16 +829,16 @@
         ],
         "solvents": [
             {
-                "abbr": "pc",
-                "cas_registry_number": "108-32-7",
-                "overall_fraction": 26.89,
-                "relative_fraction": 32.0
-            },
-            {
                 "abbr": "dme",
                 "cas_registry_number": "110-71-4",
                 "overall_fraction": 57.13,
                 "relative_fraction": 68.0
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 26.89,
+                "relative_fraction": 32.0
             }
         ],
         "additives": [],
@@ -851,7 +851,7 @@
     },
     {
         "name": "liasf6 + pc, dme",
-        "id": "E26",
+        "id": "liasf6_1605-dme_5709-pc_2686",
         "description": "10.1016/S0378-7753(01)00697-8",
         "salts": [
             {
@@ -863,16 +863,16 @@
         ],
         "solvents": [
             {
-                "abbr": "pc",
-                "cas_registry_number": "108-32-7",
-                "overall_fraction": 26.86,
-                "relative_fraction": 32.0
-            },
-            {
                 "abbr": "dme",
                 "cas_registry_number": "110-71-4",
                 "overall_fraction": 57.09,
                 "relative_fraction": 68.0
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 26.86,
+                "relative_fraction": 32.0
             }
         ],
         "additives": [],
@@ -885,7 +885,7 @@
     },
     {
         "name": "liasf6 + pc, dme",
-        "id": "E27",
+        "id": "liasf6_1594-dme_5716-pc_2690",
         "description": "10.1016/S0378-7753(01)00697-8",
         "salts": [
             {
@@ -897,16 +897,16 @@
         ],
         "solvents": [
             {
-                "abbr": "pc",
-                "cas_registry_number": "108-32-7",
-                "overall_fraction": 26.9,
-                "relative_fraction": 32.0
-            },
-            {
                 "abbr": "dme",
                 "cas_registry_number": "110-71-4",
                 "overall_fraction": 57.16,
                 "relative_fraction": 68.0
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 26.9,
+                "relative_fraction": 32.0
             }
         ],
         "additives": [],
@@ -919,7 +919,7 @@
     },
     {
         "name": "liasf6 + pc, dme",
-        "id": "E28",
+        "id": "liasf6_1596-dme_5715-pc_2689",
         "description": "10.1016/S0378-7753(01)00697-8",
         "salts": [
             {
@@ -931,16 +931,16 @@
         ],
         "solvents": [
             {
-                "abbr": "pc",
-                "cas_registry_number": "108-32-7",
-                "overall_fraction": 26.89,
-                "relative_fraction": 32.0
-            },
-            {
                 "abbr": "dme",
                 "cas_registry_number": "110-71-4",
                 "overall_fraction": 57.15,
                 "relative_fraction": 68.0
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 26.89,
+                "relative_fraction": 32.0
             }
         ],
         "additives": [],
@@ -953,7 +953,7 @@
     },
     {
         "name": "liasf6 + pc, dme",
-        "id": "E29",
+        "id": "liasf6_1594-dme_5716-pc_2690",
         "description": "10.1016/S0378-7753(01)00697-8",
         "salts": [
             {
@@ -965,16 +965,16 @@
         ],
         "solvents": [
             {
-                "abbr": "pc",
-                "cas_registry_number": "108-32-7",
-                "overall_fraction": 26.9,
-                "relative_fraction": 32.0
-            },
-            {
                 "abbr": "dme",
                 "cas_registry_number": "110-71-4",
                 "overall_fraction": 57.16,
                 "relative_fraction": 68.0
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 26.9,
+                "relative_fraction": 32.0
             }
         ],
         "additives": [],
@@ -987,7 +987,7 @@
     },
     {
         "name": "liasf6 + pc, dme",
-        "id": "E30",
+        "id": "liasf6_1587-dme_5721-pc_2692",
         "description": "10.1016/S0378-7753(01)00697-8",
         "salts": [
             {
@@ -999,16 +999,16 @@
         ],
         "solvents": [
             {
-                "abbr": "pc",
-                "cas_registry_number": "108-32-7",
-                "overall_fraction": 26.92,
-                "relative_fraction": 32.0
-            },
-            {
                 "abbr": "dme",
                 "cas_registry_number": "110-71-4",
                 "overall_fraction": 57.21,
                 "relative_fraction": 68.0
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 26.92,
+                "relative_fraction": 32.0
             }
         ],
         "additives": [],
@@ -1021,7 +1021,7 @@
     },
     {
         "name": "liasf6 + pc, dme",
-        "id": "E31",
+        "id": "liasf6_2026-dme_5422-pc_2552",
         "description": "10.1016/S0378-7753(01)00697-8",
         "salts": [
             {
@@ -1033,16 +1033,16 @@
         ],
         "solvents": [
             {
-                "abbr": "pc",
-                "cas_registry_number": "108-32-7",
-                "overall_fraction": 25.52,
-                "relative_fraction": 32.0
-            },
-            {
                 "abbr": "dme",
                 "cas_registry_number": "110-71-4",
                 "overall_fraction": 54.22,
                 "relative_fraction": 68.0
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 25.52,
+                "relative_fraction": 32.0
             }
         ],
         "additives": [],
@@ -1055,7 +1055,7 @@
     },
     {
         "name": "liasf6 + pc, dme",
-        "id": "E32",
+        "id": "liasf6_2029-dme_5420-pc_2551",
         "description": "10.1016/S0378-7753(01)00697-8",
         "salts": [
             {
@@ -1067,16 +1067,16 @@
         ],
         "solvents": [
             {
-                "abbr": "pc",
-                "cas_registry_number": "108-32-7",
-                "overall_fraction": 25.51,
-                "relative_fraction": 32.0
-            },
-            {
                 "abbr": "dme",
                 "cas_registry_number": "110-71-4",
                 "overall_fraction": 54.2,
                 "relative_fraction": 68.0
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 25.51,
+                "relative_fraction": 32.0
             }
         ],
         "additives": [],
@@ -1089,7 +1089,7 @@
     },
     {
         "name": "liasf6 + pc, dme",
-        "id": "E33",
+        "id": "liasf6_2027-dme_5422-pc_2551",
         "description": "10.1016/S0378-7753(01)00697-8",
         "salts": [
             {
@@ -1101,16 +1101,16 @@
         ],
         "solvents": [
             {
-                "abbr": "pc",
-                "cas_registry_number": "108-32-7",
-                "overall_fraction": 25.51,
-                "relative_fraction": 32.0
-            },
-            {
                 "abbr": "dme",
                 "cas_registry_number": "110-71-4",
                 "overall_fraction": 54.22,
                 "relative_fraction": 68.0
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 25.51,
+                "relative_fraction": 32.0
             }
         ],
         "additives": [],
@@ -1123,7 +1123,7 @@
     },
     {
         "name": "liasf6 + pc, dme",
-        "id": "E34",
+        "id": "liasf6_2023-dme_5424-pc_2552",
         "description": "10.1016/S0378-7753(01)00697-8",
         "salts": [
             {
@@ -1135,16 +1135,16 @@
         ],
         "solvents": [
             {
-                "abbr": "pc",
-                "cas_registry_number": "108-32-7",
-                "overall_fraction": 25.52,
-                "relative_fraction": 32.0
-            },
-            {
                 "abbr": "dme",
                 "cas_registry_number": "110-71-4",
                 "overall_fraction": 54.24,
                 "relative_fraction": 68.0
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 25.52,
+                "relative_fraction": 32.0
             }
         ],
         "additives": [],
@@ -1157,7 +1157,7 @@
     },
     {
         "name": "liasf6 + pc, dme",
-        "id": "E35",
+        "id": "liasf6_2017-dme_5428-pc_2555",
         "description": "10.1016/S0378-7753(01)00697-8",
         "salts": [
             {
@@ -1169,16 +1169,16 @@
         ],
         "solvents": [
             {
-                "abbr": "pc",
-                "cas_registry_number": "108-32-7",
-                "overall_fraction": 25.55,
-                "relative_fraction": 32.0
-            },
-            {
                 "abbr": "dme",
                 "cas_registry_number": "110-71-4",
                 "overall_fraction": 54.28,
                 "relative_fraction": 68.0
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 25.55,
+                "relative_fraction": 32.0
             }
         ],
         "additives": [],
@@ -1191,7 +1191,7 @@
     },
     {
         "name": "liasf6 + pc, dme",
-        "id": "E36",
+        "id": "liasf6_2023-dme_5424-pc_2553",
         "description": "10.1016/S0378-7753(01)00697-8",
         "salts": [
             {
@@ -1203,16 +1203,16 @@
         ],
         "solvents": [
             {
-                "abbr": "pc",
-                "cas_registry_number": "108-32-7",
-                "overall_fraction": 25.53,
-                "relative_fraction": 32.0
-            },
-            {
                 "abbr": "dme",
                 "cas_registry_number": "110-71-4",
                 "overall_fraction": 54.24,
                 "relative_fraction": 68.0
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 25.53,
+                "relative_fraction": 32.0
             }
         ],
         "additives": [],
@@ -1225,7 +1225,7 @@
     },
     {
         "name": "liasf6 + pc, dme",
-        "id": "E37",
+        "id": "liasf6_3119-dme_4679-pc_2202",
         "description": "10.1016/S0378-7753(01)00697-8",
         "salts": [
             {
@@ -1237,16 +1237,16 @@
         ],
         "solvents": [
             {
-                "abbr": "pc",
-                "cas_registry_number": "108-32-7",
-                "overall_fraction": 22.02,
-                "relative_fraction": 32.0
-            },
-            {
                 "abbr": "dme",
                 "cas_registry_number": "110-71-4",
                 "overall_fraction": 46.79,
                 "relative_fraction": 68.0
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 22.02,
+                "relative_fraction": 32.0
             }
         ],
         "additives": [],
@@ -1259,7 +1259,7 @@
     },
     {
         "name": "liasf6 + pc, dme",
-        "id": "E38",
+        "id": "liasf6_3124-dme_4676-pc_2200",
         "description": "10.1016/S0378-7753(01)00697-8",
         "salts": [
             {
@@ -1271,16 +1271,16 @@
         ],
         "solvents": [
             {
-                "abbr": "pc",
-                "cas_registry_number": "108-32-7",
-                "overall_fraction": 22.0,
-                "relative_fraction": 32.0
-            },
-            {
                 "abbr": "dme",
                 "cas_registry_number": "110-71-4",
                 "overall_fraction": 46.76,
                 "relative_fraction": 68.0
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 22.0,
+                "relative_fraction": 32.0
             }
         ],
         "additives": [],
@@ -1293,7 +1293,7 @@
     },
     {
         "name": "liasf6 + pc, dme",
-        "id": "E39",
+        "id": "liasf6_3117-dme_4680-pc_2203",
         "description": "10.1016/S0378-7753(01)00697-8",
         "salts": [
             {
@@ -1305,16 +1305,16 @@
         ],
         "solvents": [
             {
-                "abbr": "pc",
-                "cas_registry_number": "108-32-7",
-                "overall_fraction": 22.03,
-                "relative_fraction": 32.0
-            },
-            {
                 "abbr": "dme",
                 "cas_registry_number": "110-71-4",
                 "overall_fraction": 46.8,
                 "relative_fraction": 68.0
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 22.03,
+                "relative_fraction": 32.0
             }
         ],
         "additives": [],
@@ -1327,7 +1327,7 @@
     },
     {
         "name": "liasf6 + pc, dme",
-        "id": "E40",
+        "id": "liasf6_200-dme_6663-pc_3136",
         "description": "10.1016/S0378-7753(01)00697-8",
         "salts": [
             {
@@ -1339,16 +1339,16 @@
         ],
         "solvents": [
             {
-                "abbr": "pc",
-                "cas_registry_number": "108-32-7",
-                "overall_fraction": 31.36,
-                "relative_fraction": 32.0
-            },
-            {
                 "abbr": "dme",
                 "cas_registry_number": "110-71-4",
                 "overall_fraction": 66.63,
                 "relative_fraction": 68.0
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 31.36,
+                "relative_fraction": 32.0
             }
         ],
         "additives": [],
@@ -1361,7 +1361,7 @@
     },
     {
         "name": "liasf6 + pc, dme",
-        "id": "E41",
+        "id": "liasf6_200-dme_6663-pc_3136",
         "description": "10.1016/S0378-7753(01)00697-8",
         "salts": [
             {
@@ -1373,16 +1373,16 @@
         ],
         "solvents": [
             {
-                "abbr": "pc",
-                "cas_registry_number": "108-32-7",
-                "overall_fraction": 31.36,
-                "relative_fraction": 32.0
-            },
-            {
                 "abbr": "dme",
                 "cas_registry_number": "110-71-4",
                 "overall_fraction": 66.63,
                 "relative_fraction": 68.0
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 31.36,
+                "relative_fraction": 32.0
             }
         ],
         "additives": [],
@@ -1395,7 +1395,7 @@
     },
     {
         "name": "liasf6 + pc, dme",
-        "id": "E42",
+        "id": "liasf6_204-dme_6661-pc_3134",
         "description": "10.1016/S0378-7753(01)00697-8",
         "salts": [
             {
@@ -1407,16 +1407,16 @@
         ],
         "solvents": [
             {
-                "abbr": "pc",
-                "cas_registry_number": "108-32-7",
-                "overall_fraction": 31.34,
-                "relative_fraction": 32.0
-            },
-            {
                 "abbr": "dme",
                 "cas_registry_number": "110-71-4",
                 "overall_fraction": 66.61,
                 "relative_fraction": 68.0
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 31.34,
+                "relative_fraction": 32.0
             }
         ],
         "additives": [],
@@ -1429,7 +1429,7 @@
     },
     {
         "name": "liasf6 + pc, dme",
-        "id": "E43",
+        "id": "liasf6_196-dme_6667-pc_3137",
         "description": "10.1016/S0378-7753(01)00697-8",
         "salts": [
             {
@@ -1441,16 +1441,16 @@
         ],
         "solvents": [
             {
-                "abbr": "pc",
-                "cas_registry_number": "108-32-7",
-                "overall_fraction": 31.37,
-                "relative_fraction": 32.0
-            },
-            {
                 "abbr": "dme",
                 "cas_registry_number": "110-71-4",
                 "overall_fraction": 66.67,
                 "relative_fraction": 68.0
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 31.37,
+                "relative_fraction": 32.0
             }
         ],
         "additives": [],
@@ -1463,7 +1463,7 @@
     },
     {
         "name": "liasf6 + pc, dme",
-        "id": "E44",
+        "id": "liasf6_195-dme_6667-pc_3138",
         "description": "10.1016/S0378-7753(01)00697-8",
         "salts": [
             {
@@ -1475,16 +1475,16 @@
         ],
         "solvents": [
             {
-                "abbr": "pc",
-                "cas_registry_number": "108-32-7",
-                "overall_fraction": 31.38,
-                "relative_fraction": 32.0
-            },
-            {
                 "abbr": "dme",
                 "cas_registry_number": "110-71-4",
                 "overall_fraction": 66.67,
                 "relative_fraction": 68.0
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 31.38,
+                "relative_fraction": 32.0
             }
         ],
         "additives": [],
@@ -1497,7 +1497,7 @@
     },
     {
         "name": "liasf6 + pc, dme",
-        "id": "E45",
+        "id": "liasf6_199-dme_6665-pc_3136",
         "description": "10.1016/S0378-7753(01)00697-8",
         "salts": [
             {
@@ -1509,16 +1509,16 @@
         ],
         "solvents": [
             {
-                "abbr": "pc",
-                "cas_registry_number": "108-32-7",
-                "overall_fraction": 31.36,
-                "relative_fraction": 32.0
-            },
-            {
                 "abbr": "dme",
                 "cas_registry_number": "110-71-4",
                 "overall_fraction": 66.65,
                 "relative_fraction": 68.0
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 31.36,
+                "relative_fraction": 32.0
             }
         ],
         "additives": [],
@@ -1531,7 +1531,7 @@
     },
     {
         "name": "liasf6 + ec, pc, dme",
-        "id": "E46",
+        "id": "liasf6_1773-dme_3353-ec_2549-pc_2325",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -1543,6 +1543,12 @@
         ],
         "solvents": [
             {
+                "abbr": "dme",
+                "cas_registry_number": "110-71-4",
+                "overall_fraction": 33.53,
+                "relative_fraction": 40.76
+            },
+            {
                 "abbr": "ec",
                 "cas_registry_number": "96-49-1",
                 "overall_fraction": 25.49,
@@ -1553,12 +1559,6 @@
                 "cas_registry_number": "108-32-7",
                 "overall_fraction": 23.25,
                 "relative_fraction": 28.26
-            },
-            {
-                "abbr": "dme",
-                "cas_registry_number": "110-71-4",
-                "overall_fraction": 33.53,
-                "relative_fraction": 40.76
             }
         ],
         "additives": [],
@@ -1571,7 +1571,7 @@
     },
     {
         "name": "liasf6 + ec, pc, dme",
-        "id": "E47",
+        "id": "liasf6_1773-dme_3353-ec_2549-pc_2325",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -1583,6 +1583,12 @@
         ],
         "solvents": [
             {
+                "abbr": "dme",
+                "cas_registry_number": "110-71-4",
+                "overall_fraction": 33.53,
+                "relative_fraction": 40.76
+            },
+            {
                 "abbr": "ec",
                 "cas_registry_number": "96-49-1",
                 "overall_fraction": 25.49,
@@ -1593,12 +1599,6 @@
                 "cas_registry_number": "108-32-7",
                 "overall_fraction": 23.25,
                 "relative_fraction": 28.26
-            },
-            {
-                "abbr": "dme",
-                "cas_registry_number": "110-71-4",
-                "overall_fraction": 33.53,
-                "relative_fraction": 40.76
             }
         ],
         "additives": [],
@@ -1611,7 +1611,7 @@
     },
     {
         "name": "liasf6 + ec, pc, dme",
-        "id": "E48",
+        "id": "liasf6_1773-dme_3353-ec_2549-pc_2325",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -1623,6 +1623,12 @@
         ],
         "solvents": [
             {
+                "abbr": "dme",
+                "cas_registry_number": "110-71-4",
+                "overall_fraction": 33.53,
+                "relative_fraction": 40.76
+            },
+            {
                 "abbr": "ec",
                 "cas_registry_number": "96-49-1",
                 "overall_fraction": 25.49,
@@ -1633,12 +1639,6 @@
                 "cas_registry_number": "108-32-7",
                 "overall_fraction": 23.25,
                 "relative_fraction": 28.26
-            },
-            {
-                "abbr": "dme",
-                "cas_registry_number": "110-71-4",
-                "overall_fraction": 33.53,
-                "relative_fraction": 40.76
             }
         ],
         "additives": [],
@@ -1651,7 +1651,7 @@
     },
     {
         "name": "liasf6 + ec, pc, dme",
-        "id": "E49",
+        "id": "liasf6_1773-dme_3353-ec_2549-pc_2325",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -1663,6 +1663,12 @@
         ],
         "solvents": [
             {
+                "abbr": "dme",
+                "cas_registry_number": "110-71-4",
+                "overall_fraction": 33.53,
+                "relative_fraction": 40.76
+            },
+            {
                 "abbr": "ec",
                 "cas_registry_number": "96-49-1",
                 "overall_fraction": 25.49,
@@ -1673,12 +1679,6 @@
                 "cas_registry_number": "108-32-7",
                 "overall_fraction": 23.25,
                 "relative_fraction": 28.26
-            },
-            {
-                "abbr": "dme",
-                "cas_registry_number": "110-71-4",
-                "overall_fraction": 33.53,
-                "relative_fraction": 40.76
             }
         ],
         "additives": [],
@@ -1691,7 +1691,7 @@
     },
     {
         "name": "liasf6 + ec, pc, dme",
-        "id": "E50",
+        "id": "liasf6_7095-dme_1184-ec_900-pc_821",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -1703,6 +1703,12 @@
         ],
         "solvents": [
             {
+                "abbr": "dme",
+                "cas_registry_number": "110-71-4",
+                "overall_fraction": 11.84,
+                "relative_fraction": 40.76
+            },
+            {
                 "abbr": "ec",
                 "cas_registry_number": "96-49-1",
                 "overall_fraction": 9.0,
@@ -1713,12 +1719,6 @@
                 "cas_registry_number": "108-32-7",
                 "overall_fraction": 8.21,
                 "relative_fraction": 28.26
-            },
-            {
-                "abbr": "dme",
-                "cas_registry_number": "110-71-4",
-                "overall_fraction": 11.84,
-                "relative_fraction": 40.76
             }
         ],
         "additives": [],
@@ -1731,7 +1731,7 @@
     },
     {
         "name": "liasf6 + pc, dme",
-        "id": "E51",
+        "id": "liasf6_1839-dme_3419-pc_4741",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -1743,16 +1743,16 @@
         ],
         "solvents": [
             {
-                "abbr": "pc",
-                "cas_registry_number": "108-32-7",
-                "overall_fraction": 47.41,
-                "relative_fraction": 58.1
-            },
-            {
                 "abbr": "dme",
                 "cas_registry_number": "110-71-4",
                 "overall_fraction": 34.19,
                 "relative_fraction": 41.9
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 47.41,
+                "relative_fraction": 58.1
             }
         ],
         "additives": [],
@@ -1765,7 +1765,7 @@
     },
     {
         "name": "liasf6 + pc, dme",
-        "id": "E52",
+        "id": "liasf6_7361-dme_1106-pc_1533",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -1777,16 +1777,16 @@
         ],
         "solvents": [
             {
-                "abbr": "pc",
-                "cas_registry_number": "108-32-7",
-                "overall_fraction": 15.33,
-                "relative_fraction": 58.1
-            },
-            {
                 "abbr": "dme",
                 "cas_registry_number": "110-71-4",
                 "overall_fraction": 11.06,
                 "relative_fraction": 41.9
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 15.33,
+                "relative_fraction": 58.1
             }
         ],
         "additives": [],
@@ -1799,7 +1799,7 @@
     },
     {
         "name": "liasf6 + ec, dme",
-        "id": "E53",
+        "id": "liasf6_1714-dme_3286-ec_4998",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -1811,16 +1811,16 @@
         ],
         "solvents": [
             {
-                "abbr": "ec",
-                "cas_registry_number": "96-49-1",
-                "overall_fraction": 49.98,
-                "relative_fraction": 60.33
-            },
-            {
                 "abbr": "dme",
                 "cas_registry_number": "110-71-4",
                 "overall_fraction": 32.87,
                 "relative_fraction": 39.67
+            },
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 49.98,
+                "relative_fraction": 60.33
             }
         ],
         "additives": [],
@@ -1833,7 +1833,7 @@
     },
     {
         "name": "liasf6 + ec, pc, dme",
-        "id": "E54",
+        "id": "liasf6_1773-dme_3353-ec_2549-pc_2325",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -1845,6 +1845,12 @@
         ],
         "solvents": [
             {
+                "abbr": "dme",
+                "cas_registry_number": "110-71-4",
+                "overall_fraction": 33.53,
+                "relative_fraction": 40.76
+            },
+            {
                 "abbr": "ec",
                 "cas_registry_number": "96-49-1",
                 "overall_fraction": 25.49,
@@ -1855,12 +1861,6 @@
                 "cas_registry_number": "108-32-7",
                 "overall_fraction": 23.25,
                 "relative_fraction": 28.26
-            },
-            {
-                "abbr": "dme",
-                "cas_registry_number": "110-71-4",
-                "overall_fraction": 33.53,
-                "relative_fraction": 40.76
             }
         ],
         "additives": [],
@@ -1873,7 +1873,7 @@
     },
     {
         "name": "liasf6 + ec, pc, dme",
-        "id": "E55",
+        "id": "liasf6_7095-dme_1184-ec_900-pc_821",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -1885,6 +1885,12 @@
         ],
         "solvents": [
             {
+                "abbr": "dme",
+                "cas_registry_number": "110-71-4",
+                "overall_fraction": 11.84,
+                "relative_fraction": 40.76
+            },
+            {
                 "abbr": "ec",
                 "cas_registry_number": "96-49-1",
                 "overall_fraction": 9.0,
@@ -1895,12 +1901,6 @@
                 "cas_registry_number": "108-32-7",
                 "overall_fraction": 8.21,
                 "relative_fraction": 28.26
-            },
-            {
-                "abbr": "dme",
-                "cas_registry_number": "110-71-4",
-                "overall_fraction": 11.84,
-                "relative_fraction": 40.76
             }
         ],
         "additives": [],
@@ -1913,7 +1913,7 @@
     },
     {
         "name": "liasf6 + pc, dme",
-        "id": "E56",
+        "id": "liasf6_1839-dme_3419-pc_4741",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -1925,16 +1925,16 @@
         ],
         "solvents": [
             {
-                "abbr": "pc",
-                "cas_registry_number": "108-32-7",
-                "overall_fraction": 47.41,
-                "relative_fraction": 58.1
-            },
-            {
                 "abbr": "dme",
                 "cas_registry_number": "110-71-4",
                 "overall_fraction": 34.19,
                 "relative_fraction": 41.9
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 47.41,
+                "relative_fraction": 58.1
             }
         ],
         "additives": [],
@@ -1947,7 +1947,7 @@
     },
     {
         "name": "liasf6 + pc, dme",
-        "id": "E57",
+        "id": "liasf6_7361-dme_1106-pc_1533",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -1959,16 +1959,16 @@
         ],
         "solvents": [
             {
-                "abbr": "pc",
-                "cas_registry_number": "108-32-7",
-                "overall_fraction": 15.33,
-                "relative_fraction": 58.1
-            },
-            {
                 "abbr": "dme",
                 "cas_registry_number": "110-71-4",
                 "overall_fraction": 11.06,
                 "relative_fraction": 41.9
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 15.33,
+                "relative_fraction": 58.1
             }
         ],
         "additives": [],
@@ -1981,7 +1981,7 @@
     },
     {
         "name": "liasf6 + ec, dme",
-        "id": "E58",
+        "id": "liasf6_1714-dme_3286-ec_4998",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -1993,16 +1993,16 @@
         ],
         "solvents": [
             {
-                "abbr": "ec",
-                "cas_registry_number": "96-49-1",
-                "overall_fraction": 49.98,
-                "relative_fraction": 60.33
-            },
-            {
                 "abbr": "dme",
                 "cas_registry_number": "110-71-4",
                 "overall_fraction": 32.87,
                 "relative_fraction": 39.67
+            },
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 49.98,
+                "relative_fraction": 60.33
             }
         ],
         "additives": [],
@@ -2015,7 +2015,7 @@
     },
     {
         "name": "liasf6 + ec, pc, dme",
-        "id": "E59",
+        "id": "liasf6_1773-dme_3353-ec_2549-pc_2325",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -2027,6 +2027,12 @@
         ],
         "solvents": [
             {
+                "abbr": "dme",
+                "cas_registry_number": "110-71-4",
+                "overall_fraction": 33.53,
+                "relative_fraction": 40.76
+            },
+            {
                 "abbr": "ec",
                 "cas_registry_number": "96-49-1",
                 "overall_fraction": 25.49,
@@ -2037,12 +2043,6 @@
                 "cas_registry_number": "108-32-7",
                 "overall_fraction": 23.25,
                 "relative_fraction": 28.26
-            },
-            {
-                "abbr": "dme",
-                "cas_registry_number": "110-71-4",
-                "overall_fraction": 33.53,
-                "relative_fraction": 40.76
             }
         ],
         "additives": [],
@@ -2055,7 +2055,7 @@
     },
     {
         "name": "liasf6 + ec, pc, dme",
-        "id": "E60",
+        "id": "liasf6_7095-dme_1184-ec_900-pc_821",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -2067,6 +2067,12 @@
         ],
         "solvents": [
             {
+                "abbr": "dme",
+                "cas_registry_number": "110-71-4",
+                "overall_fraction": 11.84,
+                "relative_fraction": 40.76
+            },
+            {
                 "abbr": "ec",
                 "cas_registry_number": "96-49-1",
                 "overall_fraction": 9.0,
@@ -2077,12 +2083,6 @@
                 "cas_registry_number": "108-32-7",
                 "overall_fraction": 8.21,
                 "relative_fraction": 28.26
-            },
-            {
-                "abbr": "dme",
-                "cas_registry_number": "110-71-4",
-                "overall_fraction": 11.84,
-                "relative_fraction": 40.76
             }
         ],
         "additives": [],
@@ -2095,7 +2095,7 @@
     },
     {
         "name": "liasf6 + pc, dme",
-        "id": "E61",
+        "id": "liasf6_1839-dme_3419-pc_4741",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -2107,16 +2107,16 @@
         ],
         "solvents": [
             {
-                "abbr": "pc",
-                "cas_registry_number": "108-32-7",
-                "overall_fraction": 47.41,
-                "relative_fraction": 58.1
-            },
-            {
                 "abbr": "dme",
                 "cas_registry_number": "110-71-4",
                 "overall_fraction": 34.19,
                 "relative_fraction": 41.9
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 47.41,
+                "relative_fraction": 58.1
             }
         ],
         "additives": [],
@@ -2129,7 +2129,7 @@
     },
     {
         "name": "liasf6 + pc, dme",
-        "id": "E62",
+        "id": "liasf6_7361-dme_1106-pc_1533",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -2141,16 +2141,16 @@
         ],
         "solvents": [
             {
-                "abbr": "pc",
-                "cas_registry_number": "108-32-7",
-                "overall_fraction": 15.33,
-                "relative_fraction": 58.1
-            },
-            {
                 "abbr": "dme",
                 "cas_registry_number": "110-71-4",
                 "overall_fraction": 11.06,
                 "relative_fraction": 41.9
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 15.33,
+                "relative_fraction": 58.1
             }
         ],
         "additives": [],
@@ -2163,7 +2163,7 @@
     },
     {
         "name": "liasf6 + ec, dme",
-        "id": "E63",
+        "id": "liasf6_1714-dme_3286-ec_4998",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -2175,16 +2175,16 @@
         ],
         "solvents": [
             {
-                "abbr": "ec",
-                "cas_registry_number": "96-49-1",
-                "overall_fraction": 49.98,
-                "relative_fraction": 60.33
-            },
-            {
                 "abbr": "dme",
                 "cas_registry_number": "110-71-4",
                 "overall_fraction": 32.87,
                 "relative_fraction": 39.67
+            },
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 49.98,
+                "relative_fraction": 60.33
             }
         ],
         "additives": [],
@@ -2197,7 +2197,7 @@
     },
     {
         "name": "liasf6 + ec, pc, dme",
-        "id": "E64",
+        "id": "liasf6_1773-dme_3353-ec_2549-pc_2325",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -2209,6 +2209,12 @@
         ],
         "solvents": [
             {
+                "abbr": "dme",
+                "cas_registry_number": "110-71-4",
+                "overall_fraction": 33.53,
+                "relative_fraction": 40.76
+            },
+            {
                 "abbr": "ec",
                 "cas_registry_number": "96-49-1",
                 "overall_fraction": 25.49,
@@ -2219,12 +2225,6 @@
                 "cas_registry_number": "108-32-7",
                 "overall_fraction": 23.25,
                 "relative_fraction": 28.26
-            },
-            {
-                "abbr": "dme",
-                "cas_registry_number": "110-71-4",
-                "overall_fraction": 33.53,
-                "relative_fraction": 40.76
             }
         ],
         "additives": [],
@@ -2237,7 +2237,7 @@
     },
     {
         "name": "liasf6 + ec, pc, dme",
-        "id": "E65",
+        "id": "liasf6_7095-dme_1184-ec_900-pc_821",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -2249,6 +2249,12 @@
         ],
         "solvents": [
             {
+                "abbr": "dme",
+                "cas_registry_number": "110-71-4",
+                "overall_fraction": 11.84,
+                "relative_fraction": 40.76
+            },
+            {
                 "abbr": "ec",
                 "cas_registry_number": "96-49-1",
                 "overall_fraction": 9.0,
@@ -2259,12 +2265,6 @@
                 "cas_registry_number": "108-32-7",
                 "overall_fraction": 8.21,
                 "relative_fraction": 28.26
-            },
-            {
-                "abbr": "dme",
-                "cas_registry_number": "110-71-4",
-                "overall_fraction": 11.84,
-                "relative_fraction": 40.76
             }
         ],
         "additives": [],
@@ -2277,7 +2277,7 @@
     },
     {
         "name": "liasf6 + pc, dme",
-        "id": "E66",
+        "id": "liasf6_1839-dme_3419-pc_4741",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -2289,16 +2289,16 @@
         ],
         "solvents": [
             {
-                "abbr": "pc",
-                "cas_registry_number": "108-32-7",
-                "overall_fraction": 47.41,
-                "relative_fraction": 58.1
-            },
-            {
                 "abbr": "dme",
                 "cas_registry_number": "110-71-4",
                 "overall_fraction": 34.19,
                 "relative_fraction": 41.9
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 47.41,
+                "relative_fraction": 58.1
             }
         ],
         "additives": [],
@@ -2311,7 +2311,7 @@
     },
     {
         "name": "liasf6 + pc, dme",
-        "id": "E67",
+        "id": "liasf6_7361-dme_1106-pc_1533",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -2323,16 +2323,16 @@
         ],
         "solvents": [
             {
-                "abbr": "pc",
-                "cas_registry_number": "108-32-7",
-                "overall_fraction": 15.33,
-                "relative_fraction": 58.1
-            },
-            {
                 "abbr": "dme",
                 "cas_registry_number": "110-71-4",
                 "overall_fraction": 11.06,
                 "relative_fraction": 41.9
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 15.33,
+                "relative_fraction": 58.1
             }
         ],
         "additives": [],
@@ -2345,7 +2345,7 @@
     },
     {
         "name": "liasf6 + ec, dme",
-        "id": "E68",
+        "id": "liasf6_1714-dme_3286-ec_4998",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -2357,16 +2357,16 @@
         ],
         "solvents": [
             {
-                "abbr": "ec",
-                "cas_registry_number": "96-49-1",
-                "overall_fraction": 49.98,
-                "relative_fraction": 60.33
-            },
-            {
                 "abbr": "dme",
                 "cas_registry_number": "110-71-4",
                 "overall_fraction": 32.87,
                 "relative_fraction": 39.67
+            },
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 49.98,
+                "relative_fraction": 60.33
             }
         ],
         "additives": [],
@@ -2379,7 +2379,7 @@
     },
     {
         "name": "liasf6 + ec, pc, dme",
-        "id": "E69",
+        "id": "liasf6_1773-dme_3353-ec_2549-pc_2325",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -2391,6 +2391,12 @@
         ],
         "solvents": [
             {
+                "abbr": "dme",
+                "cas_registry_number": "110-71-4",
+                "overall_fraction": 33.53,
+                "relative_fraction": 40.76
+            },
+            {
                 "abbr": "ec",
                 "cas_registry_number": "96-49-1",
                 "overall_fraction": 25.49,
@@ -2401,12 +2407,6 @@
                 "cas_registry_number": "108-32-7",
                 "overall_fraction": 23.25,
                 "relative_fraction": 28.26
-            },
-            {
-                "abbr": "dme",
-                "cas_registry_number": "110-71-4",
-                "overall_fraction": 33.53,
-                "relative_fraction": 40.76
             }
         ],
         "additives": [],
@@ -2419,7 +2419,7 @@
     },
     {
         "name": "liasf6 + ec, pc, dme",
-        "id": "E70",
+        "id": "liasf6_7095-dme_1184-ec_900-pc_821",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -2431,6 +2431,12 @@
         ],
         "solvents": [
             {
+                "abbr": "dme",
+                "cas_registry_number": "110-71-4",
+                "overall_fraction": 11.84,
+                "relative_fraction": 40.76
+            },
+            {
                 "abbr": "ec",
                 "cas_registry_number": "96-49-1",
                 "overall_fraction": 9.0,
@@ -2441,12 +2447,6 @@
                 "cas_registry_number": "108-32-7",
                 "overall_fraction": 8.21,
                 "relative_fraction": 28.26
-            },
-            {
-                "abbr": "dme",
-                "cas_registry_number": "110-71-4",
-                "overall_fraction": 11.84,
-                "relative_fraction": 40.76
             }
         ],
         "additives": [],
@@ -2459,7 +2459,7 @@
     },
     {
         "name": "liasf6 + pc, dme",
-        "id": "E71",
+        "id": "liasf6_1839-dme_3419-pc_4741",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -2471,16 +2471,16 @@
         ],
         "solvents": [
             {
-                "abbr": "pc",
-                "cas_registry_number": "108-32-7",
-                "overall_fraction": 47.41,
-                "relative_fraction": 58.1
-            },
-            {
                 "abbr": "dme",
                 "cas_registry_number": "110-71-4",
                 "overall_fraction": 34.19,
                 "relative_fraction": 41.9
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 47.41,
+                "relative_fraction": 58.1
             }
         ],
         "additives": [],
@@ -2493,7 +2493,7 @@
     },
     {
         "name": "liasf6 + pc, dme",
-        "id": "E72",
+        "id": "liasf6_7361-dme_1106-pc_1533",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -2505,16 +2505,16 @@
         ],
         "solvents": [
             {
-                "abbr": "pc",
-                "cas_registry_number": "108-32-7",
-                "overall_fraction": 15.33,
-                "relative_fraction": 58.1
-            },
-            {
                 "abbr": "dme",
                 "cas_registry_number": "110-71-4",
                 "overall_fraction": 11.06,
                 "relative_fraction": 41.9
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 15.33,
+                "relative_fraction": 58.1
             }
         ],
         "additives": [],
@@ -2527,7 +2527,7 @@
     },
     {
         "name": "liasf6 + ec, dme",
-        "id": "E73",
+        "id": "liasf6_1714-dme_3286-ec_4998",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -2539,16 +2539,16 @@
         ],
         "solvents": [
             {
-                "abbr": "ec",
-                "cas_registry_number": "96-49-1",
-                "overall_fraction": 49.98,
-                "relative_fraction": 60.33
-            },
-            {
                 "abbr": "dme",
                 "cas_registry_number": "110-71-4",
                 "overall_fraction": 32.87,
                 "relative_fraction": 39.67
+            },
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 49.98,
+                "relative_fraction": 60.33
             }
         ],
         "additives": [],
@@ -2561,7 +2561,7 @@
     },
     {
         "name": "liasf6 + ec, pc, dme",
-        "id": "E74",
+        "id": "liasf6_1773-dme_3353-ec_2549-pc_2325",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -2573,6 +2573,12 @@
         ],
         "solvents": [
             {
+                "abbr": "dme",
+                "cas_registry_number": "110-71-4",
+                "overall_fraction": 33.53,
+                "relative_fraction": 40.76
+            },
+            {
                 "abbr": "ec",
                 "cas_registry_number": "96-49-1",
                 "overall_fraction": 25.49,
@@ -2583,12 +2589,6 @@
                 "cas_registry_number": "108-32-7",
                 "overall_fraction": 23.25,
                 "relative_fraction": 28.26
-            },
-            {
-                "abbr": "dme",
-                "cas_registry_number": "110-71-4",
-                "overall_fraction": 33.53,
-                "relative_fraction": 40.76
             }
         ],
         "additives": [],
@@ -2601,7 +2601,7 @@
     },
     {
         "name": "liasf6 + ec, pc, dme",
-        "id": "E75",
+        "id": "liasf6_7095-dme_1184-ec_900-pc_821",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -2613,6 +2613,12 @@
         ],
         "solvents": [
             {
+                "abbr": "dme",
+                "cas_registry_number": "110-71-4",
+                "overall_fraction": 11.84,
+                "relative_fraction": 40.76
+            },
+            {
                 "abbr": "ec",
                 "cas_registry_number": "96-49-1",
                 "overall_fraction": 9.0,
@@ -2623,12 +2629,6 @@
                 "cas_registry_number": "108-32-7",
                 "overall_fraction": 8.21,
                 "relative_fraction": 28.26
-            },
-            {
-                "abbr": "dme",
-                "cas_registry_number": "110-71-4",
-                "overall_fraction": 11.84,
-                "relative_fraction": 40.76
             }
         ],
         "additives": [],
@@ -2641,7 +2641,7 @@
     },
     {
         "name": "liasf6 + pc, dme",
-        "id": "E76",
+        "id": "liasf6_1839-dme_3419-pc_4741",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -2653,16 +2653,16 @@
         ],
         "solvents": [
             {
-                "abbr": "pc",
-                "cas_registry_number": "108-32-7",
-                "overall_fraction": 47.41,
-                "relative_fraction": 58.1
-            },
-            {
                 "abbr": "dme",
                 "cas_registry_number": "110-71-4",
                 "overall_fraction": 34.19,
                 "relative_fraction": 41.9
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 47.41,
+                "relative_fraction": 58.1
             }
         ],
         "additives": [],
@@ -2675,7 +2675,7 @@
     },
     {
         "name": "liasf6 + pc, dme",
-        "id": "E77",
+        "id": "liasf6_7361-dme_1106-pc_1533",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -2687,16 +2687,16 @@
         ],
         "solvents": [
             {
-                "abbr": "pc",
-                "cas_registry_number": "108-32-7",
-                "overall_fraction": 15.33,
-                "relative_fraction": 58.1
-            },
-            {
                 "abbr": "dme",
                 "cas_registry_number": "110-71-4",
                 "overall_fraction": 11.06,
                 "relative_fraction": 41.9
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 15.33,
+                "relative_fraction": 58.1
             }
         ],
         "additives": [],
@@ -2709,7 +2709,7 @@
     },
     {
         "name": "liasf6 + ec, dme",
-        "id": "E78",
+        "id": "liasf6_1714-dme_3286-ec_4998",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -2721,16 +2721,16 @@
         ],
         "solvents": [
             {
-                "abbr": "ec",
-                "cas_registry_number": "96-49-1",
-                "overall_fraction": 49.98,
-                "relative_fraction": 60.33
-            },
-            {
                 "abbr": "dme",
                 "cas_registry_number": "110-71-4",
                 "overall_fraction": 32.87,
                 "relative_fraction": 39.67
+            },
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 49.98,
+                "relative_fraction": 60.33
             }
         ],
         "additives": [],
@@ -2743,7 +2743,7 @@
     },
     {
         "name": "liasf6 + ec, pc, dme",
-        "id": "E79",
+        "id": "liasf6_1773-dme_3353-ec_2549-pc_2325",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -2755,6 +2755,12 @@
         ],
         "solvents": [
             {
+                "abbr": "dme",
+                "cas_registry_number": "110-71-4",
+                "overall_fraction": 33.53,
+                "relative_fraction": 40.76
+            },
+            {
                 "abbr": "ec",
                 "cas_registry_number": "96-49-1",
                 "overall_fraction": 25.49,
@@ -2765,12 +2771,6 @@
                 "cas_registry_number": "108-32-7",
                 "overall_fraction": 23.25,
                 "relative_fraction": 28.26
-            },
-            {
-                "abbr": "dme",
-                "cas_registry_number": "110-71-4",
-                "overall_fraction": 33.53,
-                "relative_fraction": 40.76
             }
         ],
         "additives": [],
@@ -2783,7 +2783,7 @@
     },
     {
         "name": "liasf6 + ec, pc, dme",
-        "id": "E80",
+        "id": "liasf6_7095-dme_1184-ec_900-pc_821",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -2795,6 +2795,12 @@
         ],
         "solvents": [
             {
+                "abbr": "dme",
+                "cas_registry_number": "110-71-4",
+                "overall_fraction": 11.84,
+                "relative_fraction": 40.76
+            },
+            {
                 "abbr": "ec",
                 "cas_registry_number": "96-49-1",
                 "overall_fraction": 9.0,
@@ -2805,12 +2811,6 @@
                 "cas_registry_number": "108-32-7",
                 "overall_fraction": 8.21,
                 "relative_fraction": 28.26
-            },
-            {
-                "abbr": "dme",
-                "cas_registry_number": "110-71-4",
-                "overall_fraction": 11.84,
-                "relative_fraction": 40.76
             }
         ],
         "additives": [],
@@ -2823,7 +2823,7 @@
     },
     {
         "name": "liasf6 + pc, dme",
-        "id": "E81",
+        "id": "liasf6_1839-dme_3419-pc_4741",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -2835,16 +2835,16 @@
         ],
         "solvents": [
             {
-                "abbr": "pc",
-                "cas_registry_number": "108-32-7",
-                "overall_fraction": 47.41,
-                "relative_fraction": 58.1
-            },
-            {
                 "abbr": "dme",
                 "cas_registry_number": "110-71-4",
                 "overall_fraction": 34.19,
                 "relative_fraction": 41.9
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 47.41,
+                "relative_fraction": 58.1
             }
         ],
         "additives": [],
@@ -2857,7 +2857,7 @@
     },
     {
         "name": "liasf6 + pc, dme",
-        "id": "E82",
+        "id": "liasf6_7361-dme_1106-pc_1533",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -2869,16 +2869,16 @@
         ],
         "solvents": [
             {
-                "abbr": "pc",
-                "cas_registry_number": "108-32-7",
-                "overall_fraction": 15.33,
-                "relative_fraction": 58.1
-            },
-            {
                 "abbr": "dme",
                 "cas_registry_number": "110-71-4",
                 "overall_fraction": 11.06,
                 "relative_fraction": 41.9
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 15.33,
+                "relative_fraction": 58.1
             }
         ],
         "additives": [],
@@ -2891,7 +2891,7 @@
     },
     {
         "name": "liasf6 + ec, dme",
-        "id": "E83",
+        "id": "liasf6_1714-dme_3286-ec_4998",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -2903,16 +2903,16 @@
         ],
         "solvents": [
             {
-                "abbr": "ec",
-                "cas_registry_number": "96-49-1",
-                "overall_fraction": 49.98,
-                "relative_fraction": 60.33
-            },
-            {
                 "abbr": "dme",
                 "cas_registry_number": "110-71-4",
                 "overall_fraction": 32.87,
                 "relative_fraction": 39.67
+            },
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 49.98,
+                "relative_fraction": 60.33
             }
         ],
         "additives": [],
@@ -2925,7 +2925,7 @@
     },
     {
         "name": "liasf6 + ec, pc, dme",
-        "id": "E84",
+        "id": "liasf6_1773-dme_3353-ec_2549-pc_2325",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -2937,6 +2937,12 @@
         ],
         "solvents": [
             {
+                "abbr": "dme",
+                "cas_registry_number": "110-71-4",
+                "overall_fraction": 33.53,
+                "relative_fraction": 40.76
+            },
+            {
                 "abbr": "ec",
                 "cas_registry_number": "96-49-1",
                 "overall_fraction": 25.49,
@@ -2947,12 +2953,6 @@
                 "cas_registry_number": "108-32-7",
                 "overall_fraction": 23.25,
                 "relative_fraction": 28.26
-            },
-            {
-                "abbr": "dme",
-                "cas_registry_number": "110-71-4",
-                "overall_fraction": 33.53,
-                "relative_fraction": 40.76
             }
         ],
         "additives": [],
@@ -2965,7 +2965,7 @@
     },
     {
         "name": "liasf6 + ec, pc, dme",
-        "id": "E85",
+        "id": "liasf6_7095-dme_1184-ec_900-pc_821",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -2977,6 +2977,12 @@
         ],
         "solvents": [
             {
+                "abbr": "dme",
+                "cas_registry_number": "110-71-4",
+                "overall_fraction": 11.84,
+                "relative_fraction": 40.76
+            },
+            {
                 "abbr": "ec",
                 "cas_registry_number": "96-49-1",
                 "overall_fraction": 9.0,
@@ -2987,12 +2993,6 @@
                 "cas_registry_number": "108-32-7",
                 "overall_fraction": 8.21,
                 "relative_fraction": 28.26
-            },
-            {
-                "abbr": "dme",
-                "cas_registry_number": "110-71-4",
-                "overall_fraction": 11.84,
-                "relative_fraction": 40.76
             }
         ],
         "additives": [],
@@ -3005,7 +3005,7 @@
     },
     {
         "name": "liasf6 + pc, dme",
-        "id": "E86",
+        "id": "liasf6_1839-dme_3419-pc_4741",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -3017,16 +3017,16 @@
         ],
         "solvents": [
             {
-                "abbr": "pc",
-                "cas_registry_number": "108-32-7",
-                "overall_fraction": 47.41,
-                "relative_fraction": 58.1
-            },
-            {
                 "abbr": "dme",
                 "cas_registry_number": "110-71-4",
                 "overall_fraction": 34.19,
                 "relative_fraction": 41.9
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 47.41,
+                "relative_fraction": 58.1
             }
         ],
         "additives": [],
@@ -3039,7 +3039,7 @@
     },
     {
         "name": "liasf6 + pc, dme",
-        "id": "E87",
+        "id": "liasf6_7361-dme_1106-pc_1533",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -3051,16 +3051,16 @@
         ],
         "solvents": [
             {
-                "abbr": "pc",
-                "cas_registry_number": "108-32-7",
-                "overall_fraction": 15.33,
-                "relative_fraction": 58.1
-            },
-            {
                 "abbr": "dme",
                 "cas_registry_number": "110-71-4",
                 "overall_fraction": 11.06,
                 "relative_fraction": 41.9
+            },
+            {
+                "abbr": "pc",
+                "cas_registry_number": "108-32-7",
+                "overall_fraction": 15.33,
+                "relative_fraction": 58.1
             }
         ],
         "additives": [],
@@ -3073,7 +3073,7 @@
     },
     {
         "name": "liasf6 + ec, pc",
-        "id": "E88",
+        "id": "liasf6_800-ec_1491-pc_7709",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -3107,7 +3107,7 @@
     },
     {
         "name": "liasf6 + ec, pc",
-        "id": "E89",
+        "id": "liasf6_1600-ec_1362-pc_7038",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -3141,7 +3141,7 @@
     },
     {
         "name": "liasf6 + ec, pc",
-        "id": "E90",
+        "id": "liasf6_800-ec_1491-pc_7709",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -3175,7 +3175,7 @@
     },
     {
         "name": "liasf6 + ec, pc",
-        "id": "E91",
+        "id": "liasf6_1600-ec_1362-pc_7038",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -3209,7 +3209,7 @@
     },
     {
         "name": "liasf6 + ec, pc",
-        "id": "E92",
+        "id": "liasf6_2400-ec_1232-pc_6368",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -3243,7 +3243,7 @@
     },
     {
         "name": "liasf6 + ec, pc",
-        "id": "E93",
+        "id": "liasf6_800-ec_1491-pc_7709",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -3277,7 +3277,7 @@
     },
     {
         "name": "liasf6 + ec, pc",
-        "id": "E94",
+        "id": "liasf6_1600-ec_1362-pc_7038",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -3311,7 +3311,7 @@
     },
     {
         "name": "liasf6 + ec, pc",
-        "id": "E95",
+        "id": "liasf6_2400-ec_1232-pc_6368",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -3345,7 +3345,7 @@
     },
     {
         "name": "liasf6 + ec, pc",
-        "id": "E96",
+        "id": "liasf6_2321-ec_4015-pc_3663",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -3379,7 +3379,7 @@
     },
     {
         "name": "liasf6 + ec, pc",
-        "id": "E97",
+        "id": "liasf6_800-ec_1491-pc_7709",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -3413,7 +3413,7 @@
     },
     {
         "name": "liasf6 + ec, pc",
-        "id": "E98",
+        "id": "liasf6_774-ec_4825-pc_4401",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -3447,7 +3447,7 @@
     },
     {
         "name": "liasf6 + ec, pc",
-        "id": "E99",
+        "id": "liasf6_1600-ec_1362-pc_7038",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -3481,7 +3481,7 @@
     },
     {
         "name": "liasf6 + ec, pc",
-        "id": "E100",
+        "id": "liasf6_1547-ec_4421-pc_4032",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -3515,7 +3515,7 @@
     },
     {
         "name": "liasf6 + ec, pc",
-        "id": "E101",
+        "id": "liasf6_2400-ec_1232-pc_6368",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -3549,7 +3549,7 @@
     },
     {
         "name": "liasf6 + ec, pc",
-        "id": "E102",
+        "id": "liasf6_2321-ec_4015-pc_3663",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -3583,7 +3583,7 @@
     },
     {
         "name": "liasf6 + ec, pc",
-        "id": "E103",
+        "id": "liasf6_3201-ec_1102-pc_5697",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -3617,7 +3617,7 @@
     },
     {
         "name": "liasf6 + ec, pc",
-        "id": "E104",
+        "id": "liasf6_3094-ec_3611-pc_3294",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -3651,7 +3651,7 @@
     },
     {
         "name": "liasf6 + ec, pc",
-        "id": "E105",
+        "id": "liasf6_800-ec_1491-pc_7709",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -3685,7 +3685,7 @@
     },
     {
         "name": "liasf6 + ec, pc",
-        "id": "E106",
+        "id": "liasf6_774-ec_4825-pc_4401",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -3719,7 +3719,7 @@
     },
     {
         "name": "liasf6 + ec, pc",
-        "id": "E107",
+        "id": "liasf6_1600-ec_1362-pc_7038",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -3753,7 +3753,7 @@
     },
     {
         "name": "liasf6 + ec, pc",
-        "id": "E108",
+        "id": "liasf6_1547-ec_4421-pc_4032",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -3787,7 +3787,7 @@
     },
     {
         "name": "liasf6 + ec, pc",
-        "id": "E109",
+        "id": "liasf6_1520-ec_6097-pc_2383",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -3821,7 +3821,7 @@
     },
     {
         "name": "liasf6 + ec, pc",
-        "id": "E110",
+        "id": "liasf6_2400-ec_1232-pc_6368",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -3855,7 +3855,7 @@
     },
     {
         "name": "liasf6 + ec, pc",
-        "id": "E111",
+        "id": "liasf6_2321-ec_4015-pc_3663",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -3889,7 +3889,7 @@
     },
     {
         "name": "liasf6 + ec, pc",
-        "id": "E112",
+        "id": "liasf6_3201-ec_1102-pc_5697",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -3923,7 +3923,7 @@
     },
     {
         "name": "liasf6 + ec, pc",
-        "id": "E113",
+        "id": "liasf6_3094-ec_3611-pc_3294",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -3957,7 +3957,7 @@
     },
     {
         "name": "liasf6 + ec, pc",
-        "id": "E114",
+        "id": "liasf6_4641-ec_2803-pc_2556",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -3991,7 +3991,7 @@
     },
     {
         "name": "liasf6 + ec, pc",
-        "id": "E115",
+        "id": "liasf6_800-ec_1491-pc_7709",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -4025,7 +4025,7 @@
     },
     {
         "name": "liasf6 + ec, pc",
-        "id": "E116",
+        "id": "liasf6_774-ec_4825-pc_4401",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -4059,7 +4059,7 @@
     },
     {
         "name": "liasf6 + ec, pc",
-        "id": "E117",
+        "id": "liasf6_1600-ec_1362-pc_7038",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -4093,7 +4093,7 @@
     },
     {
         "name": "liasf6 + ec, pc",
-        "id": "E118",
+        "id": "liasf6_1547-ec_4421-pc_4032",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -4127,7 +4127,7 @@
     },
     {
         "name": "liasf6 + ec, pc",
-        "id": "E119",
+        "id": "liasf6_1520-ec_6097-pc_2383",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -4161,7 +4161,7 @@
     },
     {
         "name": "liasf6 + ec, pc",
-        "id": "E120",
+        "id": "liasf6_2400-ec_1232-pc_6368",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -4195,7 +4195,7 @@
     },
     {
         "name": "liasf6 + ec, pc",
-        "id": "E121",
+        "id": "liasf6_2321-ec_4015-pc_3663",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -4229,7 +4229,7 @@
     },
     {
         "name": "liasf6 + ec, pc",
-        "id": "E122",
+        "id": "liasf6_3201-ec_1102-pc_5697",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -4263,7 +4263,7 @@
     },
     {
         "name": "liasf6 + ec, pc",
-        "id": "E123",
+        "id": "liasf6_3094-ec_3611-pc_3294",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -4297,7 +4297,7 @@
     },
     {
         "name": "liasf6 + ec, pc",
-        "id": "E124",
+        "id": "liasf6_4641-ec_2803-pc_2556",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -4331,7 +4331,7 @@
     },
     {
         "name": "liasf6 + ec, pc",
-        "id": "E125",
+        "id": "liasf6_800-ec_1491-pc_7709",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -4365,7 +4365,7 @@
     },
     {
         "name": "liasf6 + ec, pc",
-        "id": "E126",
+        "id": "liasf6_774-ec_4825-pc_4401",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -4399,7 +4399,7 @@
     },
     {
         "name": "liasf6 + ec, pc",
-        "id": "E127",
+        "id": "liasf6_1600-ec_1362-pc_7038",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -4433,7 +4433,7 @@
     },
     {
         "name": "liasf6 + ec, pc",
-        "id": "E128",
+        "id": "liasf6_1547-ec_4421-pc_4032",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -4467,7 +4467,7 @@
     },
     {
         "name": "liasf6 + ec, pc",
-        "id": "E129",
+        "id": "liasf6_1520-ec_6097-pc_2383",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -4501,7 +4501,7 @@
     },
     {
         "name": "liasf6 + ec, pc",
-        "id": "E130",
+        "id": "liasf6_2400-ec_1232-pc_6368",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -4535,7 +4535,7 @@
     },
     {
         "name": "liasf6 + ec, pc",
-        "id": "E131",
+        "id": "liasf6_2321-ec_4015-pc_3663",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -4569,7 +4569,7 @@
     },
     {
         "name": "liasf6 + ec, pc",
-        "id": "E132",
+        "id": "liasf6_3201-ec_1102-pc_5697",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -4603,7 +4603,7 @@
     },
     {
         "name": "liasf6 + ec, pc",
-        "id": "E133",
+        "id": "liasf6_3094-ec_3611-pc_3294",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -4637,7 +4637,7 @@
     },
     {
         "name": "liasf6 + ec, pc",
-        "id": "E134",
+        "id": "liasf6_4641-ec_2803-pc_2556",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -4671,7 +4671,7 @@
     },
     {
         "name": "liasf6 + ec",
-        "id": "E135",
+        "id": "liasf6_1482-ec_8518",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -4699,7 +4699,7 @@
     },
     {
         "name": "liasf6 + ec, pc",
-        "id": "E136",
+        "id": "liasf6_800-ec_1491-pc_7709",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -4733,7 +4733,7 @@
     },
     {
         "name": "liasf6 + ec, pc",
-        "id": "E137",
+        "id": "liasf6_774-ec_4825-pc_4401",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -4767,7 +4767,7 @@
     },
     {
         "name": "liasf6 + ec, pc",
-        "id": "E138",
+        "id": "liasf6_1600-ec_1362-pc_7038",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -4801,7 +4801,7 @@
     },
     {
         "name": "liasf6 + ec, pc",
-        "id": "E139",
+        "id": "liasf6_1547-ec_4421-pc_4032",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -4835,7 +4835,7 @@
     },
     {
         "name": "liasf6 + ec, pc",
-        "id": "E140",
+        "id": "liasf6_1520-ec_6097-pc_2383",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -4869,7 +4869,7 @@
     },
     {
         "name": "liasf6 + ec, pc",
-        "id": "E141",
+        "id": "liasf6_2400-ec_1232-pc_6368",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -4903,7 +4903,7 @@
     },
     {
         "name": "liasf6 + ec, pc",
-        "id": "E142",
+        "id": "liasf6_2321-ec_4015-pc_3663",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -4937,7 +4937,7 @@
     },
     {
         "name": "liasf6 + ec, pc",
-        "id": "E143",
+        "id": "liasf6_3201-ec_1102-pc_5697",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -4971,7 +4971,7 @@
     },
     {
         "name": "liasf6 + ec, pc",
-        "id": "E144",
+        "id": "liasf6_3094-ec_3611-pc_3294",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -5005,7 +5005,7 @@
     },
     {
         "name": "liasf6 + ec, pc",
-        "id": "E145",
+        "id": "liasf6_4641-ec_2803-pc_2556",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -5039,7 +5039,7 @@
     },
     {
         "name": "liasf6 + ec",
-        "id": "E146",
+        "id": "liasf6_1482-ec_8518",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -5067,7 +5067,7 @@
     },
     {
         "name": "liasf6 + ec, pc",
-        "id": "E147",
+        "id": "liasf6_800-ec_1491-pc_7709",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -5101,7 +5101,7 @@
     },
     {
         "name": "liasf6 + ec, pc",
-        "id": "E148",
+        "id": "liasf6_774-ec_4825-pc_4401",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -5135,7 +5135,7 @@
     },
     {
         "name": "liasf6 + ec, pc",
-        "id": "E149",
+        "id": "liasf6_1600-ec_1362-pc_7038",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -5169,7 +5169,7 @@
     },
     {
         "name": "liasf6 + ec, pc",
-        "id": "E150",
+        "id": "liasf6_1547-ec_4421-pc_4032",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -5203,7 +5203,7 @@
     },
     {
         "name": "liasf6 + ec, pc",
-        "id": "E151",
+        "id": "liasf6_1520-ec_6097-pc_2383",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -5237,7 +5237,7 @@
     },
     {
         "name": "liasf6 + ec, pc",
-        "id": "E152",
+        "id": "liasf6_2400-ec_1232-pc_6368",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -5271,7 +5271,7 @@
     },
     {
         "name": "liasf6 + ec, pc",
-        "id": "E153",
+        "id": "liasf6_2321-ec_4015-pc_3663",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -5305,7 +5305,7 @@
     },
     {
         "name": "liasf6 + ec, pc",
-        "id": "E154",
+        "id": "liasf6_3201-ec_1102-pc_5697",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -5339,7 +5339,7 @@
     },
     {
         "name": "liasf6 + ec, pc",
-        "id": "E155",
+        "id": "liasf6_3094-ec_3611-pc_3294",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -5373,7 +5373,7 @@
     },
     {
         "name": "liasf6 + ec, pc",
-        "id": "E156",
+        "id": "liasf6_4641-ec_2803-pc_2556",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -5407,7 +5407,7 @@
     },
     {
         "name": "liasf6 + ec",
-        "id": "E157",
+        "id": "liasf6_1482-ec_8518",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -5435,7 +5435,7 @@
     },
     {
         "name": "liasf6 + ec, pc",
-        "id": "E158",
+        "id": "liasf6_800-ec_1491-pc_7709",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -5469,7 +5469,7 @@
     },
     {
         "name": "liasf6 + ec, pc",
-        "id": "E159",
+        "id": "liasf6_774-ec_4825-pc_4401",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -5503,7 +5503,7 @@
     },
     {
         "name": "liasf6 + ec, pc",
-        "id": "E160",
+        "id": "liasf6_1600-ec_1362-pc_7038",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -5537,7 +5537,7 @@
     },
     {
         "name": "liasf6 + ec, pc",
-        "id": "E161",
+        "id": "liasf6_1547-ec_4421-pc_4032",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -5571,7 +5571,7 @@
     },
     {
         "name": "liasf6 + ec, pc",
-        "id": "E162",
+        "id": "liasf6_1520-ec_6097-pc_2383",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -5605,7 +5605,7 @@
     },
     {
         "name": "liasf6 + ec, pc",
-        "id": "E163",
+        "id": "liasf6_2400-ec_1232-pc_6368",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -5639,7 +5639,7 @@
     },
     {
         "name": "liasf6 + ec, pc",
-        "id": "E164",
+        "id": "liasf6_2321-ec_4015-pc_3663",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -5673,7 +5673,7 @@
     },
     {
         "name": "liasf6 + ec, pc",
-        "id": "E165",
+        "id": "liasf6_3201-ec_1102-pc_5697",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -5707,7 +5707,7 @@
     },
     {
         "name": "liasf6 + ec, pc",
-        "id": "E166",
+        "id": "liasf6_3094-ec_3611-pc_3294",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -5741,7 +5741,7 @@
     },
     {
         "name": "liasf6 + ec, pc",
-        "id": "E167",
+        "id": "liasf6_4641-ec_2803-pc_2556",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -5775,7 +5775,7 @@
     },
     {
         "name": "liasf6 + ec",
-        "id": "E168",
+        "id": "liasf6_1482-ec_8518",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -5803,7 +5803,7 @@
     },
     {
         "name": "liasf6 + ec, pc",
-        "id": "E169",
+        "id": "liasf6_800-ec_1491-pc_7709",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -5837,7 +5837,7 @@
     },
     {
         "name": "liasf6 + ec, pc",
-        "id": "E170",
+        "id": "liasf6_774-ec_4825-pc_4401",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -5871,7 +5871,7 @@
     },
     {
         "name": "liasf6 + ec, pc",
-        "id": "E171",
+        "id": "liasf6_1600-ec_1362-pc_7038",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -5905,7 +5905,7 @@
     },
     {
         "name": "liasf6 + ec, pc",
-        "id": "E172",
+        "id": "liasf6_1547-ec_4421-pc_4032",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -5939,7 +5939,7 @@
     },
     {
         "name": "liasf6 + ec, pc",
-        "id": "E173",
+        "id": "liasf6_1520-ec_6097-pc_2383",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -5973,7 +5973,7 @@
     },
     {
         "name": "liasf6 + ec, pc",
-        "id": "E174",
+        "id": "liasf6_2400-ec_1232-pc_6368",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -6007,7 +6007,7 @@
     },
     {
         "name": "liasf6 + ec, pc",
-        "id": "E175",
+        "id": "liasf6_2321-ec_4015-pc_3663",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -6041,7 +6041,7 @@
     },
     {
         "name": "liasf6 + ec, pc",
-        "id": "E176",
+        "id": "liasf6_3201-ec_1102-pc_5697",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -6075,7 +6075,7 @@
     },
     {
         "name": "liasf6 + ec, pc",
-        "id": "E177",
+        "id": "liasf6_3094-ec_3611-pc_3294",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -6109,7 +6109,7 @@
     },
     {
         "name": "liasf6 + ec, pc",
-        "id": "E178",
+        "id": "liasf6_4641-ec_2803-pc_2556",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -6143,7 +6143,7 @@
     },
     {
         "name": "liasf6 + pc",
-        "id": "E179",
+        "id": "liasf6_1625-pc_8375",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -6171,7 +6171,7 @@
     },
     {
         "name": "liasf6 + pc",
-        "id": "E180",
+        "id": "liasf6_1625-pc_8375",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -6199,7 +6199,7 @@
     },
     {
         "name": "liasf6 + pc",
-        "id": "E181",
+        "id": "liasf6_1625-pc_8375",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -6227,7 +6227,7 @@
     },
     {
         "name": "liasf6 + pc",
-        "id": "E182",
+        "id": "liasf6_325-pc_9675",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -6255,7 +6255,7 @@
     },
     {
         "name": "liasf6 + pc",
-        "id": "E183",
+        "id": "liasf6_1625-pc_8375",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -6283,7 +6283,7 @@
     },
     {
         "name": "liasf6 + pc",
-        "id": "E184",
+        "id": "liasf6_325-pc_9675",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -6311,7 +6311,7 @@
     },
     {
         "name": "liasf6 + pc",
-        "id": "E185",
+        "id": "liasf6_1625-pc_8375",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -6339,7 +6339,7 @@
     },
     {
         "name": "liasf6 + pc",
-        "id": "E186",
+        "id": "liasf6_325-pc_9675",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -6367,7 +6367,7 @@
     },
     {
         "name": "liasf6 + pc",
-        "id": "E187",
+        "id": "liasf6_1625-pc_8375",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -6395,7 +6395,7 @@
     },
     {
         "name": "liasf6 + pc",
-        "id": "E188",
+        "id": "liasf6_325-pc_9675",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -6423,7 +6423,7 @@
     },
     {
         "name": "liasf6 + pc",
-        "id": "E189",
+        "id": "liasf6_1625-pc_8375",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -6451,7 +6451,7 @@
     },
     {
         "name": "liasf6 + pc",
-        "id": "E190",
+        "id": "liasf6_325-pc_9675",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -6479,7 +6479,7 @@
     },
     {
         "name": "liasf6 + pc",
-        "id": "E191",
+        "id": "liasf6_1625-pc_8375",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -6507,7 +6507,7 @@
     },
     {
         "name": "liasf6 + pc",
-        "id": "E192",
+        "id": "liasf6_325-pc_9675",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -6535,7 +6535,7 @@
     },
     {
         "name": "liasf6 + pc",
-        "id": "E193",
+        "id": "liasf6_1625-pc_8375",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -6563,7 +6563,7 @@
     },
     {
         "name": "liasf6 + pc",
-        "id": "E194",
+        "id": "liasf6_325-pc_9675",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -6591,7 +6591,7 @@
     },
     {
         "name": "liasf6 + pc",
-        "id": "E195",
+        "id": "liasf6_1625-pc_8375",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -6619,7 +6619,7 @@
     },
     {
         "name": "liasf6 + pc",
-        "id": "E196",
+        "id": "liasf6_325-pc_9675",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
@@ -6647,7 +6647,7 @@
     },
     {
         "name": "liasf6 + pc",
-        "id": "E197",
+        "id": "liasf6_1625-pc_8375",
         "description": "10.1016/0378-7753(91)80004-H",
         "salts": [
             {
