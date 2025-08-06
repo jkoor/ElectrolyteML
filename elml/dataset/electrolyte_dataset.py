@@ -924,7 +924,7 @@ class ElectrolyteDataset(Dataset):
         target_metric: str = "conductivity",
         train_frac: float = 0.8,
         val_frac: float = 0.1,
-        random_seed: int = 42,
+        random_seed: int = 25,
     ) -> tuple["ElectrolyteDataset", "ElectrolyteDataset", "ElectrolyteDataset"]:
         """
         从一个JSON文件创建并返回训练、验证、测试三个数据集实例。
@@ -1032,7 +1032,7 @@ class ElectrolyteDataset(Dataset):
         target_metric: str = "conductivity",
         train_ratio: float = 0.8,
         val_ratio: float = 0.1,
-        random_seed: int = 42,
+        random_seed: int = 25,
     ) -> tuple[Subset, Subset, Subset]:
         """
         从JSON文件创建并返回训练、验证、测试三个数据集子集(Subset)。
