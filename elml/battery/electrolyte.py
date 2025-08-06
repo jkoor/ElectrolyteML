@@ -176,10 +176,15 @@ class Electrolyte:
             additives_component.append(
                 Component.model_validate(additives_component_dict)
             )
+
+        # 对锂盐、溶剂、添加剂排序
+        salts_component.sort(key=lambda x: x.abbr)
+        solvents_component.sort(key=lambda x: x.abbr)
+        additives_component.sort(key=lambda x: x.abbr)
+
         # 创建 ElectrolyteModel 实例
         data = ElectrolyteModel(
             name=name,
-            id=id,
             description=description,
             salts=salts_component,
             solvents=solvents_component,

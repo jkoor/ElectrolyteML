@@ -187,7 +187,7 @@ def process_calisol23():
     print(f"处理后的数据已保存到: {output_filepath}")
 
 
-filepath = "data/calisol23/calisol23_processed.csv"
+filepath = "data/calisol23/calisol23.csv"
 
 # 读取数据
 df = pd.read_csv(filepath)
@@ -317,11 +317,11 @@ for idx, row in df.iterrows():
     dataset.add_formula(el)
 
 
-json_filepath = filepath.replace(".csv", ".json")
+json_filepath = filepath.replace(".csv", "1.json")
 dataset.to_json(json_filepath)
 
 # 保存包含有效电解质配方的DataFrame
-valid_filepath = filepath.replace(".csv", "_valid.csv")
+valid_filepath = filepath.replace(".csv", "1_valid.csv")
 valid_df.to_csv(valid_filepath, index=False)
 print(f"原始数据行数: {len(df)}")
 print(f"有效配方行数: {len(valid_df)}")

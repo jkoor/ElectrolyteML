@@ -6,9 +6,9 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 from scipy import stats
-
+from sklearn.model_selection import GroupShuffleSplit
 import torch
-from torch.utils.data import Dataset
+from torch.utils.data import Dataset, Subset
 
 from ..battery import Electrolyte
 from ..material import MaterialLibrary
@@ -99,25 +99,25 @@ class ElectrolyteDataset(Dataset):
 
     def add_formula(self, electrolyte: Electrolyte):
         """添加新配方"""
-        electrolyte._data.id = f"E{next(self.electrolyte_counter)}"
+        # electrolyte._data.id = f"E{next(self.electrolyte_counter)}"
         self.formulas.append(electrolyte)
 
-    def remove_formula(self, formula_id: str):
-        """删除指定 ID 的配方"""
-        self.formulas = [f for f in self.formulas if f.id != formula_id]
+    # def remove_formula(self, formula_id: str):
+    #     """删除指定 ID 的配方"""
+    #     self.formulas = [f for f in self.formulas if f.id != formula_id]
 
-    def get_formula_by_id(self, formula_id: str) -> Optional[Electrolyte]:
-        """根据ID获取配方"""
-        for formula in self.formulas:
-            if formula.id == formula_id:
-                return formula
-        return None
+    # def get_formula_by_id(self, formula_id: str) -> Optional[Electrolyte]:
+    #     """根据ID获取配方"""
+    #     for formula in self.formulas:
+    #         if formula.id == formula_id:
+    #             return formula
+    #     return None
 
-    def update_performance(self, formula_id: str, performance_data: dict):
-        """更新指定配方的性能数据"""
-        formula = self.get_formula_by_id(formula_id)
-        if formula:
-            formula.performance.update(performance_data)
+    # def update_performance(self, formula_id: str, performance_data: dict):
+    #     """更新指定配方的性能数据"""
+    #     formula = self.get_formula_by_id(formula_id)
+    #     if formula:
+    #         formula.performance.update(performance_data)
 
     # ------------------------ 数据查询方法 ------------------------ #
 
@@ -464,7 +464,7 @@ class ElectrolyteDataset(Dataset):
 
     def _print_temperature_summary(self, temp_stats: dict):
         """打印温度统计摘要"""
-        print(f"\n🌡️ 温度统计摘要:")
+        print("\n🌡️ 温度统计摘要:")
         print(f"  样本数量: {temp_stats['count']}")
         print(
             f"  温度范围: {temp_stats['min_k']:.2f}K - {temp_stats['max_k']:.2f}K ({temp_stats['min_c']:.2f}°C - {temp_stats['max_c']:.2f}°C)"
@@ -475,7 +475,7 @@ class ElectrolyteDataset(Dataset):
         )
         print(f"  标准差: {temp_stats['std_k']:.2f}K")
         print(f"  归一化覆盖率: {temp_stats['coverage_percentage']:.1f}%")
-        print(f"  温度分布:")
+        print("  温度分布:")
         print(f"    极低温(<-20°C): {temp_stats['very_low_count']}")
         print(f"    低温(-20°C~0°C): {temp_stats['low_count']}")
         print(f"    室温(0°C~30°C): {temp_stats['room_count']}")
@@ -779,10 +779,10 @@ class ElectrolyteDataset(Dataset):
 
     def _print_quality_report(self, report: dict):
         """打印数据质量报告"""
-        print(f"\n📋 数据质量报告:")
+        print("\n📋 数据质量报告:")
         print(f"  总样本数: {report['total_samples']}")
         print(f"  整体数据完整性: {report['data_completeness']:.1f}%")
-        print(f"\n  各指标覆盖情况:")
+        print("\n  各指标覆盖情况:")
 
         for metric, coverage in report["metrics_coverage"].items():
             print(f"    {metric}:")
@@ -929,7 +929,8 @@ class ElectrolyteDataset(Dataset):
         """
         从一个JSON文件创建并返回训练、验证、测试三个数据集实例。
 
-        该方法会自动筛选出包含有效性能标签的样本进行划分。
+        该方法会自动筛选出包含有效性能标签的样本进行划分，并确保相同ID的所有数据点
+        都被分配到同一个数据集中，避免数据泄漏问题。
 
         Args:
             dataset_file (str): 包含所有配方数据的JSON文件路径。
@@ -960,21 +961,44 @@ class ElectrolyteDataset(Dataset):
                 f"数据文件 '{dataset_file}' 中没有找到任何包含性能指标 '{target_metric}' 的有效样本。"
             )
 
-        # 3. 使用随机种子来保证每次划分的结果都一样
+        # 3. 按ID分组：将具有相同ID的所有样本归为一组
+        id_groups = {}
+        for formula in labeled_formulas:
+            formula_id = formula.id
+            if formula_id not in id_groups:
+                id_groups[formula_id] = []
+            id_groups[formula_id].append(formula)
+
+        # 4. 获取所有唯一的ID列表并随机打乱（基于组而不是单个样本）
+        unique_ids = list(id_groups.keys())
         random.seed(random_seed)
-        random.shuffle(labeled_formulas)
+        random.shuffle(unique_ids)
 
-        # 4. 计算切分点
-        n_total = len(labeled_formulas)
-        n_train = int(n_total * train_frac)
-        n_val = int(n_total * val_frac)
+        # 5. 计算基于ID组数量的切分点
+        n_total_groups = len(unique_ids)
+        n_train_groups = int(n_total_groups * train_frac)
+        n_val_groups = int(n_total_groups * val_frac)
 
-        # 5. 切分数据列表
-        train_formulas = labeled_formulas[:n_train]
-        val_formulas = labeled_formulas[n_train : n_train + n_val]
-        test_formulas = labeled_formulas[n_train + n_val :]
+        # 6. 切分ID组
+        train_ids = unique_ids[:n_train_groups]
+        val_ids = unique_ids[n_train_groups : n_train_groups + n_val_groups]
+        test_ids = unique_ids[n_train_groups + n_val_groups :]
 
-        # 6. 创建三个新的、配置正确的数据集实例
+        # 7. 根据ID组分配样本到各个数据集
+        train_formulas = []
+        val_formulas = []
+        test_formulas = []
+
+        for train_id in train_ids:
+            train_formulas.extend(id_groups[train_id])
+
+        for val_id in val_ids:
+            val_formulas.extend(id_groups[val_id])
+
+        for test_id in test_ids:
+            test_formulas.extend(id_groups[test_id])
+
+        # 8. 创建三个新的、配置正确的数据集实例
         train_dataset = ElectrolyteDataset(
             target_metric=target_metric, feature_mode=feature_mode
         )
@@ -985,14 +1009,128 @@ class ElectrolyteDataset(Dataset):
             target_metric=target_metric, feature_mode=feature_mode
         )
 
-        # 7. 将切分好的配方列表分别赋给新的实例
+        # 9. 将切分好的配方列表分别赋给新的实例
         train_dataset.formulas = train_formulas
         val_dataset.formulas = val_formulas
         test_dataset.formulas = test_formulas
 
         print(f"数据划分完成 (随机种子={random_seed}):")
-        print(f"  - 训练集样本数: {len(train_dataset)}")
-        print(f"  - 验证集样本数: {len(val_dataset)}")
-        print(f"  - 测试集样本数: {len(test_dataset)}")
+        print(f"  - 唯一ID总数: {n_total_groups}")
+        print(f"  - 训练集ID数: {len(train_ids)}, 样本数: {len(train_dataset)}")
+        print(f"  - 验证集ID数: {len(val_ids)}, 样本数: {len(val_dataset)}")
+        print(f"  - 测试集ID数: {len(test_ids)}, 样本数: {len(test_dataset)}")
+        print(
+            f"  - 实际样本划分比例: {len(train_dataset) / len(labeled_formulas):.3f}:{len(val_dataset) / len(labeled_formulas):.3f}:{len(test_dataset) / len(labeled_formulas):.3f}"
+        )
 
         return train_dataset, val_dataset, test_dataset
+
+    @staticmethod
+    def create_splits_new(
+        dataset_file: str,
+        feature_mode: FeatureMode = "sequence",
+        target_metric: str = "conductivity",
+        train_ratio: float = 0.8,
+        val_ratio: float = 0.1,
+        random_seed: int = 42,
+    ) -> tuple[Subset, Subset, Subset]:
+        """
+        从JSON文件创建并返回训练、验证、测试三个数据集子集(Subset)。
+
+        该方法使用基于组的划分策略(Group-Based Splitting)，确保来自同一个配方ID的
+        所有数据点都被分配到同一个数据集中，以避免数据泄漏。
+
+        Args:
+            dataset_file (str): 包含所有配方数据的JSON文件路径。
+            feature_mode (str): 为数据集设置的特征模式，会传递给内部的Dataset实例。
+            target_metric (str): 目标性能指标。
+            train_ratio (float): 训练集所占比例。
+            val_ratio (float): 验证集所占比例。测试集比例将自动计算。
+            random_seed (int): 用于复现随机划分结果的种子。
+
+        Returns:
+            tuple: 包含训练集、验证集、测试集的三个 torch.utils.data.Subset 实例。
+        """
+
+        # 1. 创建一个完整的数据集实例以加载和筛选数据
+        full_dataset = ElectrolyteDataset(
+            dataset_file=dataset_file,
+            feature_mode=feature_mode,
+            target_metric=target_metric,
+        )
+
+        # 2. 筛选出所有包含有效性能标签的样本
+        # 这是我们进行划分的数据基础
+        labeled_formulas = full_dataset.get_formulas_with_performance(
+            metric=target_metric
+        )
+        if not labeled_formulas:
+            raise ValueError(
+                f"数据文件 '{dataset_file}' 中没有找到任何包含性能指标 '{target_metric}' 的有效样本。"
+            )
+
+        # 3. 创建一个只包含有标签数据的新Dataset实例，并提取分组ID
+        # 这样做更清晰，后续的Subset将基于这个干净的数据集创建
+        labeled_dataset = ElectrolyteDataset(
+            feature_mode=feature_mode, target_metric=target_metric
+        )
+        labeled_dataset.formulas = labeled_formulas
+
+        groups = [formula.id for formula in labeled_dataset.formulas]
+        indices = np.arange(len(labeled_dataset))
+
+        # 4. 第一次划分：从全体中分离出测试集
+        test_ratio = 1.0 - train_ratio - val_ratio
+        if test_ratio <= 0:
+            raise ValueError("训练集和验证集的比例之和必须小于1")
+
+        gss_test_split = GroupShuffleSplit(
+            n_splits=1, test_size=test_ratio, random_state=random_seed
+        )
+        train_val_idx, test_idx = next(gss_test_split.split(indices, groups=groups))
+
+        # 5. 第二次划分：从剩余的训练验证集中分离出验证集
+        # 计算验证集在剩余部分中所占的比例
+        val_ratio_in_remainder = val_ratio / (train_ratio + val_ratio)
+        gss_val_split = GroupShuffleSplit(
+            n_splits=1, test_size=val_ratio_in_remainder, random_state=random_seed
+        )
+
+        # 对train_val子集进行划分，注意groups参数也需要同步索引
+        train_val_groups = np.array(groups)[train_val_idx]
+        train_sub_idx, val_sub_idx = next(
+            gss_val_split.split(indices[train_val_idx], groups=train_val_groups)
+        )
+
+        # 6. 将第二次划分得到的相对索引映射回原始索引
+        train_idx = train_val_idx[train_sub_idx]
+        val_idx = train_val_idx[val_sub_idx]
+
+        # 7. 使用 torch.utils.data.Subset 创建数据集视图
+        # Subset 是一个轻量级的包装器，它不复制数据，只是存储索引，非常高效
+        train_subset = Subset(labeled_dataset, train_idx)
+        val_subset = Subset(labeled_dataset, val_idx)
+        test_subset = Subset(labeled_dataset, test_idx)
+
+        # 8. 打印划分摘要信息
+        print(f"数据划分完成 (基于配方ID分组, 随机种子={random_seed}):")
+        print(f"  - 总样本数 (有标签): {len(labeled_dataset)}")
+        print(f"  - 训练集样本数: {len(train_subset)}")
+        print(f"  - 验证集样本数: {len(val_subset)}")
+        print(f"  - 测试集样本数: {len(test_subset)}")
+
+        train_ids = {groups[i] for i in train_idx}
+        val_ids = {groups[i] for i in val_idx}
+        test_ids = {groups[i] for i in test_idx}
+
+        print(f"  - 训练集ID数: {len(train_ids)}")
+        print(f"  - 验证集ID数: {len(val_ids)}")
+        print(f"  - 测试集ID数: {len(test_ids)}")
+
+        # 验证组间没有交集
+        assert train_ids.isdisjoint(val_ids), "数据泄露：训练集和验证集有相同的配方ID"
+        assert train_ids.isdisjoint(test_ids), "数据泄露：训练集和测试集有相同的配方ID"
+        assert val_ids.isdisjoint(test_ids), "数据泄露：验证集和测试集有相同的配方ID"
+        print("  ✓ 验证通过：训练、验证、测试集之间的配方ID无交集。")
+
+        return train_subset, val_subset, test_subset

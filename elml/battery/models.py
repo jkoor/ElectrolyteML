@@ -96,6 +96,29 @@ class ElectrolyteModel(BaseModel):
             self.condition["temperature"] = 298.15
         return self
 
+    # 计算电解液id
+    # 该方法在创建实例后调用
+    # 以确保id唯一且符合格式要求
+    # lipf6-15_ec-30-emc_55
+    @model_validator(mode="after")
+    def compute_id(self):
+        id_parts = []
+        for salt in self.salts:
+            if salt.overall_fraction is None:
+                raise ValueError("锂盐必须提供整体占比")
+            id_parts.append(f"{salt.abbr}_{int(salt.overall_fraction * 100)}")
+        for solvent in self.solvents:
+            if solvent.overall_fraction is None:
+                raise ValueError("溶剂必须提供整体占比")
+            id_parts.append(f"{solvent.abbr}_{int(solvent.overall_fraction * 100)}")
+        for additive in self.additives:
+            if additive.overall_fraction is None:
+                raise ValueError("添加剂必须提供整体占比")
+            id_parts.append(f"{additive.abbr}_{int(additive.overall_fraction * 100)}")
+        # 生成唯一ID
+        self.id = "-".join(id_parts)
+        return self
+
 
 # 正极数据模型
 class CathodeModel(BaseModel):
