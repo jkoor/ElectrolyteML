@@ -1,0 +1,988 @@
+[
+    {
+        "name": "lifsi + ec, emc",
+        "id": "lifsi_1671-ec_3000-emc_5329",
+        "description": "10.1016/j.jpowsour.2010.12.040",
+        "salts": [
+            {
+                "abbr": "lifsi",
+                "cas_registry_number": "171611-11-3",
+                "overall_fraction": 16.71,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 30.0,
+                "relative_fraction": 36.02
+            },
+            {
+                "abbr": "emc",
+                "cas_registry_number": "623-53-0",
+                "overall_fraction": 53.29,
+                "relative_fraction": 63.98
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 332.5420421
+        },
+        "performance": {
+            "conductivity": 15.58303956
+        }
+    },
+    {
+        "name": "lifsi + ec, emc",
+        "id": "lifsi_1671-ec_3000-emc_5329",
+        "description": "10.1016/j.jpowsour.2010.12.040",
+        "salts": [
+            {
+                "abbr": "lifsi",
+                "cas_registry_number": "171611-11-3",
+                "overall_fraction": 16.71,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 30.0,
+                "relative_fraction": 36.02
+            },
+            {
+                "abbr": "emc",
+                "cas_registry_number": "623-53-0",
+                "overall_fraction": 53.29,
+                "relative_fraction": 63.98
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 322.5244073
+        },
+        "performance": {
+            "conductivity": 13.92880901
+        }
+    },
+    {
+        "name": "lifsi + ec, emc",
+        "id": "lifsi_1671-ec_3000-emc_5329",
+        "description": "10.1016/j.jpowsour.2010.12.040",
+        "salts": [
+            {
+                "abbr": "lifsi",
+                "cas_registry_number": "171611-11-3",
+                "overall_fraction": 16.71,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 30.0,
+                "relative_fraction": 36.02
+            },
+            {
+                "abbr": "emc",
+                "cas_registry_number": "623-53-0",
+                "overall_fraction": 53.29,
+                "relative_fraction": 63.98
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 312.7431776
+        },
+        "performance": {
+            "conductivity": 12.2868877
+        }
+    },
+    {
+        "name": "lifsi + ec, emc",
+        "id": "lifsi_1671-ec_3000-emc_5329",
+        "description": "10.1016/j.jpowsour.2010.12.040",
+        "salts": [
+            {
+                "abbr": "lifsi",
+                "cas_registry_number": "171611-11-3",
+                "overall_fraction": 16.71,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 30.0,
+                "relative_fraction": 36.02
+            },
+            {
+                "abbr": "emc",
+                "cas_registry_number": "623-53-0",
+                "overall_fraction": 53.29,
+                "relative_fraction": 63.98
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 302.7131199
+        },
+        "performance": {
+            "conductivity": 10.69635701
+        }
+    },
+    {
+        "name": "lifsi + ec, emc",
+        "id": "lifsi_1671-ec_3000-emc_5329",
+        "description": "10.1016/j.jpowsour.2010.12.040",
+        "salts": [
+            {
+                "abbr": "lifsi",
+                "cas_registry_number": "171611-11-3",
+                "overall_fraction": 16.71,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 30.0,
+                "relative_fraction": 36.02
+            },
+            {
+                "abbr": "emc",
+                "cas_registry_number": "623-53-0",
+                "overall_fraction": 53.29,
+                "relative_fraction": 63.98
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 292.8494972
+        },
+        "performance": {
+            "conductivity": 9.009384647
+        }
+    },
+    {
+        "name": "lifsi + ec, emc",
+        "id": "lifsi_1671-ec_3000-emc_5329",
+        "description": "10.1016/j.jpowsour.2010.12.040",
+        "salts": [
+            {
+                "abbr": "lifsi",
+                "cas_registry_number": "171611-11-3",
+                "overall_fraction": 16.71,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 30.0,
+                "relative_fraction": 36.02
+            },
+            {
+                "abbr": "emc",
+                "cas_registry_number": "623-53-0",
+                "overall_fraction": 53.29,
+                "relative_fraction": 63.98
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 282.8897228
+        },
+        "performance": {
+            "conductivity": 7.439667245
+        }
+    },
+    {
+        "name": "lifsi + ec, emc",
+        "id": "lifsi_1671-ec_3000-emc_5329",
+        "description": "10.1016/j.jpowsour.2010.12.040",
+        "salts": [
+            {
+                "abbr": "lifsi",
+                "cas_registry_number": "171611-11-3",
+                "overall_fraction": 16.71,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 30.0,
+                "relative_fraction": 36.02
+            },
+            {
+                "abbr": "emc",
+                "cas_registry_number": "623-53-0",
+                "overall_fraction": 53.29,
+                "relative_fraction": 63.98
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 273.0531347
+        },
+        "performance": {
+            "conductivity": 5.943977157
+        }
+    },
+    {
+        "name": "lifsi + ec, emc",
+        "id": "lifsi_1671-ec_3000-emc_5329",
+        "description": "10.1016/j.jpowsour.2010.12.040",
+        "salts": [
+            {
+                "abbr": "lifsi",
+                "cas_registry_number": "171611-11-3",
+                "overall_fraction": 16.71,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 30.0,
+                "relative_fraction": 36.02
+            },
+            {
+                "abbr": "emc",
+                "cas_registry_number": "623-53-0",
+                "overall_fraction": 53.29,
+                "relative_fraction": 63.98
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 263.0106197
+        },
+        "performance": {
+            "conductivity": 4.534527977
+        }
+    },
+    {
+        "name": "lifsi + ec, emc",
+        "id": "lifsi_1671-ec_3000-emc_5329",
+        "description": "10.1016/j.jpowsour.2010.12.040",
+        "salts": [
+            {
+                "abbr": "lifsi",
+                "cas_registry_number": "171611-11-3",
+                "overall_fraction": 16.71,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 30.0,
+                "relative_fraction": 36.02
+            },
+            {
+                "abbr": "emc",
+                "cas_registry_number": "623-53-0",
+                "overall_fraction": 53.29,
+                "relative_fraction": 63.98
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 253.2231362
+        },
+        "performance": {
+            "conductivity": 3.346973534
+        }
+    },
+    {
+        "name": "lifsi + ec, emc",
+        "id": "lifsi_1671-ec_3000-emc_5329",
+        "description": "10.1016/j.jpowsour.2010.12.040",
+        "salts": [
+            {
+                "abbr": "lifsi",
+                "cas_registry_number": "171611-11-3",
+                "overall_fraction": 16.71,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 30.0,
+                "relative_fraction": 36.02
+            },
+            {
+                "abbr": "emc",
+                "cas_registry_number": "623-53-0",
+                "overall_fraction": 53.29,
+                "relative_fraction": 63.98
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 332.6084723
+        },
+        "performance": {
+            "conductivity": 12.3682667
+        }
+    },
+    {
+        "name": "lifsi + ec, emc",
+        "id": "lifsi_1671-ec_3000-emc_5329",
+        "description": "10.1016/j.jpowsour.2010.12.040",
+        "salts": [
+            {
+                "abbr": "lifsi",
+                "cas_registry_number": "171611-11-3",
+                "overall_fraction": 16.71,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 30.0,
+                "relative_fraction": 36.02
+            },
+            {
+                "abbr": "emc",
+                "cas_registry_number": "623-53-0",
+                "overall_fraction": 53.29,
+                "relative_fraction": 63.98
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 322.7762915
+        },
+        "performance": {
+            "conductivity": 10.9825629
+        }
+    },
+    {
+        "name": "lifsi + ec, emc",
+        "id": "lifsi_1671-ec_3000-emc_5329",
+        "description": "10.1016/j.jpowsour.2010.12.040",
+        "salts": [
+            {
+                "abbr": "lifsi",
+                "cas_registry_number": "171611-11-3",
+                "overall_fraction": 16.71,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 30.0,
+                "relative_fraction": 36.02
+            },
+            {
+                "abbr": "emc",
+                "cas_registry_number": "623-53-0",
+                "overall_fraction": 53.29,
+                "relative_fraction": 63.98
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 312.8052904
+        },
+        "performance": {
+            "conductivity": 9.624200289
+        }
+    },
+    {
+        "name": "lifsi + ec, emc",
+        "id": "lifsi_1671-ec_3000-emc_5329",
+        "description": "10.1016/j.jpowsour.2010.12.040",
+        "salts": [
+            {
+                "abbr": "lifsi",
+                "cas_registry_number": "171611-11-3",
+                "overall_fraction": 16.71,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 30.0,
+                "relative_fraction": 36.02
+            },
+            {
+                "abbr": "emc",
+                "cas_registry_number": "623-53-0",
+                "overall_fraction": 53.29,
+                "relative_fraction": 63.98
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 302.7744584
+        },
+        "performance": {
+            "conductivity": 8.268462264
+        }
+    },
+    {
+        "name": "lifsi + ec, emc",
+        "id": "lifsi_1671-ec_3000-emc_5329",
+        "description": "10.1016/j.jpowsour.2010.12.040",
+        "salts": [
+            {
+                "abbr": "lifsi",
+                "cas_registry_number": "171611-11-3",
+                "overall_fraction": 16.71,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 30.0,
+                "relative_fraction": 36.02
+            },
+            {
+                "abbr": "emc",
+                "cas_registry_number": "623-53-0",
+                "overall_fraction": 53.29,
+                "relative_fraction": 63.98
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 297.7574305
+        },
+        "performance": {
+            "conductivity": 7.638732831
+        }
+    },
+    {
+        "name": "lifsi + ec, emc",
+        "id": "lifsi_1671-ec_3000-emc_5329",
+        "description": "10.1016/j.jpowsour.2010.12.040",
+        "salts": [
+            {
+                "abbr": "lifsi",
+                "cas_registry_number": "171611-11-3",
+                "overall_fraction": 16.71,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 30.0,
+                "relative_fraction": 36.02
+            },
+            {
+                "abbr": "emc",
+                "cas_registry_number": "623-53-0",
+                "overall_fraction": 53.29,
+                "relative_fraction": 63.98
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 292.9069031
+        },
+        "performance": {
+            "conductivity": 6.964404506
+        }
+    },
+    {
+        "name": "lifsi + ec, emc",
+        "id": "lifsi_1671-ec_3000-emc_5329",
+        "description": "10.1016/j.jpowsour.2010.12.040",
+        "salts": [
+            {
+                "abbr": "lifsi",
+                "cas_registry_number": "171611-11-3",
+                "overall_fraction": 16.71,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 30.0,
+                "relative_fraction": 36.02
+            },
+            {
+                "abbr": "emc",
+                "cas_registry_number": "623-53-0",
+                "overall_fraction": 53.29,
+                "relative_fraction": 63.98
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 282.9460375
+        },
+        "performance": {
+            "conductivity": 5.675556682
+        }
+    },
+    {
+        "name": "lifsi + ec, emc",
+        "id": "lifsi_1671-ec_3000-emc_5329",
+        "description": "10.1016/j.jpowsour.2010.12.040",
+        "salts": [
+            {
+                "abbr": "lifsi",
+                "cas_registry_number": "171611-11-3",
+                "overall_fraction": 16.71,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 30.0,
+                "relative_fraction": 36.02
+            },
+            {
+                "abbr": "emc",
+                "cas_registry_number": "623-53-0",
+                "overall_fraction": 53.29,
+                "relative_fraction": 63.98
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 272.9725552
+        },
+        "performance": {
+            "conductivity": 4.504692324
+        }
+    },
+    {
+        "name": "lifsi + ec, emc",
+        "id": "lifsi_1671-ec_3000-emc_5329",
+        "description": "10.1016/j.jpowsour.2010.12.040",
+        "salts": [
+            {
+                "abbr": "lifsi",
+                "cas_registry_number": "171611-11-3",
+                "overall_fraction": 16.71,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 30.0,
+                "relative_fraction": 36.02
+            },
+            {
+                "abbr": "emc",
+                "cas_registry_number": "623-53-0",
+                "overall_fraction": 53.29,
+                "relative_fraction": 63.98
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 263.0628597
+        },
+        "performance": {
+            "conductivity": 3.391455968
+        }
+    },
+    {
+        "name": "lifsi + ec, emc",
+        "id": "lifsi_1671-ec_3000-emc_5329",
+        "description": "10.1016/j.jpowsour.2010.12.040",
+        "salts": [
+            {
+                "abbr": "lifsi",
+                "cas_registry_number": "171611-11-3",
+                "overall_fraction": 16.71,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 30.0,
+                "relative_fraction": 36.02
+            },
+            {
+                "abbr": "emc",
+                "cas_registry_number": "623-53-0",
+                "overall_fraction": 53.29,
+                "relative_fraction": 63.98
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 253.1626323
+        },
+        "performance": {
+            "conductivity": 2.406050072
+        }
+    },
+    {
+        "name": "lipf6 + ec, emc",
+        "id": "lipf6_1357-ec_3113-emc_5530",
+        "description": "10.1016/j.jpowsour.2010.12.040",
+        "salts": [
+            {
+                "abbr": "lipf6",
+                "cas_registry_number": "21324-40-3",
+                "overall_fraction": 13.57,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 31.13,
+                "relative_fraction": 36.02
+            },
+            {
+                "abbr": "emc",
+                "cas_registry_number": "623-53-0",
+                "overall_fraction": 55.3,
+                "relative_fraction": 63.98
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 332.5401445
+        },
+        "performance": {
+            "conductivity": 15.68624976
+        }
+    },
+    {
+        "name": "lipf6 + ec, emc",
+        "id": "lipf6_1357-ec_3113-emc_5530",
+        "description": "10.1016/j.jpowsour.2010.12.040",
+        "salts": [
+            {
+                "abbr": "lipf6",
+                "cas_registry_number": "21324-40-3",
+                "overall_fraction": 13.57,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 31.13,
+                "relative_fraction": 36.02
+            },
+            {
+                "abbr": "emc",
+                "cas_registry_number": "623-53-0",
+                "overall_fraction": 55.3,
+                "relative_fraction": 63.98
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 322.7137304
+        },
+        "performance": {
+            "conductivity": 13.83716218
+        }
+    },
+    {
+        "name": "lipf6 + ec, emc",
+        "id": "lipf6_1357-ec_3113-emc_5530",
+        "description": "10.1016/j.jpowsour.2010.12.040",
+        "salts": [
+            {
+                "abbr": "lipf6",
+                "cas_registry_number": "21324-40-3",
+                "overall_fraction": 13.57,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 31.13,
+                "relative_fraction": 36.02
+            },
+            {
+                "abbr": "emc",
+                "cas_registry_number": "623-53-0",
+                "overall_fraction": 55.3,
+                "relative_fraction": 63.98
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 312.5720753
+        },
+        "performance": {
+            "conductivity": 12.04594933
+        }
+    },
+    {
+        "name": "lipf6 + ec, emc",
+        "id": "lipf6_1357-ec_3113-emc_5530",
+        "description": "10.1016/j.jpowsour.2010.12.040",
+        "salts": [
+            {
+                "abbr": "lipf6",
+                "cas_registry_number": "21324-40-3",
+                "overall_fraction": 13.57,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 31.13,
+                "relative_fraction": 36.02
+            },
+            {
+                "abbr": "emc",
+                "cas_registry_number": "623-53-0",
+                "overall_fraction": 55.3,
+                "relative_fraction": 63.98
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 302.7241275
+        },
+        "performance": {
+            "conductivity": 10.21332669
+        }
+    },
+    {
+        "name": "lipf6 + ec, emc",
+        "id": "lipf6_1357-ec_3113-emc_5530",
+        "description": "10.1016/j.jpowsour.2010.12.040",
+        "salts": [
+            {
+                "abbr": "lipf6",
+                "cas_registry_number": "21324-40-3",
+                "overall_fraction": 13.57,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 31.13,
+                "relative_fraction": 36.02
+            },
+            {
+                "abbr": "emc",
+                "cas_registry_number": "623-53-0",
+                "overall_fraction": 55.3,
+                "relative_fraction": 63.98
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 297.8700566
+        },
+        "performance": {
+            "conductivity": 9.373393367
+        }
+    },
+    {
+        "name": "lipf6 + ec, emc",
+        "id": "lipf6_1357-ec_3113-emc_5530",
+        "description": "10.1016/j.jpowsour.2010.12.040",
+        "salts": [
+            {
+                "abbr": "lipf6",
+                "cas_registry_number": "21324-40-3",
+                "overall_fraction": 13.57,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 31.13,
+                "relative_fraction": 36.02
+            },
+            {
+                "abbr": "emc",
+                "cas_registry_number": "623-53-0",
+                "overall_fraction": 55.3,
+                "relative_fraction": 63.98
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 292.706816
+        },
+        "performance": {
+            "conductivity": 8.545933527
+        }
+    },
+    {
+        "name": "lipf6 + ec, emc",
+        "id": "lipf6_1357-ec_3113-emc_5530",
+        "description": "10.1016/j.jpowsour.2010.12.040",
+        "salts": [
+            {
+                "abbr": "lipf6",
+                "cas_registry_number": "21324-40-3",
+                "overall_fraction": 13.57,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 31.13,
+                "relative_fraction": 36.02
+            },
+            {
+                "abbr": "emc",
+                "cas_registry_number": "623-53-0",
+                "overall_fraction": 55.3,
+                "relative_fraction": 63.98
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 282.9062028
+        },
+        "performance": {
+            "conductivity": 6.873059177
+        }
+    },
+    {
+        "name": "lipf6 + ec, emc",
+        "id": "lipf6_1357-ec_3113-emc_5530",
+        "description": "10.1016/j.jpowsour.2010.12.040",
+        "salts": [
+            {
+                "abbr": "lipf6",
+                "cas_registry_number": "21324-40-3",
+                "overall_fraction": 13.57,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 31.13,
+                "relative_fraction": 36.02
+            },
+            {
+                "abbr": "emc",
+                "cas_registry_number": "623-53-0",
+                "overall_fraction": 55.3,
+                "relative_fraction": 63.98
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 272.939314
+        },
+        "performance": {
+            "conductivity": 5.348178506
+        }
+    },
+    {
+        "name": "lipf6 + ec, emc",
+        "id": "lipf6_1357-ec_3113-emc_5530",
+        "description": "10.1016/j.jpowsour.2010.12.040",
+        "salts": [
+            {
+                "abbr": "lipf6",
+                "cas_registry_number": "21324-40-3",
+                "overall_fraction": 13.57,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 31.13,
+                "relative_fraction": 36.02
+            },
+            {
+                "abbr": "emc",
+                "cas_registry_number": "623-53-0",
+                "overall_fraction": 55.3,
+                "relative_fraction": 63.98
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 263.0331754
+        },
+        "performance": {
+            "conductivity": 4.0
+        }
+    },
+    {
+        "name": "lipf6 + ec, emc",
+        "id": "lipf6_1357-ec_3113-emc_5530",
+        "description": "10.1016/j.jpowsour.2010.12.040",
+        "salts": [
+            {
+                "abbr": "lipf6",
+                "cas_registry_number": "21324-40-3",
+                "overall_fraction": 13.57,
+                "relative_fraction": 100.0
+            }
+        ],
+        "solvents": [
+            {
+                "abbr": "ec",
+                "cas_registry_number": "96-49-1",
+                "overall_fraction": 31.13,
+                "relative_fraction": 36.02
+            },
+            {
+                "abbr": "emc",
+                "cas_registry_number": "623-53-0",
+                "overall_fraction": 55.3,
+                "relative_fraction": 63.98
+            }
+        ],
+        "additives": [],
+        "condition": {
+            "temperature": 253.1395384
+        },
+        "performance": {
+            "conductivity": 2.76382576
+        }
+    }
+]

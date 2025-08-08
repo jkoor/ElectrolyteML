@@ -3,6 +3,7 @@ ElectrolyteWorkflow使用示例
 展示如何使用统一的工作流类进行完整的机器学习流水线
 """
 
+from elml.dataset import ElectrolyteDataset
 from elml.ml import ElectrolyteWorkflow, WorkflowConfig
 
 
@@ -18,11 +19,11 @@ def example_transformer_workflow():
         num_encoder_layers=4,
         feature_mode="sequence",  # transformer使用序列特征
         batch_size=256,
-        num_workers=16,
+        num_workers=0,
         lr=1e-4,
         num_epochs=500,
         early_stopping_patience=40,
-        data_path="data/calisol23/calisol23.json",
+        data_path="data/calisol23/calisol231.json",
         log_dir="runs",
         model_name="transformer_model_4",
     )
@@ -49,7 +50,7 @@ def example_mlp_workflow():
         "dropout_rate": 0.3,
         "feature_mode": "weighted_average",  # mlp使用加权平均特征
         "batch_size": 256,
-        "num_workers": 16,
+        "num_workers": 0,
         "lr": 1e-4,
         "optimizer_name": "adam",
         "num_epochs": 500,
@@ -169,13 +170,14 @@ def example_config_from_file():
         print(f"跳过训练时需要指定已有模型: {e}")
 
 
-def example_custom_analysis():
+def custom_mlp_analysis():
     """自定义分析的示例"""
 
     config = WorkflowConfig(
+        input_dim=179,
         model_type="mlp",
         data_path="data/calisol23/calisol23.json",
-        model_name="mlp_model_4",
+        model_name="mlp_model_12_splits_custom_25",
     )
 
     workflow = ElectrolyteWorkflow(config)
@@ -188,11 +190,218 @@ def example_custom_analysis():
         workflow.setup_predictor(str(workflow.log_dir / "best_model.pth"))
 
         # 使用不同的数据集进行分析
-        # 这里可以传入自定义的数据集
-        analysis_results = workflow.analyze(
-            show_plots=True, save_plots=True, plot_filename="custom_analysis.png"
+        all_dataset = ElectrolyteDataset(feature_mode="weighted_average")
+        new_dataset = ElectrolyteDataset(feature_mode="weighted_average")
+
+        dataset_liasf6 = ElectrolyteDataset(
+            "data/calisol23/calisol23_liAsf6.json", feature_mode="weighted_average"
+        )
+        dataset_litfsi = ElectrolyteDataset(
+            "data/calisol23/calisol23_litfsi.json", feature_mode="weighted_average"
         )
 
+        dataset_test = workflow.datasets["test"]
+
+        dataset_tem = ElectrolyteDataset(
+            "data/calisol23/calisol23_tem.json", feature_mode="weighted_average"
+        )
+
+        dataset_fraction = ElectrolyteDataset(
+            "data/calisol23/calisol23_fraction.json", feature_mode="weighted_average"
+        )
+
+        # 合并数据集
+        # for e in dataset_liasf6:
+        #     all_dataset.add_formula(e)
+        #     new_dataset.add_formula(e)
+        for e in dataset_litfsi:
+            all_dataset.add_formula(e)
+            new_dataset.add_formula(e)
+        for e in dataset_test:
+            all_dataset.add_formula(e)
+
+        # # 这里可以传入自定义的数据集
+        # analysis_results = workflow.analyze(
+        #     dataset=all_dataset,
+        #     # show_plots=True,
+        #     save_plots=True,
+        #     plot_filename="custom_analysis_all.png",
+        # )
+        # # 保存数据到文件
+        # with open("custom_analysis_all.json", "w") as f:
+        #     import json
+
+        #     json.dump(analysis_results, f, indent=4)
+        # # 这里可以传入自定义的数据集
+        # analysis_results = workflow.analyze(
+        #     dataset=new_dataset,
+        #     # show_plots=True,
+        #     save_plots=True,
+        #     plot_filename="custom_analysis_new_salt.png",
+        # )
+        # # 保存数据到文件
+        # with open("custom_analysis_new_salt.json", "w") as f:
+        #     import json
+
+        #     json.dump(analysis_results, f, indent=4)
+        # # 这里可以传入自定义的数据集
+        # analysis_results = workflow.analyze(
+        #     dataset=dataset_test,
+        #     # show_plots=True,
+        #     save_plots=True,
+        #     plot_filename="custom_analysis.png",
+        # )
+        # # 保存数据到文件
+        # with open("custom_analysis.json", "w") as f:
+        #     import json
+
+        #     json.dump(analysis_results, f, indent=4)
+        # 这里可以传入自定义的数据集
+        analysis_results = workflow.analyze(
+            dataset=dataset_tem,
+            # show_plots=True,
+            save_plots=True,
+            plot_filename="custom_analysis_tem.png",
+        )
+        # 保存数据到文件
+        with open("custom_analysis_tem.json", "w") as f:
+            import json
+
+            json.dump(analysis_results, f, indent=4)
+        # 这里可以传入自定义的数据集
+        analysis_results = workflow.analyze(
+            dataset=dataset_fraction,
+            # show_plots=True,
+            save_plots=True,
+            plot_filename="custom_analysis_fraction.png",
+        )
+        # 保存数据到文件
+        with open("custom_analysis_fraction.json", "w") as f:
+            import json
+
+            json.dump(analysis_results, f, indent=4)
+        print("自定义分析完成")
+        if analysis_results:
+            print(f"R²得分: {analysis_results['r2']:.4f}")
+        else:
+            print("分析结果为空")
+
+    except Exception as e:
+        print(f"自定义分析失败: {e}")
+
+
+def custom_transformer_analysis():
+    """自定义分析的示例"""
+
+    config = WorkflowConfig(
+        input_dim=179,
+        model_type="transformer",
+        data_path="data/calisol23/calisol23.json",
+        model_name="transformer_model_12_splits_custom_25",
+    )
+
+    workflow = ElectrolyteWorkflow(config)
+
+    # 假设已经有训练好的模型
+    try:
+        # 仅执行预测和分析部分
+        workflow.setup_data()
+        workflow.setup_model()
+        workflow.setup_predictor(str(workflow.log_dir / "best_model.pth"))
+
+        # 使用不同的数据集进行分析
+        all_dataset = ElectrolyteDataset(feature_mode="sequence")
+        new_dataset = ElectrolyteDataset(feature_mode="sequence")
+        dataset_liasf6 = ElectrolyteDataset(
+            "data/calisol23/calisol23_liAsf6.json", feature_mode="sequence"
+        )
+        dataset_litfsi = ElectrolyteDataset(
+            "data/calisol23/calisol23_litfsi.json", feature_mode="sequence"
+        )
+
+        dataset_test = workflow.datasets["test"]
+
+        dataset_tem = ElectrolyteDataset(
+            "data/calisol23/calisol23_tem.json", feature_mode="sequence"
+        )
+
+        dataset_fraction = ElectrolyteDataset(
+            "data/calisol23/calisol23_fraction.json", feature_mode="sequence"
+        )
+
+        # 合并数据集
+        # for e in dataset_liasf6:
+        #     all_dataset.add_formula(e)
+        #     new_dataset.add_formula(e)
+        for e in dataset_litfsi:
+            all_dataset.add_formula(e)
+            new_dataset.add_formula(e)
+        for e in dataset_test:
+            all_dataset.add_formula(e)
+
+        # 这里可以传入自定义的数据集
+        analysis_results = workflow.analyze(
+            dataset=dataset_tem,
+            # show_plots=True,
+            save_plots=True,
+            plot_filename="custom_analysis_tem.png",
+        )
+        # 保存数据到文件
+        with open("custom_analysis_tem.json", "w") as f:
+            import json
+
+            json.dump(analysis_results, f, indent=4)
+        # 这里可以传入自定义的数据集
+        analysis_results = workflow.analyze(
+            dataset=dataset_fraction,
+            # show_plots=True,
+            save_plots=True,
+            plot_filename="custom_analysis_fraction.png",
+        )
+        # 保存数据到文件
+        with open("custom_analysis_fraction.json", "w") as f:
+            import json
+
+            json.dump(analysis_results, f, indent=4)
+
+        # # 这里可以传入自定义的数据集
+        # analysis_results = workflow.analyze(
+        #     dataset=all_dataset,
+        #     # show_plots=True,
+        #     save_plots=True,
+        #     plot_filename="custom_analysis_all.png",
+        # )
+
+        # # 保存数据到文件
+        # with open("custom_analysis_all.json", "w") as f:
+        #     import json
+
+        #     json.dump(analysis_results, f, indent=4)
+
+        # # 这里可以传入自定义的数据集
+        # analysis_results = workflow.analyze(
+        #     dataset=new_dataset,
+        #     # show_plots=True,
+        #     save_plots=True,
+        #     plot_filename="custom_analysis_new_salt.png",
+        # )
+        # # 保存数据到文件
+        # with open("custom_analysis_new_salt.json", "w") as f:
+        #     import json
+
+        #     json.dump(analysis_results, f, indent=4)
+        # # 这里可以传入自定义的数据集
+        # analysis_results = workflow.analyze(
+        #     dataset=dataset_test,
+        #     # show_plots=True,
+        #     save_plots=True,
+        #     plot_filename="custom_analysis.png",
+        # )
+        # # 保存数据到文件
+        # with open("custom_analysis.json", "w") as f:
+        #     import json
+
+        #     json.dump(analysis_results, f, indent=4)
         print("自定义分析完成")
         if analysis_results:
             print(f"R²得分: {analysis_results['r2']:.4f}")
@@ -224,4 +433,5 @@ if __name__ == "__main__":
     # example_config_from_file()
 
     print("\n6. 自定义分析")
-    example_custom_analysis()
+    # custom_mlp_analysis()
+    custom_transformer_analysis()
